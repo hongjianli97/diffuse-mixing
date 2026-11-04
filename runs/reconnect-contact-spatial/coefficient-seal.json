@@ -1,0 +1,6 @@
+{
+  "graphs": 2,
+  "graph_index_sha256": "39350896f35c05dac1017f56527eb95e474b699e929e69aebd37139d27b5e221",
+  "both_new_static_graphs_sealed_before_any_material_c0_reference_or_reused_state": true,
+  "builder_received_true_material_faces_F_C_or_precomputed_g": false
+}

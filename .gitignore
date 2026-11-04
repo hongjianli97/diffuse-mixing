@@ -9,6 +9,7 @@ __pycache__/
 # Keep the selected reproducible case; do not accidentally add 18 GB of history.
 /runs/*
 !/runs/reconnect-contact-oracle/
+!/runs/reconnect-contact-spatial/
 !/runs/reconnect-affine-shear-spatial/
 /runs/reconnect-affine-shear-spatial/*
 !/runs/reconnect-affine-shear-spatial/sha256.json
@@ -21,3 +22,7 @@ __pycache__/
 !/exports/LTN_contact_oracle_code_results_20261104.zip
 !/exports/LTN_contact_oracle_delivery_20261104.json
 !/exports/LTN_contact_oracle_downloads_20261104.md
+!/exports/LTN_contact_spatial_report_20261104.pdf
+!/exports/LTN_contact_spatial_code_results_20261104.zip
+!/exports/LTN_contact_spatial_delivery_20261104.json
+!/exports/LTN_contact_spatial_downloads_20261104.md

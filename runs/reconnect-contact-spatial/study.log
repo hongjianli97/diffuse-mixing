@@ -1,0 +1,551 @@
+exact_cells:256/256;0.281s;peak58.21MiB
+sealed-and-pure-audited-static-n16:0/0;0.409s;peak59.46MiB
+exact_cells:4096/4096;4.982s;peak70.46MiB
+sealed-and-pure-audited-static-n64:0/0;6.833s;peak88.84MiB
+both-graphs-sealed-before-all-material-and-reference:0/0;6.833s;peak88.84MiB
+k16-propagated:16/16;7.519s;peak88.84MiB
+n16-full-path-and-Cartesian-control-saved:0/0;7.531s;peak88.84MiB
+k16-propagated:16/16;11.516s;peak89.62MiB
+n64-full-path-and-Cartesian-control-saved:0/0;11.607s;peak89.62MiB
+three-grid-native-common-concentration-H-control-saved:0/0;11.662s;peak89.62MiB
+{
+  "decision": "T4_three_space_level_static_contact_oracle_control_passed",
+  "observations": {
+    "16": [
+      {
+        "time": 0.0,
+        "native_error_common_denominator": 0.0,
+        "native_error_native_denominator": 0.0,
+        "common_error": 0.0,
+        "native_H": 0.0,
+        "native_reference_H": 0.0,
+        "common_H": 0.0,
+        "common_reference_H": 0.0,
+        "raw_native_mass_change": 0.0,
+        "raw_common_mass_change": 0.0
+      },
+      {
+        "time": 0.025,
+        "native_error_common_denominator": 0.001295162655742797,
+        "native_error_native_denominator": 0.001295162655742797,
+        "common_error": 0.001295162655742797,
+        "native_H": 0.052787299659527,
+        "native_reference_H": 0.05350096824272976,
+        "common_H": 0.052787299659527,
+        "common_reference_H": 0.05350096824272976,
+        "raw_native_mass_change": -6.01732205729455e-16,
+        "raw_common_mass_change": -6.01732205729455e-16
+      },
+      {
+        "time": 0.05,
+        "native_error_common_denominator": 0.0017630624614367269,
+        "native_error_native_denominator": 0.0017630624614367269,
+        "common_error": 0.0017630624614367269,
+        "native_H": 0.10227715586025399,
+        "native_reference_H": 0.10360335807150423,
+        "common_H": 0.10227715586025399,
+        "common_reference_H": 0.10360335807150423,
+        "raw_native_mass_change": -1.1368943980683e-15,
+        "raw_common_mass_change": -1.1368943980683e-15
+      }
+    ],
+    "32": [
+      {
+        "time": 0.0,
+        "native_error_common_denominator": 0.0,
+        "native_error_native_denominator": 0.0,
+        "common_error": 3.8745515934838824e-16,
+        "native_H": 0.0,
+        "native_reference_H": 0.0,
+        "common_H": 0.0,
+        "common_reference_H": 0.0,
+        "raw_native_mass_change": 0.0,
+        "raw_common_mass_change": 0.0
+      },
+      {
+        "time": 0.025,
+        "native_error_common_denominator": 0.00033137907946381294,
+        "native_error_native_denominator": 0.0003291369328548262,
+        "common_error": 0.0003253732034259066,
+        "native_H": 0.05349109554202036,
+        "native_reference_H": 0.05367653779019865,
+        "common_H": 0.053319999667694074,
+        "common_reference_H": 0.05350096824272976,
+        "raw_native_mass_change": -1.3048373145863046e-16,
+        "raw_common_mass_change": -1.3812735677465326e-16
+      },
+      {
+        "time": 0.05,
+        "native_error_common_denominator": 0.00043706803874056293,
+        "native_error_native_denominator": 0.0004341107892287824,
+        "common_error": 0.00041779023434238,
+        "native_H": 0.10355952561607928,
+        "native_reference_H": 0.10389899732689467,
+        "common_H": 0.10326673556960675,
+        "common_reference_H": 0.10360335807150423,
+        "raw_native_mass_change": -3.3024798173908465e-16,
+        "raw_common_mass_change": -3.3263322651855276e-16
+      }
+    ],
+    "64": [
+      {
+        "time": 0.0,
+        "native_error_common_denominator": 0.0,
+        "native_error_native_denominator": 0.0,
+        "common_error": 4.827018530209565e-16,
+        "native_H": 0.0,
+        "native_reference_H": 0.0,
+        "common_H": -4.440892098500626e-16,
+        "common_reference_H": 0.0,
+        "raw_native_mass_change": 0.0,
+        "raw_common_mass_change": 2.168404344971009e-19
+      },
+      {
+        "time": 0.025,
+        "native_error_common_denominator": 8.205068199369763e-05,
+        "native_error_native_denominator": 8.135735622918862e-05,
+        "common_error": 7.741352907073382e-05,
+        "native_H": 0.053671280538730604,
+        "native_reference_H": 0.0537180962858933,
+        "common_H": 0.05345493577606686,
+        "common_reference_H": 0.05350096824272976,
+        "raw_native_mass_change": 3.4892336416014746e-16,
+        "raw_common_mass_change": 3.5323306779577734e-16
+      },
+      {
+        "time": 0.05,
+        "native_error_common_denominator": 0.00010977024756707302,
+        "native_error_native_denominator": 0.00010884269231749409,
+        "common_error": 0.00010249567725694379,
+        "native_H": 0.10388581901748006,
+        "native_reference_H": 0.10397119143527933,
+        "common_H": 0.1035187761831502,
+        "common_reference_H": 0.10360335807150423,
+        "raw_native_mass_change": 6.881837764580179e-16,
+        "raw_common_mass_change": 6.752411130239722e-16
+      }
+    ]
+  },
+  "comparisons": [
+    {
+      "coarse_N": 16,
+      "fine_N": 32,
+      "time": 0.0,
+      "gains": {
+        "native": 0.0,
+        "common": -3.8745515934838824e-16,
+        "native_H": 0.0,
+        "common_H": 0.0
+      },
+      "fixed_indicators": {
+        "native": 3.5785706739200977e-12,
+        "common": 3.5793455842387944e-12,
+        "native_H": 5.719082949226629e-11,
+        "common_H": 5.768331046759707e-11
+      },
+      "decisions": {
+        "native": "comparison_inconclusive",
+        "common": "comparison_inconclusive",
+        "native_H": "comparison_inconclusive",
+        "common_H": "comparison_inconclusive"
+      },
+      "native_indicator_components_absolute": {
+        "n16_machine": 0.0,
+        "n16_raw_tail": 0.0,
+        "n16_observed_full_sequence": 0.0,
+        "n16_Cartesian_semidiscrete_indicator": 1.9007641686826976e-13,
+        "n16_twice_fixed_evaluation": 4.4938668397781776e-14,
+        "n16_initial_serialization_bridge": 4.30754468318874e-17,
+        "n16_reference_evaluation": 2.2469334198890888e-14,
+        "n16_reference_float_serialization": 4.30754468318874e-17,
+        "n16_reference_truncation": 0.0,
+        "n16_initial_reference_bridge": 4.30754468318874e-17,
+        "n32_machine": 0.0,
+        "n32_raw_tail": 0.0,
+        "n32_observed_full_sequence": 0.0,
+        "n32_Cartesian_semidiscrete_indicator": 3.769064896170964e-13,
+        "n32_twice_fixed_evaluation": 4.4938668397781776e-14,
+        "n32_initial_serialization_bridge": 4.1146986900366384e-17,
+        "n32_reference_evaluation": 2.2469334198890888e-14,
+        "n32_reference_float_serialization": 4.1146986900366384e-17,
+        "n32_reference_truncation": 0.0,
+        "n32_initial_reference_bridge": 4.1146986900366384e-17
+      },
+      "common_indicator_components_absolute": {
+        "n16_numeric_reference": 2.576136458054381e-13,
+        "n16_reference_projection": 0.0,
+        "n16_initial_projection_bridge": 0.0,
+        "n32_numeric_reference": 4.444379331744701e-13,
+        "n32_reference_projection": 7.601177430610147e-17,
+        "n32_initial_projection_bridge": 7.601177430610147e-17,
+        "base_initial_reference_bridge": 0.0
+      },
+      "native_H_indicator_components": {
+        "n16_numeric_reference": 2.1166547240412074e-11,
+        "n16_initial_H_bridge": 0.0,
+        "n32_numeric_reference": 3.602428225185422e-11,
+        "n32_initial_H_bridge": 0.0
+      },
+      "common_H_indicator_components": {
+        "n16_numeric_reference": 2.1166547240412074e-11,
+        "n16_reference_projection": 0.0,
+        "n16_initial_projection_bridge": 0.0,
+        "n32_numeric_reference": 3.6516763227185e-11,
+        "n32_reference_projection": 0.0,
+        "n32_initial_projection_bridge": 0.0,
+        "base_initial_reference_bridge": 0.0
+      },
+      "signed_cancellation_or_extrapolated_state_used": false
+    },
+    {
+      "coarse_N": 16,
+      "fine_N": 32,
+      "time": 0.025,
+      "gains": {
+        "native": 0.000963783576278984,
+        "common": 0.0009697894523168903,
+        "native_H": 0.0005282263350244731,
+        "common_H": 0.0005327000081670752
+      },
+      "fixed_indicators": {
+        "native": 1.3010678200923764e-10,
+        "common": 1.3010753189551173e-10,
+        "native_H": 2.0799126225745506e-09,
+        "common_H": 2.097203319919246e-09
+      },
+      "decisions": {
+        "native": "fine_better_resolvably",
+        "common": "fine_better_resolvably",
+        "native_H": "fine_better_resolvably",
+        "common_H": "fine_better_resolvably"
+      },
+      "native_indicator_components_absolute": {
+        "n16_machine": 9.661813705523082e-12,
+        "n16_raw_tail": 1.3718353233008328e-17,
+        "n16_observed_full_sequence": 6.288414472912145e-16,
+        "n16_Cartesian_semidiscrete_indicator": 1.90799084966446e-13,
+        "n16_twice_fixed_evaluation": 4.4938668397781776e-14,
+        "n16_initial_serialization_bridge": 4.30754468318874e-17,
+        "n16_reference_evaluation": 2.2469334198890888e-14,
+        "n16_reference_float_serialization": 3.857503747508703e-17,
+        "n16_reference_truncation": 2.5e-143,
+        "n16_initial_reference_bridge": 4.30754468318874e-17,
+        "n32_machine": 1.5152757250377043e-11,
+        "n32_raw_tail": 2.0170646535749625e-16,
+        "n32_observed_full_sequence": 4.3587149622014344e-16,
+        "n32_Cartesian_semidiscrete_indicator": 3.829087585688973e-13,
+        "n32_twice_fixed_evaluation": 4.4938668397781776e-14,
+        "n32_initial_serialization_bridge": 4.1146986900366384e-17,
+        "n32_reference_evaluation": 2.2469334198890888e-14,
+        "n32_reference_float_serialization": 4.227141278952136e-17,
+        "n32_reference_truncation": 2.5e-143,
+        "n32_initial_reference_bridge": 4.1146986900366384e-17
+      },
+      "common_indicator_components_absolute": {
+        "n16_numeric_reference": 9.920788078817863e-12,
+        "n16_reference_projection": 0.0,
+        "n16_initial_projection_bridge": 0.0,
+        "n32_numeric_reference": 1.5603836154890782e-11,
+        "n32_reference_projection": 7.110250420355456e-17,
+        "n32_initial_projection_bridge": 7.601177430610147e-17,
+        "base_initial_reference_bridge": 0.0
+      },
+      "native_H_indicator_components": {
+        "n16_numeric_reference": 8.151308478885872e-10,
+        "n16_initial_H_bridge": 0.0,
+        "n32_numeric_reference": 1.2647817746859634e-09,
+        "n32_initial_H_bridge": 0.0
+      },
+      "common_H_indicator_components": {
+        "n16_numeric_reference": 8.151308478885872e-10,
+        "n16_reference_projection": 0.0,
+        "n16_initial_projection_bridge": 0.0,
+        "n32_numeric_reference": 1.2820723610083564e-09,
+        "n32_reference_projection": 1.1102230246251565e-16,
+        "n32_initial_projection_bridge": 0.0,
+        "base_initial_reference_bridge": 0.0
+      },
+      "signed_cancellation_or_extrapolated_state_used": false
+    },
+    {
+      "coarse_N": 16,
+      "fine_N": 32,
+      "time": 0.05,
+      "gains": {
+        "native": 0.001325994422696164,
+        "common": 0.0013452722270943468,
+        "native_H": 0.0009867305004348514,
+        "common_H": 0.0009895797093527614
+      },
+      "fixed_indicators": {
+        "native": 2.566308543783539e-10,
+        "common": 2.566316211308082e-10,
+        "native_H": 4.10256800720558e-09,
+        "common_H": 4.1366566130100735e-09
+      },
+      "decisions": {
+        "native": "fine_better_resolvably",
+        "common": "fine_better_resolvably",
+        "native_H": "fine_better_resolvably",
+        "common_H": "fine_better_resolvably"
+      },
+      "native_indicator_components_absolute": {
+        "n16_machine": 1.932362741104616e-11,
+        "n16_raw_tail": 2.7436706466016654e-17,
+        "n16_observed_full_sequence": 7.144197011469675e-16,
+        "n16_Cartesian_semidiscrete_indicator": 1.915246379317808e-13,
+        "n16_twice_fixed_evaluation": 4.4938668397781776e-14,
+        "n16_initial_serialization_bridge": 4.30754468318874e-17,
+        "n16_reference_evaluation": 2.2469334198890888e-14,
+        "n16_reference_float_serialization": 4.033397563338346e-17,
+        "n16_reference_truncation": 2.5e-285,
+        "n16_initial_reference_bridge": 4.30754468318874e-17,
+        "n32_machine": 3.0305514500754093e-11,
+        "n32_raw_tail": 4.0341293071499236e-16,
+        "n32_observed_full_sequence": 5.969238683202452e-16,
+        "n32_Cartesian_semidiscrete_indicator": 3.8891058006412086e-13,
+        "n32_twice_fixed_evaluation": 4.4938668397781776e-14,
+        "n32_initial_serialization_bridge": 4.1146986900366384e-17,
+        "n32_reference_evaluation": 2.2469334198890888e-14,
+        "n32_reference_float_serialization": 4.079023693523196e-17,
+        "n32_reference_truncation": 2.5e-285,
+        "n32_initial_reference_bridge": 4.1146986900366384e-17
+      },
+      "common_indicator_components_absolute": {
+        "n16_numeric_reference": 1.9583428392851525e-11,
+        "n16_reference_projection": 0.0,
+        "n16_initial_projection_bridge": 0.0,
+        "n32_numeric_reference": 3.0762956504424657e-11,
+        "n32_reference_projection": 7.441134718652326e-17,
+        "n32_initial_projection_bridge": 7.601177430610147e-17,
+        "base_initial_reference_bridge": 0.0
+      },
+      "native_H_indicator_components": {
+        "n16_numeric_reference": 1.6090512632320428e-09,
+        "n16_initial_H_bridge": 0.0,
+        "n32_numeric_reference": 2.4935167439735377e-09,
+        "n32_initial_H_bridge": 0.0
+      },
+      "common_H_indicator_components": {
+        "n16_numeric_reference": 1.6090512632320428e-09,
+        "n16_reference_projection": 0.0,
+        "n16_initial_projection_bridge": 0.0,
+        "n32_numeric_reference": 2.5276051277334256e-09,
+        "n32_reference_projection": 2.220446049250313e-16,
+        "n32_initial_projection_bridge": 0.0,
+        "base_initial_reference_bridge": 0.0
+      },
+      "signed_cancellation_or_extrapolated_state_used": false
+    },
+    {
+      "coarse_N": 32,
+      "fine_N": 64,
+      "time": 0.0,
+      "gains": {
+        "native": 0.0,
+        "common": -9.52466936725683e-17,
+        "native_H": 0.0,
+        "common_H": -4.440892098500626e-16
+      },
+      "fixed_indicators": {
+        "native": 6.434492474797368e-12,
+        "common": 6.4362327888221056e-12,
+        "native_H": 1.02094794692669e-10,
+        "common_H": 1.0371906533505657e-10
+      },
+      "decisions": {
+        "native": "comparison_inconclusive",
+        "common": "comparison_inconclusive",
+        "native_H": "comparison_inconclusive",
+        "common_H": "comparison_inconclusive"
+      },
+      "native_indicator_components_absolute": {
+        "n32_machine": 0.0,
+        "n32_raw_tail": 0.0,
+        "n32_observed_full_sequence": 0.0,
+        "n32_Cartesian_semidiscrete_indicator": 3.769064896170964e-13,
+        "n32_twice_fixed_evaluation": 4.4938668397781776e-14,
+        "n32_initial_serialization_bridge": 4.1146986900366384e-17,
+        "n32_reference_evaluation": 2.2469334198890888e-14,
+        "n32_reference_float_serialization": 4.1146986900366384e-17,
+        "n32_reference_truncation": 0.0,
+        "n32_initial_reference_bridge": 4.1146986900366384e-17,
+        "n64_machine": 0.0,
+        "n64_raw_tail": 0.0,
+        "n64_observed_full_sequence": 0.0,
+        "n64_Cartesian_semidiscrete_indicator": 7.503677194853452e-13,
+        "n64_twice_fixed_evaluation": 4.4938668397781776e-14,
+        "n64_initial_serialization_bridge": 3.9571752912887795e-17,
+        "n64_reference_evaluation": 2.2469334198890888e-14,
+        "n64_reference_float_serialization": 3.9571752912887795e-17,
+        "n64_reference_truncation": 0.0,
+        "n64_initial_reference_bridge": 3.9571752912887795e-17
+      },
+      "common_indicator_components_absolute": {
+        "n32_numeric_reference": 4.444379331744701e-13,
+        "n32_reference_projection": 7.601177430610147e-17,
+        "n32_initial_projection_bridge": 7.601177430610147e-17,
+        "n64_numeric_reference": 8.178944373407566e-13,
+        "n64_reference_projection": 9.469747252991005e-17,
+        "n64_initial_projection_bridge": 9.469747252991005e-17,
+        "base_initial_reference_bridge": 0.0
+      },
+      "native_H_indicator_components": {
+        "n32_numeric_reference": 3.602428225185422e-11,
+        "n32_initial_H_bridge": 0.0,
+        "n64_numeric_reference": 6.607051244081478e-11,
+        "n64_initial_H_bridge": 0.0
+      },
+      "common_H_indicator_components": {
+        "n32_numeric_reference": 3.6516763227185e-11,
+        "n32_reference_projection": 0.0,
+        "n32_initial_projection_bridge": 0.0,
+        "n64_numeric_reference": 6.720141392945186e-11,
+        "n64_reference_projection": 4.440892098500626e-16,
+        "n64_initial_projection_bridge": 4.440892098500626e-16,
+        "base_initial_reference_bridge": 0.0
+      },
+      "signed_cancellation_or_extrapolated_state_used": false
+    },
+    {
+      "coarse_N": 32,
+      "fine_N": 64,
+      "time": 0.025,
+      "gains": {
+        "native": 0.0002493283974701153,
+        "common": 0.0002479596743551728,
+        "native_H": 0.00013862650101559293,
+        "common_H": 0.00013493610837278514
+      },
+      "fixed_indicators": {
+        "native": 2.8346827612331564e-10,
+        "common": 2.834699287028273e-10,
+        "native_H": 4.496642266701934e-09,
+        "common_H": 4.569251931358475e-09
+      },
+      "decisions": {
+        "native": "fine_better_resolvably",
+        "common": "fine_better_resolvably",
+        "native_H": "fine_better_resolvably",
+        "common_H": "fine_better_resolvably"
+      },
+      "native_indicator_components_absolute": {
+        "n32_machine": 1.5152757250377043e-11,
+        "n32_raw_tail": 2.0170646535749625e-16,
+        "n32_observed_full_sequence": 4.3587149622014344e-16,
+        "n32_Cartesian_semidiscrete_indicator": 3.829087585688973e-13,
+        "n32_twice_fixed_evaluation": 4.4938668397781776e-14,
+        "n32_initial_serialization_bridge": 4.1146986900366384e-17,
+        "n32_reference_evaluation": 2.2469334198890888e-14,
+        "n32_reference_float_serialization": 4.227141278952136e-17,
+        "n32_reference_truncation": 2.5e-143,
+        "n32_initial_reference_bridge": 4.1146986900366384e-17,
+        "n64_machine": 3.9152814841567375e-11,
+        "n64_raw_tail": 1.0225964563885995e-16,
+        "n64_observed_full_sequence": 9.898326681608344e-16,
+        "n64_Cartesian_semidiscrete_indicator": 7.861368757375593e-13,
+        "n64_twice_fixed_evaluation": 4.4938668397781776e-14,
+        "n64_initial_serialization_bridge": 3.9571752912887795e-17,
+        "n64_reference_evaluation": 2.2469334198890888e-14,
+        "n64_reference_float_serialization": 4.006192936746142e-17,
+        "n64_reference_truncation": 2.5e-143,
+        "n64_initial_reference_bridge": 3.9571752912887795e-17
+      },
+      "common_indicator_components_absolute": {
+        "n32_numeric_reference": 1.5603836154890782e-11,
+        "n32_reference_projection": 7.110250420355456e-17,
+        "n32_initial_projection_bridge": 7.601177430610147e-17,
+        "n64_numeric_reference": 4.00075710176506e-11,
+        "n64_reference_projection": 8.239479992065644e-17,
+        "n64_initial_projection_bridge": 9.469747252991005e-17,
+        "base_initial_reference_bridge": 0.0
+      },
+      "native_H_indicator_components": {
+        "n32_numeric_reference": 1.2647817746859634e-09,
+        "n32_initial_H_bridge": 0.0,
+        "n64_numeric_reference": 3.2318604920159706e-09,
+        "n64_initial_H_bridge": 0.0
+      },
+      "common_H_indicator_components": {
+        "n32_numeric_reference": 1.2820723610083564e-09,
+        "n32_reference_projection": 1.1102230246251565e-16,
+        "n32_initial_projection_bridge": 0.0,
+        "n64_numeric_reference": 3.2871789042163036e-09,
+        "n64_reference_projection": 1.1102230246251565e-16,
+        "n64_initial_projection_bridge": 4.440892098500626e-16,
+        "base_initial_reference_bridge": 0.0
+      },
+      "signed_cancellation_or_extrapolated_state_used": false
+    },
+    {
+      "coarse_N": 32,
+      "fine_N": 64,
+      "time": 0.05,
+      "gains": {
+        "native": 0.00032729779117348994,
+        "common": 0.0003152945570854362,
+        "native_H": 0.000254099293016119,
+        "common_H": 0.0002520406135434472
+      },
+      "fixed_indicators": {
+        "native": 5.604998831303744e-10,
+        "common": 5.605015525760663e-10,
+        "native_H": 8.891155167450805e-09,
+        "common_H": 9.034750156078586e-09
+      },
+      "decisions": {
+        "native": "fine_better_resolvably",
+        "common": "fine_better_resolvably",
+        "native_H": "fine_better_resolvably",
+        "common_H": "fine_better_resolvably"
+      },
+      "native_indicator_components_absolute": {
+        "n32_machine": 3.0305514500754093e-11,
+        "n32_raw_tail": 4.0341293071499236e-16,
+        "n32_observed_full_sequence": 5.969238683202452e-16,
+        "n32_Cartesian_semidiscrete_indicator": 3.8891058006412086e-13,
+        "n32_twice_fixed_evaluation": 4.4938668397781776e-14,
+        "n32_initial_serialization_bridge": 4.1146986900366384e-17,
+        "n32_reference_evaluation": 2.2469334198890888e-14,
+        "n32_reference_float_serialization": 4.079023693523196e-17,
+        "n32_reference_truncation": 2.5e-285,
+        "n32_initial_reference_bridge": 4.1146986900366384e-17,
+        "n64_machine": 7.830562968313472e-11,
+        "n64_raw_tail": 2.0451929127771983e-16,
+        "n64_observed_full_sequence": 1.817070881441577e-15,
+        "n64_Cartesian_semidiscrete_indicator": 8.21920242211112e-13,
+        "n64_twice_fixed_evaluation": 4.4938668397781776e-14,
+        "n64_initial_serialization_bridge": 3.9571752912887795e-17,
+        "n64_reference_evaluation": 2.2469334198890888e-14,
+        "n64_reference_float_serialization": 3.979038728467733e-17,
+        "n64_reference_truncation": 2.5e-285,
+        "n64_initial_reference_bridge": 3.9571752912887795e-17
+      },
+      "common_indicator_components_absolute": {
+        "n32_numeric_reference": 3.0762956504424657e-11,
+        "n32_reference_projection": 7.441134718652326e-17,
+        "n32_initial_projection_bridge": 7.601177430610147e-17,
+        "n64_numeric_reference": 7.919709845200834e-11,
+        "n64_reference_projection": 8.239479992065644e-17,
+        "n64_initial_projection_bridge": 9.469747252991005e-17,
+        "base_initial_reference_bridge": 0.0
+      },
+      "native_H_indicator_components": {
+        "n32_numeric_reference": 2.4935167439735377e-09,
+        "n32_initial_H_bridge": 0.0,
+        "n64_numeric_reference": 6.397638423477267e-09,
+        "n64_initial_H_bridge": 0.0
+      },
+      "common_H_indicator_components": {
+        "n32_numeric_reference": 2.5276051277334256e-09,
+        "n32_reference_projection": 2.220446049250313e-16,
+        "n32_initial_projection_bridge": 0.0,
+        "n64_numeric_reference": 6.50714414016674e-09,
+        "n64_reference_projection": 2.220446049250313e-16,
+        "n64_initial_projection_bridge": 4.440892098500626e-16,
+        "base_initial_reference_bridge": 0.0
+      },
+      "signed_cancellation_or_extrapolated_state_used": false
+    }
+  ]
+}

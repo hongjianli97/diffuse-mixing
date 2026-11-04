@@ -1,0 +1,965 @@
+{
+  "steps": [
+    {
+      "step": 0,
+      "dt_exact": "1/320",
+      "operator": {
+        "nodes": 4096,
+        "shared_faces": 8192,
+        "maximum_degree": 4,
+        "Lambda_exact_integer": 377,
+        "minimum_exact_uniformization_diagonal": "11821949021847/26529016554979328",
+        "symmetric_generator_trace_raw": -1342177.2800000003,
+        "symmetric_constant_residual_Linf": 8.881784197001252e-16,
+        "uniformization_row_sum_residual_Linf": 2.220446049250313e-16,
+        "uniformization_invariant_mass_residual_Linf": 2.168404344971009e-19,
+        "uniformization_minimum_stored_coefficient": 0.0004456233421750455,
+        "primary_diagonal_is_raw_sum_of_float_face_coefficients": true,
+        "uniformization_diagonal_from_exact_local_rates": true,
+        "rows_weights_or_masses_normalized": false,
+        "zero_eigenvalues_snapped": false,
+        "dense_full_generator_or_propagator_constructed": false
+      },
+      "poisson": {
+        "M": 19,
+        "z_exact": "377/320",
+        "tail_upper_exact": "258751962161709379443594929768625993953425845661477/22392690075285390316605789760208858128790323200000000000000000000000",
+        "raw_weight_sum": 0.9999999999999999,
+        "weights_or_state_normalized": false
+      },
+      "state_metrics": {
+        "mean": 0.5,
+        "variance": 0.03887566873910067,
+        "I": 0.9930892792354226,
+        "H": 0.006910720764577438
+      },
+      "independent_metrics": {
+        "mean": 0.4999999999999999,
+        "variance": 0.03887566873910066,
+        "I": 0.9930892792354222,
+        "H": 0.006910720764577771
+      },
+      "primary_control_mass_norm_difference": 2.585014472353614e-16,
+      "primary_control_relative_difference": 1.3065263988039985e-15,
+      "machine_indicator_absolute_this_interval": 4.894101855195922e-12,
+      "cumulative_machine_indicator_absolute": 4.894101855195922e-12,
+      "cumulative_tail_indicator_absolute": 1.2782455704857494e-17,
+      "raw_mass_change_from_c0": 4.529254575558195e-17,
+      "independent_raw_mass_change_from_c0": -1.2223024242058456e-16,
+      "minimum": 0.3009425887887836,
+      "maximum": 0.6990574112112163,
+      "chi_start_half_end": [
+        0.04347275672425067,
+        0.04328426288375801,
+        0.043097494701463485
+      ],
+      "half_variance_loss": 0.00013526421884192327,
+      "Simpson_chi_integral": 0.0001352642202920553,
+      "raw_energy_balance_difference": -1.450132033767662e-12,
+      "Simpson_is_empirical_not_exact_balance": true,
+      "coefficient_cache_sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+      "midpoint_time_saved": 0.0015625
+    },
+    {
+      "step": 1,
+      "dt_exact": "1/320",
+      "operator": {
+        "nodes": 4096,
+        "shared_faces": 8192,
+        "maximum_degree": 4,
+        "Lambda_exact_integer": 377,
+        "minimum_exact_uniformization_diagonal": "11821949021847/26529016554979328",
+        "symmetric_generator_trace_raw": -1342177.2800000003,
+        "symmetric_constant_residual_Linf": 8.881784197001252e-16,
+        "uniformization_row_sum_residual_Linf": 2.220446049250313e-16,
+        "uniformization_invariant_mass_residual_Linf": 2.168404344971009e-19,
+        "uniformization_minimum_stored_coefficient": 0.0004456233421750455,
+        "primary_diagonal_is_raw_sum_of_float_face_coefficients": true,
+        "uniformization_diagonal_from_exact_local_rates": true,
+        "rows_weights_or_masses_normalized": false,
+        "zero_eigenvalues_snapped": false,
+        "dense_full_generator_or_propagator_constructed": false
+      },
+      "poisson": {
+        "M": 19,
+        "z_exact": "377/320",
+        "tail_upper_exact": "258751962161709379443594929768625993953425845661477/22392690075285390316605789760208858128790323200000000000000000000000",
+        "raw_weight_sum": 0.9999999999999999,
+        "weights_or_state_normalized": false
+      },
+      "state_metrics": {
+        "mean": 0.5,
+        "variance": 0.038607465290502394,
+        "I": 0.986237950934309,
+        "H": 0.013762049065691007
+      },
+      "independent_metrics": {
+        "mean": 0.49999999999999983,
+        "variance": 0.038607465290502366,
+        "I": 0.9862379509343082,
+        "H": 0.013762049065691784
+      },
+      "primary_control_mass_norm_difference": 3.5723091086077797e-16,
+      "primary_control_relative_difference": 1.805528056032324e-15,
+      "machine_indicator_absolute_this_interval": 4.894101855195922e-12,
+      "cumulative_machine_indicator_absolute": 9.788203710391844e-12,
+      "cumulative_tail_indicator_absolute": 2.5564911409714988e-17,
+      "raw_mass_change_from_c0": 9.172350379227368e-17,
+      "independent_raw_mass_change_from_c0": -2.409368277805912e-16,
+      "minimum": 0.30151111010133846,
+      "maximum": 0.6984888898986615,
+      "chi_start_half_end": [
+        0.043097494701463485,
+        0.042912305431810856,
+        0.04272859507238045
+      ],
+      "half_variance_loss": 0.00013410172429913908,
+      "Simpson_chi_integral": 0.00013410172474014967,
+      "raw_energy_balance_difference": -4.410105906762357e-13,
+      "Simpson_is_empirical_not_exact_balance": true,
+      "coefficient_cache_sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+      "midpoint_time_saved": 0.0046875
+    },
+    {
+      "step": 2,
+      "dt_exact": "1/320",
+      "operator": {
+        "nodes": 4096,
+        "shared_faces": 8192,
+        "maximum_degree": 4,
+        "Lambda_exact_integer": 377,
+        "minimum_exact_uniformization_diagonal": "11821949021847/26529016554979328",
+        "symmetric_generator_trace_raw": -1342177.2800000003,
+        "symmetric_constant_residual_Linf": 8.881784197001252e-16,
+        "uniformization_row_sum_residual_Linf": 2.220446049250313e-16,
+        "uniformization_invariant_mass_residual_Linf": 2.168404344971009e-19,
+        "uniformization_minimum_stored_coefficient": 0.0004456233421750455,
+        "primary_diagonal_is_raw_sum_of_float_face_coefficients": true,
+        "uniformization_diagonal_from_exact_local_rates": true,
+        "rows_weights_or_masses_normalized": false,
+        "zero_eigenvalues_snapped": false,
+        "dense_full_generator_or_propagator_constructed": false
+      },
+      "poisson": {
+        "M": 19,
+        "z_exact": "377/320",
+        "tail_upper_exact": "258751962161709379443594929768625993953425845661477/22392690075285390316605789760208858128790323200000000000000000000000",
+        "raw_weight_sum": 0.9999999999999999,
+        "weights_or_state_normalized": false
+      },
+      "state_metrics": {
+        "mean": 0.5,
+        "variance": 0.03834154957359087,
+        "I": 0.9794450633465148,
+        "H": 0.02055493665348518
+      },
+      "independent_metrics": {
+        "mean": 0.4999999999999999,
+        "variance": 0.038341549573590816,
+        "I": 0.9794450633465134,
+        "H": 0.020554936653486622
+      },
+      "primary_control_mass_norm_difference": 4.505867008784075e-16,
+      "primary_control_relative_difference": 2.2773699178234588e-15,
+      "machine_indicator_absolute_this_interval": 4.894101855195922e-12,
+      "cumulative_machine_indicator_absolute": 1.4682305565587766e-11,
+      "cumulative_tail_indicator_absolute": 3.834736711457248e-17,
+      "raw_mass_change_from_c0": 1.2770546339163635e-16,
+      "independent_raw_mass_change_from_c0": -3.564585692589217e-16,
+      "minimum": 0.30207800767890713,
+      "maximum": 0.6979219923210929,
+      "chi_start_half_end": [
+        0.04272859507238045,
+        0.04254629009717411,
+        0.042365333115937626
+      ],
+      "half_variance_loss": 0.00013295785845576086,
+      "Simpson_chi_integral": 0.00013295785863386175,
+      "raw_energy_balance_difference": -1.7810088798718426e-13,
+      "Simpson_is_empirical_not_exact_balance": true,
+      "coefficient_cache_sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+      "midpoint_time_saved": 0.0078125
+    },
+    {
+      "step": 3,
+      "dt_exact": "1/320",
+      "operator": {
+        "nodes": 4096,
+        "shared_faces": 8192,
+        "maximum_degree": 4,
+        "Lambda_exact_integer": 377,
+        "minimum_exact_uniformization_diagonal": "11821949021847/26529016554979328",
+        "symmetric_generator_trace_raw": -1342177.2800000003,
+        "symmetric_constant_residual_Linf": 8.881784197001252e-16,
+        "uniformization_row_sum_residual_Linf": 2.220446049250313e-16,
+        "uniformization_invariant_mass_residual_Linf": 2.168404344971009e-19,
+        "uniformization_minimum_stored_coefficient": 0.0004456233421750455,
+        "primary_diagonal_is_raw_sum_of_float_face_coefficients": true,
+        "uniformization_diagonal_from_exact_local_rates": true,
+        "rows_weights_or_masses_normalized": false,
+        "zero_eigenvalues_snapped": false,
+        "dense_full_generator_or_propagator_constructed": false
+      },
+      "poisson": {
+        "M": 19,
+        "z_exact": "377/320",
+        "tail_upper_exact": "258751962161709379443594929768625993953425845661477/22392690075285390316605789760208858128790323200000000000000000000000",
+        "raw_weight_sum": 0.9999999999999999,
+        "weights_or_state_normalized": false
+      },
+      "state_metrics": {
+        "mean": 0.5000000000000001,
+        "variance": 0.03807788777681629,
+        "I": 0.9727097527470233,
+        "H": 0.027290247252976685
+      },
+      "independent_metrics": {
+        "mean": 0.4999999999999999,
+        "variance": 0.03807788777681623,
+        "I": 0.9727097527470216,
+        "H": 0.02729024725297835
+      },
+      "primary_control_mass_norm_difference": 5.422516393345567e-16,
+      "primary_control_relative_difference": 2.7406658228118e-15,
+      "machine_indicator_absolute_this_interval": 4.894101855195922e-12,
+      "cumulative_machine_indicator_absolute": 1.9576407420783687e-11,
+      "cumulative_tail_indicator_absolute": 5.1129822819429976e-17,
+      "raw_mass_change_from_c0": 1.7691468949532219e-16,
+      "independent_raw_mass_change_from_c0": -4.644993157471022e-16,
+      "minimum": 0.30264328615898584,
+      "maximum": 0.6973567138410143,
+      "chi_start_half_end": [
+        0.042365333115937626,
+        0.04218567725847977,
+        0.042007282927067194
+      ],
+      "half_variance_loss": 0.0001318308983872911,
+      "Simpson_chi_integral": 0.00013183089847756455,
+      "raw_energy_balance_difference": -9.027346470173725e-14,
+      "Simpson_is_empirical_not_exact_balance": true,
+      "coefficient_cache_sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+      "midpoint_time_saved": 0.0109375
+    },
+    {
+      "step": 4,
+      "dt_exact": "1/320",
+      "operator": {
+        "nodes": 4096,
+        "shared_faces": 8192,
+        "maximum_degree": 4,
+        "Lambda_exact_integer": 377,
+        "minimum_exact_uniformization_diagonal": "11821949021847/26529016554979328",
+        "symmetric_generator_trace_raw": -1342177.2800000003,
+        "symmetric_constant_residual_Linf": 8.881784197001252e-16,
+        "uniformization_row_sum_residual_Linf": 2.220446049250313e-16,
+        "uniformization_invariant_mass_residual_Linf": 2.168404344971009e-19,
+        "uniformization_minimum_stored_coefficient": 0.0004456233421750455,
+        "primary_diagonal_is_raw_sum_of_float_face_coefficients": true,
+        "uniformization_diagonal_from_exact_local_rates": true,
+        "rows_weights_or_masses_normalized": false,
+        "zero_eigenvalues_snapped": false,
+        "dense_full_generator_or_propagator_constructed": false
+      },
+      "poisson": {
+        "M": 19,
+        "z_exact": "377/320",
+        "tail_upper_exact": "258751962161709379443594929768625993953425845661477/22392690075285390316605789760208858128790323200000000000000000000000",
+        "raw_weight_sum": 0.9999999999999999,
+        "weights_or_state_normalized": false
+      },
+      "state_metrics": {
+        "mean": 0.5000000000000001,
+        "variance": 0.037816448306409706,
+        "I": 0.9660312120646187,
+        "H": 0.03396878793538127
+      },
+      "independent_metrics": {
+        "mean": 0.4999999999999997,
+        "variance": 0.03781644830640962,
+        "I": 0.9660312120646166,
+        "H": 0.03396878793538338
+      },
+      "primary_control_mass_norm_difference": 6.469937197628472e-16,
+      "primary_control_relative_difference": 3.2700566428972873e-15,
+      "machine_indicator_absolute_this_interval": 4.894101855195922e-12,
+      "cumulative_machine_indicator_absolute": 2.447050927597961e-11,
+      "cumulative_tail_indicator_absolute": 6.391227852428747e-17,
+      "raw_mass_change_from_c0": 2.1411637653873106e-16,
+      "independent_raw_mass_change_from_c0": -5.777306801360571e-16,
+      "minimum": 0.30320695016582544,
+      "maximum": 0.6967930498341748,
+      "chi_start_half_end": [
+        0.042007282927067194,
+        0.04183011580285802,
+        0.041654145554555995
+      ],
+      "half_variance_loss": 0.00013071973520329197,
+      "Simpson_chi_integral": 0.0001307197352567996,
+      "raw_energy_balance_difference": -5.350762693166755e-14,
+      "Simpson_is_empirical_not_exact_balance": true,
+      "coefficient_cache_sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+      "midpoint_time_saved": 0.0140625
+    },
+    {
+      "step": 5,
+      "dt_exact": "1/320",
+      "operator": {
+        "nodes": 4096,
+        "shared_faces": 8192,
+        "maximum_degree": 4,
+        "Lambda_exact_integer": 377,
+        "minimum_exact_uniformization_diagonal": "11821949021847/26529016554979328",
+        "symmetric_generator_trace_raw": -1342177.2800000003,
+        "symmetric_constant_residual_Linf": 8.881784197001252e-16,
+        "uniformization_row_sum_residual_Linf": 2.220446049250313e-16,
+        "uniformization_invariant_mass_residual_Linf": 2.168404344971009e-19,
+        "uniformization_minimum_stored_coefficient": 0.0004456233421750455,
+        "primary_diagonal_is_raw_sum_of_float_face_coefficients": true,
+        "uniformization_diagonal_from_exact_local_rates": true,
+        "rows_weights_or_masses_normalized": false,
+        "zero_eigenvalues_snapped": false,
+        "dense_full_generator_or_propagator_constructed": false
+      },
+      "poisson": {
+        "M": 19,
+        "z_exact": "377/320",
+        "tail_upper_exact": "258751962161709379443594929768625993953425845661477/22392690075285390316605789760208858128790323200000000000000000000000",
+        "raw_weight_sum": 0.9999999999999999,
+        "weights_or_state_normalized": false
+      },
+      "state_metrics": {
+        "mean": 0.5000000000000002,
+        "variance": 0.03755720120783447,
+        "I": 0.9594086761027097,
+        "H": 0.040591323897290255
+      },
+      "independent_metrics": {
+        "mean": 0.49999999999999967,
+        "variance": 0.037557201207834366,
+        "I": 0.9594086761027071,
+        "H": 0.04059132389729292
+      },
+      "primary_control_mass_norm_difference": 7.617535022778485e-16,
+      "primary_control_relative_difference": 3.850079257781682e-15,
+      "machine_indicator_absolute_this_interval": 4.894101855195922e-12,
+      "cumulative_machine_indicator_absolute": 2.936461113117553e-11,
+      "cumulative_tail_indicator_absolute": 7.669473422914496e-17,
+      "raw_mass_change_from_c0": 2.59015899006787e-16,
+      "independent_raw_mass_change_from_c0": -6.932253165600755e-16,
+      "minimum": 0.30376900431047055,
+      "maximum": 0.6962309956895295,
+      "chi_start_half_end": [
+        0.041654145554555995,
+        0.04147934496199167,
+        0.041305689297299705
+      ],
+      "half_variance_loss": 0.0001296235492876177,
+      "Simpson_chi_integral": 0.00012962354932282417,
+      "raw_energy_balance_difference": -3.520645689043811e-14,
+      "Simpson_is_empirical_not_exact_balance": true,
+      "coefficient_cache_sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+      "midpoint_time_saved": 0.0171875
+    },
+    {
+      "step": 6,
+      "dt_exact": "1/320",
+      "operator": {
+        "nodes": 4096,
+        "shared_faces": 8192,
+        "maximum_degree": 4,
+        "Lambda_exact_integer": 377,
+        "minimum_exact_uniformization_diagonal": "11821949021847/26529016554979328",
+        "symmetric_generator_trace_raw": -1342177.2800000003,
+        "symmetric_constant_residual_Linf": 8.881784197001252e-16,
+        "uniformization_row_sum_residual_Linf": 2.220446049250313e-16,
+        "uniformization_invariant_mass_residual_Linf": 2.168404344971009e-19,
+        "uniformization_minimum_stored_coefficient": 0.0004456233421750455,
+        "primary_diagonal_is_raw_sum_of_float_face_coefficients": true,
+        "uniformization_diagonal_from_exact_local_rates": true,
+        "rows_weights_or_masses_normalized": false,
+        "zero_eigenvalues_snapped": false,
+        "dense_full_generator_or_propagator_constructed": false
+      },
+      "poisson": {
+        "M": 19,
+        "z_exact": "377/320",
+        "tail_upper_exact": "258751962161709379443594929768625993953425845661477/22392690075285390316605789760208858128790323200000000000000000000000",
+        "raw_weight_sum": 0.9999999999999999,
+        "weights_or_state_normalized": false
+      },
+      "state_metrics": {
+        "mean": 0.5000000000000002,
+        "variance": 0.037300117836536306,
+        "I": 0.9528414131285523,
+        "H": 0.047158586871447694
+      },
+      "independent_metrics": {
+        "mean": 0.49999999999999967,
+        "variance": 0.03730011783653619,
+        "I": 0.9528414131285493,
+        "H": 0.04715858687145069
+      },
+      "primary_control_mass_norm_difference": 8.709823553891381e-16,
+      "primary_control_relative_difference": 4.402147269884719e-15,
+      "machine_indicator_absolute_this_interval": 4.894101855195922e-12,
+      "cumulative_machine_indicator_absolute": 3.4258712986371456e-11,
+      "cumulative_tail_indicator_absolute": 8.947718993400246e-17,
+      "raw_mass_change_from_c0": 3.084690705992821e-16,
+      "independent_raw_mass_change_from_c0": -8.011576428310074e-16,
+      "minimum": 0.30432945319080174,
+      "maximum": 0.6956705468091984,
+      "chi_start_half_end": [
+        0.041305689297299705,
+        0.041133155873204354,
+        0.04096172370393575
+      ],
+      "half_variance_loss": 0.00012854168564908203,
+      "Simpson_chi_integral": 0.00012854168567398585,
+      "raw_energy_balance_difference": -2.4903825746394603e-14,
+      "Simpson_is_empirical_not_exact_balance": true,
+      "coefficient_cache_sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+      "midpoint_time_saved": 0.0203125
+    },
+    {
+      "step": 7,
+      "dt_exact": "1/320",
+      "operator": {
+        "nodes": 4096,
+        "shared_faces": 8192,
+        "maximum_degree": 4,
+        "Lambda_exact_integer": 377,
+        "minimum_exact_uniformization_diagonal": "11821949021847/26529016554979328",
+        "symmetric_generator_trace_raw": -1342177.2800000003,
+        "symmetric_constant_residual_Linf": 8.881784197001252e-16,
+        "uniformization_row_sum_residual_Linf": 2.220446049250313e-16,
+        "uniformization_invariant_mass_residual_Linf": 2.168404344971009e-19,
+        "uniformization_minimum_stored_coefficient": 0.0004456233421750455,
+        "primary_diagonal_is_raw_sum_of_float_face_coefficients": true,
+        "uniformization_diagonal_from_exact_local_rates": true,
+        "rows_weights_or_masses_normalized": false,
+        "zero_eigenvalues_snapped": false,
+        "dense_full_generator_or_propagator_constructed": false
+      },
+      "poisson": {
+        "M": 19,
+        "z_exact": "377/320",
+        "tail_upper_exact": "258751962161709379443594929768625993953425845661477/22392690075285390316605789760208858128790323200000000000000000000000",
+        "raw_weight_sum": 0.9999999999999999,
+        "weights_or_state_normalized": false
+      },
+      "state_metrics": {
+        "mean": 0.5000000000000002,
+        "variance": 0.037045170646084855,
+        "I": 0.9463287194612694,
+        "H": 0.053671280538730604
+      },
+      "independent_metrics": {
+        "mean": 0.4999999999999997,
+        "variance": 0.037045170646084716,
+        "I": 0.946328719461266,
+        "H": 0.053671280538734045
+      },
+      "primary_control_mass_norm_difference": 9.898326681608344e-16,
+      "primary_control_relative_difference": 5.002844375463986e-15,
+      "machine_indicator_absolute_this_interval": 4.894101855195922e-12,
+      "cumulative_machine_indicator_absolute": 3.9152814841567375e-11,
+      "cumulative_tail_indicator_absolute": 1.0225964563885995e-16,
+      "raw_mass_change_from_c0": 3.4892336416014746e-16,
+      "independent_raw_mass_change_from_c0": -9.306520398072449e-16,
+      "minimum": 0.304888301391591,
+      "maximum": 0.695111698608409,
+      "chi_start_half_end": [
+        0.04096172370393575,
+        0.040791373244596744,
+        0.0406220861867368
+      ],
+      "half_variance_loss": 0.00012747359522572582,
+      "Simpson_chi_integral": 0.00012747359524430184,
+      "raw_energy_balance_difference": -1.8576015291954517e-14,
+      "Simpson_is_empirical_not_exact_balance": true,
+      "coefficient_cache_sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+      "midpoint_time_saved": 0.0234375
+    },
+    {
+      "step": 8,
+      "dt_exact": "1/320",
+      "operator": {
+        "nodes": 4096,
+        "shared_faces": 8192,
+        "maximum_degree": 4,
+        "Lambda_exact_integer": 377,
+        "minimum_exact_uniformization_diagonal": "11821949021847/26529016554979328",
+        "symmetric_generator_trace_raw": -1342177.2800000003,
+        "symmetric_constant_residual_Linf": 8.881784197001252e-16,
+        "uniformization_row_sum_residual_Linf": 2.220446049250313e-16,
+        "uniformization_invariant_mass_residual_Linf": 2.168404344971009e-19,
+        "uniformization_minimum_stored_coefficient": 0.0004456233421750455,
+        "primary_diagonal_is_raw_sum_of_float_face_coefficients": true,
+        "uniformization_diagonal_from_exact_local_rates": true,
+        "rows_weights_or_masses_normalized": false,
+        "zero_eigenvalues_snapped": false,
+        "dense_full_generator_or_propagator_constructed": false
+      },
+      "poisson": {
+        "M": 19,
+        "z_exact": "377/320",
+        "tail_upper_exact": "258751962161709379443594929768625993953425845661477/22392690075285390316605789760208858128790323200000000000000000000000",
+        "raw_weight_sum": 0.9999999999999999,
+        "weights_or_state_normalized": false
+      },
+      "state_metrics": {
+        "mean": 0.5000000000000002,
+        "variance": 0.03679233304023524,
+        "I": 0.9398699156927247,
+        "H": 0.06013008430727529
+      },
+      "independent_metrics": {
+        "mean": 0.49999999999999967,
+        "variance": 0.03679233304023509,
+        "I": 0.9398699156927208,
+        "H": 0.060130084307279175
+      },
+      "primary_control_mass_norm_difference": 1.0828402530594211e-15,
+      "primary_control_relative_difference": 5.472926327648836e-15,
+      "machine_indicator_absolute_this_interval": 4.894101855195922e-12,
+      "cumulative_machine_indicator_absolute": 4.4046916696763294e-11,
+      "cumulative_tail_indicator_absolute": 1.1504210134371745e-16,
+      "raw_mass_change_from_c0": 3.9051607000212263e-16,
+      "independent_raw_mass_change_from_c0": -1.0263057764747785e-15,
+      "minimum": 0.3054455534845995,
+      "maximum": 0.6945544465154007,
+      "chi_start_half_end": [
+        0.0406220861867368,
+        0.04045384529518694,
+        0.04028663427582914
+      ],
+      "half_variance_loss": 0.00012641880292480617,
+      "Simpson_chi_integral": 0.0001264188029392259,
+      "raw_energy_balance_difference": -1.4419726263731336e-14,
+      "Simpson_is_empirical_not_exact_balance": true,
+      "coefficient_cache_sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+      "midpoint_time_saved": 0.0265625
+    },
+    {
+      "step": 9,
+      "dt_exact": "1/320",
+      "operator": {
+        "nodes": 4096,
+        "shared_faces": 8192,
+        "maximum_degree": 4,
+        "Lambda_exact_integer": 377,
+        "minimum_exact_uniformization_diagonal": "11821949021847/26529016554979328",
+        "symmetric_generator_trace_raw": -1342177.2800000003,
+        "symmetric_constant_residual_Linf": 8.881784197001252e-16,
+        "uniformization_row_sum_residual_Linf": 2.220446049250313e-16,
+        "uniformization_invariant_mass_residual_Linf": 2.168404344971009e-19,
+        "uniformization_minimum_stored_coefficient": 0.0004456233421750455,
+        "primary_diagonal_is_raw_sum_of_float_face_coefficients": true,
+        "uniformization_diagonal_from_exact_local_rates": true,
+        "rows_weights_or_masses_normalized": false,
+        "zero_eigenvalues_snapped": false,
+        "dense_full_generator_or_propagator_constructed": false
+      },
+      "poisson": {
+        "M": 19,
+        "z_exact": "377/320",
+        "tail_upper_exact": "258751962161709379443594929768625993953425845661477/22392690075285390316605789760208858128790323200000000000000000000000",
+        "raw_weight_sum": 0.9999999999999999,
+        "weights_or_state_normalized": false
+      },
+      "state_metrics": {
+        "mean": 0.5000000000000002,
+        "variance": 0.036541579263494835,
+        "I": 0.9334643438920207,
+        "H": 0.06653565610797929
+      },
+      "independent_metrics": {
+        "mean": 0.49999999999999944,
+        "variance": 0.03654157926349469,
+        "I": 0.933464343892017,
+        "H": 0.06653565610798295
+      },
+      "primary_control_mass_norm_difference": 1.178732794514526e-15,
+      "primary_control_relative_difference": 5.957589520831775e-15,
+      "machine_indicator_absolute_this_interval": 4.894101855195922e-12,
+      "cumulative_machine_indicator_absolute": 4.894101855195921e-11,
+      "cumulative_tail_indicator_absolute": 1.2782455704857493e-16,
+      "raw_mass_change_from_c0": 4.278397297899361e-16,
+      "independent_raw_mass_change_from_c0": -1.1362303242376526e-15,
+      "minimum": 0.30600121402876934,
+      "maximum": 0.6939987859712311,
+      "chi_start_half_end": [
+        0.04028663427582914,
+        0.040120437666989625,
+        0.03995524074916815
+      ],
+      "half_variance_loss": 0.00012537688837020375,
+      "Simpson_chi_integral": 0.00012537688838174782,
+      "raw_energy_balance_difference": -1.154406973659372e-14,
+      "Simpson_is_empirical_not_exact_balance": true,
+      "coefficient_cache_sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+      "midpoint_time_saved": 0.0296875
+    },
+    {
+      "step": 10,
+      "dt_exact": "1/320",
+      "operator": {
+        "nodes": 4096,
+        "shared_faces": 8192,
+        "maximum_degree": 4,
+        "Lambda_exact_integer": 377,
+        "minimum_exact_uniformization_diagonal": "11821949021847/26529016554979328",
+        "symmetric_generator_trace_raw": -1342177.2800000003,
+        "symmetric_constant_residual_Linf": 8.881784197001252e-16,
+        "uniformization_row_sum_residual_Linf": 2.220446049250313e-16,
+        "uniformization_invariant_mass_residual_Linf": 2.168404344971009e-19,
+        "uniformization_minimum_stored_coefficient": 0.0004456233421750455,
+        "primary_diagonal_is_raw_sum_of_float_face_coefficients": true,
+        "uniformization_diagonal_from_exact_local_rates": true,
+        "rows_weights_or_masses_normalized": false,
+        "zero_eigenvalues_snapped": false,
+        "dense_full_generator_or_propagator_constructed": false
+      },
+      "poisson": {
+        "M": 19,
+        "z_exact": "377/320",
+        "tail_upper_exact": "258751962161709379443594929768625993953425845661477/22392690075285390316605789760208858128790323200000000000000000000000",
+        "raw_weight_sum": 0.9999999999999999,
+        "weights_or_state_normalized": false
+      },
+      "state_metrics": {
+        "mean": 0.5000000000000002,
+        "variance": 0.036292884316636756,
+        "I": 0.9271113654472699,
+        "H": 0.07288863455273009
+      },
+      "independent_metrics": {
+        "mean": 0.49999999999999944,
+        "variance": 0.03629288431663659,
+        "I": 0.9271113654472656,
+        "H": 0.07288863455273442
+      },
+      "primary_control_mass_norm_difference": 1.2708687661811002e-15,
+      "primary_control_relative_difference": 6.423266137149649e-15,
+      "machine_indicator_absolute_this_interval": 4.894101855195922e-12,
+      "cumulative_machine_indicator_absolute": 5.383512040715513e-11,
+      "cumulative_tail_indicator_absolute": 1.4060701275343241e-16,
+      "raw_mass_change_from_c0": 4.68185603133553e-16,
+      "independent_raw_mass_change_from_c0": -1.2371017838602727e-15,
+      "minimum": 0.30655528757060224,
+      "maximum": 0.6934447124293981,
+      "chi_start_half_end": [
+        0.03995524074916815,
+        0.0397910294692066,
+        0.03962779037597552
+      ],
+      "half_variance_loss": 0.00012434747342903937,
+      "Simpson_chi_integral": 0.0001243474734385261,
+      "raw_energy_balance_difference": -9.48671479913954e-15,
+      "Simpson_is_empirical_not_exact_balance": true,
+      "coefficient_cache_sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+      "midpoint_time_saved": 0.0328125
+    },
+    {
+      "step": 11,
+      "dt_exact": "1/320",
+      "operator": {
+        "nodes": 4096,
+        "shared_faces": 8192,
+        "maximum_degree": 4,
+        "Lambda_exact_integer": 377,
+        "minimum_exact_uniformization_diagonal": "11821949021847/26529016554979328",
+        "symmetric_generator_trace_raw": -1342177.2800000003,
+        "symmetric_constant_residual_Linf": 8.881784197001252e-16,
+        "uniformization_row_sum_residual_Linf": 2.220446049250313e-16,
+        "uniformization_invariant_mass_residual_Linf": 2.168404344971009e-19,
+        "uniformization_minimum_stored_coefficient": 0.0004456233421750455,
+        "primary_diagonal_is_raw_sum_of_float_face_coefficients": true,
+        "uniformization_diagonal_from_exact_local_rates": true,
+        "rows_weights_or_masses_normalized": false,
+        "zero_eigenvalues_snapped": false,
+        "dense_full_generator_or_propagator_constructed": false
+      },
+      "poisson": {
+        "M": 19,
+        "z_exact": "377/320",
+        "tail_upper_exact": "258751962161709379443594929768625993953425845661477/22392690075285390316605789760208858128790323200000000000000000000000",
+        "raw_weight_sum": 0.9999999999999999,
+        "weights_or_state_normalized": false
+      },
+      "state_metrics": {
+        "mean": 0.5000000000000002,
+        "variance": 0.03604622388928787,
+        "I": 0.9208103593435361,
+        "H": 0.07918964065646394
+      },
+      "independent_metrics": {
+        "mean": 0.4999999999999993,
+        "variance": 0.03604622388928769,
+        "I": 0.9208103593435314,
+        "H": 0.07918964065646861
+      },
+      "primary_control_mass_norm_difference": 1.3750802412204365e-15,
+      "primary_control_relative_difference": 6.949975154268728e-15,
+      "machine_indicator_absolute_this_interval": 4.894101855195922e-12,
+      "cumulative_machine_indicator_absolute": 5.872922226235105e-11,
+      "cumulative_tail_indicator_absolute": 1.533894684582899e-16,
+      "raw_mass_change_from_c0": 5.102933050074587e-16,
+      "independent_raw_mass_change_from_c0": -1.3481240863227884e-15,
+      "minimum": 0.30710777864485433,
+      "maximum": 0.692892221355146,
+      "chi_start_half_end": [
+        0.03962779037597552,
+        0.039465510565355875,
+        0.03930417763280199
+      ],
+      "half_variance_loss": 0.00012333021367444408,
+      "Simpson_chi_integral": 0.00012333021368239638,
+      "raw_energy_balance_difference": -7.95229767452943e-15,
+      "Simpson_is_empirical_not_exact_balance": true,
+      "coefficient_cache_sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+      "midpoint_time_saved": 0.0359375
+    },
+    {
+      "step": 12,
+      "dt_exact": "1/320",
+      "operator": {
+        "nodes": 4096,
+        "shared_faces": 8192,
+        "maximum_degree": 4,
+        "Lambda_exact_integer": 377,
+        "minimum_exact_uniformization_diagonal": "11821949021847/26529016554979328",
+        "symmetric_generator_trace_raw": -1342177.2800000003,
+        "symmetric_constant_residual_Linf": 8.881784197001252e-16,
+        "uniformization_row_sum_residual_Linf": 2.220446049250313e-16,
+        "uniformization_invariant_mass_residual_Linf": 2.168404344971009e-19,
+        "uniformization_minimum_stored_coefficient": 0.0004456233421750455,
+        "primary_diagonal_is_raw_sum_of_float_face_coefficients": true,
+        "uniformization_diagonal_from_exact_local_rates": true,
+        "rows_weights_or_masses_normalized": false,
+        "zero_eigenvalues_snapped": false,
+        "dense_full_generator_or_propagator_constructed": false
+      },
+      "poisson": {
+        "M": 19,
+        "z_exact": "377/320",
+        "tail_upper_exact": "258751962161709379443594929768625993953425845661477/22392690075285390316605789760208858128790323200000000000000000000000",
+        "raw_weight_sum": 0.9999999999999999,
+        "weights_or_state_normalized": false
+      },
+      "state_metrics": {
+        "mean": 0.5000000000000003,
+        "variance": 0.035801574304717074,
+        "I": 0.9145607207524372,
+        "H": 0.08543927924756278
+      },
+      "independent_metrics": {
+        "mean": 0.4999999999999994,
+        "variance": 0.03580157430471688,
+        "I": 0.9145607207524323,
+        "H": 0.08543927924756767
+      },
+      "primary_control_mass_norm_difference": 1.4857693907096244e-15,
+      "primary_control_relative_difference": 7.509423843687916e-15,
+      "machine_indicator_absolute_this_interval": 4.894101855195922e-12,
+      "cumulative_machine_indicator_absolute": 6.362332411754697e-11,
+      "cumulative_tail_indicator_absolute": 1.6617192416314738e-16,
+      "raw_mass_change_from_c0": 5.488231397121623e-16,
+      "independent_raw_mass_change_from_c0": -1.4740948262384479e-15,
+      "minimum": 0.307658691775708,
+      "maximum": 0.6923413082242925,
+      "chi_start_half_end": [
+        0.03930417763280199,
+        0.0391437796321468,
+        0.038984305039592396
+      ],
+      "half_variance_loss": 0.00012232479228539705,
+      "Simpson_chi_integral": 0.0001223247922921779,
+      "raw_energy_balance_difference": -6.780844332213154e-15,
+      "Simpson_is_empirical_not_exact_balance": true,
+      "coefficient_cache_sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+      "midpoint_time_saved": 0.0390625
+    },
+    {
+      "step": 13,
+      "dt_exact": "1/320",
+      "operator": {
+        "nodes": 4096,
+        "shared_faces": 8192,
+        "maximum_degree": 4,
+        "Lambda_exact_integer": 377,
+        "minimum_exact_uniformization_diagonal": "11821949021847/26529016554979328",
+        "symmetric_generator_trace_raw": -1342177.2800000003,
+        "symmetric_constant_residual_Linf": 8.881784197001252e-16,
+        "uniformization_row_sum_residual_Linf": 2.220446049250313e-16,
+        "uniformization_invariant_mass_residual_Linf": 2.168404344971009e-19,
+        "uniformization_minimum_stored_coefficient": 0.0004456233421750455,
+        "primary_diagonal_is_raw_sum_of_float_face_coefficients": true,
+        "uniformization_diagonal_from_exact_local_rates": true,
+        "rows_weights_or_masses_normalized": false,
+        "zero_eigenvalues_snapped": false,
+        "dense_full_generator_or_propagator_constructed": false
+      },
+      "poisson": {
+        "M": 19,
+        "z_exact": "377/320",
+        "tail_upper_exact": "258751962161709379443594929768625993953425845661477/22392690075285390316605789760208858128790323200000000000000000000000",
+        "raw_weight_sum": 0.9999999999999999,
+        "weights_or_state_normalized": false
+      },
+      "state_metrics": {
+        "mean": 0.5000000000000002,
+        "variance": 0.035558912473648736,
+        "I": 0.9083618598522973,
+        "H": 0.09163814014770266
+      },
+      "independent_metrics": {
+        "mean": 0.4999999999999994,
+        "variance": 0.03555891247364852,
+        "I": 0.9083618598522919,
+        "H": 0.0916381401477081
+      },
+      "primary_control_mass_norm_difference": 1.609955867891257e-15,
+      "primary_control_relative_difference": 8.137091164500029e-15,
+      "machine_indicator_absolute_this_interval": 4.894101855195922e-12,
+      "cumulative_machine_indicator_absolute": 6.851742597274289e-11,
+      "cumulative_tail_indicator_absolute": 1.7895437986800486e-16,
+      "raw_mass_change_from_c0": 6.055946759689346e-16,
+      "independent_raw_mass_change_from_c0": -1.5973008506142694e-15,
+      "minimum": 0.3082080314785992,
+      "maximum": 0.6917919685214012,
+      "chi_start_half_end": [
+        0.038984305039592396,
+        0.03882574272204273,
+        0.038668081909099095
+      ],
+      "half_variance_loss": 0.00012133091553416867,
+      "Simpson_chi_integral": 0.0001213309155400325,
+      "raw_energy_balance_difference": -5.86383968725207e-15,
+      "Simpson_is_empirical_not_exact_balance": true,
+      "coefficient_cache_sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+      "midpoint_time_saved": 0.0421875
+    },
+    {
+      "step": 14,
+      "dt_exact": "1/320",
+      "operator": {
+        "nodes": 4096,
+        "shared_faces": 8192,
+        "maximum_degree": 4,
+        "Lambda_exact_integer": 377,
+        "minimum_exact_uniformization_diagonal": "11821949021847/26529016554979328",
+        "symmetric_generator_trace_raw": -1342177.2800000003,
+        "symmetric_constant_residual_Linf": 8.881784197001252e-16,
+        "uniformization_row_sum_residual_Linf": 2.220446049250313e-16,
+        "uniformization_invariant_mass_residual_Linf": 2.168404344971009e-19,
+        "uniformization_minimum_stored_coefficient": 0.0004456233421750455,
+        "primary_diagonal_is_raw_sum_of_float_face_coefficients": true,
+        "uniformization_diagonal_from_exact_local_rates": true,
+        "rows_weights_or_masses_normalized": false,
+        "zero_eigenvalues_snapped": false,
+        "dense_full_generator_or_propagator_constructed": false
+      },
+      "poisson": {
+        "M": 19,
+        "z_exact": "377/320",
+        "tail_upper_exact": "258751962161709379443594929768625993953425845661477/22392690075285390316605789760208858128790323200000000000000000000000",
+        "raw_weight_sum": 0.9999999999999999,
+        "weights_or_state_normalized": false
+      },
+      "state_metrics": {
+        "mean": 0.5000000000000003,
+        "variance": 0.035318215854946516,
+        "I": 0.902213200823804,
+        "H": 0.09778679917619604
+      },
+      "independent_metrics": {
+        "mean": 0.4999999999999993,
+        "variance": 0.035318215854946294,
+        "I": 0.9022132008237982,
+        "H": 0.09778679917620181
+      },
+      "primary_control_mass_norm_difference": 1.7201228806461967e-15,
+      "primary_control_relative_difference": 8.693900853502096e-15,
+      "machine_indicator_absolute_this_interval": 4.894101855195922e-12,
+      "cumulative_machine_indicator_absolute": 7.34115278279388e-11,
+      "cumulative_tail_indicator_absolute": 1.9173683557286235e-16,
+      "raw_mass_change_from_c0": 6.391371806802049e-16,
+      "independent_raw_mass_change_from_c0": -1.723664613817455e-15,
+      "minimum": 0.3087558022628699,
+      "maximum": 0.6912441977371306,
+      "chi_start_half_end": [
+        0.038668081909099095,
+        0.038511312168167174,
+        0.03835542338222332
+      ],
+      "half_variance_loss": 0.00012034830935110999,
+      "Simpson_chi_integral": 0.00012034830935624538,
+      "raw_energy_balance_difference": -5.135391352613372e-15,
+      "Simpson_is_empirical_not_exact_balance": true,
+      "coefficient_cache_sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+      "midpoint_time_saved": 0.0453125
+    },
+    {
+      "step": 15,
+      "dt_exact": "1/320",
+      "operator": {
+        "nodes": 4096,
+        "shared_faces": 8192,
+        "maximum_degree": 4,
+        "Lambda_exact_integer": 377,
+        "minimum_exact_uniformization_diagonal": "11821949021847/26529016554979328",
+        "symmetric_generator_trace_raw": -1342177.2800000003,
+        "symmetric_constant_residual_Linf": 8.881784197001252e-16,
+        "uniformization_row_sum_residual_Linf": 2.220446049250313e-16,
+        "uniformization_invariant_mass_residual_Linf": 2.168404344971009e-19,
+        "uniformization_minimum_stored_coefficient": 0.0004456233421750455,
+        "primary_diagonal_is_raw_sum_of_float_face_coefficients": true,
+        "uniformization_diagonal_from_exact_local_rates": true,
+        "rows_weights_or_masses_normalized": false,
+        "zero_eigenvalues_snapped": false,
+        "dense_full_generator_or_propagator_constructed": false
+      },
+      "poisson": {
+        "M": 19,
+        "z_exact": "377/320",
+        "tail_upper_exact": "258751962161709379443594929768625993953425845661477/22392690075285390316605789760208858128790323200000000000000000000000",
+        "raw_weight_sum": 0.9999999999999999,
+        "weights_or_state_normalized": false
+      },
+      "state_metrics": {
+        "mean": 0.5000000000000003,
+        "variance": 0.035079462421654495,
+        "I": 0.8961141809825199,
+        "H": 0.10388581901748006
+      },
+      "independent_metrics": {
+        "mean": 0.4999999999999993,
+        "variance": 0.03507946242165426,
+        "I": 0.8961141809825139,
+        "H": 0.10388581901748606
+      },
+      "primary_control_mass_norm_difference": 1.817070881441577e-15,
+      "primary_control_relative_difference": 9.183898583515223e-15,
+      "machine_indicator_absolute_this_interval": 4.894101855195922e-12,
+      "cumulative_machine_indicator_absolute": 7.830562968313472e-11,
+      "cumulative_tail_indicator_absolute": 2.0451929127771983e-16,
+      "raw_mass_change_from_c0": 6.881837764580179e-16,
+      "independent_raw_mass_change_from_c0": -1.8190879575233354e-15,
+      "minimum": 0.3093020086353852,
+      "maximum": 0.6906979913646155,
+      "chi_start_half_end": [
+        0.03835542338222332,
+        0.038200405729868,
+        0.03804624966735611
+      ],
+      "half_variance_loss": 0.0001193767166460108,
+      "Simpson_chi_integral": 0.00011937671665054764,
+      "raw_energy_balance_difference": -4.536843990765593e-15,
+      "Simpson_is_empirical_not_exact_balance": true,
+      "coefficient_cache_sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+      "midpoint_time_saved": 0.0484375
+    }
+  ],
+  "initial_mass_fluctuation_norm": 0.19785397943125763
+}

@@ -1,0 +1,97 @@
+{
+  "sources": [
+    {
+      "path": "runs/reconnect-contact-oracle/sha256.json",
+      "sha256": "a1465938389dd6f897312ea2fa9af49cb766d5e7795eee1e99e9148f29b63c15",
+      "role": "parent cumulative seal6459entries"
+    },
+    {
+      "path": "runs/reconnect-contact-oracle/next-gate-spec.json",
+      "sha256": "f8b41ba23ab20f4f5510787fb8741ed8f9b4c2b561b4e1985efd955a34f73b87",
+      "role": "immutable registered three-grid control,old executedfalse retained"
+    },
+    {
+      "path": "runs/reconnect-contact-oracle/results.json",
+      "sha256": "05fee3f6c13d2abe4bef111642c003958d868f612982a5ffa79c98c54e8a24a4",
+      "role": "oldN32decision andstates reused withoutaction"
+    },
+    {
+      "path": "research/reconnect/CONTACT_ORACLE_COMPARISON.md",
+      "sha256": "a8f28e936b3a155ececb3db0b45f52a0b5f626ea8893c3a365c161749b311a08",
+      "role": "previous N32 report andfailure recovery retained"
+    },
+    {
+      "path": "research/reconnect/CONTACT_PERIODIC_SPECTRAL_BASIS.md",
+      "sha256": "ee14cff8f18915caf6abd2c1971ca11b1f8b5d5e7018ccadf218aa2d6aa33572",
+      "role": "original weighted transmission referencebasis andtailproof"
+    },
+    {
+      "path": "research/reconnect/periodic_voronoi_fv.py",
+      "sha256": "b3b24dc9547d4bd6d1fba531104b552e2f37bb0950cb103e8923e7f00eccaa3e",
+      "role": "unchanged pointgeometry/ordinary halfresistance"
+    },
+    {
+      "path": "research/reconnect/voronoi_time_action.py",
+      "sha256": "0db8f151cfcec1b93889acfc6ba3ec6f4621d9bf7417dbf488df5eac3df1330a",
+      "role": "unchanged sparseexponential/rawuniformization"
+    },
+    {
+      "path": "research/reconnect/voronoi_time16_core.py",
+      "sha256": "faab14ab22563a3ee3a0f5981bbdc86acdfd733548c90106100a49aac556a484",
+      "role": "unchanged T.05 chronology andH/I"
+    },
+    {
+      "path": "research/reconnect/contact_oracle_reporting.py",
+      "sha256": "b22eb140dc0eebf12666894024b090d5820d9253dd502ca65d50304ab91047df",
+      "role": "original NumPy totaltype restoration reused unchanged"
+    },
+    {
+      "path": "docs/METHOD.md",
+      "sha256": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+      "role": "original fixedmaterial,threegrid,physicalcriteria"
+    },
+    {
+      "path": "docs/CODEX_TASK.md",
+      "sha256": "b585447c6a038febc3c364723946aea80cedce91109db16bb99f15d0304b3142",
+      "role": "original T4 anddensitysource closure"
+    },
+    {
+      "path": "runs/rebuild-stage3-space/inputs-cells32.npz",
+      "sha256": "1a77246ec8f4e514d431252c778e0dfc21fc86e8829346a2befc58cb288ea17e",
+      "role": "nextgate: original rebuiltBecker32 materialmass/c0/projectedreference,notv080"
+    },
+    {
+      "path": "runs/rebuild-stage3-space/reference-n8192-k8192.npz",
+      "sha256": "0da610049bde539f6028de7ac34a49baccfe068b256aaa5251f80e54c5a5ea97",
+      "role": "nextgate: existing independent fineBeckerreference,not solvedagain"
+    },
+    {
+      "path": "runs/rebuild-stage3-space/config.json",
+      "sha256": "fd2fa00012dfd8a6926eaf4507896af9b3a2551e4128c764b624706e1d69510a",
+      "role": "nextgate: original physicaldelta/D/T andboundaryscope"
+    },
+    {
+      "path": "runs/rebuild-stage3-space/results.json",
+      "sha256": "f7e80f9dd08c9cc82687ffab97f239783905924c98ea7b984421d8fc7d0efc5b",
+      "role": "nextgate: existingreference uncertainty andlimitedphysicalFVcomparison"
+    },
+    {
+      "path": "research/rebuild/becker.py",
+      "sha256": "6c42c00550bf2614d6d8baf978606936fff059f006308656bdb934e1f740c11e",
+      "role": "nextgate: original prescribedflow andx(mu,t)"
+    },
+    {
+      "path": "research/rebuild/REPORT.md",
+      "sha256": "8aa28c57e9cfb9e31349179337c74c33d499b6739bd752f1ffa9936e49347548",
+      "role": "nextgate: oldgeometry-centre/mass-centre distinction remains"
+    },
+    {
+      "path": "research/reconnect/T3_COVERAGE_REVIEW.md",
+      "sha256": "d7cc013050a6bd8c909c7bcbb210993cc73e7c34b4ae881876caaeec9fb4a09e",
+      "role": "originalpoint-backendT4gapnotclosedbyoldtruefaceFV"
+    }
+  ],
+  "old_candidate_reruns": 0,
+  "new_reference_PDE_solves": 0,
+  "N32_original_decision_unchanged": true
+}

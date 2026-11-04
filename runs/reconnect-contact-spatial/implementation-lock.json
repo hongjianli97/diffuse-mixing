@@ -1,0 +1,20 @@
+{
+  "files": {
+    "contact_spatial_core.py": "5e95d838fcf25b6d9eb5fe94d61f1b00d05da02a29bf653f9adf15cf4b5b1f03",
+    "contact_spatial_study.py": "eebd755ba532f4aa24a29c62fda1f8cf1b074a618aec352efd397439da3ae538",
+    "test_contact_spatial.py": "559a7c7fbdb615116769eec7f9aa89bb84a70462409bafaf23c803cab55eff1c",
+    "contact_oracle_core.py": "16195f0efaff9c02545afd4c84a858e5e2cf72631115ae32d72801b754a5ad8c",
+    "contact_oracle_reporting.py": "b22eb140dc0eebf12666894024b090d5820d9253dd502ca65d50304ab91047df",
+    "periodic_voronoi_fv.py": "b3b24dc9547d4bd6d1fba531104b552e2f37bb0950cb103e8923e7f00eccaa3e",
+    "audit_shear_voronoi_time.py": "79ee180ec1e0056cf4ee27911e266f5ce45bf2b7e97db14ee9ea27ba982bb956",
+    "cartesian_fv_modes.py": "3e03f374c99cb2cf9fc196ae14126724c75a93577ce8de9f34b5da1a8966daf4",
+    "contact_spectral_reference.py": "d21bb6d5a7c47eaf064793b368e66340141da6336136d8f529bd79702b6ee46d",
+    "voronoi_time_action.py": "0db8f151cfcec1b93889acfc6ba3ec6f4621d9bf7417dbf488df5eac3df1330a",
+    "voronoi_time16_core.py": "faab14ab22563a3ee3a0f5981bbdc86acdfd733548c90106100a49aac556a484",
+    "shear_union64_study.py": "483240641382641d553abf92cb5be0f5f2c34a63874c527b7177a3d858936311",
+    "material_union.py": "a26f4a4fa7b195af3e39a91a0bc6e4db5d7f8bf05869cdb39635cb4f8446f86a",
+    "t1_uniform_core.py": "bbd7e9ab8ad55860c4d66d3fbda2673ab4f30ae48f6b2f1d1e4e51e7df205d5e"
+  },
+  "protocol_sha256": "4cf034ce994e7ac8721d1af002fd18e1416c929f1d413ff06c3b652402bbafac",
+  "fixed_before_new_scientific_inputs": true
+}

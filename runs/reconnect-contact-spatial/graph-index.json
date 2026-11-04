@@ -1,0 +1,12 @@
+{
+  "16": {
+    "file": "n16/geometry.json",
+    "sha256": "64264b6ccf1e279f7300d7fa580df55c5a06ce3ac29a34671ae55dc75d42b92a",
+    "builder_inputs_sha256": "8306e950421a599c2da7262fa1fcd3eef3501ba60b649db1c4099ccb9b529495"
+  },
+  "64": {
+    "file": "n64/geometry.json",
+    "sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+    "builder_inputs_sha256": "6bd1879741275195cf1f0f596940e895a514307a467286efffbafa9e3dd2a9fd"
+  }
+}

@@ -1,0 +1,8 @@
+test_fixed_parent_mass_component_integrals_and_nonzero_capacity_bridge (__main__.Checks.test_fixed_parent_mass_component_integrals_and_nonzero_capacity_bridge) ... ok
+test_multiN_point_face_laws_and_original_finite_cell_formula (__main__.Checks.test_multiN_point_face_laws_and_original_finite_cell_formula) ... ok
+test_positive_budget_classification_and_native_hidden_error_rejection (__main__.Checks.test_positive_budget_classification_and_native_hidden_error_rejection) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.859s
+
+OK

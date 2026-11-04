@@ -1,0 +1,91 @@
+{
+  "already_executed": false,
+  "type": "one_moving_Becker_point_boundary_duration_adapter_contract_and_oracle_discriminator",
+  "reason": "static contact samebackend threegrid control passed; next originalgap is moving shock with correctly declared nonperiodic materialboundary andphysical duration",
+  "scope": "one rebuiltBecker delta.08,Doriginalfloat.02,T.1,32fixedmaterialcolumns,8uniform transversecopies/unitheight; oracle pointdensity only,no density/flow/modelscan",
+  "staged_dependency": "first write exact bounded-x/periodic-y outerboundary anddurationT contract; verify adapter/unit equivalence at originalT.05; freeze foursoftwarechecks andprotocolbefore anynewscientificpoint/graph/reference/state load",
+  "sources": [
+    {
+      "path": "runs/rebuild-stage3-space/inputs-cells32.npz",
+      "sha256": "1a77246ec8f4e514d431252c778e0dfc21fc86e8829346a2befc58cb288ea17e"
+    },
+    {
+      "path": "runs/rebuild-stage3-space/reference-n8192-k8192.npz",
+      "sha256": "0da610049bde539f6028de7ac34a49baccfe068b256aaa5251f80e54c5a5ea97"
+    },
+    {
+      "path": "runs/rebuild-stage3-space/config.json",
+      "sha256": "fd2fa00012dfd8a6926eaf4507896af9b3a2551e4128c764b624706e1d69510a"
+    },
+    {
+      "path": "runs/rebuild-stage3-space/results.json",
+      "sha256": "f7e80f9dd08c9cc82687ffab97f239783905924c98ea7b984421d8fc7d0efc5b"
+    },
+    {
+      "path": "research/rebuild/becker.py",
+      "sha256": "6c42c00550bf2614d6d8baf978606936fff059f006308656bdb934e1f740c11e"
+    },
+    {
+      "path": "research/rebuild/REPORT.md",
+      "sha256": "8aa28c57e9cfb9e31349179337c74c33d499b6739bd752f1ffa9936e49347548"
+    },
+    {
+      "path": "research/reconnect/periodic_voronoi_fv.py",
+      "sha256": "b3b24dc9547d4bd6d1fba531104b552e2f37bb0950cb103e8923e7f00eccaa3e"
+    },
+    {
+      "path": "research/reconnect/voronoi_time_action.py",
+      "sha256": "0db8f151cfcec1b93889acfc6ba3ec6f4621d9bf7417dbf488df5eac3df1330a"
+    },
+    {
+      "path": "research/reconnect/voronoi_time16_core.py",
+      "sha256": "faab14ab22563a3ee3a0f5981bbdc86acdfd733548c90106100a49aac556a484"
+    }
+  ],
+  "original_material_columns": 32,
+  "transverse_rows": 8,
+  "nodes": 256,
+  "delta": 0.08,
+  "D": 0.02,
+  "T_exact": "1/10",
+  "K_values": [
+    4,
+    8,
+    16
+  ],
+  "point_labels": "fixed mass-labelmidpoints oforiginal32muintervals;worldx=originalBecker.x_mu(mu_mid,t),y=(j+.5)/8; never forcepoints tocurrentcellgeometriccentres",
+  "boundary": "givenmovingoutermaterialendpoints x_mu(mu0,t),x_mu(muM,t),zero scalarflux there; periodicunit-y only,no periodicx,shock isnotwall",
+  "geometry": "new optional exactbounded-x/periodic-y pointVoronoi adapter sharing originalEuclidean clipping/moments/ordinaryhalfresistance; old periodicbuilder unchanged; never giveinternalmaterialfaces/scalar/reference/F_C to builder",
+  "time": "new optional duration-explicit chronological wrapper sharing unchanged sparseexponential/fulluniformization andoriginalH; atT.05 fixture mustmatcholdordered_path bitwise; do not silentlyuseoldhardcodedT.05 atT.1",
+  "coefficient_input_order": "puregivenmasslabels/points/givenrho/D/outerboundary only; all28graphs sealedbefore actualfixedmass/c0/reference oroldstateload; internalmasslabelintervals generatepointlabels only,not materialfaces passedtobuilder",
+  "material_state": "reuse original32column mass/c0; extrudeeachrow withmass/8,samec0; preserveunmodifiedcolumnvalues andnormalizationbridges; truephysicalmaterialmeans notpointVoronoimeans",
+  "reference": "reuse existing saved8192space/8192time projected32column reference atT.1 plus savedspace/timeuncertainty; no newPDEsolve; do not replace witholdtruefaceFV solution",
+  "acceptance": "exact independent boundary/bisector/face/ordinaryresistance audits; originalmass/extrema/variance/sign/residualguards; fullindependentsequences andoriginalH; actual4/8to8/16endpointstate/Htimedifference decrease mustexceed fixedpositive numeric/reference indicators; report actualPDEerror anddensitypoint-vsfinitecell diagnostics withoutfittingphysicalthreshold",
+  "physical_scope": "onepointgeometryoracle moving-shockdiscriminator only; failure/unresolved retained,not fullT4or densityadmission; no claimnewspaceconvergence",
+  "new_candidate_graphs": 28,
+  "new_candidate_transient_runs": 3,
+  "new_complete_independent_uniformization_sequences": 3,
+  "old_candidate_reruns": 0,
+  "new_reference_PDE_solves": 0,
+  "new_spectral_fits": 0,
+  "new_software_checks_planned": 4,
+  "recorded_checks_total_if_all_pass": 500,
+  "check_categories": [
+    "boundedx/periodicy Euclideanface reciprocity,noflux andillegalinput rejection",
+    "explicitT chronology equivalenceandtimeorder atoldT.05",
+    "unchanged32column materialmeans/ref reuseandtransverseintegrals",
+    "rawfullsequence/originalH/time/PDEindicator adversecase rejection"
+  ],
+  "main_wall_seconds_cap": 900,
+  "main_peak_RSS_MiB_cap": 1024,
+  "tail_per_interval_exact": "1/10000000000000000",
+  "original_algebra_tolerance": 1e-10,
+  "norm_estimator_seed": 20261101,
+  "stop": "preservefailure/unresolved; no automaticmoreN/K/rows/delta/centreconvention/density/modelscan,positivefacedeletion,clipping,normalization,F/Cfit,thresholdorHchanges",
+  "new_Becker_points_graphs_states_or_reference_evaluations_generated_this_turn": false,
+  "moving_shock_T4_closed": false,
+  "all_three_density_sources_closed": false,
+  "stage3_physical_acceptance": "incomplete",
+  "fluid_orc_enabled": false,
+  "kappa_computed": false
+}

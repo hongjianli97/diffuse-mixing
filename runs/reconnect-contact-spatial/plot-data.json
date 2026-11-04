@@ -1,0 +1,47 @@
+{
+  "N_values": [
+    16,
+    32,
+    64
+  ],
+  "saved_errors": {
+    "0.025": {
+      "native_error_own_initial_denominator": [
+        0.001295162655742797,
+        0.0003291369328548262,
+        8.135735622918862e-05
+      ],
+      "common_error_N16_denominator": [
+        0.001295162655742797,
+        0.0003253732034259066,
+        7.741352907073382e-05
+      ],
+      "common_H_error": [
+        0.0007136685832027645,
+        0.0001809685750356893,
+        4.603246666290417e-05
+      ]
+    },
+    "0.05": {
+      "native_error_own_initial_denominator": [
+        0.0017630624614367269,
+        0.0004341107892287824,
+        0.00010884269231749409
+      ],
+      "common_error_N16_denominator": [
+        0.0017630624614367269,
+        0.00041779023434238,
+        0.00010249567725694379
+      ],
+      "common_H_error": [
+        0.001326202211250238,
+        0.00033662250189747667,
+        8.458188835402947e-05
+      ]
+    }
+  },
+  "fits_clipping_or_extrapolation": false,
+  "new_candidate_or_reference_solve": false,
+  "stage3_physical_acceptance": "incomplete",
+  "fluid_orc_enabled": false
+}

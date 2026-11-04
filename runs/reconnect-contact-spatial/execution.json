@@ -1,0 +1,18 @@
+{
+  "tests_exit_code": 0,
+  "study_exit_code": 0,
+  "tests_first_attempt_passed": true,
+  "main_first_attempt_passed": true,
+  "preflight_manifest_verification_seconds": 16.624616245000652,
+  "elapsed_main_seconds": 11.662287734001438,
+  "peak_RSS_MiB": 89.625,
+  "resource_caps_passed": true,
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "threads": 4,
+  "norm_estimator_seed": 20261101,
+  "network_used": false,
+  "environment_configuration_changed": false,
+  "published": false
+}

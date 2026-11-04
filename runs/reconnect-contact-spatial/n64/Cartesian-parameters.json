@@ -1,0 +1,265 @@
+{
+  "N": 64,
+  "all_discrete_mode_slots_retained": 4096,
+  "normal_g_exact": [
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "1152921504606847/36028797018963968",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "1152921504606847/36028797018963968"
+  ],
+  "raw_minimum_normal_eigenvalue": -3.842064931178665e-15,
+  "normal_eigen_residual_frobenius": 1.684971883075237e-12,
+  "normal_orthogonality_residual_frobenius": 1.0303129336518538e-14,
+  "normal_matrix_rounding_row_bound_exact": "1/70368744177664",
+  "transverse_eigenvalue_vs90digit_max_difference": 5.718762339308988e-14,
+  "rows": [
+    {
+      "time_exact": "0",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 8.396552286709071e-15,
+        "fixed_machine_transform_allowance": 7.411942108553345e-13,
+        "initial_roundtrip": 7.375941408620414e-16,
+        "imaginary_mass_norm": 3.9362202439655424e-17,
+        "time_label_rounding": 0.0
+      },
+      "total_absolute": 7.503677194853452e-13
+    },
+    {
+      "time_exact": "1/320",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 1.2869542691743288e-14,
+        "fixed_machine_transform_allowance": 7.411942108553345e-13,
+        "initial_roundtrip": 7.375941408620414e-16,
+        "imaginary_mass_norm": 3.34334714023825e-17,
+        "time_label_rounding": 4.270938019894844e-20
+      },
+      "total_absolute": 7.548348238687224e-13
+    },
+    {
+      "time_exact": "1/160",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 1.7342533096777506e-14,
+        "fixed_machine_transform_allowance": 7.411942108553345e-13,
+        "initial_roundtrip": 7.375941408620414e-16,
+        "imaginary_mass_norm": 2.841096330465598e-17,
+        "time_label_rounding": 8.541876039789688e-20
+      },
+      "total_absolute": 7.593028344750391e-13
+    },
+    {
+      "time_exact": "3/320",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 2.1815523501811723e-14,
+        "fixed_machine_transform_allowance": 7.411942108553345e-13,
+        "initial_roundtrip": 7.375941408620414e-16,
+        "imaginary_mass_norm": 2.6186854432558058e-17,
+        "time_label_rounding": 8.541876039789688e-20
+      },
+      "total_absolute": 7.637736007712013e-13
+    },
+    {
+      "time_exact": "1/80",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 2.6288513906845947e-14,
+        "fixed_machine_transform_allowance": 7.411942108553345e-13,
+        "initial_roundtrip": 7.375941408620414e-16,
+        "imaginary_mass_norm": 2.7668347441836808e-17,
+        "time_label_rounding": 1.7083752079579376e-19
+      },
+      "total_absolute": 7.682481580880051e-13
+    },
+    {
+      "time_exact": "1/64",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 3.076150431188016e-14,
+        "fixed_machine_transform_allowance": 7.411942108553345e-13,
+        "initial_roundtrip": 7.375941408620414e-16,
+        "imaginary_mass_norm": 2.8049090817572704e-17,
+        "time_label_rounding": 0.0
+      },
+      "total_absolute": 7.727213583988943e-13
+    },
+    {
+      "time_exact": "3/160",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 3.523449471691437e-14,
+        "fixed_machine_transform_allowance": 7.411942108553345e-13,
+        "initial_roundtrip": 7.375941408620414e-16,
+        "imaginary_mass_norm": 2.4699084091463282e-17,
+        "time_label_rounding": 1.7083752079579376e-19
+      },
+      "total_absolute": 7.771911696347232e-13
+    },
+    {
+      "time_exact": "7/320",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 3.97074851219486e-14,
+        "fixed_machine_transform_allowance": 7.411942108553345e-13,
+        "initial_roundtrip": 7.375941408620414e-16,
+        "imaginary_mass_norm": 2.2881105745485878e-17,
+        "time_label_rounding": 3.4167504159158753e-19
+      },
+      "total_absolute": 7.816625128989322e-13
+    },
+    {
+      "time_exact": "1/40",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 4.418047552698281e-14,
+        "fixed_machine_transform_allowance": 7.411942108553345e-13,
+        "initial_roundtrip": 7.375941408620414e-16,
+        "imaginary_mass_norm": 2.425353933836651e-17,
+        "time_label_rounding": 3.4167504159158753e-19
+      },
+      "total_absolute": 7.861368757375593e-13
+    },
+    {
+      "time_exact": "9/320",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 4.865346593201703e-14,
+        "fixed_machine_transform_allowance": 7.411942108553345e-13,
+        "initial_roundtrip": 7.375941408620414e-16,
+        "imaginary_mass_norm": 2.415496563967627e-17,
+        "time_label_rounding": 1.7083752079579376e-19
+      },
+      "total_absolute": 7.906095967313741e-13
+    },
+    {
+      "time_exact": "1/32",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 5.312645633705126e-14,
+        "fixed_machine_transform_allowance": 7.411942108553347e-13,
+        "initial_roundtrip": 7.375941408620414e-16,
+        "imaginary_mass_norm": 2.6906711945208854e-17,
+        "time_label_rounding": 0.0
+      },
+      "total_absolute": 7.950851680451932e-13
+    },
+    {
+      "time_exact": "11/320",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 5.759944674208547e-14,
+        "fixed_machine_transform_allowance": 7.411942108553347e-13,
+        "initial_roundtrip": 7.375941408620414e-16,
+        "imaginary_mass_norm": 2.6298783843130278e-17,
+        "time_label_rounding": 6.833500831831751e-19
+      },
+      "total_absolute": 7.995582338722086e-13
+    },
+    {
+      "time_exact": "3/80",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 6.207243714711968e-14,
+        "fixed_machine_transform_allowance": 7.411942108553347e-13,
+        "initial_roundtrip": 7.375941408620414e-16,
+        "imaginary_mass_norm": 2.5645878888730143e-17,
+        "time_label_rounding": 3.4167504159158753e-19
+      },
+      "total_absolute": 8.040302296972467e-13
+    },
+    {
+      "time_exact": "13/320",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 6.654542755215391e-14,
+        "fixed_machine_transform_allowance": 7.411942108553347e-13,
+        "initial_roundtrip": 7.375941408620414e-16,
+        "imaginary_mass_norm": 2.589667633994253e-17,
+        "time_label_rounding": 3.4167504159158753e-19
+      },
+      "total_absolute": 8.085034708997322e-13
+    },
+    {
+      "time_exact": "7/160",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 7.101841795718812e-14,
+        "fixed_machine_transform_allowance": 7.411942108553347e-13,
+        "initial_roundtrip": 7.375941408620414e-16,
+        "imaginary_mass_norm": 2.244243974391032e-17,
+        "time_label_rounding": 6.833500831831751e-19
+      },
+      "total_absolute": 8.12973348743212e-13
+    },
+    {
+      "time_exact": "3/64",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 7.549140836222235e-14,
+        "fixed_machine_transform_allowance": 7.411942108553347e-13,
+        "initial_roundtrip": 7.375941408620414e-16,
+        "imaginary_mass_norm": 2.814623859705094e-17,
+        "time_label_rounding": 0.0
+      },
+      "total_absolute": 8.174513595970162e-13
+    },
+    {
+      "time_exact": "1/20",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 7.996439876725658e-14,
+        "fixed_machine_transform_allowance": 7.411942108553347e-13,
+        "initial_roundtrip": 7.375941408620414e-16,
+        "imaginary_mass_norm": 2.335509757550202e-17,
+        "time_label_rounding": 6.833500831831751e-19
+      },
+      "total_absolute": 8.21920242211112e-13
+    }
+  ],
+  "clipping_normalization_mode_filter_or_zero_eigenvalue_reset": false
+}

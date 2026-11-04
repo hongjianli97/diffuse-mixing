@@ -1,0 +1,17 @@
+{
+  "independent_mpmath80_100_roundings_bitwise_equal": true,
+  "production_reference_evaluator_or_projection_called": false,
+  "mass_norm_differences_from_Decimal": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "fixed_evaluation_allowance": 2.2469334198890888e-14,
+  "independent_float_serialization_mass_norms": [
+    3.9571752912887795e-17,
+    4.006192936746142e-17,
+    3.979038728467733e-17
+  ],
+  "separate_time_tail_exponents_and_exact_bounds_verified": true,
+  "t0_direct_formula_not_truncated": true
+}

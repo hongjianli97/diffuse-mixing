@@ -1,0 +1,8 @@
+{
+  "all_original_parent_capacities_exact": true,
+  "all_direct_component_integral_snapshots_verified": 165,
+  "fixed_parent_exact_integral_probes_verified": 825,
+  "maximum_fsum_vs_saved_mean_difference": 2.220446049250313e-16,
+  "production_group_sum_or_observe_path_called": false,
+  "masses_or_states_reweighted": false
+}

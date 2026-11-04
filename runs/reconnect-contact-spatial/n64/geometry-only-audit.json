@@ -1,0 +1,62 @@
+{
+  "certificate": {
+    "all_vertices_independently_rebuilt_from_bisectors": true,
+    "all_face_counterparts_and_two_half_resistances_exact": true,
+    "shared_positive_faces": 8192,
+    "area_sum_256bit_enclosure": {
+      "lower_exact": "1",
+      "upper_exact": "1"
+    },
+    "fixed_all_point_halfplane_probes": {
+      "fixed_ids": [
+        0,
+        32,
+        63,
+        2048,
+        4095
+      ],
+      "all_selected_cells_passed": true,
+      "records": [
+        {
+          "id": 0,
+          "other_points_checked": 4095,
+          "possible_cutters_tested": 24,
+          "maximum_signed_halfplane_residual_exact": "0",
+          "final_radius_L1_exact": "1/64"
+        },
+        {
+          "id": 32,
+          "other_points_checked": 4095,
+          "possible_cutters_tested": 24,
+          "maximum_signed_halfplane_residual_exact": "0",
+          "final_radius_L1_exact": "1/64"
+        },
+        {
+          "id": 63,
+          "other_points_checked": 4095,
+          "possible_cutters_tested": 24,
+          "maximum_signed_halfplane_residual_exact": "0",
+          "final_radius_L1_exact": "1/64"
+        },
+        {
+          "id": 2048,
+          "other_points_checked": 4095,
+          "possible_cutters_tested": 24,
+          "maximum_signed_halfplane_residual_exact": "0",
+          "final_radius_L1_exact": "1/64"
+        },
+        {
+          "id": 4095,
+          "other_points_checked": 4095,
+          "possible_cutters_tested": 24,
+          "maximum_signed_halfplane_residual_exact": "0",
+          "final_radius_L1_exact": "1/64"
+        }
+      ]
+    }
+  },
+  "cache_sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+  "audit_source_sha256": "79ee180ec1e0056cf4ee27911e266f5ce45bf2b7e97db14ee9ea27ba982bb956",
+  "mass_c0_reference_or_oldstates_loaded": false,
+  "builder_called_by_auditor": false
+}

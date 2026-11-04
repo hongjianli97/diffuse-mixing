@@ -1,0 +1,7 @@
+{
+  "audit_exit_code": 0,
+  "audit_first_attempt_passed": true,
+  "elapsed_audit_seconds": 31.944495925999945,
+  "peak_auditor_RSS_MiB": 83.15625,
+  "audit_source_sha256": "eea85dbf328818b74068bf980e7df34c1b5cf36b621acc0c4071248c5f8aebec"
+}

@@ -1,0 +1,26 @@
+{
+  "independent_exact_normal_ring_verified": true,
+  "all17_full_mode_states_checked": true,
+  "eigh_or_production_cartesian_solver_called_by_this_audit": false,
+  "mass_norm_differences": [
+    9.791096485803067e-16,
+    9.82117031925288e-16,
+    9.46993791712366e-16,
+    9.668745497765284e-16,
+    9.624761120090764e-16,
+    8.788185147250747e-16,
+    9.003198128131902e-16,
+    8.563843312570936e-16,
+    9.098885084345832e-16,
+    8.659936970222342e-16,
+    8.735706418711296e-16,
+    8.483347640931028e-16,
+    8.916276167317531e-16,
+    8.667022923829059e-16,
+    8.890115094113009e-16,
+    8.628745444373434e-16,
+    8.717775118569578e-16
+  ],
+  "all_within_fixed_Cartesian_indicator": true,
+  "raw_minimum_normal_eigenvalue_not_corrected": 6.661338147750824e-16
+}

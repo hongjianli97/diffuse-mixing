@@ -1,0 +1,217 @@
+{
+  "N": 16,
+  "all_discrete_mode_slots_retained": 256,
+  "normal_g_exact": [
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "1152921504606847/36028797018963968",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "1152921504606847/36028797018963968"
+  ],
+  "raw_minimum_normal_eigenvalue": 6.661338147750824e-16,
+  "normal_eigen_residual_frobenius": 3.29950194411154e-14,
+  "normal_orthogonality_residual_frobenius": 4.7588984772724436e-15,
+  "normal_matrix_rounding_row_bound_exact": "1/1125899906842624",
+  "transverse_eigenvalue_vs90digit_max_difference": 1.7763568394002505e-15,
+  "rows": [
+    {
+      "time_exact": "0",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 3.876348256200784e-15,
+        "fixed_machine_transform_allowance": 1.8520663017285022e-13,
+        "initial_roundtrip": 9.764382310053725e-16,
+        "imaginary_mass_norm": 1.7000208213395068e-17,
+        "time_label_rounding": 0.0
+      },
+      "total_absolute": 1.9007641686826976e-13
+    },
+    {
+      "time_exact": "1/320",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 3.96711824566055e-15,
+        "fixed_machine_transform_allowance": 1.8520663017285022e-13,
+        "initial_roundtrip": 9.764382310053725e-16,
+        "imaginary_mass_norm": 1.3764407116801545e-17,
+        "time_label_rounding": 4.08924285432855e-20
+      },
+      "total_absolute": 1.9016399194906148e-13
+    },
+    {
+      "time_exact": "1/160",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 4.057888235120317e-15,
+        "fixed_machine_transform_allowance": 1.8520663017285022e-13,
+        "initial_roundtrip": 9.764382310053725e-16,
+        "imaginary_mass_norm": 1.3033275557620168e-17,
+        "time_label_rounding": 8.1784857086571e-20
+      },
+      "total_absolute": 1.902540716993906e-13
+    },
+    {
+      "time_exact": "3/320",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 4.148658224580084e-15,
+        "fixed_machine_transform_allowance": 1.8520663017285022e-13,
+        "initial_roundtrip": 9.764382310053725e-16,
+        "imaginary_mass_norm": 1.2568981967704354e-17,
+        "time_label_rounding": 8.1784857086571e-20
+      },
+      "total_absolute": 1.9034437739526045e-13
+    },
+    {
+      "time_exact": "1/80",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 4.2394282140398504e-15,
+        "fixed_machine_transform_allowance": 1.8520663017285022e-13,
+        "initial_roundtrip": 9.764382310053725e-16,
+        "imaginary_mass_norm": 1.389573730109118e-17,
+        "time_label_rounding": 1.63569714173142e-19
+      },
+      "total_absolute": 1.9043655592491067e-13
+    },
+    {
+      "time_exact": "1/64",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 4.330198203499617e-15,
+        "fixed_machine_transform_allowance": 1.8520663017285022e-13,
+        "initial_roundtrip": 9.764382310053725e-16,
+        "imaginary_mass_norm": 1.3182111581299367e-17,
+        "time_label_rounding": 0.0
+      },
+      "total_absolute": 1.905264487189365e-13
+    },
+    {
+      "time_exact": "3/160",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 4.420968192959384e-15,
+        "fixed_machine_transform_allowance": 1.8520663017285022e-13,
+        "initial_roundtrip": 9.764382310053725e-16,
+        "imaginary_mass_norm": 1.3704683923464418e-17,
+        "time_label_rounding": 1.63569714173142e-19
+      },
+      "total_absolute": 1.906179048504526e-13
+    },
+    {
+      "time_exact": "7/320",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 4.5117381824191506e-15,
+        "fixed_machine_transform_allowance": 1.8520663017285022e-13,
+        "initial_roundtrip": 9.764382310053725e-16,
+        "imaginary_mass_norm": 1.131470039841622e-17,
+        "time_label_rounding": 3.27139428346284e-19
+      },
+      "total_absolute": 1.907064484261015e-13
+    },
+    {
+      "time_exact": "1/40",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 4.602508171878917e-15,
+        "fixed_machine_transform_allowance": 1.8520663017285022e-13,
+        "initial_roundtrip": 9.764382310053725e-16,
+        "imaginary_mass_norm": 1.3181251283162391e-17,
+        "time_label_rounding": 3.27139428346284e-19
+      },
+      "total_absolute": 1.90799084966446e-13
+    },
+    {
+      "time_exact": "9/320",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 4.6932781613386835e-15,
+        "fixed_machine_transform_allowance": 1.8520663017285022e-13,
+        "initial_roundtrip": 9.764382310053725e-16,
+        "imaginary_mass_norm": 1.4175637604506585e-17,
+        "time_label_rounding": 1.63569714173142e-19
+      },
+      "total_absolute": 1.9089068577251293e-13
+    },
+    {
+      "time_exact": "1/32",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 4.784048150798451e-15,
+        "fixed_machine_transform_allowance": 1.8520663017285022e-13,
+        "initial_roundtrip": 9.764382310053725e-16,
+        "imaginary_mass_norm": 1.1182829123540374e-17,
+        "time_label_rounding": 0.0
+      },
+      "total_absolute": 1.909782993837776e-13
+    },
+    {
+      "time_exact": "11/320",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 4.874818140258217e-15,
+        "fixed_machine_transform_allowance": 1.8520663017285022e-13,
+        "initial_roundtrip": 9.764382310053725e-16,
+        "imaginary_mass_norm": 1.2337045900831067e-17,
+        "time_label_rounding": 6.54278856692568e-19
+      },
+      "total_absolute": 1.9107087786887132e-13
+    },
+    {
+      "time_exact": "3/80",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 4.965588129717984e-15,
+        "fixed_machine_transform_allowance": 1.8520663017285022e-13,
+        "initial_roundtrip": 9.764382310053725e-16,
+        "imaginary_mass_norm": 1.4647844514118673e-17,
+        "time_label_rounding": 3.27139428346284e-19
+      },
+      "total_absolute": 1.9116363151751603e-13
+    },
+    {
+      "time_exact": "13/320",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 5.05635811917775e-15,
+        "fixed_machine_transform_allowance": 1.8520663017285022e-13,
+        "initial_roundtrip": 9.764382310053725e-16,
+        "imaginary_mass_norm": 9.692093542848467e-18,
+        "time_label_rounding": 3.27139428346284e-19
+      },
+      "total_absolute": 1.9124944575600452e-13
+    },
+    {
+      "time_exact": "7/160",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 5.147128108637517e-15,
+        "fixed_machine_transform_allowance": 1.8520663017285022e-13,
+        "initial_roundtrip": 9.764382310053725e-16,
+        "imaginary_mass_norm": 9.127706173495331e-18,
+        "time_label_rounding": 6.54278856692568e-19
+      },
+      "total_absolute": 1.913399784975233e-13
+    },
+    {
+      "time_exact": "3/64",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 5.237898098097284e-15,
+        "fixed_machine_transform_allowance": 1.8520663017285022e-13,
+        "initial_roundtrip": 9.764382310053725e-16,
+        "imaginary_mass_norm": 1.2978679768328251e-17,
+        "time_label_rounding": 0.0
+      },
+      "total_absolute": 1.914339451817212e-13
+    },
+    {
+      "time_exact": "1/20",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 5.32866808755705e-15,
+        "fixed_machine_transform_allowance": 1.8520663017285022e-13,
+        "initial_roundtrip": 9.764382310053725e-16,
+        "imaginary_mass_norm": 1.2247161511469445e-17,
+        "time_label_rounding": 6.54278856692568e-19
+      },
+      "total_absolute": 1.915246379317808e-13
+    }
+  ],
+  "clipping_normalization_mode_filter_or_zero_eigenvalue_reset": false
+}

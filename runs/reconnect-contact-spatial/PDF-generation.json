@@ -1,0 +1,11 @@
+{
+  "PDF_explicitly_requested_by_user": true,
+  "file": "exports/LTN_contact_spatial_report_20261104.pdf",
+  "sha256": "176438cc9a87d75b02f90a6cd65f963d0d685add9781ce4255596eb37085db25",
+  "pages": 3,
+  "xelatex_exit_code": 0,
+  "overfull_boxes": 0,
+  "missing_characters": 0,
+  "all_pages_rendered_and_visually_reviewed": true,
+  "environment_or_software_release_published": false
+}

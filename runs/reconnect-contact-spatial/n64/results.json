@@ -1,0 +1,379 @@
+{
+  "initial_mass_fluctuation_norm": 0.19785397943125763,
+  "observations": [
+    {
+      "time": 0.0,
+      "reference_error_relative": 0.0,
+      "semidiscrete_PDE_error_relative": 3.7279722297337524e-15,
+      "actual_H": 0.0,
+      "reference_H": 0.0,
+      "semidiscrete_H": 8.881784197001252e-16,
+      "raw_mass_change": 0.0,
+      "minimum": 0.30037243909046374,
+      "maximum": 0.6996275609095363,
+      "actual_vs_Cartesian_relative": 3.7279722297337524e-15,
+      "fixed_action_indicator_relative": 4.01986334529286e-12,
+      "reference_numeric_indicator_absolute": 2.254847770471666e-14,
+      "total_PDE_comparison_indicator_relative": 4.137556564870832e-12,
+      "reference_decomposition_passed": true,
+      "reference_H_decomposition_passed": true,
+      "PDE_spatial_error_subtracted_or_fitted": false
+    },
+    {
+      "time": 0.025,
+      "reference_error_relative": 8.135735622918862e-05,
+      "semidiscrete_PDE_error_relative": 8.135735622874397e-05,
+      "actual_H": 0.053671280538730604,
+      "reference_H": 0.0537180962858933,
+      "semidiscrete_H": 0.05367128053873249,
+      "raw_mass_change": 3.4892336416014746e-16,
+      "minimum": 0.304888301391591,
+      "maximum": 0.695111698608409,
+      "actual_vs_Cartesian_relative": 6.393505031481929e-15,
+      "fixed_action_indicator_relative": 2.0209359531058519e-10,
+      "reference_numeric_indicator_absolute": 2.2548967881171236e-14,
+      "total_PDE_comparison_indicator_relative": 8.135755843630703e-05,
+      "reference_decomposition_passed": true,
+      "reference_H_decomposition_passed": true,
+      "PDE_spatial_error_subtracted_or_fitted": false
+    },
+    {
+      "time": 0.05,
+      "reference_error_relative": 0.00010884269231749409,
+      "semidiscrete_PDE_error_relative": 0.00010884269231670444,
+      "actual_H": 0.10388581901748006,
+      "reference_H": 0.10397119143527933,
+      "semidiscrete_H": 0.10388581901748317,
+      "raw_mass_change": 6.881837764580179e-16,
+      "minimum": 0.3093020086353852,
+      "maximum": 0.6906979913646155,
+      "actual_vs_Cartesian_relative": 9.269880245321764e-15,
+      "fixed_action_indicator_relative": 4.001665773074716e-10,
+      "reference_numeric_indicator_absolute": 2.2548696339088453e-14,
+      "total_PDE_comparison_indicator_relative": 0.00010884309259724808,
+      "reference_decomposition_passed": true,
+      "reference_H_decomposition_passed": true,
+      "PDE_spatial_error_subtracted_or_fitted": false
+    }
+  ],
+  "all_endpoint_action_controls": [
+    {
+      "time": 0.0,
+      "components_absolute": {
+        "machine": 0.0,
+        "raw_tail": 0.0,
+        "observed_full_sequence": 0.0,
+        "Cartesian_semidiscrete_indicator": 7.503677194853452e-13,
+        "twice_fixed_evaluation": 4.4938668397781776e-14,
+        "initial_serialization_bridge": 3.9571752912887795e-17
+      },
+      "actual_vs_Cartesian_absolute": 7.375941408620414e-16,
+      "fixed_indicator_absolute": 7.953459596360399e-13,
+      "within_indicator": true,
+      "H_difference": 8.881784197001252e-16,
+      "fixed_H_indicator": 6.424901884861591e-11,
+      "H_within_indicator": true,
+      "full_sequence_within_original_allowance": true
+    },
+    {
+      "time": 0.003125,
+      "components_absolute": {
+        "machine": 4.894101855195922e-12,
+        "raw_tail": 1.2782455704857494e-17,
+        "observed_full_sequence": 2.585014472353614e-16,
+        "Cartesian_semidiscrete_indicator": 7.548348238687224e-13,
+        "twice_fixed_evaluation": 4.4938668397781776e-14,
+        "initial_serialization_bridge": 3.9571752912887795e-17
+      },
+      "actual_vs_Cartesian_absolute": 6.392867904263807e-16,
+      "fixed_indicator_absolute": 5.694186203118279e-12,
+      "within_indicator": true,
+      "H_difference": 8.881784197001252e-16,
+      "fixed_H_indicator": 4.5998332204976224e-10,
+      "H_within_indicator": true,
+      "full_sequence_within_original_allowance": true
+    },
+    {
+      "time": 0.00625,
+      "components_absolute": {
+        "machine": 9.788203710391844e-12,
+        "raw_tail": 2.5564911409714988e-17,
+        "observed_full_sequence": 3.5723091086077797e-16,
+        "Cartesian_semidiscrete_indicator": 7.593028344750391e-13,
+        "twice_fixed_evaluation": 4.4938668397781776e-14,
+        "initial_serialization_bridge": 3.9571752912887795e-17
+      },
+      "actual_vs_Cartesian_absolute": 6.776748936280789e-16,
+      "fixed_indicator_absolute": 1.0592867580839848e-11,
+      "within_indicator": true,
+      "H_difference": 1.1102230246251565e-15,
+      "fixed_H_indicator": 8.557047918817903e-10,
+      "H_within_indicator": true,
+      "full_sequence_within_original_allowance": true
+    },
+    {
+      "time": 0.009375,
+      "components_absolute": {
+        "machine": 1.4682305565587766e-11,
+        "raw_tail": 3.834736711457248e-17,
+        "observed_full_sequence": 4.505867008784075e-16,
+        "Cartesian_semidiscrete_indicator": 7.637736007712013e-13,
+        "twice_fixed_evaluation": 4.4938668397781776e-14,
+        "initial_serialization_bridge": 3.9571752912887795e-17
+      },
+      "actual_vs_Cartesian_absolute": 8.0098355813812645e-16,
+      "fixed_indicator_absolute": 1.5491546340577656e-11,
+      "within_indicator": true,
+      "H_difference": 1.1102230246251565e-15,
+      "fixed_H_indicator": 1.251426050231116e-09,
+      "H_within_indicator": true,
+      "full_sequence_within_original_allowance": true
+    },
+    {
+      "time": 0.0125,
+      "components_absolute": {
+        "machine": 1.9576407420783687e-11,
+        "raw_tail": 5.1129822819429976e-17,
+        "observed_full_sequence": 5.422516393345567e-16,
+        "Cartesian_semidiscrete_indicator": 7.682481580880051e-13,
+        "twice_fixed_evaluation": 4.4938668397781776e-14,
+        "initial_serialization_bridge": 3.9571752912887795e-17
+      },
+      "actual_vs_Cartesian_absolute": 9.021700415534661e-16,
+      "fixed_indicator_absolute": 2.0390227200484546e-11,
+      "within_indicator": true,
+      "H_difference": 1.2212453270876722e-15,
+      "fixed_H_indicator": 1.6471474782358934e-09,
+      "H_within_indicator": true,
+      "full_sequence_within_original_allowance": true
+    },
+    {
+      "time": 0.015625,
+      "components_absolute": {
+        "machine": 2.447050927597961e-11,
+        "raw_tail": 6.391227852428747e-17,
+        "observed_full_sequence": 6.469937197628472e-16,
+        "Cartesian_semidiscrete_indicator": 7.727213583988943e-13,
+        "twice_fixed_evaluation": 4.4938668397781776e-14,
+        "initial_serialization_bridge": 3.9571752912887795e-17
+      },
+      "actual_vs_Cartesian_absolute": 9.915651923201972e-16,
+      "fixed_indicator_absolute": 2.5288919780527487e-11,
+      "within_indicator": true,
+      "H_difference": 1.3322676295501878e-15,
+      "fixed_H_indicator": 2.042869853008814e-09,
+      "H_within_indicator": true,
+      "full_sequence_within_original_allowance": true
+    },
+    {
+      "time": 0.01875,
+      "components_absolute": {
+        "machine": 2.936461113117553e-11,
+        "raw_tail": 7.669473422914496e-17,
+        "observed_full_sequence": 7.617535022778485e-16,
+        "Cartesian_semidiscrete_indicator": 7.771911696347232e-13,
+        "twice_fixed_evaluation": 4.4938668397781776e-14,
+        "initial_serialization_bridge": 3.9571752912887795e-17
+      },
+      "actual_vs_Cartesian_absolute": 1.0872177852818653e-15,
+      "fixed_indicator_absolute": 3.018761898919745e-11,
+      "within_indicator": true,
+      "H_difference": 1.7763568394002505e-15,
+      "fixed_H_indicator": 2.438592763251554e-09,
+      "H_within_indicator": true,
+      "full_sequence_within_original_allowance": true
+    },
+    {
+      "time": 0.021875,
+      "components_absolute": {
+        "machine": 3.4258712986371456e-11,
+        "raw_tail": 8.947718993400246e-17,
+        "observed_full_sequence": 8.709823553891381e-16,
+        "Cartesian_semidiscrete_indicator": 7.816625128989322e-13,
+        "twice_fixed_evaluation": 4.4938668397781776e-14,
+        "initial_serialization_bridge": 3.9571752912887795e-17
+      },
+      "actual_vs_Cartesian_absolute": 1.1783076488930361e-15,
+      "fixed_indicator_absolute": 3.508631419896641e-11,
+      "within_indicator": true,
+      "H_difference": 1.7763568394002505e-15,
+      "fixed_H_indicator": 2.834315350459409e-09,
+      "H_within_indicator": true,
+      "full_sequence_within_original_allowance": true
+    },
+    {
+      "time": 0.025,
+      "components_absolute": {
+        "machine": 3.9152814841567375e-11,
+        "raw_tail": 1.0225964563885995e-16,
+        "observed_full_sequence": 9.898326681608344e-16,
+        "Cartesian_semidiscrete_indicator": 7.861368757375593e-13,
+        "twice_fixed_evaluation": 4.4938668397781776e-14,
+        "initial_serialization_bridge": 3.9571752912887795e-17
+      },
+      "actual_vs_Cartesian_absolute": 1.2649804129924677e-15,
+      "fixed_indicator_absolute": 3.9985022049769426e-11,
+      "within_indicator": true,
+      "H_difference": 1.887379141862766e-15,
+      "fixed_H_indicator": 3.2300389588266737e-09,
+      "H_within_indicator": true,
+      "full_sequence_within_original_allowance": true
+    },
+    {
+      "time": 0.028125,
+      "components_absolute": {
+        "machine": 4.4046916696763294e-11,
+        "raw_tail": 1.1504210134371745e-16,
+        "observed_full_sequence": 1.0828402530594211e-15,
+        "Cartesian_semidiscrete_indicator": 7.906095967313741e-13,
+        "twice_fixed_evaluation": 4.4938668397781776e-14,
+        "initial_serialization_bridge": 3.9571752912887795e-17
+      },
+      "actual_vs_Cartesian_absolute": 1.3660705060587559e-15,
+      "fixed_indicator_absolute": 4.488370241599976e-11,
+      "within_indicator": true,
+      "H_difference": 2.55351295663786e-15,
+      "fixed_H_indicator": 3.625760346957786e-09,
+      "H_within_indicator": true,
+      "full_sequence_within_original_allowance": true
+    },
+    {
+      "time": 0.03125,
+      "components_absolute": {
+        "machine": 4.894101855195921e-11,
+        "raw_tail": 1.2782455704857493e-16,
+        "observed_full_sequence": 1.178732794514526e-15,
+        "Cartesian_semidiscrete_indicator": 7.950851680451932e-13,
+        "twice_fixed_evaluation": 4.4938668397781776e-14,
+        "initial_serialization_bridge": 3.9571752912887795e-17
+      },
+      "actual_vs_Cartesian_absolute": 1.3878782527658385e-15,
+      "fixed_indicator_absolute": 4.978238851750666e-11,
+      "within_indicator": true,
+      "H_difference": 2.3314683517128287e-15,
+      "fixed_H_indicator": 4.021482198392775e-09,
+      "H_within_indicator": true,
+      "full_sequence_within_original_allowance": true
+    },
+    {
+      "time": 0.034375,
+      "components_absolute": {
+        "machine": 5.383512040715513e-11,
+        "raw_tail": 1.4060701275343241e-16,
+        "observed_full_sequence": 1.2708687661811002e-15,
+        "Cartesian_semidiscrete_indicator": 7.995582338722086e-13,
+        "twice_fixed_evaluation": 4.4938668397781776e-14,
+        "initial_serialization_bridge": 3.9571752912887795e-17
+      },
+      "actual_vs_Cartesian_absolute": 1.4871116193726603e-15,
+      "fixed_indicator_absolute": 5.468106835695697e-11,
+      "within_indicator": true,
+      "H_difference": 2.55351295663786e-15,
+      "fixed_H_indicator": 4.417203543972405e-09,
+      "H_within_indicator": true,
+      "full_sequence_within_original_allowance": true
+    },
+    {
+      "time": 0.0375,
+      "components_absolute": {
+        "machine": 5.872922226235105e-11,
+        "raw_tail": 1.533894684582899e-16,
+        "observed_full_sequence": 1.3750802412204365e-15,
+        "Cartesian_semidiscrete_indicator": 8.040302296972467e-13,
+        "twice_fixed_evaluation": 4.4938668397781776e-14,
+        "initial_serialization_bridge": 3.9571752912887795e-17
+      },
+      "actual_vs_Cartesian_absolute": 1.5399494096040441e-15,
+      "fixed_indicator_absolute": 5.957975920190867e-11,
+      "within_indicator": true,
+      "H_difference": 2.55351295663786e-15,
+      "fixed_H_indicator": 4.812925778591116e-09,
+      "H_within_indicator": true,
+      "full_sequence_within_original_allowance": true
+    },
+    {
+      "time": 0.040625,
+      "components_absolute": {
+        "machine": 6.362332411754697e-11,
+        "raw_tail": 1.6617192416314738e-16,
+        "observed_full_sequence": 1.4857693907096244e-15,
+        "Cartesian_semidiscrete_indicator": 8.085034708997322e-13,
+        "twice_fixed_evaluation": 4.4938668397781776e-14,
+        "initial_serialization_bridge": 3.9571752912887795e-17
+      },
+      "actual_vs_Cartesian_absolute": 1.6148144282181885e-15,
+      "fixed_indicator_absolute": 6.447845776991226e-11,
+      "within_indicator": true,
+      "H_difference": 2.4424906541753444e-15,
+      "fixed_H_indicator": 5.208648637088626e-09,
+      "H_within_indicator": true,
+      "full_sequence_within_original_allowance": true
+    },
+    {
+      "time": 0.04375,
+      "components_absolute": {
+        "machine": 6.851742597274289e-11,
+        "raw_tail": 1.7895437986800486e-16,
+        "observed_full_sequence": 1.609955867891257e-15,
+        "Cartesian_semidiscrete_indicator": 8.12973348743212e-13,
+        "twice_fixed_evaluation": 4.4938668397781776e-14,
+        "initial_serialization_bridge": 3.9571752912887795e-17
+      },
+      "actual_vs_Cartesian_absolute": 1.6798761553582122e-15,
+      "fixed_indicator_absolute": 6.937716647188454e-11,
+      "within_indicator": true,
+      "H_difference": 2.9976021664879227e-15,
+      "fixed_H_indicator": 5.60437231422174e-09,
+      "H_within_indicator": true,
+      "full_sequence_within_original_allowance": true
+    },
+    {
+      "time": 0.046875,
+      "components_absolute": {
+        "machine": 7.34115278279388e-11,
+        "raw_tail": 1.9173683557286235e-16,
+        "observed_full_sequence": 1.7201228806461967e-15,
+        "Cartesian_semidiscrete_indicator": 8.174513595970162e-13,
+        "twice_fixed_evaluation": 4.4938668397781776e-14,
+        "initial_serialization_bridge": 3.9571752912887795e-17
+      },
+      "actual_vs_Cartesian_absolute": 1.7609500474665885e-15,
+      "fixed_indicator_absolute": 7.427586928740274e-11,
+      "within_indicator": true,
+      "H_difference": 3.219646771412954e-15,
+      "fixed_H_indicator": 6.000095515841124e-09,
+      "H_within_indicator": true,
+      "full_sequence_within_original_allowance": true
+    },
+    {
+      "time": 0.05,
+      "components_absolute": {
+        "machine": 7.830562968313472e-11,
+        "raw_tail": 2.0451929127771983e-16,
+        "observed_full_sequence": 1.817070881441577e-15,
+        "Cartesian_semidiscrete_indicator": 8.21920242211112e-13,
+        "twice_fixed_evaluation": 4.4938668397781776e-14,
+        "initial_serialization_bridge": 3.9571752912887795e-17
+      },
+      "actual_vs_Cartesian_absolute": 1.8340826953881136e-15,
+      "fixed_indicator_absolute": 7.917454975566925e-11,
+      "within_indicator": true,
+      "H_difference": 3.1086244689504383e-15,
+      "fixed_H_indicator": 6.395816912223425e-09,
+      "H_within_indicator": true,
+      "full_sequence_within_original_allowance": true
+    }
+  ],
+  "all_action_and_original_H_controls_passed": true,
+  "all_reference_decompositions_passed": true,
+  "registered_same_backend_contact_oracle_control_passed": true,
+  "comparison_decision": "T4_same_backend_static_contact_oracle_control_passed",
+  "one_N_not_spatial_convergence": true,
+  "static_L_midpoint_time_error_zero_not_measured_order": true,
+  "indicators_are_certified_total_error_bounds": false,
+  "moving_shock_T4_closed": false,
+  "all_three_density_sources_closed": false,
+  "stage3_physical_acceptance": "incomplete",
+  "fluid_orc_enabled": false,
+  "kappa_computed": false
+}

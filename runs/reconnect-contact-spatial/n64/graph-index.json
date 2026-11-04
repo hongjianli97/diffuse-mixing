@@ -1,0 +1,130 @@
+{
+  "k16-step00": {
+    "N": 64,
+    "K": 16,
+    "step": 0,
+    "file": "geometry.json",
+    "sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+    "midpoint_time_saved": 0.0015625
+  },
+  "k16-step01": {
+    "N": 64,
+    "K": 16,
+    "step": 1,
+    "file": "geometry.json",
+    "sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+    "midpoint_time_saved": 0.0046875
+  },
+  "k16-step02": {
+    "N": 64,
+    "K": 16,
+    "step": 2,
+    "file": "geometry.json",
+    "sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+    "midpoint_time_saved": 0.0078125
+  },
+  "k16-step03": {
+    "N": 64,
+    "K": 16,
+    "step": 3,
+    "file": "geometry.json",
+    "sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+    "midpoint_time_saved": 0.0109375
+  },
+  "k16-step04": {
+    "N": 64,
+    "K": 16,
+    "step": 4,
+    "file": "geometry.json",
+    "sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+    "midpoint_time_saved": 0.0140625
+  },
+  "k16-step05": {
+    "N": 64,
+    "K": 16,
+    "step": 5,
+    "file": "geometry.json",
+    "sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+    "midpoint_time_saved": 0.0171875
+  },
+  "k16-step06": {
+    "N": 64,
+    "K": 16,
+    "step": 6,
+    "file": "geometry.json",
+    "sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+    "midpoint_time_saved": 0.0203125
+  },
+  "k16-step07": {
+    "N": 64,
+    "K": 16,
+    "step": 7,
+    "file": "geometry.json",
+    "sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+    "midpoint_time_saved": 0.0234375
+  },
+  "k16-step08": {
+    "N": 64,
+    "K": 16,
+    "step": 8,
+    "file": "geometry.json",
+    "sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+    "midpoint_time_saved": 0.0265625
+  },
+  "k16-step09": {
+    "N": 64,
+    "K": 16,
+    "step": 9,
+    "file": "geometry.json",
+    "sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+    "midpoint_time_saved": 0.0296875
+  },
+  "k16-step10": {
+    "N": 64,
+    "K": 16,
+    "step": 10,
+    "file": "geometry.json",
+    "sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+    "midpoint_time_saved": 0.0328125
+  },
+  "k16-step11": {
+    "N": 64,
+    "K": 16,
+    "step": 11,
+    "file": "geometry.json",
+    "sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+    "midpoint_time_saved": 0.0359375
+  },
+  "k16-step12": {
+    "N": 64,
+    "K": 16,
+    "step": 12,
+    "file": "geometry.json",
+    "sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+    "midpoint_time_saved": 0.0390625
+  },
+  "k16-step13": {
+    "N": 64,
+    "K": 16,
+    "step": 13,
+    "file": "geometry.json",
+    "sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+    "midpoint_time_saved": 0.0421875
+  },
+  "k16-step14": {
+    "N": 64,
+    "K": 16,
+    "step": 14,
+    "file": "geometry.json",
+    "sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+    "midpoint_time_saved": 0.0453125
+  },
+  "k16-step15": {
+    "N": 64,
+    "K": 16,
+    "step": 15,
+    "file": "geometry.json",
+    "sha256": "b3d1220ea5b402c8ca000ca45a334c0ae2d670e899a139b2d2bd15b289d45b6b",
+    "midpoint_time_saved": 0.0484375
+  }
+}

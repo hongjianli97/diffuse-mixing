@@ -5,8 +5,8 @@
   "target_branch": "main",
   "all_project_research_code_and_documents": true,
   "original_files": 782,
-  "current_case": "runs/reconnect-contact-oracle",
-  "recorded_checks": 493,
+  "current_case": "runs/reconnect-contact-spatial",
+  "recorded_checks": 496,
   "stage3": "incomplete",
   "fluid_orc_enabled": false,
   "full_workspace_backup": false,
@@ -18,5 +18,7 @@
     "chat transcript"
   ],
   "original_scientific_files_changed": false,
-  "purpose": "User-authorized independent GitHub backup and downloadable PDF/ZIP, not environment publication"
+  "purpose": "User-authorized independent GitHub backup and downloadable PDF/ZIP, not environment publication",
+  "previous_backup_commit": "869f34e6a6330f5745fd93b112159b5cd3b46fe0",
+  "current_scope": "threegridstaticcontactoracle,N32caseandselectednextBeckerinputs;notfullworkspace"
 }

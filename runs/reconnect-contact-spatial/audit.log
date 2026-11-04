@@ -1,0 +1,60 @@
+independent static contact N16:geometry,reference,fullrawsequence,Padé passed
+independent static contact N64:geometry,reference,fullrawsequence,Padé passed
+{
+  "both_new_exact_world_geometries_rawsequences_and17Pade_states_verified": true,
+  "new_N16_N64_independent80_100_references_and_separate_time_tails_passed": true,
+  "per_new_grid_controls": {
+    "16": {
+      "exact_rates_minimal_raw_tail_and_all_control_states_verified": true,
+      "maximum_primary_control_mass_norm_difference": 7.545548620275908e-16,
+      "maximum_shared_vs_symmetric_action_mass_norm_difference": 1.2879378482188994e-15,
+      "maximum_raw_mass_drift": 1.1368943980683e-15,
+      "positive_weights_or_states_normalized": false,
+      "face_counts_by_exact_g": {
+        "5764607523034235/288230376151711744": 240,
+        "5764607523034235/72057594037927936": 240,
+        "1152921504606847/36028797018963968": 32
+      },
+      "independent80_100_reference_and17_Pade_states_verified": true
+    },
+    "64": {
+      "exact_rates_minimal_raw_tail_and_all_control_states_verified": true,
+      "maximum_primary_control_mass_norm_difference": 1.817070881441577e-15,
+      "maximum_shared_vs_symmetric_action_mass_norm_difference": 1.646854067659845e-14,
+      "maximum_raw_mass_drift": 6.881837764580179e-16,
+      "positive_weights_or_states_normalized": false,
+      "face_counts_by_exact_g": {
+        "5764607523034235/288230376151711744": 4032,
+        "5764607523034235/72057594037927936": 4032,
+        "1152921504606847/36028797018963968": 128
+      },
+      "independent80_100_reference_and17_Pade_states_verified": true
+    }
+  },
+  "common_material_audit": {
+    "all_original_parent_capacities_exact": true,
+    "all_direct_component_integral_snapshots_verified": 165,
+    "fixed_parent_exact_integral_probes_verified": 825,
+    "maximum_fsum_vs_saved_mean_difference": 2.220446049250313e-16,
+    "production_group_sum_or_observe_path_called": false,
+    "masses_or_states_reweighted": false
+  },
+  "N32_path_loaded_only_not_rerun": true,
+  "N32_original_decision_exactly_preserved": true,
+  "all_original_capacity_integrals_and_positive_comparison_budgets_verified": true,
+  "comparison_decision": "T4_three_space_level_static_contact_oracle_control_passed",
+  "registered_three_space_level_contact_oracle_control_passed": true,
+  "original_files_verified": 782,
+  "historical_attachments_verified": 15,
+  "prior_formal_manifests_verified": 100,
+  "new_software_checks": 3,
+  "recorded_checks_total": 496,
+  "old_candidate_reruns": 0,
+  "new_reference_PDE_solves": 0,
+  "new_spectral_projection_fits": 0,
+  "moving_shock_T4_closed": false,
+  "all_three_density_sources_closed": false,
+  "stage3_physical_acceptance": "incomplete",
+  "fluid_orc_enabled": false,
+  "kappa_computed": false
+}

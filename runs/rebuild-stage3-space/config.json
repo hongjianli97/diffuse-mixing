@@ -1,0 +1,51 @@
+{
+  "study": "three material spatial resolutions of one reconstructed Becker case",
+  "physical_source": "/workspace/diffuse-mixing/runs/rebuild-becker-final",
+  "delta": 0.08,
+  "D": 0.02,
+  "T": 0.1,
+  "Mach": 2.0,
+  "gamma": 1.4,
+  "Pr": 0.75,
+  "dynamic_viscosity": 0.025176847261237076,
+  "material_columns": [
+    32,
+    64,
+    128
+  ],
+  "initial_labels": [
+    -1.0,
+    1.0
+  ],
+  "candidate_steps": [
+    4096,
+    8192
+  ],
+  "methods": [
+    "ordinary_volume_center",
+    "ordinary_mass_center",
+    "mass_average_resistance"
+  ],
+  "reference_levels": [
+    [
+      4096,
+      4096
+    ],
+    [
+      8192,
+      4096
+    ],
+    [
+      8192,
+      8192
+    ]
+  ],
+  "reused_reference": "n4096-k4096; validated previous SHA256",
+  "normalization": "mass RMS concentration error / each grid initial mass fluctuation norm",
+  "error_separation_diagnostic_limit": 0.1,
+  "diagnostic_definition": "(candidate 4096->8192 vector difference + reference space difference + reference time difference)/8192-step error",
+  "diagnostic_warning": "empirical differences, not rigorous error bounds or a physical acceptance threshold",
+  "conductances_and_initial_field": "unchanged from source experiment",
+  "fluid_orc_enabled": false,
+  "third_stage_complete": false
+}
