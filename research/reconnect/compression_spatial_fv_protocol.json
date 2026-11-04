@@ -1,0 +1,23 @@
+{
+ "scope":"one registered existingN256 smooth compression,ordinary unchanged periodic Voronoi FV,D=.02,T=.05,actual16/32; coarseN12816/32 reused",
+ "new_intervals":[16,32],"new_graphs":48,"fixed_geometry_probe_ids":[0,127,255,32768,65535],
+ "state":"originalfine material masses,c0,IDs and original2x2 parent mapping reused; mass averages,not point values or auxiliary capacity",
+ "pure_inputs":"same compression sampler,all savedfineK4/8 time/positions/rho and nested32 subsets bitwise verified; per-frame workers receive onlyids,positions,rho",
+ "all48_coefficients_sealed_before_mass_c0_reference_or_old_states_loaded":true,
+ "backend_changed":false,"tensor_geometry_shortcut":false,"norm_estimator_seed":20261101,
+ "tail_per_interval_exact":"1/10000000000000000","original_algebra_tolerance":1e-10,
+ "numerical_actions":"same raw mass-symmetric sparse exponential and whole independent uniformization; originalweights/rows/states/masses never normalized",
+ "common_observation":"raw original2x2 child component sums/original savedN128 mass; raw mass/projection discrepancies retained",
+ "native_error_required":true,"normalization":"originalparent initial fluctuation for common andnative numerators; native denominators additionally recorded",
+ "common_indicator":"coarse16/32+fine16/32 common differences+2*(originalparent reference space+fine_time)+both native-reference projection differences+three initial bridges+both grids16/32 projected cumulative machine/tails and observed whole independent differences",
+ "native_indicator":"both native16/32 differences+2*sum both native reference space/fine_time norms+both initial/reference bridges+both grids16/32 cumulative machine/tails and observed whole differences,all on common denominator",
+ "H_indicator":"corresponding commonH differences for time,originalparent reference space/fine_time at originalcoarse reference base,projection,initial and observed solvers+unchanged machine-to-H conversion of projected numerical allowances",
+ "decision":"both nonzero times fine32 common concentration,native concentration and commonH error gains above fixed positive-sum indicators; else inconclusive/adverse and stop",
+ "resource_dispatch":"first real pure graph measures build+probe peak and finalpacket peak; select largest workers1/2/3 with parentpeak+1.2*(firstfinal+(workers-1)*firstbuild)+128<=2048MiB; immutable backend,packet creation serialized until worker process exit",
+ "resource_measurement":"sample simultaneous main+active geometry worker RSS,also conservatively bound parentpeak+maxworkerfinal+(workers-1)*maxworkerbuild; maximum with later sequential state parentpeak,all geometry workers exited before scalar loading",
+ "scheduler_scalar_adaptation":false,"main_wall_seconds_cap":8400,"main_peak_RSS_MiB_cap":2048,
+ "old_candidate_reruns":0,"new_reference_PDE_solves":0,"new_material_definitions":0,
+ "no_new_absolute_physical_threshold":true,"indicators_are_certified_PDE_bounds":false,"two_levels_certify_general_order":false,
+ "stop":"no automatic extraN64/grid,K64,D/flow/point/mass/rho/state/row/weight changes,clipping,normalization,F/C fitting or threshold relaxation",
+ "general_smooth_flow_admitted":false,"shock_extension_deferred":true,"stage3_physical_acceptance":"incomplete","fluid_orc_enabled":false
+}

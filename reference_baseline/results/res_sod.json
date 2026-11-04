@@ -1,0 +1,140 @@
+{
+ "tau": 0.2,
+ "detect_rate": 1.0,
+ "false_step_rate": 0.000102647975610841,
+ "rho_err_med": 3.774758283725532e-15,
+ "rho_err_p95": 0.009650339165268269,
+ "n_blocks": 6384,
+ "sig_dev_med_all": 1.1102230246251565e-16,
+ "sig_dev_med_full": 5.551115123125783e-17,
+ "pseudo_rot_step_med_p95": [
+  2.4003818686925294e-05,
+  0.09226730586943245
+ ],
+ "pseudo_rot_block_med_p95": [
+  2.8101601450030674e-15,
+  0.005663721538257337
+ ],
+ "kelvin_res_max": 9.862374880735542e-15,
+ "afrc_gate": {
+  "cand_n": 95,
+  "hot_frac": 0.012176666666666667,
+  "tau": 0.2,
+  "lab_frac": {
+   "hyp": 0.0,
+   "shear": 0.0,
+   "shock": 0.0,
+   "inactive": 0.0,
+   "wave": 1.0
+  },
+  "beta_q": [
+   0.004917582864382601,
+   0.028959558037897935,
+   0.08730384999894587,
+   0.21069878899478564,
+   0.5251201096910354
+  ],
+  "K_q": [
+   0.0,
+   0.0
+  ],
+  "cand_crossed_frac": 0.0,
+  "shock_label_precision": null,
+  "crossed_cand_labelled_shock": null,
+  "fan_cand_labels": {
+   "hyp": 0.0,
+   "shear": 0.0,
+   "shock": 0.0,
+   "inactive": 0.0,
+   "wave": 1.0
+  },
+  "fan_cand_n": 95
+ },
+ "afrc_raw": {
+  "cand_n": 136,
+  "hot_frac": 0.012176666666666667,
+  "tau": 0.2,
+  "lab_frac": {
+   "hyp": 0.0,
+   "shear": 0.0,
+   "shock": 0.0,
+   "inactive": 0.0,
+   "wave": 1.0
+  },
+  "beta_q": [
+   0.007675382413831679,
+   0.032286435764667686,
+   0.11526684088064605,
+   0.23731156524424357,
+   0.3309834647584917
+  ],
+  "K_q": [
+   0.0,
+   0.0
+  ],
+  "cand_crossed_frac": 0.0,
+  "shock_label_precision": null,
+  "crossed_cand_labelled_shock": null,
+  "fan_cand_labels": {
+   "hyp": 0.0,
+   "shear": 0.0,
+   "shock": 0.0,
+   "inactive": 0.0,
+   "wave": 1.0
+  },
+  "fan_cand_n": 136
+ },
+ "ftle_bwd": {
+  "cand_n": 448,
+  "hot_frac": 0.012176666666666667,
+  "tau": NaN,
+  "lab_frac": {
+   "hyp": 0.0,
+   "shear": 0.06696428571428571,
+   "shock": 0.8392857142857143,
+   "inactive": 0.08705357142857142,
+   "wave": 0.006696428571428571
+  },
+  "beta_q": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   1.1532335413733704e-14
+  ],
+  "K_q": [
+   0.999999999999901,
+   1.0
+  ],
+  "cand_crossed_frac": 1.0,
+  "shock_label_precision": 1.0,
+  "crossed_cand_labelled_shock": 0.8392857142857143
+ },
+ "ftle_fwd": {
+  "cand_n": 231,
+  "hot_frac": 0.012176666666666667,
+  "tau": NaN,
+  "lab_frac": {
+   "hyp": 0.0,
+   "shear": 0.0,
+   "shock": 0.0,
+   "inactive": 0.0,
+   "wave": 1.0
+  },
+  "beta_q": [
+   0.025350513792552716,
+   0.11542976204444488,
+   0.2684995585448235,
+   0.43276298733321605,
+   0.5050660794566016
+  ],
+  "K_q": [
+   0.0,
+   0.0
+  ],
+  "cand_crossed_frac": 0.0,
+  "shock_label_precision": null,
+  "crossed_cand_labelled_shock": null
+ },
+ "time": 11.789806842803955
+}

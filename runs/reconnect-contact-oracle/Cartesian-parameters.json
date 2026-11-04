@@ -1,0 +1,233 @@
+{
+  "N": 32,
+  "all_discrete_mode_slots_retained": 1024,
+  "normal_g_exact": [
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "5764607523034235/288230376151711744",
+    "1152921504606847/36028797018963968",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "5764607523034235/72057594037927936",
+    "1152921504606847/36028797018963968"
+  ],
+  "raw_minimum_normal_eigenvalue": -3.26802948626093e-15,
+  "normal_eigen_residual_frobenius": 2.7685997751610604e-13,
+  "normal_orthogonality_residual_frobenius": 7.0062939698251046e-15,
+  "normal_matrix_rounding_row_bound_exact": "1/281474976710656",
+  "transverse_eigenvalue_vs90digit_max_difference": 1.429690584827247e-14,
+  "rows": [
+    {
+      "time_exact": "0",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 5.709220749696392e-15,
+        "fixed_machine_transform_allowance": 3.705601024924287e-13,
+        "initial_roundtrip": 6.231304445401232e-16,
+        "imaginary_mass_norm": 1.403593043114869e-17,
+        "time_label_rounding": 0.0
+      },
+      "total_absolute": 3.769064896170964e-13
+    },
+    {
+      "time_exact": "1/320",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 6.459689789489439e-15,
+        "fixed_machine_transform_allowance": 3.705601024924287e-13,
+        "initial_roundtrip": 6.231304445401232e-16,
+        "imaginary_mass_norm": 1.2282941796093052e-17,
+        "time_label_rounding": 4.2239617295673757e-20
+      },
+      "total_absolute": 3.776552479078717e-13
+    },
+    {
+      "time_exact": "1/160",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 7.210158829282485e-15,
+        "fixed_machine_transform_allowance": 3.705601024924287e-13,
+        "initial_roundtrip": 6.231304445401232e-16,
+        "imaginary_mass_norm": 1.1908029611847575e-17,
+        "time_label_rounding": 8.447923459134751e-20
+      },
+      "total_absolute": 3.784053842750978e-13
+    },
+    {
+      "time_exact": "3/320",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 7.960627869075531e-15,
+        "fixed_machine_transform_allowance": 3.705601024924287e-13,
+        "initial_roundtrip": 6.231304445401232e-16,
+        "imaginary_mass_norm": 1.1806647108608883e-17,
+        "time_label_rounding": 8.447923459134751e-20
+      },
+      "total_absolute": 3.7915575193238756e-13
+    },
+    {
+      "time_exact": "1/80",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 8.711096908868577e-15,
+        "fixed_machine_transform_allowance": 3.705601024924287e-13,
+        "initial_roundtrip": 6.231304445401232e-16,
+        "imaginary_mass_norm": 1.2471940921663903e-17,
+        "time_label_rounding": 1.6895846918269503e-19
+      },
+      "total_absolute": 3.7990697074522826e-13
+    },
+    {
+      "time_exact": "1/64",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 9.461565948661624e-15,
+        "fixed_machine_transform_allowance": 3.705601024924287e-13,
+        "initial_roundtrip": 6.231304445401232e-16,
+        "imaginary_mass_norm": 1.2768235670898484e-17,
+        "time_label_rounding": 0.0
+      },
+      "total_absolute": 3.806575671213014e-13
+    },
+    {
+      "time_exact": "3/160",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 1.021203498845467e-14,
+        "fixed_machine_transform_allowance": 3.705601024924287e-13,
+        "initial_roundtrip": 6.231304445401232e-16,
+        "imaginary_mass_norm": 1.3067433547954813e-17,
+        "time_label_rounding": 1.6895846918269503e-19
+      },
+      "total_absolute": 3.8140850431744066e-13
+    },
+    {
+      "time_exact": "7/320",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 1.0962504028247716e-14,
+        "fixed_machine_transform_allowance": 3.705601024924287e-13,
+        "initial_roundtrip": 6.231304445401232e-16,
+        "imaginary_mass_norm": 1.1153276991530994e-17,
+        "time_label_rounding": 3.3791693836539005e-19
+      },
+      "total_absolute": 3.8215722815914647e-13
+    },
+    {
+      "time_exact": "1/40",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 1.1712973068040764e-14,
+        "fixed_machine_transform_allowance": 3.705601024924287e-13,
+        "initial_roundtrip": 6.231304445401232e-16,
+        "imaginary_mass_norm": 1.2214646949347465e-17,
+        "time_label_rounding": 3.3791693836539005e-19
+      },
+      "total_absolute": 3.829087585688973e-13
+    },
+    {
+      "time_exact": "9/320",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 1.246344210783381e-14,
+        "fixed_machine_transform_allowance": 3.705601024924287e-13,
+        "initial_roundtrip": 6.231304445401232e-16,
+        "imaginary_mass_norm": 1.2302485215683383e-17,
+        "time_label_rounding": 1.6895846918269503e-19
+      },
+      "total_absolute": 3.8365914648848756e-13
+    },
+    {
+      "time_exact": "1/32",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 1.3213911147626855e-14,
+        "fixed_machine_transform_allowance": 3.705601024924287e-13,
+        "initial_roundtrip": 6.231304445401232e-16,
+        "imaginary_mass_norm": 1.1620041422435198e-17,
+        "time_label_rounding": 0.0
+      },
+      "total_absolute": 3.8440876412601814e-13
+    },
+    {
+      "time_exact": "11/320",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 1.3964380187419906e-14,
+        "fixed_machine_transform_allowance": 3.705601024924288e-13,
+        "initial_roundtrip": 6.231304445401232e-16,
+        "imaginary_mass_norm": 1.1833055972575493e-17,
+        "time_label_rounding": 6.758338767307801e-19
+      },
+      "total_absolute": 3.851601220142382e-13
+    },
+    {
+      "time_exact": "3/80",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 1.4714849227212952e-14,
+        "fixed_machine_transform_allowance": 3.705601024924288e-13,
+        "initial_roundtrip": 6.231304445401232e-16,
+        "imaginary_mass_norm": 1.1081180133299378e-17,
+        "time_label_rounding": 3.3791693836539005e-19
+      },
+      "total_absolute": 3.8590950126125357e-13
+    },
+    {
+      "time_exact": "13/320",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 1.5465318267005997e-14,
+        "fixed_machine_transform_allowance": 3.705601024924288e-13,
+        "initial_roundtrip": 6.231304445401232e-16,
+        "imaginary_mass_norm": 1.0816292215521086e-17,
+        "time_label_rounding": 3.3791693836539005e-19
+      },
+      "total_absolute": 3.866597054131288e-13
+    },
+    {
+      "time_exact": "7/160",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 1.621578730679904e-14,
+        "fixed_machine_transform_allowance": 3.705601024924288e-13,
+        "initial_roundtrip": 6.231304445401232e-16,
+        "imaginary_mass_norm": 1.072921357895267e-17,
+        "time_label_rounding": 6.758338767307801e-19
+      },
+      "total_absolute": 3.874104252912237e-13
+    },
+    {
+      "time_exact": "3/64",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 1.6966256346592092e-14,
+        "fixed_machine_transform_allowance": 3.705601024924288e-13,
+        "initial_roundtrip": 6.231304445401232e-16,
+        "imaginary_mass_norm": 1.1512112006949841e-17,
+        "time_label_rounding": 0.0
+      },
+      "total_absolute": 3.88161001395568e-13
+    },
+    {
+      "time_exact": "1/20",
+      "components_absolute": {
+        "spectral_residual_and_matrix_rounding": 1.7716725386385137e-14,
+        "fixed_machine_transform_allowance": 3.705601024924288e-13,
+        "initial_roundtrip": 6.231304445401232e-16,
+        "imaginary_mass_norm": 9.945906889975443e-18,
+        "time_label_rounding": 6.758338767307801e-19
+      },
+      "total_absolute": 3.8891058006412086e-13
+    }
+  ],
+  "clipping_normalization_mode_filter_or_zero_eigenvalue_reset": false
+}

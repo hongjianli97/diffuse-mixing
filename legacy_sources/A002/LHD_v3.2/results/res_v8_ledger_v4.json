@@ -1,0 +1,1961 @@
+{
+ "planar_mid": {
+  "old_v2": {
+   "med": 1.7763568394002505e-15,
+   "p95": 0.03199464065920066,
+   "max": 0.7018319611291761
+  },
+  "v3_hybrid": {
+   "med": 1.8051715677813718e-10,
+   "p95": 0.08745546122059367,
+   "max": 0.7018319611291761
+  },
+  "default": {
+   "poly": {
+    "med": 1.7763568394002505e-15,
+    "p95": 0.03199464065920038,
+    "max": 0.7018319611291759
+   },
+   "v4": {
+    "med": 3.409117432795483e-11,
+    "p95": 2.651210917470337e-10,
+    "max": 1.6932843915247844
+   },
+   "diag": {
+    "segments": 10760,
+    "tensor_segments": 10610,
+    "tensor_shock_segments": 1437,
+    "shock_segments": 1587,
+    "iface_arc_segments": 0,
+    "arc_repairs": 744,
+    "rejected_fit": 7,
+    "rejected_tol": 143,
+    "max_defer": 16,
+    "hot_frac": 0.4908947368421053,
+    "noise_sigma_over_h": 2.306458447696572e-15,
+    "tensor_share": 0.9860594795539034
+   },
+   "secs": 4.374902963638306
+  },
+  "n": 1936,
+  "final": {
+   "poly": {
+    "med": 1.7763568394002505e-15,
+    "p95": 0.03199464065920066,
+    "max": 0.7018319611291761
+   },
+   "v4": {
+    "med": 1.868758481293753e-10,
+    "p95": 2.7749963438239433e-10,
+    "max": 1.693284391947334
+   },
+   "diag": {
+    "segments": 18420,
+    "tensor_segments": 18325,
+    "tensor_shock_segments": 1625,
+    "shock_segments": 1720,
+    "iface_arc_segments": 0,
+    "arc_repairs": 90,
+    "rejected_fit": 7,
+    "rejected_tol": 88,
+    "max_defer": 4,
+    "hot_frac": 0.03016842105263158,
+    "noise_sigma_over_h": 2.306458447696572e-15,
+    "tensor_share": 0.994842562432139
+   },
+   "secs": 1.461561918258667
+  }
+ },
+ "smooth": {
+  "old_v2": {
+   "med": 0.000368405549867834,
+   "p95": 0.001395308502084941,
+   "max": 0.0028287030391459522
+  },
+  "v3_hybrid": {
+   "med": 6.545137952657099e-05,
+   "p95": 0.00020535922695655295,
+   "max": 0.0004623184924001933
+  },
+  "default": {
+   "poly": {
+    "med": 0.000368405549867834,
+    "p95": 0.001395308502084941,
+    "max": 0.0028287030391459522
+   },
+   "v4": {
+    "med": 6.545137952679303e-05,
+    "p95": 0.00020535922695666398,
+    "max": 0.0004623184923997492
+   },
+   "diag": {
+    "segments": 20000,
+    "tensor_segments": 20000,
+    "tensor_shock_segments": 0,
+    "shock_segments": 0,
+    "iface_arc_segments": 0,
+    "arc_repairs": 0,
+    "rejected_fit": 0,
+    "rejected_tol": 0,
+    "max_defer": 4,
+    "hot_frac": 0.0,
+    "noise_sigma_over_h": 1.6721376624991307e-05,
+    "tensor_share": 1.0
+   },
+   "secs": 3.342461347579956
+  },
+  "n": 1936,
+  "final": {
+   "poly": {
+    "med": 0.000368405549867834,
+    "p95": 0.001395308502084941,
+    "max": 0.0028287030391459522
+   },
+   "v4": {
+    "med": 6.545137952679303e-05,
+    "p95": 0.00020535922695666398,
+    "max": 0.0004623184923997492
+   },
+   "diag": {
+    "segments": 20000,
+    "tensor_segments": 20000,
+    "tensor_shock_segments": 0,
+    "shock_segments": 0,
+    "iface_arc_segments": 0,
+    "arc_repairs": 0,
+    "rejected_fit": 0,
+    "rejected_tol": 0,
+    "max_defer": 4,
+    "hot_frac": 0.0,
+    "noise_sigma_over_h": 1.6721376624991307e-05,
+    "tensor_share": 1.0
+   },
+   "secs": 0.4499785900115967
+  }
+ },
+ "weak": {
+  "old_v2": {
+   "med": 0.0035630614573436414,
+   "p95": 0.057555052937168893,
+   "max": 0.11610556800704042
+  },
+  "v3_hybrid": {
+   "med": 5.951498183165427e-10,
+   "p95": 7.51331274972955e-10,
+   "max": 1.1632932395144735e-09
+  },
+  "default": {
+   "poly": {
+    "med": 1.8318679906315083e-15,
+    "p95": 5.773159728050814e-15,
+    "max": 1.2212453270876722e-14
+   },
+   "v4": {
+    "med": 3.808885429279485e-10,
+    "p95": 5.064492158979306e-10,
+    "max": 8.358083114501369e-10
+   },
+   "diag": {
+    "segments": 43869,
+    "tensor_segments": 43869,
+    "tensor_shock_segments": 4220,
+    "shock_segments": 4220,
+    "iface_arc_segments": 0,
+    "arc_repairs": 108,
+    "rejected_fit": 0,
+    "rejected_tol": 0,
+    "max_defer": 26,
+    "hot_frac": 0.4054640522875817,
+    "noise_sigma_over_h": 2.306458447696572e-15,
+    "tensor_share": 1.0
+   },
+   "secs": 18.313231945037842
+  },
+  "n": 1936,
+  "trim_t10": {
+   "poly": {
+    "med": 1.7763568394002505e-15,
+    "p95": 5.773159728050814e-15,
+    "max": 1.2878587085651816e-14
+   },
+   "v4": {
+    "med": 6.349821779494391e-10,
+    "p95": 8.037540633054618e-10,
+    "max": 0.007796583266990842
+   },
+   "diag": {
+    "segments": 72072,
+    "tensor_segments": 72054,
+    "tensor_shock_segments": 4201,
+    "shock_segments": 4219,
+    "iface_arc_segments": 0,
+    "arc_repairs": 0,
+    "rejected_fit": 2,
+    "rejected_tol": 16,
+    "max_defer": 4,
+    "hot_frac": 0.030486274509803922,
+    "noise_sigma_over_h": 2.306458447696572e-15,
+    "tensor_share": 0.9997502497502497
+   },
+   "secs": 7.373844861984253
+  },
+  "final": {
+   "poly": {
+    "med": 1.887379141862766e-15,
+    "p95": 5.995204332975845e-15,
+    "max": 1.0880185641326534e-14
+   },
+   "v4": {
+    "med": 6.224929460785233e-10,
+    "p95": 7.876786445315531e-10,
+    "max": 1.1871232885596328e-09
+   },
+   "diag": {
+    "segments": 70612,
+    "tensor_segments": 70612,
+    "tensor_shock_segments": 4265,
+    "shock_segments": 4265,
+    "iface_arc_segments": 0,
+    "arc_repairs": 0,
+    "rejected_fit": 0,
+    "rejected_tol": 0,
+    "max_defer": 5,
+    "hot_frac": 0.0501516339869281,
+    "noise_sigma_over_h": 2.306458447696572e-15,
+    "tensor_share": 1.0
+   },
+   "secs": 5.488965749740601
+  }
+ },
+ "slow": {
+  "old_v2": {
+   "med": 0.07579772951714969,
+   "p95": 0.25222299378805974,
+   "max": 0.5809732256766882
+  },
+  "v3_hybrid": {
+   "med": 1.0712717379846026e-09,
+   "p95": 1.4301349549050713e-09,
+   "max": 2.2327724114035163e-09
+  },
+  "default": {
+   "poly": {
+    "med": 4.440892098500626e-15,
+    "p95": 1.3766765505351941e-14,
+    "max": 2.6423307986078726e-14
+   },
+   "v4": {
+    "med": 8.938203510666654e-10,
+    "p95": 1.2226327728015463e-09,
+    "max": 1.9642991677670807e-09
+   },
+   "diag": {
+    "segments": 113386,
+    "tensor_segments": 113386,
+    "tensor_shock_segments": 6023,
+    "shock_segments": 6023,
+    "iface_arc_segments": 0,
+    "arc_repairs": 22,
+    "rejected_fit": 0,
+    "rejected_tol": 0,
+    "max_defer": 30,
+    "hot_frac": 0.22350980392156863,
+    "noise_sigma_over_h": 3.4596876715448575e-15,
+    "tensor_share": 1.0
+   },
+   "secs": 35.44432973861694
+  },
+  "n": 1936,
+  "trim_t10": {
+   "poly": {
+    "med": 4.218847493575595e-15,
+    "p95": 1.2934098236883074e-14,
+    "max": 2.964295475749168e-14
+   },
+   "v4": {
+    "med": 1.1240114394794887e-09,
+    "p95": 1.5998345426204708e-09,
+    "max": 0.04998847086158942
+   },
+   "diag": {
+    "segments": 142007,
+    "tensor_segments": 141987,
+    "tensor_shock_segments": 6067,
+    "shock_segments": 6087,
+    "iface_arc_segments": 0,
+    "arc_repairs": 0,
+    "rejected_fit": 6,
+    "rejected_tol": 14,
+    "max_defer": 9,
+    "hot_frac": 0.03455032679738562,
+    "noise_sigma_over_h": 3.4596876715448575e-15,
+    "tensor_share": 0.9998591618723021
+   },
+   "secs": 15.40946364402771
+  },
+  "final": {
+   "poly": {
+    "med": 4.440892098500626e-15,
+    "p95": 1.2878587085651816e-14,
+    "max": 2.9753977059954195e-14
+   },
+   "v4": {
+    "med": 1.1076304318180519e-09,
+    "p95": 1.491799517250314e-09,
+    "max": 0.014135595512593246
+   },
+   "diag": {
+    "segments": 140614,
+    "tensor_segments": 140596,
+    "tensor_shock_segments": 5952,
+    "shock_segments": 5970,
+    "iface_arc_segments": 0,
+    "arc_repairs": 0,
+    "rejected_fit": 0,
+    "rejected_tol": 18,
+    "max_defer": 11,
+    "hot_frac": 0.043758169934640524,
+    "noise_sigma_over_h": 3.4596876715448575e-15,
+    "tensor_share": 0.9998719899867723
+   },
+   "secs": 11.65387773513794
+  }
+ },
+ "cyl": {
+  "old_v2": {
+   "med": 0.0015222712160390395,
+   "p95": 0.006866324162226361,
+   "max": 0.698234807767494
+  },
+  "v3_hybrid": {
+   "med": 0.0004631091614391014,
+   "p95": 0.003794785964195694,
+   "max": 0.6982348077674945
+  },
+  "default": {
+   "poly": {
+    "med": 0.00042795866152384177,
+    "p95": 0.005150355473484123,
+    "max": 0.6982348077674938
+   },
+   "v4": {
+    "med": 0.00010880178252326012,
+    "p95": 0.00449184384941015,
+    "max": 1.8819163846365634
+   },
+   "diag": {
+    "segments": 14077,
+    "tensor_segments": 13838,
+    "tensor_shock_segments": 9421,
+    "shock_segments": 9660,
+    "iface_arc_segments": 0,
+    "arc_repairs": 661,
+    "rejected_fit": 1,
+    "rejected_tol": 238,
+    "max_defer": 17,
+    "hot_frac": 0.6565344603381015,
+    "noise_sigma_over_h": 4.187001093840931e-05,
+    "tensor_share": 0.983021950699723
+   },
+   "secs": 17.8122239112854
+  },
+  "n": 6784,
+  "final": {
+   "poly": {
+    "med": 0.001519139479898568,
+    "p95": 0.006866324162226361,
+    "max": 0.698234807767494
+   },
+   "v4": {
+    "med": 0.0007097410547619587,
+    "p95": 0.003189515531476309,
+    "max": 1.8819163851367273
+   },
+   "diag": {
+    "segments": 56133,
+    "tensor_segments": 55984,
+    "tensor_shock_segments": 9645,
+    "shock_segments": 9794,
+    "iface_arc_segments": 0,
+    "arc_repairs": 113,
+    "rejected_fit": 1,
+    "rejected_tol": 148,
+    "max_defer": 4,
+    "hot_frac": 0.0526853055916775,
+    "noise_sigma_over_h": 4.187001093840931e-05,
+    "tensor_share": 0.9973455899381826
+   },
+   "secs": 4.92457914352417
+  }
+ },
+ "sod": {
+  "old_v2": {
+   "med": 3.774758283725532e-15,
+   "p95": 0.009650339165268269,
+   "max": 0.7306503333431353
+  },
+  "v3_hybrid": {
+   "med": 2.0617951790313782e-10,
+   "p95": 0.002917950798904169,
+   "max": 0.7306503333431309
+  },
+  "default": {
+   "poly": {
+    "med": 3.774758283725532e-15,
+    "p95": 0.009650339165268269,
+    "max": 0.7306503333431256
+   },
+   "v4": {
+    "med": 1.9729018418956912e-10,
+    "p95": 0.002165078971968599,
+    "max": 0.7971732146819643
+   },
+   "diag": {
+    "segments": 41505,
+    "tensor_segments": 38926,
+    "tensor_shock_segments": 2804,
+    "shock_segments": 3071,
+    "iface_arc_segments": 1298,
+    "arc_repairs": 1786,
+    "rejected_fit": 2499,
+    "rejected_tol": 80,
+    "max_defer": 17,
+    "hot_frac": 0.33769,
+    "noise_sigma_over_h": 7.319395668761443e-16,
+    "tensor_share": 0.9378629080833635
+   },
+   "secs": 14.709407091140747
+  },
+  "n": 5230,
+  "final": {
+   "poly": {
+    "med": 3.774758283725532e-15,
+    "p95": 0.009650339165268269,
+    "max": 0.7306503333431353
+   },
+   "v4": {
+    "med": 2.0643797782327056e-10,
+    "p95": 0.0022221199650261153,
+    "max": 0.797173214982621
+   },
+   "diag": {
+    "segments": 59251,
+    "tensor_segments": 55997,
+    "tensor_shock_segments": 2632,
+    "shock_segments": 2806,
+    "iface_arc_segments": 1718,
+    "arc_repairs": 51,
+    "rejected_fit": 3195,
+    "rejected_tol": 59,
+    "max_defer": 4,
+    "hot_frac": 0.012306666666666667,
+    "noise_sigma_over_h": 7.319395668761443e-16,
+    "tensor_share": 0.94508109567771
+   },
+   "secs": 5.338317155838013
+  }
+ },
+ "sv": {
+  "old_v2": {
+   "med": 0.003448636108237091,
+   "p95": 0.03414227809472728,
+   "max": 0.2066176095563279
+  },
+  "v3_hybrid": {
+   "med": 0.001986166689773472,
+   "p95": 0.01861789818803644,
+   "max": 0.32289884120079115
+  },
+  "default": {
+   "poly": {
+    "med": 0.003570056738887828,
+    "p95": 0.04141609246024369,
+    "max": 0.32289884120079115
+   },
+   "v4": {
+    "med": 0.003794019278980487,
+    "p95": 0.03140800719126846,
+    "max": 0.3220353790175168
+   },
+   "diag": {
+    "segments": 35503,
+    "tensor_segments": 34384,
+    "tensor_shock_segments": 13982,
+    "shock_segments": 15100,
+    "iface_arc_segments": 0,
+    "arc_repairs": 5465,
+    "rejected_fit": 2,
+    "rejected_tol": 1117,
+    "max_defer": 13,
+    "hot_frac": 0.6663912037037037,
+    "noise_sigma_over_h": 0.0006931383303852919,
+    "tensor_share": 0.9684815367715405
+   },
+   "secs": 28.18923330307007
+  },
+  "n": 12786,
+  "W6": {
+   "poly": {
+    "med": 0.00344043816044326,
+    "p95": 0.03887249083740624,
+    "max": 0.32289884120079115
+   },
+   "v4": {
+    "med": 0.001997712601680024,
+    "p95": 0.025580543614893203,
+    "max": 0.3220353790175168
+   },
+   "diag": {
+    "segments": 63803,
+    "tensor_segments": 62887,
+    "tensor_shock_segments": 13631,
+    "shock_segments": 14546,
+    "iface_arc_segments": 0,
+    "arc_repairs": 46,
+    "rejected_fit": 0,
+    "rejected_tol": 916,
+    "max_defer": 6,
+    "hot_frac": 0.29208796296296297,
+    "noise_sigma_over_h": 0.0006931383303852919,
+    "tensor_share": 0.9856433083083868
+   },
+   "secs": 23.5504891872406
+  },
+  "W6_noarc": {
+   "poly": {
+    "med": 0.00344043816044326,
+    "p95": 0.03887249083740624,
+    "max": 0.32289884120079115
+   },
+   "v4": {
+    "med": 0.0019932237936195474,
+    "p95": 0.025570798030184305,
+    "max": 0.3220353790175168
+   },
+   "diag": {
+    "segments": 63803,
+    "tensor_segments": 62887,
+    "tensor_shock_segments": 13631,
+    "shock_segments": 14546,
+    "iface_arc_segments": 0,
+    "arc_repairs": 0,
+    "rejected_fit": 0,
+    "rejected_tol": 916,
+    "max_defer": 6,
+    "hot_frac": 0.29208796296296297,
+    "noise_sigma_over_h": 0.0006931383303852919,
+    "tensor_share": 0.9856433083083868
+   },
+   "secs": 20.251195192337036
+  },
+  "geo_t02": {
+   "poly": {
+    "med": 0.003570056738887828,
+    "p95": 0.04141609246024369,
+    "max": 0.32289884120079115
+   },
+   "v4": {
+    "med": 0.0021057472127558596,
+    "p95": 0.030347350870484985,
+    "max": 0.3220353790175168
+   },
+   "diag": {
+    "segments": 35503,
+    "tensor_segments": 34384,
+    "tensor_shock_segments": 13982,
+    "shock_segments": 15100,
+    "iface_arc_segments": 0,
+    "arc_repairs": 211,
+    "rejected_fit": 2,
+    "rejected_tol": 1117,
+    "max_defer": 13,
+    "hot_frac": 0.6663912037037037,
+    "noise_sigma_over_h": 0.0006931383303852919,
+    "tensor_share": 0.9684815367715405
+   },
+   "secs": 12.849172353744507
+  },
+  "geo_t05": {
+   "poly": {
+    "med": 0.003570056738887828,
+    "p95": 0.04141609246024369,
+    "max": 0.32289884120079115
+   },
+   "v4": {
+    "med": 0.002078989700338818,
+    "p95": 0.024629125112061917,
+    "max": 0.3220353790175168
+   },
+   "diag": {
+    "segments": 35503,
+    "tensor_segments": 35177,
+    "tensor_shock_segments": 14775,
+    "shock_segments": 15100,
+    "iface_arc_segments": 0,
+    "arc_repairs": 211,
+    "rejected_fit": 2,
+    "rejected_tol": 324,
+    "max_defer": 13,
+    "hot_frac": 0.6663912037037037,
+    "noise_sigma_over_h": 0.0006931383303852919,
+    "tensor_share": 0.9908176773793764
+   },
+   "secs": 13.517041683197021
+  },
+  "geo_t10": {
+   "poly": {
+    "med": 0.003570056738887828,
+    "p95": 0.04141609246024369,
+    "max": 0.32289884120079115
+   },
+   "v4": {
+    "med": 0.00207115883719311,
+    "p95": 0.022241944655322754,
+    "max": 0.3220353790175168
+   },
+   "diag": {
+    "segments": 35503,
+    "tensor_segments": 35439,
+    "tensor_shock_segments": 15037,
+    "shock_segments": 15100,
+    "iface_arc_segments": 0,
+    "arc_repairs": 211,
+    "rejected_fit": 2,
+    "rejected_tol": 62,
+    "max_defer": 13,
+    "hot_frac": 0.6663912037037037,
+    "noise_sigma_over_h": 0.0006931383303852919,
+    "tensor_share": 0.998197335436442
+   },
+   "secs": 12.160801410675049
+  },
+  "geo_t02_d2": {
+   "poly": {
+    "med": 0.003570056738887828,
+    "p95": 0.04141609246024369,
+    "max": 0.32289884120079115
+   },
+   "v4": {
+    "med": 0.0020743057806182352,
+    "p95": 0.02231676488113804,
+    "max": 0.20561269891284495
+   },
+   "diag": {
+    "segments": 35503,
+    "tensor_segments": 35386,
+    "tensor_shock_segments": 14984,
+    "shock_segments": 15100,
+    "iface_arc_segments": 0,
+    "arc_repairs": 211,
+    "rejected_fit": 2,
+    "rejected_tol": 115,
+    "max_defer": 13,
+    "hot_frac": 0.6663912037037037,
+    "noise_sigma_over_h": 0.0006931383303852919,
+    "tensor_share": 0.9967045038447455
+   },
+   "secs": 12.341262102127075
+  },
+  "W6_t05": {
+   "poly": {
+    "med": 0.00344043816044326,
+    "p95": 0.03887249083740624,
+    "max": 0.32289884120079115
+   },
+   "v4": {
+    "med": 0.0019746903645432856,
+    "p95": 0.019922905988801615,
+    "max": 0.3220353790175168
+   },
+   "diag": {
+    "segments": 63803,
+    "tensor_segments": 63572,
+    "tensor_shock_segments": 14316,
+    "shock_segments": 14546,
+    "iface_arc_segments": 0,
+    "arc_repairs": 46,
+    "rejected_fit": 0,
+    "rejected_tol": 231,
+    "max_defer": 6,
+    "hot_frac": 0.29208796296296297,
+    "noise_sigma_over_h": 0.0006931383303852919,
+    "tensor_share": 0.9963794805886871
+   },
+   "secs": 9.493807077407837
+  },
+  "W6_t10": {
+   "poly": {
+    "med": 0.00344043816044326,
+    "p95": 0.03887249083740624,
+    "max": 0.32289884120079115
+   },
+   "v4": {
+    "med": 0.001966107818860474,
+    "p95": 0.0179648221681859,
+    "max": 0.3220353790175168
+   },
+   "diag": {
+    "segments": 63803,
+    "tensor_segments": 63758,
+    "tensor_shock_segments": 14502,
+    "shock_segments": 14546,
+    "iface_arc_segments": 0,
+    "arc_repairs": 46,
+    "rejected_fit": 0,
+    "rejected_tol": 45,
+    "max_defer": 6,
+    "hot_frac": 0.29208796296296297,
+    "noise_sigma_over_h": 0.0006931383303852919,
+    "tensor_share": 0.9992947040107832
+   },
+   "secs": 9.207854747772217
+  },
+  "W6_d2": {
+   "poly": {
+    "med": 0.00344043816044326,
+    "p95": 0.03887249083740624,
+    "max": 0.32289884120079115
+   },
+   "v4": {
+    "med": 0.0019684767199650843,
+    "p95": 0.018231840907700303,
+    "max": 0.18799779438444852
+   },
+   "diag": {
+    "segments": 63803,
+    "tensor_segments": 63697,
+    "tensor_shock_segments": 14441,
+    "shock_segments": 14546,
+    "iface_arc_segments": 0,
+    "arc_repairs": 46,
+    "rejected_fit": 0,
+    "rejected_tol": 106,
+    "max_defer": 6,
+    "hot_frac": 0.29208796296296297,
+    "noise_sigma_over_h": 0.0006931383303852919,
+    "tensor_share": 0.9983386361142893
+   },
+   "secs": 8.922476768493652
+  },
+  "trim_t10": {
+   "poly": {
+    "med": 0.00341179536980607,
+    "p95": 0.03443034883717366,
+    "max": 0.32289884120079115
+   },
+   "v4": {
+    "med": 0.0018224939364775983,
+    "p95": 0.01362280888618242,
+    "max": 0.3220353790175168
+   },
+   "diag": {
+    "segments": 82341,
+    "tensor_segments": 82317,
+    "tensor_shock_segments": 15920,
+    "shock_segments": 15940,
+    "iface_arc_segments": 0,
+    "arc_repairs": 0,
+    "rejected_fit": 0,
+    "rejected_tol": 24,
+    "max_defer": 4,
+    "hot_frac": 0.04634722222222222,
+    "noise_sigma_over_h": 0.0006931383303852919,
+    "tensor_share": 0.9997085291653004
+   },
+   "secs": 9.146994829177856
+  },
+  "pad_t02d2": {
+   "poly": {
+    "med": 0.0034162101857616034,
+    "p95": 0.035279959292539464,
+    "max": 0.5342368864908194
+   },
+   "v4": {
+    "med": 0.0018555372732070863,
+    "p95": 0.014237001574901431,
+    "max": 0.22475773374128005
+   },
+   "diag": {
+    "segments": 78736,
+    "tensor_segments": 78681,
+    "tensor_shock_segments": 17411,
+    "shock_segments": 17462,
+    "iface_arc_segments": 0,
+    "arc_repairs": 1,
+    "rejected_fit": 0,
+    "rejected_tol": 55,
+    "max_defer": 7,
+    "hot_frac": 0.059898148148148145,
+    "noise_sigma_over_h": 0.0006931383303852919,
+    "tensor_share": 0.9993014631172525
+   },
+   "secs": 10.581596851348877
+  },
+  "final": {
+   "poly": {
+    "med": 0.0034205349153700326,
+    "p95": 0.03540093195347624,
+    "max": 0.41447862256683
+   },
+   "v4": {
+    "med": 0.0018578462291820586,
+    "p95": 0.014270107281563305,
+    "max": 0.20653652065183492
+   },
+   "diag": {
+    "segments": 80191,
+    "tensor_segments": 80147,
+    "tensor_shock_segments": 16902,
+    "shock_segments": 16942,
+    "iface_arc_segments": 0,
+    "arc_repairs": 0,
+    "rejected_fit": 0,
+    "rejected_tol": 44,
+    "max_defer": 5,
+    "hot_frac": 0.055046296296296295,
+    "noise_sigma_over_h": 0.0006931383303852919,
+    "tensor_share": 0.9994513099973813
+   },
+   "secs": 7.073439359664917
+  },
+  "pad1": {
+   "poly": {
+    "med": 0.0034254579144302744,
+    "p95": 0.03671874454121288,
+    "max": 0.8597615807053598
+   },
+   "v4": {
+    "med": 0.0018841931423922986,
+    "p95": 0.01451508928256623,
+    "max": 0.34039145901681467
+   },
+   "diag": {
+    "segments": 76551,
+    "tensor_segments": 76499,
+    "tensor_shock_segments": 18432,
+    "shock_segments": 18480,
+    "iface_arc_segments": 0,
+    "arc_repairs": 19,
+    "rejected_fit": 0,
+    "rejected_tol": 52,
+    "max_defer": 9,
+    "hot_frac": 0.06900462962962962,
+    "noise_sigma_over_h": 0.0006931383303852919,
+    "tensor_share": 0.9993207142950451
+   },
+   "secs": 9.040767908096313,
+   "note": "span padding 1.0 (option), default 0.5"
+  }
+ },
+ "blast": {
+  "old_v2": {
+   "med": 0.005758282990432184,
+   "p95": 0.32232978601078105,
+   "max": 1.2580653235900159
+  },
+  "v3_hybrid": {
+   "med": 0.0029298131686347206,
+   "p95": 0.3342475953615706,
+   "max": 1.2580653235900154
+  },
+  "default": {
+   "poly": {
+    "med": 0.005757303097968569,
+    "p95": 0.32232978601078105,
+    "max": 1.2580653235900159
+   },
+   "v4": {
+    "med": 0.003019639891457815,
+    "p95": 0.02550139000035905,
+    "max": 4.888959212081077
+   },
+   "diag": {
+    "segments": 67986,
+    "tensor_segments": 63915,
+    "tensor_shock_segments": 11515,
+    "shock_segments": 13220,
+    "iface_arc_segments": 2006,
+    "arc_repairs": 1665,
+    "rejected_fit": 2737,
+    "rejected_tol": 1334,
+    "max_defer": 20,
+    "hot_frac": 0.3549420367397895,
+    "noise_sigma_over_h": 2.1031701775832266e-15,
+    "tensor_share": 0.9401200247109699
+   },
+   "secs": 31.570361852645874
+  },
+  "n": 8038,
+  "final": {
+   "poly": {
+    "med": 0.00575730309796646,
+    "p95": 0.32232978601078105,
+    "max": 1.2580653235900159
+   },
+   "v4": {
+    "med": 0.0026090308843422783,
+    "p95": 0.02098866862045787,
+    "max": 4.888959212983682
+   },
+   "diag": {
+    "segments": 97978,
+    "tensor_segments": 94596,
+    "tensor_shock_segments": 11737,
+    "shock_segments": 12740,
+    "iface_arc_segments": 2007,
+    "arc_repairs": 477,
+    "rejected_fit": 2743,
+    "rejected_tol": 639,
+    "max_defer": 6,
+    "hot_frac": 0.06208846085250579,
+    "noise_sigma_over_h": 2.1031701775832266e-15,
+    "tensor_share": 0.9654820469901406
+   },
+   "secs": 10.183680057525635
+  },
+  "pad1": {
+   "poly": {
+    "med": 0.00575730309796646,
+    "p95": 0.32232978601078105,
+    "max": 1.2580653235900154
+   },
+   "v4": {
+    "med": 0.002623649724327659,
+    "p95": 0.020988668624225357,
+    "max": 4.888959212983682
+   },
+   "diag": {
+    "segments": 96991,
+    "tensor_segments": 93599,
+    "tensor_shock_segments": 11876,
+    "shock_segments": 12889,
+    "iface_arc_segments": 2007,
+    "arc_repairs": 477,
+    "rejected_fit": 2743,
+    "rejected_tol": 649,
+    "max_defer": 6,
+    "hot_frac": 0.06313001605136437,
+    "noise_sigma_over_h": 2.1031701775832266e-15,
+    "tensor_share": 0.9650276829808951
+   },
+   "secs": 12.343963384628296,
+   "note": "span padding 1.0 (option), default 0.5"
+  }
+ },
+ "visc_0.5_0.25": {
+  "old_v2": {
+   "med": 0.04818027723828816,
+   "p95": 0.15028223406886287,
+   "max": 0.3261611353105629
+  },
+  "trim_t10": {
+   "poly": {
+    "med": 0.0006030301668151772,
+    "p95": 0.0021915481426571515,
+    "max": 0.005072940665967529
+   },
+   "v4": {
+    "med": 0.0020285127914041468,
+    "p95": 0.007556354858453462,
+    "max": 0.023163724449134948
+   },
+   "diag": {
+    "segments": 149623,
+    "tensor_segments": 149623,
+    "tensor_shock_segments": 6005,
+    "shock_segments": 6005,
+    "iface_arc_segments": 0,
+    "arc_repairs": 0,
+    "rejected_fit": 0,
+    "rejected_tol": 0,
+    "max_defer": 12,
+    "hot_frac": 0.058837575757575755,
+    "noise_sigma_over_h": 9.225833790786312e-15,
+    "tensor_share": 1.0
+   },
+   "secs": 15.980467557907104
+  },
+  "n": 1936,
+  "pad_t02d2": {
+   "poly": {
+    "med": 3.3239444740540414e-05,
+    "p95": 0.00021706139958976856,
+    "max": 0.0015893600647978179
+   },
+   "v4": {
+    "med": 0.0001230164868009087,
+    "p95": 0.0008083117578125965,
+    "max": 0.006197360183904932
+   },
+   "diag": {
+    "segments": 142591,
+    "tensor_segments": 142591,
+    "tensor_shock_segments": 6024,
+    "shock_segments": 6024,
+    "iface_arc_segments": 0,
+    "arc_repairs": 0,
+    "rejected_fit": 0,
+    "rejected_tol": 0,
+    "max_defer": 18,
+    "hot_frac": 0.09512484848484848,
+    "noise_sigma_over_h": 9.225833790786312e-15,
+    "tensor_share": 1.0
+   },
+   "secs": 16.257153749465942
+  },
+  "final": {
+   "poly": {
+    "med": 3.3239444740540414e-05,
+    "p95": 0.00021706139958976856,
+    "max": 0.0015893600647978179
+   },
+   "v4": {
+    "med": 0.0001230164868009087,
+    "p95": 0.0008083117578125965,
+    "max": 0.006197360183904932
+   },
+   "diag": {
+    "segments": 142591,
+    "tensor_segments": 142591,
+    "tensor_shock_segments": 6024,
+    "shock_segments": 6024,
+    "iface_arc_segments": 0,
+    "arc_repairs": 0,
+    "rejected_fit": 0,
+    "rejected_tol": 0,
+    "max_defer": 18,
+    "hot_frac": 0.09512484848484848,
+    "noise_sigma_over_h": 9.225833790786312e-15,
+    "tensor_share": 1.0
+   },
+   "secs": 11.579843521118164
+  }
+ },
+ "visc_2_1": {
+  "old_v2": {
+   "med": 0.014776667178890424,
+   "p95": 0.04540156418264446,
+   "max": 0.08426473230981057
+  },
+  "trim_t10": {
+   "poly": {
+    "med": 0.0007132835747741817,
+    "p95": 0.0022134865089937783,
+    "max": 0.005157137911133924
+   },
+   "v4": {
+    "med": 0.0006932588092435354,
+    "p95": 0.0013814497535972747,
+    "max": 0.002722262492099725
+   },
+   "diag": {
+    "segments": 41608,
+    "tensor_segments": 41608,
+    "tensor_shock_segments": 3357,
+    "shock_segments": 3357,
+    "iface_arc_segments": 0,
+    "arc_repairs": 0,
+    "rejected_fit": 0,
+    "rejected_tol": 0,
+    "max_defer": 8,
+    "hot_frac": 0.15243960396039605,
+    "noise_sigma_over_h": 6.78258840306772e-08,
+    "tensor_share": 1.0
+   },
+   "secs": 4.182244062423706
+  },
+  "n": 1936,
+  "final": {
+   "poly": {
+    "med": 3.9257143986726195e-05,
+    "p95": 0.00024664883002939453,
+    "max": 0.0030807815572789776
+   },
+   "v4": {
+    "med": 3.908033383648313e-05,
+    "p95": 0.00021406989687733358,
+    "max": 0.001716069387490915
+   },
+   "diag": {
+    "segments": 35048,
+    "tensor_segments": 35048,
+    "tensor_shock_segments": 3532,
+    "shock_segments": 3532,
+    "iface_arc_segments": 0,
+    "arc_repairs": 0,
+    "rejected_fit": 0,
+    "rejected_tol": 0,
+    "max_defer": 14,
+    "hot_frac": 0.2495207920792079,
+    "noise_sigma_over_h": 6.78258840306772e-08,
+    "tensor_share": 1.0
+   },
+   "secs": 3.124112129211426
+  }
+ },
+ "visc_2_0.25": {
+  "old_v2": {
+   "med": 0.018101221938244483,
+   "p95": 0.05422382455621236,
+   "max": 0.10076248685165545
+  },
+  "trim_t10": {
+   "poly": {
+    "med": 0.001101825665299816,
+    "p95": 0.0030814364715308906,
+    "max": 0.006572833965749814
+   },
+   "v4": {
+    "med": 0.0010563728522039462,
+    "p95": 0.0020483531075048966,
+    "max": 0.0041666855655124735
+   },
+   "diag": {
+    "segments": 166167,
+    "tensor_segments": 166167,
+    "tensor_shock_segments": 5925,
+    "shock_segments": 5925,
+    "iface_arc_segments": 0,
+    "arc_repairs": 0,
+    "rejected_fit": 0,
+    "rejected_tol": 0,
+    "max_defer": 27,
+    "hot_frac": 0.14134129353233832,
+    "noise_sigma_over_h": 8.89351925764219e-10,
+    "tensor_share": 1.0
+   },
+   "secs": 17.998287677764893
+  },
+  "n": 1936,
+  "pad_t02d2": {
+   "poly": {
+    "med": 0.0007479085184395329,
+    "p95": 0.0018948996598713297,
+    "max": 0.00288069441589367
+   },
+   "v4": {
+    "med": 0.0007167387552433624,
+    "p95": 0.0012255569832475555,
+    "max": 0.0017231961174752897
+   },
+   "diag": {
+    "segments": 156595,
+    "tensor_segments": 156595,
+    "tensor_shock_segments": 6006,
+    "shock_segments": 6006,
+    "iface_arc_segments": 0,
+    "arc_repairs": 0,
+    "rejected_fit": 0,
+    "rejected_tol": 0,
+    "max_defer": 34,
+    "hot_frac": 0.19294427860696517,
+    "noise_sigma_over_h": 8.89351925764219e-10,
+    "tensor_share": 1.0
+   },
+   "secs": 18.77326798439026
+  },
+  "final": {
+   "poly": {
+    "med": 0.0007479085184395329,
+    "p95": 0.0018948996598713297,
+    "max": 0.00288069441589367
+   },
+   "v4": {
+    "med": 0.0007167387552433624,
+    "p95": 0.0012255569832475555,
+    "max": 0.0017231961174752897
+   },
+   "diag": {
+    "segments": 156595,
+    "tensor_segments": 156595,
+    "tensor_shock_segments": 6006,
+    "shock_segments": 6006,
+    "iface_arc_segments": 0,
+    "arc_repairs": 0,
+    "rejected_fit": 0,
+    "rejected_tol": 0,
+    "max_defer": 34,
+    "hot_frac": 0.19294427860696517,
+    "noise_sigma_over_h": 8.89351925764219e-10,
+    "tensor_share": 1.0
+   },
+   "secs": 12.62846851348877
+  }
+ },
+ "visc_4_0.5": {
+  "old_v2": {
+   "med": 0.009229818098995701,
+   "p95": 0.027450843052625518,
+   "max": 0.04555651088777757
+  },
+  "trim_t10": {
+   "poly": {
+    "med": 0.000636970917856361,
+    "p95": 0.0016551305470057232,
+    "max": 0.0027242549871070443
+   },
+   "v4": {
+    "med": 0.00031253226249972066,
+    "p95": 0.0005156305198625311,
+    "max": 0.000852989273788074
+   },
+   "diag": {
+    "segments": 92216,
+    "tensor_segments": 92216,
+    "tensor_shock_segments": 4293,
+    "shock_segments": 4293,
+    "iface_arc_segments": 0,
+    "arc_repairs": 0,
+    "rejected_fit": 0,
+    "rejected_tol": 0,
+    "max_defer": 26,
+    "hot_frac": 0.2314152610441767,
+    "noise_sigma_over_h": 2.6752628602624975e-07,
+    "tensor_share": 1.0
+   },
+   "secs": 9.97489881515503
+  },
+  "n": 1936,
+  "final": {
+   "poly": {
+    "med": 0.00043811805816318383,
+    "p95": 0.0011396460049040713,
+    "max": 0.001810498919657233
+   },
+   "v4": {
+    "med": 0.00021925509765319262,
+    "p95": 0.0003521176584677099,
+    "max": 0.0005006339660182935
+   },
+   "diag": {
+    "segments": 83034,
+    "tensor_segments": 83034,
+    "tensor_shock_segments": 4395,
+    "shock_segments": 4395,
+    "iface_arc_segments": 0,
+    "arc_repairs": 0,
+    "rejected_fit": 0,
+    "rejected_tol": 0,
+    "max_defer": 32,
+    "hot_frac": 0.31238232931726906,
+    "noise_sigma_over_h": 2.6752628602624975e-07,
+    "tensor_share": 1.0
+   },
+   "secs": 7.301805734634399
+  }
+ },
+ "visc_4_0.25": {
+  "old_v2": {
+   "med": 0.009517786325648592,
+   "p95": 0.02780158547448977,
+   "max": 0.04912868789899738
+  },
+  "trim_t10": {
+   "poly": {
+    "med": 0.0019149812993747295,
+    "p95": 0.005470560140936553,
+    "max": 0.015514768342972829
+   },
+   "v4": {
+    "med": 0.0008886492872831608,
+    "p95": 0.0015175831078303448,
+    "max": 0.0022715098569592307
+   },
+   "diag": {
+    "segments": 199602,
+    "tensor_segments": 199602,
+    "tensor_shock_segments": 6156,
+    "shock_segments": 6156,
+    "iface_arc_segments": 0,
+    "arc_repairs": 0,
+    "rejected_fit": 0,
+    "rejected_tol": 0,
+    "max_defer": 38,
+    "hot_frac": 0.16236064257028113,
+    "noise_sigma_over_h": 3.2334697657030795e-08,
+    "tensor_share": 1.0
+   },
+   "secs": 21.676527738571167
+  },
+  "n": 1936,
+  "pad_t02d2": {
+   "poly": {
+    "med": 0.0032041296115669637,
+    "p95": 0.008363215431546084,
+    "max": 0.012642486197422809
+   },
+   "v4": {
+    "med": 0.0012812056154996032,
+    "p95": 0.002033188700333477,
+    "max": 0.0031953875424288736
+   },
+   "diag": {
+    "segments": 194155,
+    "tensor_segments": 194155,
+    "tensor_shock_segments": 5734,
+    "shock_segments": 5734,
+    "iface_arc_segments": 0,
+    "arc_repairs": 0,
+    "rejected_fit": 0,
+    "rejected_tol": 0,
+    "max_defer": 40,
+    "hot_frac": 0.19780642570281123,
+    "noise_sigma_over_h": 3.2334697657030795e-08,
+    "tensor_share": 1.0
+   },
+   "secs": 20.434871435165405
+  },
+  "final": {
+   "poly": {
+    "med": 0.0032041296115669637,
+    "p95": 0.008363215431546084,
+    "max": 0.012642486197422809
+   },
+   "v4": {
+    "med": 0.0012812056154996032,
+    "p95": 0.002033188700333477,
+    "max": 0.0031953875424288736
+   },
+   "diag": {
+    "segments": 194155,
+    "tensor_segments": 194155,
+    "tensor_shock_segments": 5734,
+    "shock_segments": 5734,
+    "iface_arc_segments": 0,
+    "arc_repairs": 0,
+    "rejected_fit": 0,
+    "rejected_tol": 0,
+    "max_defer": 40,
+    "hot_frac": 0.19780642570281123,
+    "noise_sigma_over_h": 3.2334697657030795e-08,
+    "tensor_share": 1.0
+   },
+   "secs": 15.14161491394043
+  }
+ },
+ "sb": {
+  "old_v2": {
+   "med": 0.006721351281892662,
+   "p95": 0.29717981609260824,
+   "max": 4.014631163418243
+  },
+  "old_v2_clean": {
+   "med": 0.004973745867396517,
+   "p95": 0.02492099706086115,
+   "max": 1.0242994064226383
+  },
+  "v3_hybrid": {
+   "med": 0.004034732181589451,
+   "p95": 0.30973936275091596,
+   "max": 4.014631163418243
+  },
+  "v3_hybrid_clean": {
+   "med": 0.0029054938725405766,
+   "p95": 0.017172037310034804,
+   "max": 0.9334571332643082
+  },
+  "final": {
+   "poly": {
+    "med": 0.006435136021839094,
+    "p95": 0.3024975198008243,
+    "max": 4.014631163418243
+   },
+   "v4": {
+    "med": 0.004044098308551125,
+    "p95": 0.2960686053961073,
+    "max": 3.7622116132899865
+   },
+   "diag": {
+    "segments": 203523,
+    "tensor_segments": 190268,
+    "tensor_shock_segments": 24470,
+    "shock_segments": 25925,
+    "iface_arc_segments": 5766,
+    "arc_repairs": 4,
+    "rejected_fit": 12944,
+    "rejected_tol": 311,
+    "max_defer": 8,
+    "hot_frac": 0.06108485499462943,
+    "noise_sigma_over_h": 0.0009304485059546087,
+    "tensor_share": 0.9348722257435278
+   },
+   "secs": 25.49473547935486,
+   "poly_clean": {
+    "med": 0.004755958142785954,
+    "p95": 0.02440092895931134,
+    "max": 1.0242994064226383
+   },
+   "v4_clean": {
+    "med": 0.002917732305799836,
+    "p95": 0.0168644828636485,
+    "max": 1.0242994064226383
+   },
+   "clean_frac": 0.7935220085606594
+  },
+  "n": 15653,
+  "pad1": {
+   "poly": {
+    "med": 0.006527110111306245,
+    "p95": 0.3217245860775756,
+    "max": 4.014631163418243
+   },
+   "v4": {
+    "med": 0.004020162999998078,
+    "p95": 0.31151702843502577,
+    "max": 3.7622116132899865
+   },
+   "diag": {
+    "segments": 185381,
+    "tensor_segments": 172498,
+    "tensor_shock_segments": 28908,
+    "shock_segments": 30647,
+    "iface_arc_segments": 5558,
+    "arc_repairs": 61,
+    "rejected_fit": 12563,
+    "rejected_tol": 320,
+    "max_defer": 18,
+    "hot_frac": 0.10463838166845686,
+    "noise_sigma_over_h": 0.0009304485059546087,
+    "tensor_share": 0.9305052837130019
+   },
+   "secs": 32.289175033569336,
+   "poly_clean": {
+    "med": 0.00482076027423417,
+    "p95": 0.026320629169933385,
+    "max": 1.0242994064226383
+   },
+   "v4_clean": {
+    "med": 0.0028870598591870245,
+    "p95": 0.017682262970112217,
+    "max": 1.0242994064226383
+   },
+   "clean_frac": 0.7935220085606594,
+   "note": "span padding 1.0 (option), default 0.5"
+  }
+ },
+ "rm": {
+  "old_v2": {
+   "med": 0.007283073043470312,
+   "p95": 0.3535394895175953,
+   "max": 0.5747629283312921
+  },
+  "old_v2_clean": {
+   "med": 0.0035201240449126425,
+   "p95": 0.04298399163249407,
+   "max": 0.26146111691498475
+  },
+  "v3_hybrid": {
+   "med": 0.0046900169496234545,
+   "p95": 0.353218271810831,
+   "max": 0.5277777225042293
+  },
+  "v3_hybrid_clean": {
+   "med": 0.002054451776339783,
+   "p95": 0.03940113590700672,
+   "max": 0.29700664253756415
+  },
+  "final": {
+   "poly": {
+    "med": 0.007253559425400846,
+    "p95": 0.3535394895175953,
+    "max": 0.5747629283312921
+   },
+   "v4": {
+    "med": 0.004689142474074703,
+    "p95": 0.34922485589089747,
+    "max": 0.6511523303556241
+   },
+   "diag": {
+    "segments": 79198,
+    "tensor_segments": 72248,
+    "tensor_shock_segments": 8206,
+    "shock_segments": 8778,
+    "iface_arc_segments": 2922,
+    "arc_repairs": 0,
+    "rejected_fit": 6950,
+    "rejected_tol": 0,
+    "max_defer": 4,
+    "hot_frac": 0.0288975,
+    "noise_sigma_over_h": 0.00047126282553448524,
+    "tensor_share": 0.9122452587186545
+   },
+   "secs": 6.905933856964111,
+   "poly_clean": {
+    "med": 0.0035253182394648364,
+    "p95": 0.04298399163249407,
+    "max": 0.26146111691498475
+   },
+   "v4_clean": {
+    "med": 0.0020575969378226477,
+    "p95": 0.0394635429751444,
+    "max": 0.26146111691498475
+   },
+   "clean_frac": 0.6287597857437165
+  },
+  "n": 7281
+ },
+ "sbv": {
+  "old_v2": {
+   "med": 0.005328076310366914,
+   "p95": 0.08914961981298924,
+   "max": 0.31168802505549664
+  },
+  "old_v2_clean": {
+   "med": 0.003633436266722523,
+   "p95": 0.01370084490418395,
+   "max": 0.19099341460537522
+  },
+  "v3_hybrid": {
+   "med": 0.0030815819409988343,
+   "p95": 0.09271951840409023,
+   "max": 0.33032490110126045
+  },
+  "v3_hybrid_clean": {
+   "med": 0.001986230769902897,
+   "p95": 0.009870940944960651,
+   "max": 0.1884042202302807
+  },
+  "final": {
+   "poly": {
+    "med": 0.005279201366162389,
+    "p95": 0.09016362819519874,
+    "max": 0.3162464391466385
+   },
+   "v4": {
+    "med": 0.0030722826338411835,
+    "p95": 0.07299934086627113,
+    "max": 0.2843521479640483
+   },
+   "diag": {
+    "segments": 198625,
+    "tensor_segments": 187203,
+    "tensor_shock_segments": 25166,
+    "shock_segments": 26547,
+    "iface_arc_segments": 4951,
+    "arc_repairs": 0,
+    "rejected_fit": 11391,
+    "rejected_tol": 31,
+    "max_defer": 15,
+    "hot_frac": 0.06835213032581454,
+    "noise_sigma_over_h": 0.0011197386530708842,
+    "tensor_share": 0.9424946507237256
+   },
+   "secs": 23.458266258239746,
+   "poly_clean": {
+    "med": 0.003578065949117082,
+    "p95": 0.013741985527483307,
+    "max": 0.19099341460537522
+   },
+   "v4_clean": {
+    "med": 0.0019923210598633,
+    "p95": 0.010065833905034911,
+    "max": 0.10673831328229788
+   },
+   "clean_frac": 0.6677324466044251
+  },
+  "n": 15638
+ },
+ "dg": {
+  "old_v2": {
+   "med": 0.012394333212521702,
+   "p95": 0.05583481139870659,
+   "max": 0.3255375080243057
+  },
+  "v3_hybrid": {
+   "med": 0.001141888933224533,
+   "p95": 0.005372943159061439,
+   "max": 0.3255375080243057
+  },
+  "final": {
+   "poly": {
+    "med": 0.012417552555200495,
+    "p95": 0.056052215668756414,
+    "max": 1.3904942220813679
+   },
+   "v4": {
+    "med": 0.001133117565149222,
+    "p95": 0.005009037405294543,
+    "max": 1.059564739359153
+   },
+   "diag": {
+    "segments": 127764,
+    "tensor_segments": 127707,
+    "tensor_shock_segments": 293,
+    "shock_segments": 320,
+    "iface_arc_segments": 0,
+    "arc_repairs": 0,
+    "rejected_fit": 23,
+    "rejected_tol": 34,
+    "max_defer": 11,
+    "hot_frac": 0.000359375,
+    "noise_sigma_over_h": 0.01908561607649567,
+    "tensor_share": 0.9995538649384803
+   },
+   "secs": 10.512964725494385
+  },
+  "n": 11674
+ },
+ "smooth_noise0.02": {
+  "old_v2": {
+   "med": 0.01303452520088244,
+   "p95": 0.03882022473165192,
+   "max": 0.07435450270474409
+  },
+  "final": {
+   "poly": {
+    "med": 0.01303452520088244,
+    "p95": 0.03882022473165192,
+    "max": 0.07435450270474409
+   },
+   "v4": {
+    "med": 0.008214721371933853,
+    "p95": 0.025190857868074457,
+    "max": 0.05991514408077547
+   },
+   "diag": {
+    "segments": 19994,
+    "tensor_segments": 19971,
+    "tensor_shock_segments": 108,
+    "shock_segments": 108,
+    "iface_arc_segments": 0,
+    "arc_repairs": 0,
+    "rejected_fit": 0,
+    "rejected_tol": 23,
+    "max_defer": 4,
+    "hot_frac": 0.00012,
+    "noise_sigma_over_h": 0.02003507317835874,
+    "tensor_share": 0.9988496548964689
+   },
+   "secs": 1.0940463542938232
+  },
+  "n": 1936
+ },
+ "sod_noise0.02": {
+  "old_v2": {
+   "med": 0.01465731148686611,
+   "p95": 0.05241464513909052,
+   "max": 0.7690265148566022
+  },
+  "final": {
+   "poly": {
+    "med": 0.01464223993977154,
+    "p95": 0.05296903866820767,
+    "max": 0.7690265148566022
+   },
+   "v4": {
+    "med": 0.00963519660304113,
+    "p95": 0.036210030522429375,
+    "max": 0.7690265148566022
+   },
+   "diag": {
+    "segments": 58726,
+    "tensor_segments": 55071,
+    "tensor_shock_segments": 3276,
+    "shock_segments": 3535,
+    "iface_arc_segments": 1735,
+    "arc_repairs": 69,
+    "rejected_fit": 3603,
+    "rejected_tol": 52,
+    "max_defer": 4,
+    "hot_frac": 0.01416,
+    "noise_sigma_over_h": 0.020376630856196398,
+    "tensor_share": 0.9377618090794537
+   },
+   "secs": 5.299102783203125
+  },
+  "n": 5230
+ },
+ "blast_noise0.02": {
+  "old_v2": {
+   "med": 0.03380838641295858,
+   "p95": 0.3225940112393476,
+   "max": 1.183477963838854
+  },
+  "final": {
+   "poly": {
+    "med": 0.03346641805517481,
+    "p95": 0.3272029617114541,
+    "max": 1.1834779638388535
+   },
+   "v4": {
+    "med": 0.02248326631431735,
+    "p95": 0.11363316465909774,
+    "max": 5.361450549757437
+   },
+   "diag": {
+    "segments": 89682,
+    "tensor_segments": 85573,
+    "tensor_shock_segments": 14202,
+    "shock_segments": 15289,
+    "iface_arc_segments": 2012,
+    "arc_repairs": 559,
+    "rejected_fit": 3527,
+    "rejected_tol": 582,
+    "max_defer": 14,
+    "hot_frac": 0.08570536828963796,
+    "noise_sigma_over_h": 0.020519463459955912,
+    "tensor_share": 0.9541825561428158
+   },
+   "secs": 10.818504095077515
+  },
+  "n": 8038
+ },
+ "sv_noise0.02": {
+  "old_v2": {
+   "med": 0.01957244687460946,
+   "p95": 0.07525768428949853,
+   "max": 0.3856124148049844
+  },
+  "final": {
+   "poly": {
+    "med": 0.019591256223872477,
+    "p95": 0.07586217104330034,
+    "max": 0.431494763690073
+   },
+   "v4": {
+    "med": 0.012403526964585687,
+    "p95": 0.04654812139964218,
+    "max": 0.41210902035290786
+   },
+   "diag": {
+    "segments": 77090,
+    "tensor_segments": 76861,
+    "tensor_shock_segments": 18895,
+    "shock_segments": 18935,
+    "iface_arc_segments": 0,
+    "arc_repairs": 43,
+    "rejected_fit": 109,
+    "rejected_tol": 120,
+    "max_defer": 6,
+    "hot_frac": 0.06297222222222222,
+    "noise_sigma_over_h": 0.02317438210644525,
+    "tensor_share": 0.9970294461019588
+   },
+   "secs": 7.593626976013184
+  },
+  "n": 12786
+ },
+ "rm_noise0.02": {
+  "old_v2": {
+   "med": 0.03783708832627408,
+   "p95": 0.3557099080534176,
+   "max": 0.7805972991215266
+  },
+  "old_v2_clean": {
+   "med": 0.02324279932517892,
+   "p95": 0.08155372406875336,
+   "max": 0.5460228699540652
+  },
+  "final": {
+   "poly": {
+    "med": 0.03780944395380226,
+    "p95": 0.3557099080534176,
+    "max": 0.7805972991215266
+   },
+   "v4": {
+    "med": 0.027594495175799594,
+    "p95": 0.35003935838079125,
+    "max": 1.123365092249594
+   },
+   "diag": {
+    "segments": 78179,
+    "tensor_segments": 70619,
+    "tensor_shock_segments": 9313,
+    "shock_segments": 10168,
+    "iface_arc_segments": 2927,
+    "arc_repairs": 6,
+    "rejected_fit": 7431,
+    "rejected_tol": 129,
+    "max_defer": 4,
+    "hot_frac": 0.03309,
+    "noise_sigma_over_h": 0.021382659654711842,
+    "tensor_share": 0.9032988398419013
+   },
+   "secs": 7.338457345962524,
+   "poly_clean": {
+    "med": 0.02299046289452389,
+    "p95": 0.08313136567283251,
+    "max": 0.5460228699540652
+   },
+   "v4_clean": {
+    "med": 0.015624393863005293,
+    "p95": 0.07137911016412252,
+    "max": 0.3553390728912844
+   },
+   "clean_frac": 0.6287597857437165
+  },
+  "n": 7281
+ },
+ "visc_2_0.5_mid": {
+  "old_v2": {
+   "med": 0.004715402464981311,
+   "p95": 0.041112252304892904,
+   "max": 0.09047124126016226
+  },
+  "final": {
+   "poly": {
+    "med": 0.0002452187042023546,
+    "p95": 0.021747880026846078,
+    "max": 0.07534624212433272
+   },
+   "v4": {
+    "med": 0.00041372108604931235,
+    "p95": 0.013687272474963263,
+    "max": 0.1077229607469683
+   },
+   "diag": {
+    "segments": 39501,
+    "tensor_segments": 39485,
+    "tensor_shock_segments": 1946,
+    "shock_segments": 1962,
+    "iface_arc_segments": 0,
+    "arc_repairs": 11,
+    "rejected_fit": 0,
+    "rejected_tol": 16,
+    "max_defer": 24,
+    "hot_frac": 0.21504158415841584,
+    "noise_sigma_over_h": 9.640996311371697e-13,
+    "tensor_share": 0.999594946963368
+   },
+   "secs": 2.7751190662384033
+  },
+  "n": 1936
+ },
+ "visc_4_0.5_mid": {
+  "old_v2": {
+   "med": 0.0035784316726544807,
+   "p95": 0.020243873571844512,
+   "max": 0.03666484251672941
+  },
+  "final": {
+   "poly": {
+    "med": 0.001199697428841795,
+    "p95": 0.01469107008879117,
+    "max": 0.037854795427987975
+   },
+   "v4": {
+    "med": 0.0010268132420966358,
+    "p95": 0.004052196251693729,
+    "max": 0.006929241556260957
+   },
+   "diag": {
+    "segments": 45107,
+    "tensor_segments": 45104,
+    "tensor_shock_segments": 2065,
+    "shock_segments": 2068,
+    "iface_arc_segments": 0,
+    "arc_repairs": 4,
+    "rejected_fit": 0,
+    "rejected_tol": 3,
+    "max_defer": 32,
+    "hot_frac": 0.2623936,
+    "noise_sigma_over_h": 3.0813258487216892e-09,
+    "tensor_share": 0.9999334914758241
+   },
+   "secs": 3.2240073680877686
+  },
+  "n": 1936
+ },
+ "sb_noise0.02": {
+  "old_v2": {
+   "med": 0.03224977968734932,
+   "p95": 0.3022737610844429,
+   "max": 3.229301162668622
+  },
+  "old_v2_clean": {
+   "med": 0.026198291246029237,
+   "p95": 0.08742268745427795,
+   "max": 0.8580856779631851
+  },
+  "final": {
+   "poly": {
+    "med": 0.03206473833111434,
+    "p95": 0.3042045002167744,
+    "max": 3.229301162668622
+   },
+   "v4": {
+    "med": 0.022642526466634783,
+    "p95": 0.2925339882524741,
+    "max": 3.9328752457273985
+   },
+   "diag": {
+    "segments": 204545,
+    "tensor_segments": 189172,
+    "tensor_shock_segments": 29277,
+    "shock_segments": 31664,
+    "iface_arc_segments": 5788,
+    "arc_repairs": 25,
+    "rejected_fit": 14792,
+    "rejected_tol": 581,
+    "max_defer": 5,
+    "hot_frac": 0.04388739706408879,
+    "noise_sigma_over_h": 0.022347338278806157,
+    "tensor_share": 0.9248429440954313
+   },
+   "secs": 27.590692043304443,
+   "poly_clean": {
+    "med": 0.026060754609325887,
+    "p95": 0.08746993831489913,
+    "max": 0.8580856779631851
+   },
+   "v4_clean": {
+    "med": 0.01788374309294838,
+    "p95": 0.0689234433658007,
+    "max": 0.8580856779631851
+   },
+   "clean_frac": 0.7935220085606594
+  },
+  "n": 15653
+ },
+ "sbv_noise0.02": {
+  "old_v2": {
+   "med": 0.029059893155926053,
+   "p95": 0.1210422349822932,
+   "max": 0.8061556444854217
+  },
+  "old_v2_clean": {
+   "med": 0.02421093927687884,
+   "p95": 0.07918903954749047,
+   "max": 0.8061556444854217
+  },
+  "final": {
+   "poly": {
+    "med": 0.028899957304464263,
+    "p95": 0.12165774699006544,
+    "max": 1.2623231410760032
+   },
+   "v4": {
+    "med": 0.02037265753150691,
+    "p95": 0.1069246474148684,
+    "max": 33.739597392956355
+   },
+   "diag": {
+    "segments": 206184,
+    "tensor_segments": 191950,
+    "tensor_shock_segments": 26657,
+    "shock_segments": 28631,
+    "iface_arc_segments": 5212,
+    "arc_repairs": 14,
+    "rejected_fit": 13895,
+    "rejected_tol": 339,
+    "max_defer": 7,
+    "hot_frac": 0.04210884353741497,
+    "noise_sigma_over_h": 0.021882604421718087,
+    "tensor_share": 0.9309645753307725
+   },
+   "secs": 26.1168794631958,
+   "poly_clean": {
+    "med": 0.024159645261419338,
+    "p95": 0.07768565790280378,
+    "max": 1.2623231410760032
+   },
+   "v4_clean": {
+    "med": 0.01715126476893669,
+    "p95": 0.05999904459392435,
+    "max": 1.5179487232648583
+   },
+   "clean_frac": 0.6677324466044251
+  },
+  "n": 15638
+ }
+}

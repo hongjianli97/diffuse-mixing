@@ -1,0 +1,7 @@
+{
+  "graphs": 1,
+  "geometry_sha256": "99d72288f768d29ebe5e9dd12d26bfb8d515e74140ff651784be38004918e697",
+  "builder_inputs_sha256": "a4b5a526957e09cfa423a3e20f8b603ee0705d012ada517c21533dc479d5d461",
+  "static_graph_sealed_before_any_material_c0_reference_or_oldstate": true,
+  "builder_received_true_material_faces_or_F_C_or_precomputed_g": false
+}

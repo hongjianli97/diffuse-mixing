@@ -1,0 +1,40 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "element": {
+    "symmetry_max": 0.0,
+    "row_sum_max": 1.213473765915296e-13,
+    "min_eigenvalue": 2.619779390368794e-14,
+    "positive_offdiag_count": 44,
+    "relative_mass_error": 3.307608282917262e-17,
+    "energy_before": 2.402930615678264,
+    "energy_after": 1.2371044399770186,
+    "min_c": 0.08657325415924376,
+    "max_c": 0.7600516311898973
+  },
+  "edge_harm": {
+    "symmetry_max": 0.0,
+    "row_sum_max": 8.659739592076221e-15,
+    "min_eigenvalue": 5.540510042446287e-15,
+    "positive_offdiag_count": 0,
+    "relative_mass_error": 3.790071477880638e-17,
+    "energy_before": 2.402930615678264,
+    "energy_after": 1.9906492054344476,
+    "min_c": 0.05540846610840201,
+    "max_c": 0.9118872579886654
+  },
+  "zero_conductance": {
+    "finite": true,
+    "max_abs": 0,
+    "warnings": [
+      "divide by zero encountered in divide"
+    ]
+  },
+  "sph_pair_support_counterexample": {
+    "legacy_pairs": [],
+    "distance": 1.0,
+    "mean_kernel_support": 1.1,
+    "pair_should_be_present": true
+  }
+}

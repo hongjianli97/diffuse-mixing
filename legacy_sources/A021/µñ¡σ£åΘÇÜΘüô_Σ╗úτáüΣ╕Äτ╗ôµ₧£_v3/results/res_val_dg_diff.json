@@ -1,0 +1,30 @@
+{
+ "kappa=0.001": {
+  "t=5": {
+   "r_network": 0.9998888110440096,
+   "relL2_network": 0.015250313845318244,
+   "relL2_pure_advection": 0.2441529691564563,
+   "variance_ratio_network_over_euler": 1.006525901792626
+  },
+  "t=10": {
+   "r_network": 0.9995148132081977,
+   "relL2_network": 0.032204066643794715,
+   "relL2_pure_advection": 0.6611982094766005,
+   "variance_ratio_network_over_euler": 1.0153436810880638
+  }
+ },
+ "kappa=0.0003": {
+  "t=5": {
+   "r_network": 0.9999012849080247,
+   "relL2_network": 0.01416992999560337,
+   "relL2_pure_advection": 0.15126972149857795,
+   "variance_ratio_network_over_euler": 1.003160812080909
+  },
+  "t=10": {
+   "r_network": 0.9994367012477243,
+   "relL2_network": 0.03414468653226859,
+   "relL2_pure_advection": 0.403008354293605,
+   "variance_ratio_network_over_euler": 1.0102873186415857
+  }
+ }
+}

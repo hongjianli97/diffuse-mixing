@@ -1,0 +1,21 @@
+{
+  "updated": "2026-11-04",
+  "timezone": "Asia/Shanghai",
+  "parent_manifest_entries_verified": 6374,
+  "parent_manifest_sha256": "904f0adf8b062530970fbe68277e876412111285f9d0ccfb8c47a48e8c80fff3",
+  "previous_recorded_checks": 490,
+  "new_software_checks": 3,
+  "recorded_checks_total": 493,
+  "previous_checks_rerun": 0,
+  "N": 32,
+  "K": 16,
+  "new_candidate_graphs": 1,
+  "new_candidate_transient_runs": 1,
+  "new_complete_independent_uniformization_sequences": 1,
+  "old_candidate_reruns": 0,
+  "new_reference_PDE_solves": 0,
+  "new_spectral_projection_fits": 0,
+  "material_data_newly_derived_not_recovered": true,
+  "PDF_requested_by_user": true,
+  "environment_or_software_publication_requested": false
+}

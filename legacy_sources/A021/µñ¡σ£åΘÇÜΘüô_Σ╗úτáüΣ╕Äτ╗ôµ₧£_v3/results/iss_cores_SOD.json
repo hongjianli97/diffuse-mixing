@@ -1,0 +1,57 @@
+{
+ "case": "SOD",
+ "thr": 0.01529165097889188,
+ "z": 5.212583779240977,
+ "cores_clean": [
+  {
+   "pos": [
+    0.422,
+    0.026
+   ],
+   "pers": 0.0177,
+   "share": 1.005
+  }
+ ],
+ "ref_vortices": [],
+ "noise": [
+  {
+   "seed": 5,
+   "thr_noise": 0.7488339060342958,
+   "n_cores": 0,
+   "cores": [],
+   "ref_vortex_snr": [],
+   "iou_vs_ref_by_smoothing": {
+    "2": [],
+    "4": [],
+    "8": [],
+    "16": []
+   }
+  },
+  {
+   "seed": 6,
+   "thr_noise": 0.7367796641340808,
+   "n_cores": 0,
+   "cores": [],
+   "ref_vortex_snr": [],
+   "iou_vs_ref_by_smoothing": {
+    "2": [],
+    "4": [],
+    "8": [],
+    "16": []
+   }
+  },
+  {
+   "seed": 7,
+   "thr_noise": 0.75084902150425,
+   "n_cores": 0,
+   "cores": [],
+   "ref_vortex_snr": [],
+   "iou_vs_ref_by_smoothing": {
+    "2": [],
+    "4": [],
+    "8": [],
+    "16": []
+   }
+  }
+ ]
+}

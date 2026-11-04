@@ -1,0 +1,11 @@
+{
+ "lamella": {
+  "strain: profile": 0.02410159967058563,
+  "strain: mixed mass": 0.021289407609854427,
+  "compression alpha=1, mass metric: profile": 0.01453429886279167,
+  "compression alpha=0, mass metric: profile": 0.016347777209281083,
+  "compression alpha=1, AREA metric: profile": 0.04151958102206802,
+  "compression alpha=1: mixed mass": 0.011007316948172585,
+  "compression alpha=1, AREA metric: mixed mass": 0.19106859102826967
+ }
+}

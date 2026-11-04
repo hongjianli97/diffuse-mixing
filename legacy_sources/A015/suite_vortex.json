@@ -1,0 +1,10 @@
+{
+ "vortex": {
+  "omega (face)": 0.012985757802672904,
+  "pressure (variable rho)": 0.000978907447636695,
+  "entropy s (label)": 0.0010043145980497736,
+  "Kelvin torque / omega^2 scale (exact 0)": 0.0019272437536552976,
+  "curl share of rho a (exact 0)": 4.616354141836468e-07,
+  "ledger rho (exact rho0)": 0.00013742218840606443
+ }
+}

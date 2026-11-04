@@ -1,0 +1,8 @@
+{
+ "rigid_motion_max_dlnJ": 1.4636070133633439e-12,
+ "permutation_max_dlnJ": 7.771561172376096e-16,
+ "scaling_max_dlnJ": 2.5091040356528538e-14,
+ "time_reversal_rho0_med": 3.3306690738754696e-15,
+ "time_reversal_rho0_p95": 0.011163638417497788,
+ "PASS": true
+}

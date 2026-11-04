@@ -1,0 +1,98 @@
+{
+  "already_executed": false,
+  "type": "one_same_point_geometry_action_backend_static_periodic_contact_oracle_control",
+  "reason": "registered affine compression/shear coverage complete at declared cases; next original gap is same final point-geometry/action T4,not more T3 angles/grids",
+  "scope": "one original periodic contact,rho1/4,D originalfloat.02,T1/20,N32,oracle point densities only; no shock/density/space scan",
+  "N": 32,
+  "T_exact": "1/20",
+  "rho_left_exact": "1",
+  "rho_right_exact": "4",
+  "interface_x_exact": "1/2",
+  "boundary": "original static unit square,periodic both axes; second contact at periodic seam; no artificial shock or moving open boundary",
+  "material_state": "newly evaluate original continuous initial formula and stored transmission reference on fixed N32 material squares; exactmassrho/N^2; do not label as recoveredv080 orinterpolateN128means",
+  "pure_source": {
+    "path": "runs/reconnect-affine-shear-spatial/original-pure-inputs.npz",
+    "sha256": "2213b1f71a9bed02108adb075d89b14868d9f8a9a8682cff4e1f5ba0da1c78ac"
+  },
+  "sources": [
+    {
+      "path": "runs/reconnect-contact-finite-time-reference/reference-K128-p90.json",
+      "sha256": "38b465656337432d16389a2757306e657842111437bbc94ea31236be9a4f9aa0"
+    },
+    {
+      "path": "research/reconnect/CONTACT_PERIODIC_SPECTRAL_BASIS.md",
+      "sha256": "ee14cff8f18915caf6abd2c1971ca11b1f8b5d5e7018ccadf218aa2d6aa33572"
+    },
+    {
+      "path": "research/reconnect/contact_spectral_reference.py",
+      "sha256": "d21bb6d5a7c47eaf064793b368e66340141da6336136d8f529bd79702b6ee46d"
+    },
+    {
+      "path": "research/reconnect/cartesian_fv_modes.py",
+      "sha256": "3e03f374c99cb2cf9fc196ae14126724c75a93577ce8de9f34b5da1a8966daf4"
+    },
+    {
+      "path": "research/reconnect/FV_CONTACT_FIXED_TIME_COMPARISON.md",
+      "sha256": "0cb71c0aea2ea206c9dc2c3678d2be62f0ccb78f3cdea3749e82e5dc6f8dca2e"
+    },
+    {
+      "path": "research/reconnect/FV_CONTACT_COMMON_OBSERVATION.md",
+      "sha256": "b1802a0a72324212383d92c9416586865421f239adace7cc9916e6b7f88ab771"
+    },
+    {
+      "path": "runs/reconnect-affine-shear-spatial/original-pure-inputs.npz",
+      "sha256": "2213b1f71a9bed02108adb075d89b14868d9f8a9a8682cff4e1f5ba0da1c78ac"
+    }
+  ],
+  "geometry": "same unchanged periodic_voronoi_fv point-only builder,ordinary half resistance; positions,IDs,givenoracle rho/D,boundary only; seal before m/c0/reference",
+  "new_candidate_graphs": 1,
+  "static_coefficients_cached_once_and_reused": true,
+  "ordered_intervals": 16,
+  "new_candidate_transient_runs": 1,
+  "new_complete_independent_uniformization_sequences": 1,
+  "reference": "reuse stored128-mode90digit coefficients; evaluate N32 finite material means at t0,.025,.05,independently check arithmetic precision and rounding/initial bridge; evaluate original analytic truncation bound separately at each positive time,never reuseT.05tail at.025; t0initial directcontinuousformula,not truncatedspectralinitial; no new spectral fit or PDE solve",
+  "cross_control": "original extra-geometry Cartesian full-mode FV serves independent semidiscrete spatial/action oracle only; no coefficients from it supplied to point builder",
+  "acceptance": "exact aligned worldface/rho halfresistance laws and independent geometry; actual full-state path vs independently evaluated Cartesian semidiscrete solution within locked positive solver/evaluation/initial-bridge terms,raw inventory/extrema/variance/H; independently evaluated PDE error and original H indicator reported without thresholds fitted to result",
+  "time_policy": "staticL gives no midpoint-freezing error; full independent sequence and Cartesian semidiscrete reference isolate actionerror; do not require spurious4/8/16 time-freezing decrease or regenerate identicalstaticgraphs",
+  "density_policy": "oracle alone establishes backend plumbing; kernel andledger still separate later controls withsame m/c0/D/boundary; no F correction or source-dependent normalization",
+  "software_checks_planned": 3,
+  "check_categories": [
+    "point geometry/contact half-resistance and rejection",
+    "true cell-mean/ref evaluation and initial bridge",
+    "unchanged action/fullsequence/PDE-H comparison and adverse control rejection"
+  ],
+  "recorded_checks_total_if_all_pass": 493,
+  "old_candidate_reruns": 0,
+  "new_reference_PDE_solves": 0,
+  "new_spectral_projection_fits": 0,
+  "tail_per_interval_exact": "1/10000000000000000",
+  "original_algebra_tolerance": 1e-10,
+  "norm_estimator_seed": 20261101,
+  "main_wall_seconds_cap": 900,
+  "main_peak_RSS_MiB_cap": 1024,
+  "stop": "preserve failure/unresolved; no automaticN64/128,K/angle/density/flow scans,clipping,pointrepair,normalization,F/Cfit orphysical/H thresholdchanges",
+  "new_T4_points_material_reference_graphs_or_states_generated_this_turn": false,
+  "moving_shock_T4_closed": false,
+  "all_three_density_sources_closed": false,
+  "general_T3_admitted": false,
+  "general_nonorthogonal_domains_admitted": false,
+  "stage3_physical_acceptance": "incomplete",
+  "fluid_orc_enabled": false,
+  "kappa_computed": false,
+  "implementation_fixed_before_new_scientific_inputs": true,
+  "previous_recorded_checks": 490,
+  "new_software_checks": 3,
+  "recorded_checks_total": 493,
+  "reference_arithmetic_digits": [
+    100,
+    120
+  ],
+  "independent_reference_digits": [
+    80,
+    100
+  ],
+  "reference_evaluation_indicator": "unchanged64eps*sqrt(M)*max(1,maxabs(c0))",
+  "action_budget": "original cumulative machine+raw tail+observed fullsequence+independentCartesian spectral/matrix/transform/roundtrip/imaginary/timelabel terms+twicefixed evaluation+initialserializationbridge",
+  "PDE_comparison": "independentsemidiscrete minusPDE spatialnorm +actionbudget+reference rounding/precision/tail/initial bridge; unchangedoriginalHindicator; not a new physicalaccuracy threshold",
+  "PDF_requested_by_user": true
+}

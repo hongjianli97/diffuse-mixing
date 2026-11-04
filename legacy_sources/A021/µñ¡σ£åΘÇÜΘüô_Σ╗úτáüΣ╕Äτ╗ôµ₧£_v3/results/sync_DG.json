@@ -1,0 +1,36 @@
+{
+ "case": "DG",
+ "in_vortex_region": {
+  "frac": 0.4463633040935672,
+  "spearman_P_net_ref": 0.9999869365030243,
+  "spearman_P_noise_ref": 0.999780492321544,
+  "spearman_phi_net_ref": 0.9998927421664705,
+  "spearman_phi_noise_ref": 0.9973235964082746,
+  "pearson_P_net_ref": 0.9999760868927333,
+  "pearson_P_noise_ref": 0.9993891834364583,
+  "pearson_phi_noise_ref": 0.9985398337087162
+ },
+ "spearman": {
+  "P_net_vs_P_ref": 0.9981854054921101,
+  "absphi_net_vs_lavdref": 0.9349663726877127,
+  "P_net_vs_lavdref": 0.8246425541258259,
+  "P_noise_vs_P_ref": 0.9908936039341354,
+  "absphi_noise_vs_lavdref": 0.9303813040024866
+ },
+ "background": {
+  "frac_nodes": 0.5536366959064327,
+  "median_absphi_over_core": 0.18664524510855637,
+  "median_absP_over_core": 0.0
+ },
+ "ensemble": {
+  "kept": 11840,
+  "phi_shift_median": 0.2608367185947127,
+  "phi_shift_iqr": 1.3322676295501878e-15,
+  "P_change_median": 0.0,
+  "P_change_iqr": 4.440892098500626e-16,
+  "core_phi_full": -9.773955876440334,
+  "core_phi_sub": -9.513119157845617,
+  "core_P_full": -7.120873078483373,
+  "core_P_sub": -7.1208730784833705
+ }
+}

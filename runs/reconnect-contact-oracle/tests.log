@@ -1,0 +1,8 @@
+test_mass_means_independent_quadrature_and_separate_time_tail_bounds (__main__.Checks.test_mass_means_independent_quadrature_and_separate_time_tail_bounds) ... ok
+test_point_faces_exact_contact_laws_independent_bisectors_and_bad_inputs (__main__.Checks.test_point_faces_exact_contact_laws_independent_bisectors_and_bad_inputs) ... ok
+test_unchanged_action_vs_cartesian_full_modes_and_adverse_controls (__main__.Checks.test_unchanged_action_vs_cartesian_full_modes_and_adverse_controls) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.287s
+
+OK

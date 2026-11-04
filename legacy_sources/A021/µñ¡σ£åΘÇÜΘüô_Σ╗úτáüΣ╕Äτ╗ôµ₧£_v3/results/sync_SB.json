@@ -1,0 +1,25 @@
+{
+ "case": "SB",
+ "in_vortex_region": {
+  "frac": 0.11092032967032966,
+  "spearman_P_net_ref": 0.9915971205117105,
+  "spearman_P_noise_ref": 0.9503577623924189,
+  "spearman_phi_net_ref": 0.9962629422966236,
+  "spearman_phi_noise_ref": 0.9784605861693354,
+  "pearson_P_net_ref": 0.9910213426027851,
+  "pearson_P_noise_ref": 0.9575967865894657,
+  "pearson_phi_noise_ref": 0.9871760160070796
+ },
+ "spearman": {
+  "P_net_vs_P_ref": 0.7445578568442269,
+  "absphi_net_vs_lavdref": 0.8968880962027808,
+  "P_net_vs_lavdref": 0.5670716002094546,
+  "P_noise_vs_P_ref": 0.5870974136753193,
+  "absphi_noise_vs_lavdref": 0.5431273655894832
+ },
+ "background": {
+  "frac_nodes": 0.8890796703296703,
+  "median_absphi_over_core": 0.027447427790761723,
+  "median_absP_over_core": 3.0306298712508777e-05
+ }
+}

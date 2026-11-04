@@ -1,0 +1,94 @@
+{
+  "already_executed": false,
+  "type": "one_three_space_level_same_backend_static_contact_oracle_reuse_N32",
+  "reason": "N32 samebackend geometry/action bridge passed; original METHOD requires three space levels before a spatial convergence claim",
+  "scope": "same static periodic contact rho1/4,originalD.02,T1/20,original continuous c0; no density/flow/model/angle scan",
+  "N_values": [
+    16,
+    32,
+    64
+  ],
+  "new_N_values": [
+    16,
+    64
+  ],
+  "reused_N_values": [
+    32
+  ],
+  "ordered_intervals": 16,
+  "new_candidate_graphs": 2,
+  "one_static_graph_per_new_grid_reused": true,
+  "new_candidate_transient_runs": 2,
+  "new_complete_independent_uniformization_sequences": 2,
+  "reused_saved_N32_paths": 1,
+  "old_candidate_reruns": 0,
+  "new_reference_PDE_solves": 0,
+  "new_spectral_projection_fits": 0,
+  "sources": [
+    {
+      "path": "runs/reconnect-contact-oracle/original-pure-inputs.npz",
+      "sha256": "2213b1f71a9bed02108adb075d89b14868d9f8a9a8682cff4e1f5ba0da1c78ac"
+    },
+    {
+      "path": "runs/reconnect-contact-oracle/source-reference-K128-p90.json",
+      "sha256": "38b465656337432d16389a2757306e657842111437bbc94ea31236be9a4f9aa0"
+    },
+    {
+      "path": "runs/reconnect-contact-oracle/results.json",
+      "sha256": "05fee3f6c13d2abe4bef111642c003958d868f612982a5ffa79c98c54e8a24a4"
+    },
+    {
+      "path": "runs/reconnect-contact-oracle/material-reference.npz",
+      "sha256": "e1e7e16d6ca5b297598f6f0b324a165f2cb2b96a1b9b5265ff98e52a7a295eea"
+    },
+    {
+      "path": "runs/reconnect-contact-oracle/reference-parameters.json",
+      "sha256": "84c544e3286193ebcf5b726651efbab27fb908e2b8bc504f8c4761676566fd3e"
+    },
+    {
+      "path": "runs/reconnect-contact-oracle/Cartesian-control.npz",
+      "sha256": "46e68035e5d5dc44936c27595995b2bd4f489ec984e2640afba12ad9c1385fda"
+    },
+    {
+      "path": "runs/reconnect-contact-oracle/Cartesian-parameters.json",
+      "sha256": "f4f0bafd5196249dd443b6d2ffe0681228d15761daa48d4d0696e3bb8ea63295"
+    },
+    {
+      "path": "runs/reconnect-contact-oracle/k16/native-results.json",
+      "sha256": "fe40737d3c91695262eb8665db6f8049b199315c9c19e504d84d131a7bc1694e"
+    },
+    {
+      "path": "runs/reconnect-contact-oracle/k16/trajectory-states.npz",
+      "sha256": "471ece7e91d87c3ae9e98078fd3026d1b0613ae00d18914795ac80f62a38828c"
+    }
+  ],
+  "geometry": "unchanged original periodicpointVoronoi andordinaryhalfresistance; bothnewgraphs sealedbefore m/c0/reference/oldstates; preserve exactcounts,areas andinterfaceg",
+  "material": "derive each new grid fromoriginalcontinuousformula andrho/N^2,not interpolateoldcellmeans; preservefloatserialization andinitialbridges; truefiniteunitaverages",
+  "reference": "reuse stored128mode90digitcoefficients,Decimal100/120 plus independentmp80/100; useoriginalanalytic tails separately at.025/.05; t0directformula,not truncatedinitial",
+  "reference_evaluation_indicator": "unchanged64eps*sqrt(M)*max(1,maxabs(c0))",
+  "common_observation_N": 16,
+  "common_observation": "direct child component masses dividedby original derivedN16mass; exactcapacitycontrol andrawinitial/referenceprojectionbridges; no reweighting",
+  "acceptance": "all three grid pointgeometry/fullsequence/Cartesian/originalH/PDE controls; bothadjacent16/32,32/64 at.025/.05 native/common concentration andnative/commonH gains exceed predeclared positivebudgets",
+  "comparison_budget": "forbothgrids sum unchangedmachine/tail/fullsequence/Cartesian/evaluation/reference-rounding/tail/initialbridge terms; common multiplycapacitynormfactors andaddallinitial/referenceprojectionbridges; H usesunchangedquadratic h_indicator onnumericterms anddirectabsoluteHprojection/initialbridges; no signed cancellation",
+  "static_time_policy": "no freezingerror withconstantL; K16wholeaction controlled independently,not fake4/8/16 temporalorder orduplicategraphs",
+  "reporting_type_policy": "restore original np.float64 totaltype before same evaluation; preservefirstauditandtestfixturefailure; do not alterfrozen scientificcode oroldresultbits",
+  "planned_new_software_checks": 3,
+  "recorded_checks_total_if_all_pass": 496,
+  "check_categories": [
+    "multiN exactinterfacegeometry andfinitecellreference",
+    "fixedparent component integrals andbridges",
+    "native/common/H positivebudget classification andadverse rejection"
+  ],
+  "main_wall_seconds_cap": 900,
+  "main_peak_RSS_MiB_cap": 1024,
+  "tail_per_interval_exact": "1/10000000000000000",
+  "original_algebra_tolerance": 1e-10,
+  "norm_estimator_seed": 20261101,
+  "stop": "preservefailed/unresolved; no automaticN128/K/angle/density/modelscan,clipping,normalization,F/Cfit orphysics/H thresholdchanges",
+  "new_spatial_points_mass_initial_graphs_references_or_states_generated_this_turn": false,
+  "moving_shock_T4_closed": false,
+  "all_three_density_sources_closed": false,
+  "stage3_physical_acceptance": "incomplete",
+  "fluid_orc_enabled": false,
+  "kappa_computed": false
+}

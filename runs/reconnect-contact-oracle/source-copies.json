@@ -1,0 +1,14 @@
+[
+  {
+    "source": "runs/reconnect-affine-shear-spatial/original-pure-inputs.npz",
+    "copy": "original-pure-inputs.npz",
+    "sha256": "2213b1f71a9bed02108adb075d89b14868d9f8a9a8682cff4e1f5ba0da1c78ac",
+    "phase": "purebeforegeometry"
+  },
+  {
+    "source": "runs/reconnect-contact-finite-time-reference/reference-K128-p90.json",
+    "copy": "source-reference-K128-p90.json",
+    "sha256": "38b465656337432d16389a2757306e657842111437bbc94ea31236be9a4f9aa0",
+    "phase": "aftersealonly"
+  }
+]

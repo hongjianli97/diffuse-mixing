@@ -1,0 +1,185 @@
+{
+  "already_executed": false,
+  "type": "one_three_space_level_same_affine_pair_control_after_saved_budget_review",
+  "reason": "saved N32 spatial-only original-formula floor exceeds actual and stored continuous-time-grid H model gaps; separate space control is necessary, time-only expansion not selected",
+  "scope": "same physical affine pair and T=.05; three original material space levels only, not a new flow/model/parameter scan",
+  "N_values": [
+    16,
+    32,
+    64
+  ],
+  "new_N_values": [
+    16,
+    64
+  ],
+  "reused_N_values": [
+    32
+  ],
+  "models": [
+    "constant_D",
+    "constant_Gamma"
+  ],
+  "T_exact": "1/20",
+  "ordered_interval_counts": [
+    4,
+    8,
+    16
+  ],
+  "new_candidate_graphs": 112,
+  "new_candidate_transient_runs": 12,
+  "new_complete_independent_uniformization_sequences": 12,
+  "reused_saved_candidate_paths": 6,
+  "old_candidate_reruns": 0,
+  "new_reference_PDE_solves": 0,
+  "new_material_definitions": 0,
+  "motion_and_constitutive_protocol": {
+    "path": "runs/reconnect-t3-affine/implementation-protocol.json",
+    "sha256": "2198d8470c330f7e106bac226c5bbf5825f9b11ea016d73f86d4b7523eb2a3d2"
+  },
+  "pure_source": {
+    "path": "runs/reconnect-t3-affine/original-pure-inputs.npz",
+    "sha256": "2213b1f71a9bed02108adb075d89b14868d9f8a9a8682cff4e1f5ba0da1c78ac"
+  },
+  "material_sources": {
+    "16": {
+      "path": "runs/reconnect-t1-uniform/n16/material-reference.npz",
+      "sha256": "ba96ae32c31a77ee4f448df642b917ce021a1e56aac353ec710b2f89b365f2b7",
+      "old_T1_reference_history_only": true,
+      "mass_c0_not_parsed_this_review": true
+    },
+    "64": {
+      "path": "runs/reconnect-t1-uniform/n64/material-reference.npz",
+      "sha256": "61164c4b715c67b5d40247f815e38e568f24dc84a1dae6fb710b5c44742eb975",
+      "old_T1_reference_history_only": true,
+      "mass_c0_not_parsed_this_review": true
+    }
+  },
+  "N32_source_seal": {
+    "path": "runs/reconnect-t3-affine/sha256.json",
+    "sha256": "6f11a60c3e3ba1bba76a5f544bc78a6cb1b5932d1ae7b94ebbe9674881b80ee9"
+  },
+  "reused_N32_records": [
+    {
+      "path": "runs/reconnect-t3-affine/constant_D/k4/trajectory-states.npz",
+      "sha256": "72470be0ea581393ab281117680e308bb05e45135cb40f4e423852b8f915fe18"
+    },
+    {
+      "path": "runs/reconnect-t3-affine/constant_D/k4/native-results.json",
+      "sha256": "70a90a7cc28e5d76a6d3e48001cf2393f761906459582540e747a51e95464f20"
+    },
+    {
+      "path": "runs/reconnect-t3-affine/constant_D/k4/modal-residues.json",
+      "sha256": "1102a58baff40d09f7480a48e3580d021257384f9e36f60e824ee1c26cde4f4c"
+    },
+    {
+      "path": "runs/reconnect-t3-affine/constant_D/k8/trajectory-states.npz",
+      "sha256": "fa95d12b0284c7a0e07617ca6a6fe9af63b38aca70955e7d85d5a5a0052e051b"
+    },
+    {
+      "path": "runs/reconnect-t3-affine/constant_D/k8/native-results.json",
+      "sha256": "2d6e4abea5fe0a04f1c45ea06f9528984dfd7338fca9e50f19a49105772c2bd7"
+    },
+    {
+      "path": "runs/reconnect-t3-affine/constant_D/k8/modal-residues.json",
+      "sha256": "6700c7bb8ccbe82a53aa3ff9d37d684e7bf6f107dfdd37b79d1a54371fc99a05"
+    },
+    {
+      "path": "runs/reconnect-t3-affine/constant_D/k16/trajectory-states.npz",
+      "sha256": "d3375081ff41682f28d0125986e74e44fcedc78856b8d353448dceb848e1eb42"
+    },
+    {
+      "path": "runs/reconnect-t3-affine/constant_D/k16/native-results.json",
+      "sha256": "032e7ed11930c8e373b589d888bc09842cd7287a25ab209b692b7c2d64a466d6"
+    },
+    {
+      "path": "runs/reconnect-t3-affine/constant_D/k16/modal-residues.json",
+      "sha256": "c1b7413a29daf047e03c52af5539d7bc94d0bd99ea2d8d6c49ec6526e0773f8f"
+    },
+    {
+      "path": "runs/reconnect-t3-affine/constant_Gamma/k4/trajectory-states.npz",
+      "sha256": "b3898906e21d83d900e87ea8aa3878bcf2b77625ba5fc4bbcdba5c0ae6e54fc3"
+    },
+    {
+      "path": "runs/reconnect-t3-affine/constant_Gamma/k4/native-results.json",
+      "sha256": "3c748bf762469105c7bc01cfed112ff5934b3efd661d92094190fc02dab134da"
+    },
+    {
+      "path": "runs/reconnect-t3-affine/constant_Gamma/k4/modal-residues.json",
+      "sha256": "8e90869bb40de90344916d7f477a6bdbfecc0d5058d1add2f8126683cffd5636"
+    },
+    {
+      "path": "runs/reconnect-t3-affine/constant_Gamma/k8/trajectory-states.npz",
+      "sha256": "691259e2f2779edc7dcf1dc4defa4ba216d2a987c728ade1ea84ebe8450b3cf7"
+    },
+    {
+      "path": "runs/reconnect-t3-affine/constant_Gamma/k8/native-results.json",
+      "sha256": "301026d3a551f1511311b43fa5cf54d0b192cbc936cc115ab0dcfe45fc8b2bd7"
+    },
+    {
+      "path": "runs/reconnect-t3-affine/constant_Gamma/k8/modal-residues.json",
+      "sha256": "39f29471b87b28fdf4b39c2f6cb190415e0846a2634cef6c27aa1cbb7cd14c03"
+    },
+    {
+      "path": "runs/reconnect-t3-affine/constant_Gamma/k16/trajectory-states.npz",
+      "sha256": "c64d57a923f5a73411369b3886c5bdf892421a2accf0aa1367896ef94a3ec461"
+    },
+    {
+      "path": "runs/reconnect-t3-affine/constant_Gamma/k16/native-results.json",
+      "sha256": "fe6448b99622b3b610f5661d2736e6f7552841159c9bdcf8ce8d01d63e1434aa"
+    },
+    {
+      "path": "runs/reconnect-t3-affine/constant_Gamma/k16/modal-residues.json",
+      "sha256": "aa3acee7aa5cf63649357d4d4716d46b071c8981a1cc5261f5098944d98a06d4"
+    }
+  ],
+  "common_material_observation_N": 16,
+  "material_observation": "original child component integrals sum divided by original N16 mass; retain initial/reference projection bridges, no capacity or scalar reweighting",
+  "coefficient_inputs": "only pure labels transformed into actual points,IDs,given rho/D and boundary; all112 new local/world graphs sealed before any actual m/c0/reference or reused N32 state parse",
+  "references": "same separate physical clocks at N16/N64 with original finite-cell means; independent80/100digit checks; old T1 reference never an affine target",
+  "backends": "unchanged original geometry,ordinary center resistance,exact boundary adapter and chronological action; generalized study/diagnostics only in new files",
+  "time_and_symbol_controls": "all N and K4/8/16,original frozen-symbol/residue/input/machine/tail indicators and original H formula; actual4/8 to8/16 state/H decrease must be resolved at both nonzero times",
+  "spatial_comparison": "at fixed K16,adjacent16/32 and32/64,each physical model separately; native and common N16 mass-L2/reference error and H/reference error gains must exceed predetermined positive comparison budgets at both times",
+  "spatial_budget": "both observed8/16 differences,analytic midpoint-to-continuous time errors,both input/numerical/residue/evaluation terms and all relevant initial/reference projection bridges; report components before decision, no signed cancellation or Richardson replacement",
+  "model_comparison": "fine N64 state and H model response at both nonzero times must exceed unchanged original-formula both-model spatial/time/input/numerical/reference plus observed8/16 indicators and agree with physical references",
+  "coarse_case_policy": "retain N32 original inconclusive and report N16 decisions without requiring every coarse grid to resolve model H; no retroactive pass or universal T3 admission",
+  "planned_new_software_checks": 3,
+  "check_categories": [
+    "multi-N exact directional laws and modal guards",
+    "direct material child-integral/common observation and nonzero bridges",
+    "native/common/time/model budget classification and failure rejection"
+  ],
+  "recorded_checks_total_if_all_pass": 483,
+  "tail_per_interval_exact": "1/10000000000000000",
+  "original_algebra_tolerance": 1e-10,
+  "norm_estimator_seed": 20261101,
+  "fixed_geometry_probe_formula": "unique IDs [0,N//2,N-1,N^2//2,N^2-1]",
+  "main_wall_seconds_cap": 900,
+  "main_peak_RSS_MiB_cap": 1024,
+  "resource_basis": "56N32 graphs took85.285s before material load; node-linear planning estimate(.25+4)*85.285=362.461s for56N16+56N64,900s conservative envelope; not measured speed or accuracy",
+  "stop": "preserve adverse/unresolved, no H-indicator/threshold change,clipping,pointrepair,normalization,F/Cfit,automaticN128/K32/newflow/model or full-matrix scan",
+  "new_points_graphs_states_or_references_generated_this_review": false,
+  "next_experiment_executed": false,
+  "general_spatial_convergence_claimed": false,
+  "general_T3_admitted": false,
+  "general_smooth_flow_admitted": false,
+  "stage3_physical_acceptance": "incomplete",
+  "fluid_orc_enabled": false,
+  "kappa_computed": false,
+  "implementation_protocol_fixed_before_new_scientific_input": true,
+  "new_software_checks": 3,
+  "previous_recorded_checks": 480,
+  "recorded_checks_total": 483,
+  "old_checks_rerun": 0,
+  "small_unit_fixtures_not_new_scientific_cases": true,
+  "unit_fixture_levels": [
+    3,
+    6,
+    12
+  ],
+  "spatial_state_budget_detail": "for each adjacent pair sum both observed8/16 differences, both analytic midpoint16-to-continuous-grid errors, both8/16 original numeric/input/reference/residue positive terms; common observations additionally retain contraction factors and all reference/initial projection bridges",
+  "spatial_H_budget_detail": "same T1 comparison structure: sum absolute observed H8/16 differences, absolute analytic midpoint16-to-continuous-grid H differences, reference/initial H bridges; apply unchanged original quadratic H indicator to numeric/input/reference/residue terms; native and common H both required",
+  "model_H_budget_detail": "unchanged t3_affine_core.evaluate including both models spatial/time/input/numerical/reference and observed8/16 norm terms through original H indicator; no modified H formula",
+  "coarse_decision_guard": "recomputed N32 controls must equal saved original results byte-for-value; N32 inconclusive retained even if fine-level control passes",
+  "all112_new_coefficients_before_material_reference_or_oldstates": true,
+  "original_backends_changed": false
+}

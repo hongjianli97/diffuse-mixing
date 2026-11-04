@@ -1,0 +1,175 @@
+{
+  "already_executed": false,
+  "type": "one_optional_exact_oriented_rectangle_adapter_and_one_continuous_rotation_control",
+  "scope": "implement separate research boundary isometry adapter and independent world-geometry audit; oneN32 positiveD rotating periodic domain",
+  "implementation_location": "new files only inresearch/reconnect; original periodic_voronoi_fv.py andtime backends unchanged",
+  "original_backend_sha256": "b3b24dc9547d4bd6d1fba531104b552e2f37bb0950cb103e8923e7f00eccaa3e",
+  "boundary_data": "given globaloriginb,positiveperiodlengthsL,orthonormalpreservingdirectionsE,worldperiodbasisB=Ediag(L);not fitted from trajectories",
+  "adapter_inputs": "worldpositions_exact,IDs,point_rho,D,givenboundary; no source local labels,m,c0,reference,true internal faces orF/C",
+  "adapter_exact_contract": "rationalE,detE=1,E^TE=I,B^TB=diag(L^2); exacty=E^T(x-b); require Fraction(float(y))==y andcanonical domain membership before originalbuilder",
+  "unsupported_input_handling": "reject nonisometry,lossyfloatconversion,invalidIDs/density/domain; no orthonormalization,clipping,jitter,roundtrip correction or source-label fallback",
+  "general_float_world_trajectories_or_nonorthogonal_lattices_admitted": false,
+  "N": 32,
+  "D": 0.02,
+  "T_exact": "1/20",
+  "K": 16,
+  "origin_exact": [
+    "0",
+    "0"
+  ],
+  "period_lengths_exact": [
+    "1",
+    "1"
+  ],
+  "sample_times_exact": "j/640,j0..32; midpointoddj",
+  "rotation_parameter": "s(t)=t/(2T)",
+  "rotation_frame_exact": "E=(1/(1+s^2))*[[1-s^2,-2s],[2s,1-s^2]]",
+  "rotation_angle": "theta=2atan(s),final2atan(1/2)",
+  "angular_speed": "1/[T*(1+s^2)],not constant",
+  "world_motion": "x_i(t)=E(t)*originala_i,exact rational; no worldaxis modulo",
+  "world_domain": "E(t)[0,1)^2,worldlatticeE(t)Z^2; rotates with trajectories",
+  "point_density": "same given oracle1",
+  "material_state": "same true originalm/c0/IDs andmaterial reference; no new material definitions",
+  "sources": {
+    "pure_points": {
+      "path": "runs/reconnect-t1-uniform/builder-inputs.npz",
+      "sha256": "2213b1f71a9bed02108adb075d89b14868d9f8a9a8682cff4e1f5ba0da1c78ac"
+    },
+    "material_mass_c0_reference": {
+      "path": "runs/reconnect-t1-uniform/n32/material-reference.npz",
+      "sha256": "f152945222a92b2b1760250972d1577279497d9a6fbfc7ec8ebe231e0ca5e405"
+    },
+    "static_geometry": {
+      "path": "runs/reconnect-t1-uniform/n32/geometry.json",
+      "sha256": "9be0efe02638685d03c3d2f627d9687d97f846cc0cee865fae178dbc253d33c5"
+    },
+    "static16_states": {
+      "path": "runs/reconnect-t1-uniform/n32/k16/trajectory-states.npz",
+      "sha256": "9f53046ec7aa313399c33dffbc474b26ac6bac0b1efdc6cc834502ae9fbd54b6"
+    },
+    "static16_results": {
+      "path": "runs/reconnect-t1-uniform/n32/k16/native-results.json",
+      "sha256": "89b522e2db0e71a1115ecabdd8ea751419571ce21935aeccdbf7a2ca74d41858"
+    },
+    "static_analytic_parameters": {
+      "path": "runs/reconnect-t1-uniform/n32/analytic-parameters.json",
+      "sha256": "308ecb5c5d50bddecfe7e43cd6c84c811ae28f7dea02cb5924631b4df83abe44"
+    }
+  },
+  "static_action_sources": {
+    "step00": {
+      "path": "runs/reconnect-t1-uniform/n32/k16/action-step00.npz",
+      "sha256": "00800c285acdad2f2a0ec65a4497f0f26fc72b900e9883d6c5b478852def7fa6"
+    },
+    "step01": {
+      "path": "runs/reconnect-t1-uniform/n32/k16/action-step01.npz",
+      "sha256": "00800c285acdad2f2a0ec65a4497f0f26fc72b900e9883d6c5b478852def7fa6"
+    },
+    "step02": {
+      "path": "runs/reconnect-t1-uniform/n32/k16/action-step02.npz",
+      "sha256": "00800c285acdad2f2a0ec65a4497f0f26fc72b900e9883d6c5b478852def7fa6"
+    },
+    "step03": {
+      "path": "runs/reconnect-t1-uniform/n32/k16/action-step03.npz",
+      "sha256": "00800c285acdad2f2a0ec65a4497f0f26fc72b900e9883d6c5b478852def7fa6"
+    },
+    "step04": {
+      "path": "runs/reconnect-t1-uniform/n32/k16/action-step04.npz",
+      "sha256": "00800c285acdad2f2a0ec65a4497f0f26fc72b900e9883d6c5b478852def7fa6"
+    },
+    "step05": {
+      "path": "runs/reconnect-t1-uniform/n32/k16/action-step05.npz",
+      "sha256": "00800c285acdad2f2a0ec65a4497f0f26fc72b900e9883d6c5b478852def7fa6"
+    },
+    "step06": {
+      "path": "runs/reconnect-t1-uniform/n32/k16/action-step06.npz",
+      "sha256": "00800c285acdad2f2a0ec65a4497f0f26fc72b900e9883d6c5b478852def7fa6"
+    },
+    "step07": {
+      "path": "runs/reconnect-t1-uniform/n32/k16/action-step07.npz",
+      "sha256": "00800c285acdad2f2a0ec65a4497f0f26fc72b900e9883d6c5b478852def7fa6"
+    },
+    "step08": {
+      "path": "runs/reconnect-t1-uniform/n32/k16/action-step08.npz",
+      "sha256": "00800c285acdad2f2a0ec65a4497f0f26fc72b900e9883d6c5b478852def7fa6"
+    },
+    "step09": {
+      "path": "runs/reconnect-t1-uniform/n32/k16/action-step09.npz",
+      "sha256": "00800c285acdad2f2a0ec65a4497f0f26fc72b900e9883d6c5b478852def7fa6"
+    },
+    "step10": {
+      "path": "runs/reconnect-t1-uniform/n32/k16/action-step10.npz",
+      "sha256": "00800c285acdad2f2a0ec65a4497f0f26fc72b900e9883d6c5b478852def7fa6"
+    },
+    "step11": {
+      "path": "runs/reconnect-t1-uniform/n32/k16/action-step11.npz",
+      "sha256": "00800c285acdad2f2a0ec65a4497f0f26fc72b900e9883d6c5b478852def7fa6"
+    },
+    "step12": {
+      "path": "runs/reconnect-t1-uniform/n32/k16/action-step12.npz",
+      "sha256": "00800c285acdad2f2a0ec65a4497f0f26fc72b900e9883d6c5b478852def7fa6"
+    },
+    "step13": {
+      "path": "runs/reconnect-t1-uniform/n32/k16/action-step13.npz",
+      "sha256": "00800c285acdad2f2a0ec65a4497f0f26fc72b900e9883d6c5b478852def7fa6"
+    },
+    "step14": {
+      "path": "runs/reconnect-t1-uniform/n32/k16/action-step14.npz",
+      "sha256": "00800c285acdad2f2a0ec65a4497f0f26fc72b900e9883d6c5b478852def7fa6"
+    },
+    "step15": {
+      "path": "runs/reconnect-t1-uniform/n32/k16/action-step15.npz",
+      "sha256": "00800c285acdad2f2a0ec65a4497f0f26fc72b900e9883d6c5b478852def7fa6"
+    }
+  },
+  "coefficient_separation": "all16 freshoriginalgeometry builds+exactworldlifts sealed before m,c0,reference,staticgeometry oroldstate parse; do not copy staticg",
+  "independent_world_audit": "worldpoints+B*n bisectors,reciprocalfaces,exactresistance,area andfixed probes; no reconstructing local cloud to validate same builder",
+  "probe_ids": [
+    0,
+    16,
+    31,
+    512,
+    1023
+  ],
+  "world_probe_pruning": "enumerate{-1,0,1}^2images with exactdistance^2; prove farther images cannot cut when circumradius<minL/4",
+  "new_candidate_graphs": 16,
+  "new_candidate_transient_runs": 1,
+  "new_complete_independent_uniformization_sequences": 1,
+  "new_reference_PDE_solves": 0,
+  "old_candidate_reruns": 0,
+  "new_material_definitions": 0,
+  "expected_objectivity": "IDedges/exactg agree with originalstatic afterseal; originalCSR actions agree; all17 actual/independent endpoints and16halfstates bitwise equal originalstatic16",
+  "positiveD_behavior": "preserve nonzero baselineH andoriginalreferenceerror; do not forceH/kappa tozero or replace movingstates withreference",
+  "time_and_space_scope": "singlecovariancecontrol,not convergence orangularscan; no newN/K levels",
+  "planned_new_software_checks": 3,
+  "check_categories": [
+    "exactisometryroundtrip andinvalidboundary rejection",
+    "losslessfloat/IDs/canonicaldomain rejection",
+    "independentworldgeometry corruption rejection"
+  ],
+  "tail_per_interval_exact": "1/10000000000000000",
+  "original_algebra_tolerance": 1e-10,
+  "norm_estimator_seed": 20261101,
+  "main_wall_seconds_cap": 300,
+  "main_peak_RSS_MiB_cap": 1024,
+  "resource_basis": "previous16N32 geometry run27.452s; envelope includes exactisometrycertificates/worldlifts; independentauditresources recorded separately",
+  "stop": "retain failure; no scalarfit,pointrepair,mass/rho/state/row/weight normalization,F/Cfit,thresholdchange or automatic extraN/K/anglecase",
+  "adapter_implemented_this_round": false,
+  "rotation_points_graphs_states_generated_this_round": false,
+  "kappa_computed": false,
+  "fluid_ORC_run_required": false,
+  "general_T2_admitted": false,
+  "general_smooth_flow_admitted": false,
+  "stage3_physical_acceptance": "incomplete",
+  "fluid_orc_enabled": false,
+  "implementation_protocol_fixed_before_scientific_input": true,
+  "new_software_checks": 3,
+  "recorded_checks_total_if_all_pass": 477,
+  "canonical_positions_and_period_lengths_must_convert_losslessly": true,
+  "world_boundary_and_positions_are_exact_rational_values": true,
+  "original_raw_sparse_matrices_weights_and_numerical_controls_retained": true,
+  "sameCSR_means_dtype_shape_and_C_order_bytes_equal_all_arrays": true,
+  "same_states_means_dtype_shape_and_C_order_bytes_equal_all_arrays": true,
+  "independent_audit_canonicalization": "inverse worldlattice only for equality of canonical vertex representatives; all bisectors/distances/resistances reconstructed inworldspace,no originalbuilder call",
+  "unit_fixtures_not_additional_scientific_cases": true
+}

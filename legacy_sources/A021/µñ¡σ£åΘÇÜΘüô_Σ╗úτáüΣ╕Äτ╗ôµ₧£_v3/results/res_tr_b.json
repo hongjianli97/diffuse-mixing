@@ -1,0 +1,160 @@
+{
+ "D": {
+  "DG": {
+   "kappa=0.001": {
+    "t=5": {
+     "r_network": 0.9998888110440096,
+     "relL2_network": 0.015250313845318244,
+     "relL2_pure_advection": 0.2441529691564563,
+     "variance_ratio_network_over_euler": 1.006525901792626
+    },
+    "t=10": {
+     "r_network": 0.9995148132081977,
+     "relL2_network": 0.032204066643794715,
+     "relL2_pure_advection": 0.6611982094766005,
+     "variance_ratio_network_over_euler": 1.0153436810880638
+    }
+   },
+   "kappa=0.0003": {
+    "t=5": {
+     "r_network": 0.9999012849080247,
+     "relL2_network": 0.01416992999560337,
+     "relL2_pure_advection": 0.15126972149857795,
+     "variance_ratio_network_over_euler": 1.003160812080909
+    },
+    "t=10": {
+     "r_network": 0.9994367012477243,
+     "relL2_network": 0.03414468653226859,
+     "relL2_pure_advection": 0.403008354293605,
+     "variance_ratio_network_over_euler": 1.0102873186415857
+    }
+   }
+  },
+  "LO": {
+   "t=9.42": {
+    "relL2_network": 0.00748053588308985,
+    "relL2_pure_advection": 0.15051322795720526
+   },
+   "t=18.85": {
+    "relL2_network": 0.015353313239528784,
+    "relL2_pure_advection": 0.34603043484418283
+   }
+  },
+  "SOD": {
+   "mass": 0.0017448017844989207,
+   "volume": 0.01846267280199075,
+   "pure_advection": 0.0742771724781663
+  },
+  "BLAST": {
+   "mass": 0.02194439855071876,
+   "volume": 0.2229823747767802,
+   "pure_advection": 1.0910782744642347
+  },
+  "SB": {
+   "rho_from_positions_vs_DNS_mederr_t1.4": 0.007011118123974258,
+   "t=0.6": {
+    "relL2_mass_form": 0.014182102187434958,
+    "relL2_volume_form": 0.1311909672751638,
+    "relL2_pure_advection": 0.2637522521546681,
+    "var_ratio_mass_form": 1.0037755494053788,
+    "var_ratio_volume_form": 0.9674982220738748,
+    "heavy_total_mass_form": 0.9999999999999982
+   },
+   "t=1.0": {
+    "relL2_mass_form": 0.021385374638135536,
+    "relL2_volume_form": 0.19111403698360271,
+    "relL2_pure_advection": 0.3910916501156716,
+    "var_ratio_mass_form": 1.0025028036715284,
+    "var_ratio_volume_form": 0.9356415893207206,
+    "heavy_total_mass_form": 0.999999999999997
+   },
+   "t=1.4": {
+    "relL2_mass_form": 0.06125883155709547,
+    "relL2_volume_form": 0.24337455633331262,
+    "relL2_pure_advection": 0.537025036849381,
+    "var_ratio_mass_form": 1.0038334129924433,
+    "var_ratio_volume_form": 0.8878653609113748,
+    "heavy_total_mass_form": 0.9999999999999959
+   }
+  }
+ },
+ "E": {
+  "DG": {
+   "t=5": {
+    "stretch_network": 1.0213523051975353,
+    "stretch_reference": 1.1763398706627384,
+    "compression": 0.0012052130492090996
+   },
+   "t=10": {
+    "stretch_network": 2.122415938451049,
+    "stretch_reference": 2.3539410558365983,
+    "compression": -0.0014481640862022476
+   }
+  },
+  "LO": {
+   "stretch_network": 1.4354986921553405,
+   "stretch_reference": 0.018222084196685476,
+   "compression": -0.002251695164759804
+  },
+  "SOD": {
+   "stretch_network": -0.16807089740264472,
+   "stretch_exact": 0.0,
+   "compression_network": 0.7535786983882787,
+   "compression_exact": 0.7535786983882788
+  },
+  "BLAST": {
+   "stretch_network": 0.4869031507768081,
+   "stretch_exact": 0.5776226504666211,
+   "compression_network": 0.6341441684708394,
+   "compression_exact": 0.635656548605441
+  },
+  "SB": {
+   "t=0.3": {
+    "stretch": -0.06979119328754561,
+    "compression": 0.31528756972983807,
+    "total": 0.24549637644229244,
+    "compression_share": 1.2842860424212863,
+    "interface_length_ratio": 0.9710887217471461
+   },
+   "t=0.6": {
+    "stretch": 0.46417646273298074,
+    "compression": 0.481304319803713,
+    "total": 0.9454807825366938,
+    "compression_share": 0.509057749976038,
+    "interface_length_ratio": 2.1680896893296184
+   },
+   "t=1.0": {
+    "stretch": 0.7656521888403909,
+    "compression": 0.49314901626000907,
+    "total": 1.2588012051003998,
+    "compression_share": 0.39176083901244463,
+    "interface_length_ratio": 3.6181621500943297
+   },
+   "t=1.4": {
+    "stretch": 1.0479102156633813,
+    "compression": 0.4446835857542779,
+    "total": 1.4925938014176592,
+    "compression_share": 0.29792672683748206,
+    "interface_length_ratio": 5.274685099982863
+   }
+  },
+  "SV": {
+   "in": {
+    "stretch": 0.3979655276902937,
+    "compression": 0.3937338405043723
+   },
+   "off": {
+    "stretch": 0.3822451624967767,
+    "compression": 0.41963054430926383
+   }
+  }
+ },
+ "F": {
+  "DG_diffusion_noise": {
+   "noise=0.00h": 0.032204066643794715,
+   "noise=0.05h": 0.03224475901073813,
+   "noise=0.10h": 0.03236436589495789
+  },
+  "SV_diffusion_inloop_vs_offline_relL2": 0.010812109352668395
+ }
+}

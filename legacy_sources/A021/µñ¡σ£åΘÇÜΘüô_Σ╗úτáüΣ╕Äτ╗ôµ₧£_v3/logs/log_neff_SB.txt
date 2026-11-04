@@ -1,0 +1,2 @@
+SB clean S-1 = 70  pers>0.5: n=24 share (0.021, 0.227) neff (17.5, 57.862)  | pers<=0.5: n=16 share (0.021, 0.608) neff (16.76, 57.957)
+SB noise S-1 = 70  pers>0.5: n=40 share (0.024, 2.689) neff (28.686, 57.634)  | pers<=0.5: n=0 share None neff None

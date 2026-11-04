@@ -1,0 +1,148 @@
+{
+ "sod": {
+  "ledger_elem_arith (paper)": {
+   "relL2": 0.0017448017844989186,
+   "overshoot": 3.0386626548306594e-10,
+   "pos_offdiag": 314.0975609756098,
+   "secs": 3.1
+  },
+  "oracle_exact_rho": {
+   "relL2": 0.0016336959576864437,
+   "overshoot": 2.9244984212084546e-10,
+   "pos_offdiag": 310.5365853658537,
+   "secs": 3.2
+  },
+  "dtfe_rho": {
+   "relL2": 0.0025345364785421586,
+   "overshoot": 3.4692981820683144e-10,
+   "pos_offdiag": 1121.0731707317073,
+   "secs": 3.0
+  },
+  "sph_rho": {
+   "relL2": 0.0019483569926077987,
+   "overshoot": 3.2241587177850306e-10,
+   "pos_offdiag": 418.780487804878,
+   "secs": 3.1
+  },
+  "ledger_elem_harm": {
+   "relL2": 0.0023257653866560735,
+   "overshoot": 2.9975222304301496e-10,
+   "pos_offdiag": 314.5853658536585,
+   "secs": 3.2
+  },
+  "ledger_edge_harm": {
+   "relL2": 0.017730407517827333,
+   "overshoot": 0.0,
+   "pos_offdiag": 0.0,
+   "secs": 3.0
+  },
+  "area_metric": {
+   "relL2": 0.01846267280199075,
+   "overshoot": 4.738172076912406e-10,
+   "pos_offdiag": 302.0487804878049,
+   "secs": 3.2
+  },
+  "ledger_nsub2": {
+   "relL2": 0.001588242888198672,
+   "overshoot": 1.8882567731637323e-08,
+   "pos_offdiag": 314.0,
+   "secs": 5.9
+  },
+  "ledger_nsub4": {
+   "relL2": 0.0015131289232331404,
+   "overshoot": 2.583985625470575e-08,
+   "pos_offdiag": 314.2857142857143,
+   "secs": 12.6
+  },
+  "ledger_CN": {
+   "relL2": 0.0014385550573040066,
+   "overshoot": 2.976691892975225e-08,
+   "pos_offdiag": 314.0975609756098,
+   "secs": 3.1
+  },
+  "oracle_nsub4": {
+   "relL2": 0.001406575556567162,
+   "overshoot": 2.5274629944505023e-08,
+   "pos_offdiag": 310.14906832298135,
+   "secs": 11.8
+  },
+  "thermo_T_error": {
+   "med": 3.552713678800501e-15,
+   "p95": 0.02797836563630434
+  },
+  "rhoD_T07": {
+   "mass_T_exact": 0.001256974866043249,
+   "mass_T_from_positions": 0.0012584741669209145,
+   "area_T_from_positions": 0.029017216038753395,
+   "pure_advection": 0.12454656862438059
+  }
+ },
+ "blast": {
+  "ledger_elem_arith (paper)": {
+   "relL2": 0.02194476899090825,
+   "overshoot": 0.0,
+   "pos_offdiag": 387.7704918032787,
+   "secs": 6.1
+  },
+  "oracle_exact_rho": {
+   "relL2": 0.018536824283486738,
+   "overshoot": 0.0,
+   "pos_offdiag": 370.3606557377049,
+   "secs": 6.1
+  },
+  "dtfe_rho": {
+   "relL2": 0.09123881191431754,
+   "overshoot": 0.0,
+   "pos_offdiag": 923.0491803278688,
+   "secs": 6.1
+  },
+  "sph_rho": {
+   "relL2": 0.024828816618713355,
+   "overshoot": 0.0,
+   "pos_offdiag": 383.40983606557376,
+   "secs": 6.4
+  },
+  "ledger_elem_harm": {
+   "relL2": 0.029594625676752428,
+   "overshoot": 0.0,
+   "pos_offdiag": 408.88524590163934,
+   "secs": 6.3
+  },
+  "ledger_edge_harm": {
+   "relL2": 0.021452201541513876,
+   "overshoot": 0.0,
+   "pos_offdiag": 0.0,
+   "secs": 5.9
+  },
+  "area_metric": {
+   "relL2": 0.2229823747767802,
+   "overshoot": 0.0,
+   "pos_offdiag": 176.0,
+   "secs": 6.3
+  },
+  "ledger_nsub2": {
+   "relL2": 0.02081572003420071,
+   "overshoot": 0.0,
+   "pos_offdiag": 383.4710743801653,
+   "secs": 12.7
+  },
+  "ledger_nsub4": {
+   "relL2": 0.021309730341789436,
+   "overshoot": 0.0,
+   "pos_offdiag": 382.17427385892114,
+   "secs": 25.5
+  },
+  "ledger_CN": {
+   "relL2": 0.022893421757500393,
+   "overshoot": 0.0,
+   "pos_offdiag": 387.7704918032787,
+   "secs": 6.6
+  },
+  "oracle_nsub4": {
+   "relL2": 0.022602068195947338,
+   "overshoot": 0.0,
+   "pos_offdiag": 368.3817427385892,
+   "secs": 25.2
+  }
+ }
+}

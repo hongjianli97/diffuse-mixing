@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-04",
+  "timezone": "Asia/Shanghai",
+  "repository": "hongjianli97/diffuse-mixing",
+  "target_branch": "main",
+  "all_project_research_code_and_documents": true,
+  "original_files": 782,
+  "current_case": "runs/reconnect-contact-oracle",
+  "recorded_checks": 493,
+  "stage3": "incomplete",
+  "fluid_orc_enabled": false,
+  "full_workspace_backup": false,
+  "omitted": [
+    "all historical 18GB runs",
+    "21GB previous export copies",
+    "15 uploaded attachments",
+    "unrecovered oldv080",
+    "chat transcript"
+  ],
+  "original_scientific_files_changed": false,
+  "purpose": "User-authorized independent GitHub backup and downloadable PDF/ZIP, not environment publication"
+}

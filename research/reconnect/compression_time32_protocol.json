@@ -1,0 +1,18 @@
+{
+ "scope":"one registered necessary32-interval control,original smooth compression N128,D=.02,T=.05",
+ "new_intervals":[32],"new_graphs":32,"old_intervals_reused":[4,8,16],
+ "fixed_geometry_probe_ids":[0,63,127,8192,16383],"norm_estimator_seed":20261101,
+ "pure_input":"unchanged compression sampler,all old4/8/16 time/positions/rho and nested32 subsets verified bitwise",
+ "all32_coefficients_sealed_before_actual_mass_c0_reference_or_old_state_loading":true,
+ "state":"unchanged original fixed material masses and mass-average c0,original independent reference and initial fluctuation denominator",
+ "backend_changed":false,"tail_per_interval_exact":"1/10000000000000000","algebra_tolerance_unchanged":1e-10,
+ "state_indicator":"FV16/32 difference +originalkernel4/8 difference +2*(original reference space+fine_time) +original initial/reference bridge +unchanged cumulative FV16/32 machine/tails +both observed whole independent sequences +all originalkernel4/8 direct/two-half local checks",
+ "H_indicator":"corresponding actualH differences,original referenceH space atn1024-k256 and fine_time,initialH bridge,observed wholeFV sequences,all original localkernelH checks +unchanged machine-to-H conversion of machine/tails and localkernel norm sums",
+ "decision":"both nonzero times actual16/32 concentration andH differences below saved8/16 differences AND actualFV32-vs-savedkernel8 gains above fixed positive-sum indicators; otherwise adverse/inconclusive and stop",
+ "old_solver_controls":"complete original prefixes,both direct/two-half checks; local checks are not whole independent paths or certified error bounds",
+ "orders":"retain all actual4/8/16/32 states and raw difference vectors,observed ratios only,no Richardson/fitted state,general-order or certified total-error claim",
+ "main_wall_seconds_cap":1400,"main_peak_RSS_MiB_cap":1024,
+ "new_reference_PDE_solves":0,"old_candidate_reruns":0,"new_spatial_levels":[],
+ "stop":"no automatic further intervals,K64,spatial grids,D/flow/point/state/mass/rho/weight changes,clipping,normalization,F/C fitting or threshold relaxation",
+ "general_smooth_flow_admitted":false,"shock_extension_deferred":true,"stage3_physical_acceptance":"incomplete","fluid_orc_enabled":false
+}

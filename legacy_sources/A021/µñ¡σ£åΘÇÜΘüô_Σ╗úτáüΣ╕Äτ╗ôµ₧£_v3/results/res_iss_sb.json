@@ -1,0 +1,354 @@
+{
+ "[0.0, 1.4]": [
+  {
+   "pos": [
+    0.713,
+    0.247
+   ],
+   "pers": 20.96,
+   "innermost_lnL": 1.122,
+   "coherent_area": null,
+   "coherent_req_over_h": null
+  },
+  {
+   "pos": [
+    1.001,
+    0.038
+   ],
+   "pers": 4.49,
+   "innermost_lnL": 0.0,
+   "coherent_area": 0.00265,
+   "coherent_req_over_h": 5.8
+  },
+  {
+   "pos": [
+    0.608,
+    0.208
+   ],
+   "pers": 3.8,
+   "innermost_lnL": 1.872,
+   "coherent_area": null,
+   "coherent_req_over_h": null
+  },
+  {
+   "pos": [
+    0.623,
+    0.217
+   ],
+   "pers": 3.49,
+   "innermost_lnL": 1.84,
+   "coherent_area": null,
+   "coherent_req_over_h": null
+  },
+  {
+   "pos": [
+    0.698,
+    0.244
+   ],
+   "pers": 3.41,
+   "innermost_lnL": 0.613,
+   "coherent_area": null,
+   "coherent_req_over_h": null
+  },
+  {
+   "pos": [
+    0.658,
+    0.232
+   ],
+   "pers": 2.62,
+   "innermost_lnL": 1.173,
+   "coherent_area": null,
+   "coherent_req_over_h": null
+  }
+ ],
+ "[0.6, 0.8999999999999999]": [
+  {
+   "pos": [
+    0.857,
+    0.226
+   ],
+   "pers": 5.92,
+   "innermost_lnL": 0.487,
+   "coherent_area": null,
+   "coherent_req_over_h": null
+  },
+  {
+   "pos": [
+    1.002,
+    0.032
+   ],
+   "pers": 0.83,
+   "innermost_lnL": 0.0,
+   "coherent_area": 0.00075,
+   "coherent_req_over_h": 3.1
+  },
+  {
+   "pos": [
+    1.053,
+    0.013
+   ],
+   "pers": 0.67,
+   "innermost_lnL": 0.132,
+   "coherent_area": 0.0015,
+   "coherent_req_over_h": 4.4
+  },
+  {
+   "pos": [
+    0.946,
+    0.098
+   ],
+   "pers": 0.61,
+   "innermost_lnL": 0.661,
+   "coherent_area": null,
+   "coherent_req_over_h": null
+  },
+  {
+   "pos": [
+    0.826,
+    0.231
+   ],
+   "pers": 0.47,
+   "innermost_lnL": 1.279,
+   "coherent_area": null,
+   "coherent_req_over_h": null
+  },
+  {
+   "pos": [
+    1.237,
+    0.004
+   ],
+   "pers": 0.34,
+   "innermost_lnL": null,
+   "coherent_area": null,
+   "coherent_req_over_h": null
+  }
+ ],
+ "[0.8, 1.1]": [
+  {
+   "pos": [
+    1.01,
+    0.211
+   ],
+   "pers": 6.16,
+   "innermost_lnL": 0.219,
+   "coherent_area": 0.00018,
+   "coherent_req_over_h": 1.5
+  },
+  {
+   "pos": [
+    1.087,
+    0.015
+   ],
+   "pers": 1.96,
+   "innermost_lnL": 0.346,
+   "coherent_area": null,
+   "coherent_req_over_h": null
+  },
+  {
+   "pos": [
+    1.26,
+    0.006
+   ],
+   "pers": 0.62,
+   "innermost_lnL": null,
+   "coherent_area": null,
+   "coherent_req_over_h": null
+  },
+  {
+   "pos": [
+    1.148,
+    0.007
+   ],
+   "pers": 0.44,
+   "innermost_lnL": 0.275,
+   "coherent_area": null,
+   "coherent_req_over_h": null
+  },
+  {
+   "pos": [
+    1.029,
+    0.17
+   ],
+   "pers": 0.35,
+   "innermost_lnL": 0.684,
+   "coherent_area": null,
+   "coherent_req_over_h": null
+  },
+  {
+   "pos": [
+    1.03,
+    0.104
+   ],
+   "pers": 0.34,
+   "innermost_lnL": 0.588,
+   "coherent_area": null,
+   "coherent_req_over_h": null
+  }
+ ],
+ "[1.0, 1.3]": [
+  {
+   "pos": [
+    1.133,
+    0.196
+   ],
+   "pers": 5.89,
+   "innermost_lnL": 0.098,
+   "coherent_area": 0.00075,
+   "coherent_req_over_h": 3.1
+  },
+  {
+   "pos": [
+    1.165,
+    0.013
+   ],
+   "pers": 2.2,
+   "innermost_lnL": 0.16,
+   "coherent_area": 0.00127,
+   "coherent_req_over_h": 4.0
+  },
+  {
+   "pos": [
+    1.091,
+    0.171
+   ],
+   "pers": 0.6,
+   "innermost_lnL": 0.821,
+   "coherent_area": null,
+   "coherent_req_over_h": null
+  },
+  {
+   "pos": [
+    1.134,
+    0.127
+   ],
+   "pers": 0.47,
+   "innermost_lnL": 0.85,
+   "coherent_area": null,
+   "coherent_req_over_h": null
+  },
+  {
+   "pos": [
+    1.415,
+    0.005
+   ],
+   "pers": 0.42,
+   "innermost_lnL": 0.176,
+   "coherent_area": null,
+   "coherent_req_over_h": null
+  }
+ ],
+ "[1.1, 1.4000000000000001]": [
+  {
+   "pos": [
+    1.182,
+    0.2
+   ],
+   "pers": 5.77,
+   "innermost_lnL": 0.14,
+   "coherent_area": 0.001,
+   "coherent_req_over_h": 3.6
+  },
+  {
+   "pos": [
+    1.191,
+    0.01
+   ],
+   "pers": 2.06,
+   "innermost_lnL": 0.111,
+   "coherent_area": 0.00105,
+   "coherent_req_over_h": 3.7
+  },
+  {
+   "pos": [
+    1.137,
+    0.19
+   ],
+   "pers": 0.65,
+   "innermost_lnL": 0.644,
+   "coherent_area": null,
+   "coherent_req_over_h": null
+  },
+  {
+   "pos": [
+    1.18,
+    0.107
+   ],
+   "pers": 0.64,
+   "innermost_lnL": 0.505,
+   "coherent_area": null,
+   "coherent_req_over_h": null
+  },
+  {
+   "pos": [
+    1.306,
+    0.005
+   ],
+   "pers": 0.36,
+   "innermost_lnL": 0.358,
+   "coherent_area": null,
+   "coherent_req_over_h": null
+  },
+  {
+   "pos": [
+    1.132,
+    0.288
+   ],
+   "pers": 0.33,
+   "innermost_lnL": 1.168,
+   "coherent_area": null,
+   "coherent_req_over_h": null
+  }
+ ],
+ "[1.2, 1.4]": [
+  {
+   "pos": [
+    1.239,
+    0.212
+   ],
+   "pers": 3.8,
+   "innermost_lnL": 0.038,
+   "coherent_area": 0.00198,
+   "coherent_req_over_h": 5.0
+  },
+  {
+   "pos": [
+    1.211,
+    0.01
+   ],
+   "pers": 1.25,
+   "innermost_lnL": 0.183,
+   "coherent_area": 0.00069,
+   "coherent_req_over_h": 3.0
+  },
+  {
+   "pos": [
+    1.197,
+    0.224
+   ],
+   "pers": 0.49,
+   "innermost_lnL": 0.523,
+   "coherent_area": null,
+   "coherent_req_over_h": null
+  },
+  {
+   "pos": [
+    1.198,
+    0.301
+   ],
+   "pers": 0.37,
+   "innermost_lnL": 0.925,
+   "coherent_area": null,
+   "coherent_req_over_h": null
+  },
+  {
+   "pos": [
+    1.21,
+    0.106
+   ],
+   "pers": 0.31,
+   "innermost_lnL": 0.096,
+   "coherent_area": 1e-05,
+   "coherent_req_over_h": 0.3
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+{
+  "outer_archives": 14,
+  "all_archives": 37,
+  "member_records": 1709,
+  "python_records": 699,
+  "unique_python": 272,
+  "source_hash_validation": "all saved source records match original bytes",
+  "symbolic_test": "not run: sympy unavailable",
+  "full_physics_validation": "not run",
+  "orc_implementation": "not found in scanned Python/notebook source"
+}

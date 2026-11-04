@@ -1,0 +1,10 @@
+{
+  "original_scientific_results_and_all_saved_files_unchanged": true,
+  "reason": "original Cartesian totals np.float64; JSON reload Pythonfloat makes Python3.12 compensatedsum change lowbits",
+  "change": "restore np.float64 type of saved Cartesian total scalars before same original evaluate; valuebits unchanged",
+  "saved_values_thresholds_formulas_or_states_changed": false,
+  "scientific_paths_rerun": 0,
+  "pre_recovery_files": 48,
+  "reporting_code_sha256": "b22eb140dc0eebf12666894024b090d5820d9253dd502ca65d50304ab91047df",
+  "first_audit_source_sha256": "7589708f0aef927f173b29e29907357cf5549ceb52dda86f27a1149f76950be1"
+}

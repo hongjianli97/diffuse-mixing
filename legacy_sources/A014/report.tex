@@ -1,0 +1,221 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{Noto Serif CJK SC}
+\setsansfont{Noto Sans CJK SC}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+\usepackage{amsmath,amssymb}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{graphicx,booktabs,array,caption,enumitem,titlesec}
+\usepackage[section]{placeins}
+\usepackage[hidelinks]{hyperref}
+\sloppy
+\linespread{1.25}
+\setlength{\parindent}{2em}
+\titleformat{\section}{\sffamily\Large\bfseries}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\sffamily\large\bfseries}{\thesubsection}{0.8em}{}
+\renewcommand{\figurename}{图}\renewcommand{\tablename}{表}\renewcommand{\contentsname}{目录}
+\captionsetup{font=small,labelfont=bf,labelsep=quad}
+\newcommand{\prop}[2]{\par\smallskip\noindent\textbf{#1}\quad #2\par\smallskip}
+\newcommand{\jia}{[甲类]}\newcommand{\yi}{[乙类]}\newcommand{\bing}{[丙类]}
+\setlist{nosep,leftmargin=2.2em}
+\begin{document}
+\begin{center}
+{\sffamily\LARGE\bfseries 拉格朗日轨迹网络上的运动学–动力学对应}\\[4pt]
+{\sffamily\large 理论、结果与正确性验证（二维）}\\[8pt]
+{\small 2026 年 10 月}
+\end{center}
+
+\noindent\textbf{摘要}\quad
+本文把此前以掺混为中心的工作扩展为一个统一框架：以一个拉格朗日轨迹网络（LTN）为唯一基础对象，只用示踪点位置和一个参考时刻的密度，在网络的三层余链上给出质量、动量、能量、熵四类守恒或演化律的离散对应，并把扩散、掺混与输运结构放进同一套算子。几何激活 $K(t)\subset G$ 上的 Hodge 分解把边信号分成梯度、旋度、调和三个通道，分别对应压力与声学、涡与粘性、绕洞环量；动力学激活（成对伸长率）给出同一个应变率与耗散。主要结果：由位置重建的压力与 DNS 相关不低于 0.994；粘度可由旋度通道功率反演（粘性激波–重气泡后期误差约 4\%，Taylor–Green 精确解 0.2\%）；耗散的两种激活与 DNS 相差 1\%–2\%；声速 $c^2$ 误差 0.5\%，Dirac 前推误差 0.4\%–1.1\%；熵作为物质标签、沿轨迹守恒，激波熵跳变与只用账本密度比的 RH 预测一致；调和通道周期与理论相差不超过 0.7\%。在有限雷诺数 RM 中，粘性削弱拉伸、导热削弱压缩，几何接管判据对 $Re$ 不敏感，而与掺混速率相关的判据在 $\mu=2\times10^{-3}$ 时推迟 0.25–0.35。正定二次型（涡拟能、耗散、熵产生）会把示踪点噪声当成物理量，本文给出估计量设计准则与敏感性检验，并逐项列出各结论所依据的参照层级、已做与仍缺的验证。
+
+\tableofcontents
+\newpage
+
+\section{问题、范围与命题类别}
+问题是：只给出一组示踪点的轨迹（加一个参考时刻的密度），能否在不求速度场导数、不用网格的前提下，描述可压缩含激波流动中的输运、掺混、压缩、旋转、压力、粘性耗散、声学与热力学，并且这些描述与动力学方程有可检验的等价关系。全文的计算只读取轨迹与参考密度；DNS 场量只用于打分，凡用到之处均注明。
+
+算例全部为二维：Sod 激波管与柱面爆炸波（精确运动学）；激波–重气泡（$M_s=1.5$，密度比 3，重气体为同种气体降到三分之一温度；无粘与 $\mu=5\times10^{-4}$）；单模 Richtmyer–Meshkov（$M_s=1.5$，$A_t=0.5$，$a_0=0.1$；单次激波与再激波；无粘、$\mu=5\times10^{-4}$、$\mu=2\times10^{-3}$）；静止气体中的线性声脉冲；扩散的 Lamb–Oseen 涡（精确运动学）；衰减 Taylor–Green 涡（Navier–Stokes 精确解）。DNS 网格与示踪点间距均为 $h=0.005$（Taylor–Green 为 $2\pi/100$）。
+
+命题分三类：\jia 是对任意位置成立的离散恒等式；\yi 是在写明的动力学或本构假设下成立的等式；\bing 是估计量或统计结论，其精度只能由数值检验给出。第 7 节按这三类和参照的层级逐项给出验证状态。
+
+\section{拉格朗日轨迹网络与两种激活}
+\prop{定义 2.1（LTN）}{$G=(V,E_G)$。节点是轨迹 $x_i(t)$，$t\in\{t_0,\dots,t_S\}$，每个节点带一个在参考时刻固定的质量 $m_i=\rho_{0,i}A^*_i(t_0)/3$（$A^*_i$ 为星面积）。边集 $E_G=\bigcup_s\big(\mathrm{mkNN}_k(t_s)\cup\mathrm{Del}(K(t_s))\big)$；每条边 $e=(i,j)$ 是一对物质点，带完整历史 $r_e(t)=x_j(t)-x_i(t)$。}
+\prop{定义 2.2（几何激活）}{每一帧的外侧剥离 Delaunay 复形 $K(t_s)$。由定义 $K(t_s)\subset G$，代码中对每个活跃边断言其在 $E_G$ 中的全局编号。2-胞腔是 $K(t_s)$ 中活跃的物质三元组 $T=(i,j,k)$，其历史为边矩阵 $D_T(t)=[x_j-x_i,\;x_k-x_i]$。}
+\prop{定义 2.3（动力学激活）}{边信号为成对伸长率 $\varepsilon_e=\mathrm{d}\ln|r_e|/\mathrm{d}t$。AFRC 取窗口端点互 kNN 边上 $\varepsilon_e$ 的稳健中位数。}
+\prop{定义 2.4（对称延拓）}{在对称面或壁面处用镜像轨迹把 $G$ 扩成 $G\cup\sigma G$（激波–重气泡为 $y=0$；RM 为 $y=0$ 与 $y=0.5$）。对称流动中镜像轨迹本身就是全域流动的轨迹，所以延拓不改变物理；它消除了对称线上凸包的钝角薄片三角形——不加镜像时，截零余切电导使精确特征函数的 Rayleigh 商偏高 32\%，吸收随机游走最慢特征值偏高 15\%，加镜像后为 1.6\%（与解析圆盘值之差来自吸收边界位置）。}
+
+以粘性激波–重气泡为例：$|V|=31920$（含镜像），$|E_G|=355149$，每帧 $K(t)$ 平均 95519 条边；$E_G$ 中 49\% 的边从未在 $K(t)$ 中激活，只属于 kNN，它们只参与动力学激活。全部通道已改由同一个 LTN 类（继承 LHD 的 \texttt{trajnet.TrajectoryNetwork}）计算，与此前各分散脚本的结果在 0.2\% 以内一致（图 \ref{fig:ltn}a；$t=0.3$ 处差约 2\%，来自激波掩膜改用 \texttt{trajnet} 的定义）。
+
+\begin{figure}[htbp]\centering\includegraphics[width=\textwidth]{fig/fig12.png}
+\caption{同一个 LTN 上的回归与两种激活（粘性激波–重气泡）。(a) 统一实现与此前各脚本之比；(b) 耗散的几何激活（三点映射）与动力学激活（成对伸长率），数字为两者应变张量的逐点相关；(c) $G$ 的激活统计：边出生率与其中参考距离大于 $3h$ 的比例。}\label{fig:ltn}\end{figure}
+
+\section{余链、算子与度量}
+在 $K(t)$ 上取节点–边、边–面关联矩阵 $B_1$、$B_2$（$B_1B_2=0$），Hodge 星为 $\star_0=\mathrm{diag}(A^*_i/3)$（或质量 $m_i$），$\star_1=\mathrm{diag}(w_e)$，$w_e=\tfrac12(\cot\alpha_e+\cot\beta_e)$（截零），$\star_2=\mathrm{diag}(1/A_T)$。边余链由节点（轨迹）属性构造：
+\begin{equation}
+u_e=\tfrac12(u_i+u_j)\cdot r_e,\quad a_e=\tfrac12(a_i+a_j)\cdot r_e,\quad f_e=\tfrac12(\rho_ia_i+\rho_ja_j)\cdot r_e ,
+\end{equation}
+$u_i$、$a_i$ 为位置的中心一阶、二阶差分，$\rho_i=\rho_{0,i}/J_i$ 来自物质账本。
+\prop{命题 3.1（Hodge 分解）\jia}{$C^1=\mathrm{im}\,B_1^{\top}\oplus\mathrm{im}\,\star_1^{-1}B_2\oplus\mathcal H$，在 $\star_1$ 度量下两两正交；梯度势 $\phi$ 在节点上，旋度势 $\chi$ 在面上；$\dim\mathcal H=\beta_1$。}
+\prop{命题 3.2（三点映射）\jia}{$F_T=D_T(t+\Delta)D_T(t-\Delta)^{-1}$，取 $\nabla u_T\approx\log F_T/(2\Delta)$（$2\times2$ 精确矩阵对数，时间二阶精度），且 $\mathrm{tr}\log F_T=\ln[A_T(t+\Delta)/A_T(t-\Delta)]$ 精确成立。}
+\prop{命题 3.3（物质账本）\jia}{$\ln J_i$ 由固定三角形上的星面积比逐步链接，激波块内推迟重锚（C 通道检测）。}
+\prop{定义 3.4（Dirac 算子）}{在 $C^0\oplus C^1$ 上 $D=\begin{pmatrix}0&\delta_1\\ d_0&0\end{pmatrix}$，$d_0=B_1^{\top}$，$\delta_1=-\star_0^{-1}B_1\star_1$；$D^2=\mathrm{diag}(L_0,\,L_1^{\downarrow})$。}
+
+\noindent 一个贯穿全文的事实是：凡能用物质形式（面积率、三点映射、环量）表示的量，都不要用速度差分。速度余链的 Galerkin 散度与 DNS 的 Spearman 相关只有 0.37–0.76、$\int\theta^2$ 偏大 10–40 倍，原因是位置差分得到的速度带 $O(u'''\Delta t^2)$ 误差，再除以 $h$ 被放大；物质面积率给出 0.54、0.94、0.91（$t=0.3,0.6,1.0$）。
+
+\section{各通道：命题与结果}
+\subsection{质量与压缩}
+\prop{命题 4.1 \jia}{账本在物质星上给出连续方程的离散形式 $\mathrm{D}\ln\rho/\mathrm{D}t=-\theta$，$\theta_i=\mathrm{d}\ln A^*_i/\mathrm{d}t$。}
+账本给出的界面带压缩：RM 单次激波 0.75、再激波 1.16，与此前报告的 0.69–0.75、1.11–1.19 一致；DNS 密度在界面上给出 0.84，是接触面抹平所致。
+
+\subsection{旋转与 Kelvin 定理}
+\prop{命题 4.2 \jia{} 与 \yi}{Stokes：$\Gamma_T=(B_2^{\top}u)_T$。Kelvin：对物质三元组 $(B_2^{\top}a)_T=\mathrm{d}\Gamma_T/\mathrm{d}t$；无粘时等于 $\int_T(\nabla\rho\times\nabla p)/\rho^2\,\mathrm{d}A$。}
+面元涡量与 DNS 相关 0.98–1.00；$\int\omega^2$（上 Hodge 能量）为 1.672/1.702、6.004/6.072、4.794/4.841（网络/DNS，$t=0.3,0.6,1.0$）。整团环量变化率 $-0.655/-0.640$、$-0.545/-0.604$、$-0.080/-0.059$，分箱相关 0.96、0.91、0.72（图 \ref{fig:hd}、\ref{fig:hdq}）。激波带内加速度尖峰在旋度场上留下噪声。
+
+\begin{figure}[htbp]\centering\includegraphics[width=\textwidth]{fig/fig6.png}
+\caption{激波–重气泡（无粘）：由位置重建的压力、加速度余链的旋度（Kelvin）、速度余链的涡量部分（流函数）与物质面积率，DNS 场仅作参照。}\label{fig:hd}
+\includegraphics[width=\textwidth]{fig/fig7.png}
+\caption{运动学–动力学对应的定量检验：(a) 压力误差；(b) 质量度量下动能的 Hodge 分解；(c) 加速度与 $\rho a$ 的旋度份额；(d) Kelvin 积分；(e) 耗散恒等式两项；(f) 散度的两种算法。}\label{fig:hdq}\end{figure}
+
+\subsection{动量：压力与粘性}
+常粘度二维流动中 $\nabla\cdot\tau=\tfrac43\mu\nabla\theta-\mu\,\mathrm{curl}\,\omega$。
+\prop{命题 4.3 \yi}{把 $f=\rho a$ 余链做 Hodge 分解：梯度部分对应 $-\nabla p+\tfrac43\mu\nabla\theta$，余正合部分对应 $-\mu\,\mathrm{curl}\,\omega$，只含粘性，压力与斜压项都落在梯度部分。故 $p=-\phi_f+\tfrac43\mu\theta+\mathrm{const}$。}
+\prop{命题 4.4 \yi}{$\langle f_c,u\rangle_{\star_1}=-\mu\int\omega^2+$ 边界项，得粘度估计 $\mu_E=-\langle f_c,u_c\rangle/\int\omega^2$；逐面元 $\chi_f=-\mu\,\omega_T$。}
+\begin{itemize}
+\item 压力（无粘激波–重气泡，19 个时刻）：相关不低于 0.994；RMS 误差/std 为 2\%–16\%（全部示踪点）、0.5\%–9\%（去掉激波块）；粘性算例光滑区 0.5\%–7\%。需要一个参考常数（每帧一个探头值）。
+\item 无粘算例中 $\rho a$ 的旋度份额：$t\le0.8$ 时不超过 0.3\%，$t=1.38$ 时 4.4\%，是数值粘性与离散误差。
+\item 粘度（图 \ref{fig:visc}）：粘性激波–重气泡（真值 $5\times10^{-4}$）$t\ge1.18$ 时 $\mu_E=5.1$–$5.2\times10^{-4}$，$t=1.0$ 时 $5.85\times10^{-4}$，激波作用期 5.8–8.6；无粘算例为 1.1–2.9（$\times10^{-4}$，即数值格式的有效粘度）。分子换成 DNS 物理粘性力后比值约为 $5\times10^{-4}$。逐面元 $\chi_f=-\mu\omega$ 的斜率为 $5.85\times10^{-4}$，相关 $-0.91$。旋度通道功率与 DNS 物理粘性力的同一通道相差约 2\%（$t\ge1.18$）。
+\item 力矩形式 $\mathrm{curl}(\rho a)=\mu\nabla^2\omega$ 失败（拟合值 4–7$\times10^{-5}$）：$\nabla^2\omega$ 相当于位置的三阶导数。
+\item Taylor–Green 精确解：$\mu_E=0.009977$（真值 0.01），压力 RMS 误差 0.15\%。RM：$\mu=5\times10^{-4}$ 时 5.1–5.4（$t\le3$），$\mu=2\times10^{-3}$ 时 18.8–20.4（$t\le1.5$）（$\times10^{-4}$），之后下降，见第 7 节。
+\end{itemize}
+
+\begin{figure}[htbp]\centering\includegraphics[width=\textwidth]{fig/fig8.png}
+\caption{粘性通道（激波–重气泡）：(a) 由位置反演粘度；(b) 动能收支的 Hodge 通道；(c) 不计边界项的耗散；(d) 粘性力的空间结构；(e)(f) 旋度通道面势与面元涡量的关系 $\chi=-\mu\omega$。}\label{fig:visc}\end{figure}
+
+\subsection{能量：耗散的两种激活}
+\prop{命题 4.5 \jia}{逐点代数恒等式 $2S{:}S-\tfrac23\theta^2=\omega^2+\tfrac43\theta^2-4\det\nabla u$；$\int\det\nabla u$ 只贡献边界积分，对分片线性映射离散精确。}
+\prop{命题 4.6 \yi}{(a) 几何激活：$\Phi_T=\mu[2S{:}S-\tfrac23\theta^2]_T$，$\nabla u_T=\log F_T/2\Delta$。(b) 动力学激活：转动不改变边长，$\varepsilon_e=\hat r_e^{\top}S\hat r_e$，在每个节点上用 $G$ 的短边做最小二乘求 $S$。(c) 动能收支 $\langle f,u\rangle=\langle f_g,u_g\rangle+\langle f_c,u_c\rangle$，交叉项数值上约 $10^{-8}$。}
+几何激活与 DNS 光滑区 $\int\Phi$ 之比：$t=0.3$–0.62 为 0.97–1.00，$t\ge1.1$ 为 0.98–1.004，$t\approx0.7$–1.0 为 0.85–0.93（弱压缩波未被激波掩膜去掉，待核实）。若不计边界项，偏高约 16\%。两种激活的应变张量逐点相关 0.998–0.999，动力学激活与 DNS 相差 1\%–2\%（$t\ge0.6$，$t=1.0$ 除外）。Taylor–Green：几何激活偏低 4\%，动力学激活偏低 0.3\%。RM 中两种激活相差 1\%–4\%。由此，AFRC 所用边信号的二阶统计就是粘性耗散，输运结构与能量收支落在同一张网络上。
+
+\subsection{声学：Dirac 通道}
+\prop{命题 4.7 \yi}{线性等熵时 $a=-c^2\nabla\ln\rho$。账本梯度含噪声而加速度干净，故 $c^2=-\langle a,a\rangle/\langle a,d_0\ln\rho\rangle$。线性声学 $\partial_t(\rho',u)=-(\rho_b\delta_1u,\;c^2\rho_b^{-1}d_0\rho')$ 即 Dirac 型方程，$D^2$ 给出 $\omega^2=c^2k^2$；声学运动只在梯度通道与点信号上（Kovasznay 分解）。}
+声脉冲（图 \ref{fig:ac}）：$c^2=1.005$（各帧 1.002–1.016）；若把账本梯度当自变量回归会得到 0.61–0.75（误差在自变量一侧导致的衰减偏差）。速度余链旋度份额约 $7\times10^{-7}$。只用初值、$c^2$ 与 $t=0$ 复形的 Dirac 前推，与 DNS 相差 0.4\%、1.1\%、6.4\%（$t=0.1,0.2,0.3$；最后一个时刻声环已到示踪点区域边缘），离散能量守恒到 $10^{-13}$。
+
+\begin{figure}[htbp]\centering\includegraphics[width=\textwidth]{fig/fig9.png}
+\caption{(a) 三点映射给出的耗散闭合（粘性激波–重气泡）；(b)–(f) 声脉冲：由位置得到声速、径向剖面、声学能量与 Dirac 前推。}\label{fig:ac}\end{figure}
+
+\subsection{熵与第二定律}
+\prop{命题 4.8 \yi}{$s=c_v\ln(p/\rho^\gamma)$，$p$ 来自 4.3 节，$\rho$ 来自账本。无粘光滑区 $\mathrm{D}s/\mathrm{D}t=0$；激波处 $\Delta s(\eta)$ 由 RH 给出，$\eta$ 只用账本密度比。}
+\prop{命题 4.9 \yi}{$\rho T\,\mathrm{D}s/\mathrm{D}t=\Phi+\nabla\cdot(k\nabla T)$；熵产生 $\int\Phi/T+k\sum_e w_e(\Delta\ln T)_e^2\ge0$，第二项是 $\ln T$ 的 Dirichlet 型，第二定律即拉普拉斯二次型的正定性。}
+熵场与 DNS 相关 0.99、0.98；重/轻气体熵差 $-3.75$、$-3.76$（DNS $-3.77$、$-3.75$，初值 $-3.85$）。光滑区 0.4 时间单位内沿轨迹 $\Delta s$ 的 RMS 为 0.045–0.086（DNS 0.076–0.127）。激波熵跳变：重气体 $\eta=2.18$ 时 RH、网络、DNS 为 0.150、0.151、0.148；轻气体 $\eta=1.81$ 时为 0.063、0.049、0.066。粘性算例中，温度噪声约 0.8\%–1.5\% 已使导热熵产生被放大 2–5 倍；对 $T$ 作低通 $\ell=2h$ 后，重气体熵变化率与 DNS 相差 10\%–20\%，分箱相关 0.90–0.93（图 \ref{fig:ent}）。
+
+\begin{figure}[htbp]\centering\includegraphics[width=\textwidth]{fig/fig10.png}
+\caption{熵通道：(a)(b) 由位置与 DNS 得到的熵场；(c) 激波熵跳变的三条途径；(d) 光滑区熵守恒；(e)(f) 粘性算例的熵收支与第二定律。}\label{fig:ent}\end{figure}
+
+\subsection{调和通道}
+\prop{命题 4.10 \yi（连续极限）}{环形区内径向对称涡量时，调和部分为 $h=C/(2\pi r)\,e_\theta$，$C=\int_{r_{in}}^{r_{out}}\Gamma(r)r^{-1}\mathrm{d}r/\ln(r_{out}/r_{in})$；加速度调和部分的周期为 $\mathrm{d}C/\mathrm{d}t$，即粘性把环量带出洞的速率（非单连通区域的 Kelvin 定理）。}
+扩散 Lamb–Oseen 环形区（核为洞）：按外边界同样的方式只剥离与洞相邻的长三角形后 $\beta_1=1$ 保持不变（按边长全局删除会产生伪孔，$\beta_1$ 变成 2、3）。速度调和周期 0.879→0.871，理论 0.879→0.866（不超过 0.7\%）；加速度调和周期 $-0.145\to-0.137$，理论 $-0.149\to-0.144$（3\%–5\%）。调和能量份额随度量与洞边缘三角化变化（95\% 与 78\%），不是不变量，应报告周期（图 \ref{fig:noise}c–f）。
+
+\subsection{扩散与掺混}
+\prop{命题 4.11 \jia}{以质量为点权、余切电导为边权，网络扩散是物质坐标扩散方程 $\rho_0\partial_tc=\nabla_X\!\cdot(kJC^{-1}\nabla_Xc)$ 的 P1 离散；移植网络科学概念须通过压缩滤网。}
+Sod 精确运动学上，组合量全部失败（$\varepsilon$-网络平均度 +126\%，聚类系数 +24\%，Delaunay 边更替 24\%，无权 Dirichlet 能量 $-32\%$ 至 $+72\%$）；余切电导加质量的量通过（Dirichlet 能量不超过 1\%，余切同配系数 $-1.2\%$，远程接触为 0）。激波–重气泡上（图 \ref{fig:mix}）：Pe 扫描给出 $t=1.4$ 时的掺混增强 1.44、1.38、1.31、1.23（$\Gamma=3\times10^{-5}$ 至 $10^{-3}$），网络掺混时钟预测高 Pe 极限 1.34–1.42；逐点解释"流动在哪里加速了掺混"时，网络时钟 Spearman 0.83/0.59，AFRC 0.46/0.26，远程接触 0.08/0.34，到界面距离约 0。冻结网络吸收随机游走最慢特征值 30.4，解析圆盘 30.8。
+
+RM：重写的 DNS 复现掺混文档的参照接管时刻（几何 3.39 对 3.43，时钟 2.25 对 2.19，再激波 8.43 对 8.45、5.89 对 5.9）。尖锐标签割长分箱给出的 $\langle\lambda^2\rangle$ 与标记曲线相差不超过 0.1（单次激波，到 $t=6$）；4h 带交换势在信息极限下饱和。以 $\lambda^2/J$ 的算术平均为判据接管最早（单次 1.96/1.80，再激波 4.10/3.78，标记曲线/网络）。混合质量判据随 $\Gamma$ 变化：单次激波 3.84、4.00、5.18，再激波 9.05、10.2、大于 12，$\Gamma\to0$ 时趋向片层极限 3.6、8.6（图 \ref{fig:rm}）。
+
+\begin{figure}[htbp]\centering\includegraphics[width=\textwidth]{fig/fig2.png}
+\caption{掺混通道（激波–重气泡）：压缩滤网、网络接触与交换势、Pe 扫描、掺混增强、吸收随机游走、逐点解释力。}\label{fig:mix}\end{figure}
+\begin{figure}[htbp]\centering\includegraphics[width=\textwidth]{fig/fig5.png}
+\caption{RM 接管判据：拉伸与压缩因子、界面长度、各判据的接管时刻与混合质量判据随 Pe 的变化。}\label{fig:rm}\end{figure}
+
+\subsection{激活统计}
+$G$ 中边的出生率是网络原生的"拓扑速率"。粘性激波–重气泡每节点每单位时间新激活 1.6–3.3 条边，其中参考距离大于 $3h$ 的新接触比例由 $t=0.3$ 的 3\%（仿射翻转为主）升到 $t=0.6$ 的 17\%、$t\ge1.0$ 的 43\%–54\%（搅拌为主）；RM 由 14\% 升到 41\%–62\%（图 \ref{fig:ltn}c）。
+
+\section{噪声原理与估计量设计准则}
+\prop{命题 5.1 \bing}{正定型 $Q(x)=x^{\top}Lx$ 满足 $\mathbb E\,Q(x+n)=Q(x)+\mathbb E\,n^{\top}Ln\ge Q(x)$：独立噪声对涡拟能、耗散、熵产生都给出正偏差。}
+准则：
+\begin{enumerate}
+\item 用物质形式（面积率、三点映射、环量），不用速度差分。
+\item 用能量或积分形式，不用高阶导数（$\mu_E$ 成功，力矩形式失败）。
+\item 回归时把含噪声的一侧放在因变量（$c^2$）。
+\item 正定型须去偏。分样交叉估计（两组棋盘示踪点各自建网络）消去独立噪声，导热熵产生的超出量由 80\%–380\% 降到 30\%–65\%；剩余部分是两组共有的共模误差（同一插值速度场、同一参考常数），内部统计无法去除。GCV 选出 $\ell^*=0.002$–0.003，失败（噪声不白、信号近间断）；固定 $\ell=2h$ 偏低 20\%–28\%。真值落在两者之间（图 \ref{fig:noise}a,b）。
+\item 多边拟合更抗噪：动力学激活每节点用 10–20 条边，在 $1\%h$ 位置噪声下耗散误差不超过 2\%，三点映射为 +24\% 至 +34\%（第 7 节）。
+\end{enumerate}
+两个无量纲噪声数决定可用性：梯度类量 $N_g=\sigma/(|\nabla u|\,h\,\Delta t)$，加速度类量 $N_a=\sigma/(|a|\,\Delta t^2)$。Taylor–Green 加 $1\%h$ 噪声时 $N_a\approx2$、$N_g\approx0.5$，加速度类通道全部失败；激波–重气泡加 $1\%h$ 噪声时 $N_g\approx0.05$、$N_a\approx0.01$，三点映射已受影响而成对拟合不受影响。
+
+\begin{figure}[htbp]\centering\includegraphics[width=\textwidth]{fig/fig11.png}
+\caption{(a)(b) 正定型的噪声偏置与四种处理；(c)–(f) 扩散 Lamb–Oseen 环形区的调和通道。}\label{fig:noise}\end{figure}
+
+\section{应用：有限雷诺数 RM}
+同一组示踪点、同一套 LTN 流程，比较无粘、$\mu=5\times10^{-4}$、$\mu=2\times10^{-3}$（图 \ref{fig:re}，表 \ref{tab:re}）。到 $t=6$，粘性削弱拉伸（$\ln L/L_0$：1.50、1.08、0.87），导热削弱压缩（$\langle-\ln J\rangle$：0.70、0.47、0.37，冷的重气体在界面被加热膨胀）。两者几乎抵消，只看几何的判据对 $Re$ 不敏感；与掺混速率相关的判据在 $\mu=2\times10^{-3}$ 时推迟 0.25–0.35。"导热削弱压缩"依赖本构型（重气体为同种冷气体）；真实双组分 RM 中对应效应来自组分互扩散。
+\begin{table}[h]\centering\caption{接管时刻随粘度（标记曲线参照；最后一行为 LTN 反事实扩散，$\Gamma=10^{-4}$）}\label{tab:re}
+\begin{tabular}{lccc}\toprule
+判据 & 无粘 & $\mu=5\times10^{-4}$ & $\mu=2\times10^{-3}$\\\midrule
+几何：$\ln L$ 超过压缩 & 3.39 & 3.33 & 3.38\\
+时钟 $\alpha=1$ & 2.25 & 2.25 & 2.50\\
+速率 $\alpha=1$（算术 $\langle\lambda^2\rangle$）& 1.96 & 1.95 & 2.21\\
+速率 $\alpha=0$ & 3.01 & 3.05 & 3.35\\
+混合质量 $\alpha=1$ & 4.00 & 4.13 & 4.32\\\bottomrule
+\end{tabular}\end{table}
+\begin{figure}[htbp]\centering\includegraphics[width=\textwidth]{fig/fig13.png}
+\caption{有限雷诺数 RM：(a) 由 LTN 反演粘度；(b) 两种激活的耗散；(c) 接管时刻；(d) 拉伸与压缩。}\label{fig:re}\end{figure}
+
+\section{正确性验证}
+\subsection{参照的层级}
+\begin{itemize}
+\item \textbf{R1 精确解}（与数值格式无关）：Sod/爆炸波精确运动学、圆盘本征值、线性声学 $c=1$、RH 关系、扩散 Lamb–Oseen、Taylor–Green 精确 Navier–Stokes 解。
+\item \textbf{R2 同一 DNS 的场量}：压力、涡量、$\Phi$、粘性力、熵。示踪点由 DNS 速度的双线性插值推进，R2 检验的是网络算子与产生这些示踪点的离散流场是否自洽，不能把方法误差与 DNS 自身的数值误差分开（无粘算例的 $\mu_E$ 基线 1–3$\times10^{-4}$ 即为后者）。
+\item \textbf{R3 同一 DNS 中推进的标记曲线}：与 R2 同源。
+\item \textbf{R4 内部一致性}：两种激活一致、回归、正交性（交叉项约 $10^{-8}$）、离散能量守恒（Dirac $10^{-13}$）、Galilean 不变（均匀速度只进入梯度通道）。
+\end{itemize}
+
+\subsection{逐项状态}
+\begin{table}[h]\centering\small\caption{各结论的参照与状态}\label{tab:ver}
+\begin{tabular}{p{3.3cm}p{2.0cm}p{4.6cm}p{5.2cm}}\toprule
+结论 & 参照 & 状态 & 主要风险\\\midrule
+压力重建 & R1, R2 & TG 0.15\%；SB 相关 $\ge0.994$ & 参考常数取自 DNS；$\Delta t$ 加倍误差 2–3 倍\\
+Kelvin / 涡量 & R2 & 涡量 0.98–1.00，积分 2\%–10\% & 激波带加速度尖峰\\
+粘度 $\mu_E$ & R1, R2 & TG $-0.2\%$；SB/RM 1\%–7\% & 边界项（RM 后期下降）；数值粘度混入\\
+耗散 & R1, R2, R4 & 两种激活 1\%–2\%；TG 0.3\%/4\% & 三点映射对噪声敏感\\
+声速与 Dirac & R1 & 0.5\%；前推 0.4\%–1.1\% & 只测了线性范围\\
+熵与 RH & R1, R2 & 重气体 1\%，轻气体 20\% & 弱激波时压力误差占比大\\
+第二定律 & R2 & 只给上下界 & 共模误差\\
+调和通道 & R1 & 周期 0.7\%、3\%–5\% & 只测了解析流动\\
+掺混与接管 & R1, R3 & 复现文档参照；Pe 依赖 & 单网格、单种子\\
+有限 Re 结论 & R3, R4 & 两个 $Re$ & 构型特殊（冷重气体）\\\bottomrule
+\end{tabular}\end{table}
+
+\subsection{本文新做的验证}
+\textbf{(a) Taylor–Green 精确解（R1）。}周期盒 $3\times3$ 平铺镜像轨迹，计分取中心块：$\mu_E=0.009977$（真值 0.01），$\int\omega^2$ 偏差 $-0.1\%$，耗散 $-4\%$（三点映射）与 $-0.3\%$（成对伸长率），压力 RMS 误差 0.15\%。加 $1\%h$ 位置噪声后，$\mu_E$ 失效、压力误差 72\%、三点映射耗散翻倍、成对伸长率耗散 +13\%（$N_a\approx2$）。
+
+\textbf{(b)–(d) 粘性激波–重气泡敏感性（图 \ref{fig:ver}）。}帧间隔加倍：$t=1.2$ 处 $\mu_E$ 为 5.11 对 $5.18\times10^{-4}$，压力误差由 0.8\% 升到 2.6\%（$t=1.0$ 由 7\% 升到 16\%），耗散除 $t=1.0$ 外不变。示踪点间距 $\sqrt2h$：$\mu_E=5.44\times10^{-4}$，耗散比 0.98–1.01。位置噪声 $0.2\%h$、$1\%h$、$4\%h$：$t=1.2$ 处 $\mu_E$ 为 5.39、5.57、2.67（$\times10^{-4}$）；三点映射耗散比 1.02、1.34、6.5；成对伸长率 0.99、1.02、1.36；压力误差 1.2\%、4.0\%、16\%。
+
+\begin{figure}[htbp]\centering\includegraphics[width=\textwidth]{fig/fig14.png}
+\caption{验证：帧间隔、示踪点间距与位置噪声的敏感性（粘性激波–重气泡，全部经同一个 LTN）。}\label{fig:ver}\end{figure}
+
+\subsection{仍缺的验证（按优先级）}
+\begin{enumerate}
+\item \textbf{独立 DNS}：换数值格式或把网格加密一倍，把数值粘性与方法误差分开；目前所有 R2 结论都与单一格式绑定。
+\item \textbf{示踪点间距收敛}：$h$、$h/\sqrt2$、$h/2$ 三档，给出 $\mu_E$、耗散、压力误差的收敛阶；目前只有 $h$ 与 $\sqrt2h$ 两档。
+\item \textbf{多次实现}：不同抖动种子，给出误差的分布而非单次值。
+\item \textbf{更多精确解}：线性流（所有一阶通道应精确到舍入误差）；带壁的 Couette/Poiseuille 流（检验壁面镜像与边界项）；可压缩精确或准精确解（等熵涡、粘性激波结构）检验熵与声学的非线性范围。
+\item \textbf{边界项}：加宽 RM 示踪点条带，或在恒等式中显式计入边界项，检验 $\mu_E$ 后期下降的解释（$\mu$ 越大下降越早，与涡量扩散到条带边缘的时间一致）。
+\item \textbf{参数扩展}：$M_s$、$A_t$、$Re$、多模扰动与有限 $Re$ 再激波。
+\item \textbf{真实数据}：PTV 噪声与断续轨迹，按 $N_g$、$N_a$ 评估各通道可用性。
+\item \textbf{共模误差的外部约束}：独立压力探头、已知边界条件或第二套示踪方法。
+\end{enumerate}
+
+\section{局限}
+全部算例为二维，DNS 只有一档网格，误差多为单次实现；R2 类参照与示踪点同源；压力需要每帧一个参考常数；调和通道只在解析流动上检验；第二定律只给上下界；$\mu_E$ 在涡量到达网络边界后受边界项影响；三点映射耗散对位置噪声敏感；混合质量接管依赖 $\Gamma$（即 Pe），并要求物质扩散长度不小于约 $2h$。
+
+\appendix
+\section{代码与数据}
+\begin{itemize}
+\item \texttt{ltn\_dyn.py}：LTN 类（继承 \texttt{trajnet.TrajectoryNetwork}），全部通道的统一入口；\texttt{run\_ltn\_sb.py}、\texttt{run\_ltn\_rm.py}。
+\item 掺混：\texttt{netmix.py}，\texttt{t1\_sod\_filter.py} 至 \texttt{t5c.py}。
+\item RM：\texttt{rm\_run.py}，\texttt{rmv\_run.py}，\texttt{rm\_build.py}，\texttt{rm\_series.py}，\texttt{rm\_take2.py}。
+\item 动力学通道：\texttt{hodge\_dyn.py}，\texttt{visc\_hodge.py}，\texttt{dissip\_tpm.py}。
+\item 声学：\texttt{ac\_run.py}，\texttt{ac\_dirac.py}；熵：\texttt{entropy.py} 等。
+\item 噪声：\texttt{gcv\_ell.py}，\texttt{cross\_dirichlet.py}；调和：\texttt{harm\_lo.py}。
+\item 验证：\texttt{verify.py}（帧间隔、间距、噪声）、\texttt{tg\_verify.py}（Taylor–Green）。全部数值在各目录的 \texttt{res\_*.json}。
+\end{itemize}
+\end{document}

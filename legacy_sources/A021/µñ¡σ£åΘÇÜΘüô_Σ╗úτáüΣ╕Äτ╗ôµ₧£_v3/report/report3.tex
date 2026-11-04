@@ -1,0 +1,249 @@
+\documentclass[10.5pt,a4paper]{article}
+\usepackage[a4paper,margin=2.2cm,top=2.4cm,bottom=2.4cm]{geometry}
+\usepackage{fontspec}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\setmainfont{Noto Serif CJK SC}[BoldFont={Noto Serif CJK SC Bold}]
+\setsansfont{Noto Sans CJK SC}[BoldFont={Noto Sans CJK SC Bold}]
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+\linespread{1.18}
+\usepackage{xcolor}
+\definecolor{accent}{HTML}{1F5FA8}
+\definecolor{quiet}{HTML}{5A5A5A}
+\definecolor{tint}{HTML}{EEF3FA}
+\usepackage{titlesec}
+\titleformat{\section}{\sffamily\bfseries\Large\color{accent}}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\sffamily\bfseries\large}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}{\sffamily\bfseries\normalsize}{\thesubsubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.6em}{0.7em}
+\titlespacing*{\subsection}{0pt}{1.2em}{0.5em}
+\usepackage{enumitem}
+\setlist{itemsep=0.25em,topsep=0.35em,leftmargin=1.6em}
+\usepackage{array,booktabs,tabularx,xltabular,makecell}
+\renewcommand{\arraystretch}{1.25}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf,labelsep=quad}
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
+\renewcommand{\contentsname}{目录}
+\usepackage{graphicx}\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,calc,fit}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\color{quiet}椭圆通道（第 3 版）：参数、强度场与定义的适定性}
+\fancyhead[R]{\small\color{quiet}2026 年 10 月 16 日}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\usepackage[colorlinks=true,linkcolor=accent,citecolor=accent,urlcolor=accent]{hyperref}
+\newcommand{\AFH}{AFRC$_{\mathrm H}$}
+\newcommand{\AFE}{AFRC$_{\mathrm E}$}
+\newcommand{\lnJ}{$\ln J$}
+\newcommand{\keyp}[1]{\textbf{\sffamily #1}}
+\newenvironment{finding}{\begin{center}\begin{minipage}{0.94\linewidth}\setlength{\parskip}{0.3em}\color{black}}{\end{minipage}\end{center}}
+\setlength{\parskip}{0.35em}
+\setlength{\parindent}{0pt}
+\tolerance=2000 \emergencystretch=3em
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{definition}{定义}[section]
+\theoremstyle{plain}
+\newtheorem{proposition}[definition]{命题}
+\newtheorem{corollary}[definition]{推论}
+\theoremstyle{remark}
+\newtheorem{remark}[definition]{注}
+\renewcommand{\proofname}{证明}
+\newcommand{\status}[1]{\hfill{\small\color{accent}\textsf{[#1]}}}
+\newcommand{\re}{\operatorname{Re}}
+\newcommand{\im}{\operatorname{Im}}
+\begin{document}
+\begin{center}
+{\sffamily\bfseries\LARGE 椭圆通道（第 3 版）：参数、强度场与定义的适定性}\\[0.5em]
+{\sffamily\large 平滑与阈值扫描；同步簇层级作为强度场；LAVD 在涡片上是否定义良好}\\[0.8em]
+{\color{quiet}2026 年 10 月 16 日\quad 接第 2 版}
+\end{center}
+\vspace{0.3em}
+\noindent\fcolorbox{accent!40}{tint}{\begin{minipage}{0.96\linewidth}\vspace{0.4em}
+\keyp{结论}
+\begin{itemize}[leftmargin=1.4em,itemsep=0.1em]
+\item \keyp{参数。}
+  \begin{itemize}[leftmargin=1.2em]
+  \item 平滑核宽度实测为 $w(n)\approx0.55\sqrt n\,h$。尺寸上限怎么收紧，9 个参照涡 × 3 个噪声种子的平均噪声 IoU 都只变化 $\le0.02$（$\delta=0.1$ 时 0.626–0.629，逐涡最优为 0.681）。最优平滑次数不随涡的尺寸变化，剩余差距由各涡的信噪比决定。第 3 版采用 $w\le r_{\rm eq}/6$。
+  \item $\delta$ 没有唯一最优值，建议报告相干半径随 $\delta$ 的曲线。
+  \item 持续转动门：单步占比的余量窄（真核 $\le0.23$，Sod 阈值以下的伪核 $\ge0.27$）。按比例的参与比 $n_{\rm eff}/(S-1)$ 会误杀激波–气泡中窗口内才形成的涡（0.25），不采用。第 3 版取 $J_{\max}=0.35$。
+  \end{itemize}
+\item \keyp{强度场的网络表达。}同步文献里“强度”就是频率失谐，即 $\varphi/T$，与 LAVD 的被积量相同；同步框架给不出另一种强度，但频率簇的层级（$\varphi$ 的合并树）给出另一种参照：
+  \begin{itemize}[leftmargin=1.2em]
+  \item 背景自然为零。
+  \item 对集合参照常数严格不变：双环流去掉部分示踪点后 $\varphi$ 平移 0.26 rad，核心 $P$ 不变到小数点后 4 位。
+  \item 代价：要求簇的环境落在观测区域内（Lamb–Oseen 小圆盘中核心 $P$ 由 18.3 降到 11.7）；噪声下在激波–涡上比 $\varphi$ 差。
+  \end{itemize}
+\item \keyp{LAVD 会不会定义不明：会，问题在涡片上。}网络的 $\varphi$ 只用位置，但它与 LAVD 一样是逐点的转角场，在涡片（滑移线、带剪切的接触面）上没有分辨率无关的极限：层厚远小于 $h$ 时，节点 $\max|\varphi|$ 随 $h$ 从 8.2 涨到 23.1，随帧数从 13.1 涨到 21.7，连区域积分也不收敛。物质环路的环量则严格守恒、与采样无关。由此给出基于环量的强度：在相干边界上取环量，以外侧环带为参照。它只用速度的线积分（速度由位置差分得到），客观性残差 0.2\%–0.7\%，在光滑流中与 $\varphi$ 一致到 2\%–11\%。
+\end{itemize}\vspace{0.2em}\end{minipage}}
+
+\tableofcontents
+
+\section{平滑、$\delta$ 与 $J_{\max}$}
+\subsection{平滑核宽度与尺寸上限}
+\begin{table}[H]\centering\small\caption{图平滑核的均方根宽度 $/h$（在 20 个节点上对 $\delta$ 函数平滑后取中位数）。}\input{t3_kernel.tex}\end{table}
+\begin{table}[H]\centering\small\caption{9 个参照涡、3 个噪声种子（激波–气泡为 2 个）下，噪声边界与参照边界 IoU 的平均值。}\input{t3_rules.tex}\end{table}
+\begin{table}[H]\centering\small\caption{各涡在不同平滑次数下的噪声 IoU（$\delta=0.1$，种子平均）。}\resizebox{\linewidth}{!}{\input{t3_bestn.tex}}\end{table}
+各种尺寸上限之间相差不超过 0.02，与固定 8 次几乎相同。最优平滑次数不随 $r_{\rm eq}/h$ 变化：
+\begin{itemize}
+\item Lamb–Oseen 的涡半径约 3$h$，从 3 次到 16 次都差不多；
+\item 激波–涡半径 6$h$ 的涡最优为 3 次；
+\item 激波–气泡半径 5.5$h$ 的涡最优为 2 次。
+\end{itemize}
+所以尺寸不是控制量，剩下的约 0.05 的差距由各涡的信噪比决定。第 3 版取 $w(n)\le r_{\rm eq}/6$，它在 $\delta=0.2$ 时最好（0.675），在 $\delta=0.1$ 时持平。
+
+\subsection{$\delta$ 的敏感性}
+\begin{table}[H]\centering\small\caption{每格为“相干半径 $/h$ / 与参照的干净 IoU / 噪声 IoU（8 次平滑）”。}\resizebox{\linewidth}{!}{\input{t3_delta.tex}}\end{table}
+\begin{itemize}
+\item 相干半径随 $\delta$ 增大：Lamb–Oseen 从 2.9$h$ 到 4.7$h$，双环流从 15$h$ 到 23$h$。激波–涡主涡从 $\delta=0.1$ 起停在 20.8$h$，说明它的边界由别的结构（相邻涡或等值线终止）决定。
+\item 干净 IoU 几乎都在 0.84 以上；噪声 IoU 在 $\delta=0.15$–0.2 时平均略高。
+\end{itemize}
+与 RCLV 研究中按参数划分相干等级的做法类似 [7]，建议报告半径–$\delta$ 曲线，不固定单一的 $\delta$。
+
+\subsection{持续转动门：单步占比与参与比}
+\begin{table}[H]\centering\small\caption{干净数据上前 40 个核的单步占比与参与比 $n_{\rm eff}=(\sum|x|)^2/\sum x^2$。}\resizebox{\linewidth}{!}{\input{t4_neff.tex}}\end{table}
+\begin{itemize}
+\item \keyp{单步占比}：真核不超过 0.23；但 Sod 低于显著性阈值的伪核可以低到 0.27（两三次激波与接触间断事件）。余量很窄，主要靠持续性阈值把它们挡住。
+\item \keyp{参与比}：Sod 伪核不超过 10.8 步。但激波–气泡显著核只有 17.5–57.9/70 步，因为这些涡在窗口内才形成。按比例的门会误杀它们，所以不采用。
+\item \keyp{噪声下两者都失效}：噪声把转角分散到每一步，但显著性门已经挡住了这类噪声核。
+\end{itemize}
+第 3 版取 $J_{\max}=0.35$。在超过持续性阈值的核中，Sod 唯一的假核为 1.00，真核不超过 0.23。
+
+\section{强度场的网络表达：同步簇与合并树}
+\subsection{文献}
+\begin{itemize}
+\item \keyp{高阶拓扑同步} [1–3]：相位可以定义在边与三角形上，但边上的同步只有投影到无旋/无散分量之后才看得出来 [1]。这与本工作的发现直接对应：点对转角混有应变，三角形转角就是边信号的旋转部分。节点与边信号的耦合 [2]、Dirac 同步 [3] 对应我们的 T5 Dirac 结构。
+\item \keyp{簇同步} [4]：从网络对称性预测同步簇，前提是动力学由网络本身产生。我们的图只是观测图，对称性分析不适用；能借用的是“频率簇”这个概念。
+\item \keyp{Chimera 诊断} [5]：用平均相速度剖面与离散 Laplacian（局部曲率）度量空间相干性，阈值取最大曲率的 1\%。这与 \AFE 的曲率超额同属 Laplacian 型对比，零点也同样是相对的。
+\item \keyp{轨迹时间平均与聚类}：遍历商 [6]、谱聚类 [8]。
+\end{itemize}
+在同步语言里，涡的“强度”就是频率失谐 $\Omega_i-\bar\Omega=\varphi_i/T$，与 LAVD 的被积量相同。所以同步框架不会给出另一种强度，但会给出另一种参照：用频率簇的层级代替全局均值。
+
+\subsection{合并树强度场}
+\begin{definition}[频率簇层级强度]
+对 $\varphi$ 做上水平集过滤。节点的 $P^+_i$ 是它高出所在簇“终止水平”的高度，终止水平取以下两者中先发生的：并入峰值更高的簇；触到观测物质的边缘。$P=P^+(\varphi)-P^+(-\varphi)$。$P$ 就是 $\varphi$ 的 0 维持续同调，对 $\varphi\to\varphi+c$ 严格不变。
+\end{definition}
+\begin{table}[H]\centering\small\caption{合并树强度场与参照（同一定义作用于参照 $\varphi$）的一致性。噪声下 $P$ 用 8 次平滑。}\resizebox{\linewidth}{!}{\input{t4_merge.tex}}\end{table}
+\begin{table}[H]\centering\small\caption{去掉部分示踪点（Lamb–Oseen 只保留 $r_0<4.5$，双环流只保留 $x_0<1.85$）。}\resizebox{\linewidth}{!}{\input{t4_ens.tex}}\end{table}
+\begin{itemize}
+\item $\varphi$ 平移的是一个精确常数（四分位距 $10^{-15}$），证实 $\varphi$ / LAVD 依赖播撒的集合。这也是论文结论中写到的局限。
+\item 双环流涡核的 $P$ 完全不变。Lamb–Oseen 小圆盘切到了涡的外围旋流，簇先触到边缘，$P$ 从 18.3 降到 11.7：$P$ 是局部量，前提是簇的环境要在观测区域内。
+\item 两个被否定的变体：
+  \begin{itemize}[leftmargin=1.2em]
+  \item “覆盖半个区域的簇算背景”在双环流上失效，因为两个涡填满了区域。
+  \item 以涡自身相干边界为参照的强度在理论上严格不变（实测残差 0.5\%–4\% 来自等值线扫描的离散化），但固体旋转涡会得到约 0：它量的是核心相对自身边缘的转动（Lamb–Oseen 为 2.9 rad，合并树为 18.3），物理上不对。
+  \end{itemize}
+\item 噪声下：Lamb–Oseen、双环流、激波–气泡上 $P$ 与 $\varphi$ 相当；激波–涡上 $P$ 明显更差（Spearman 0.60 对 0.86），因为噪声会移动合并鞍点的水平。
+\end{itemize}
+
+\section{LAVD 会不会定义不明}
+\subsection{问题在哪里}
+\begin{itemize}
+\item 网络本身不用速度梯度，也不用涡量：$\varphi$ 来自三角形步映射的 $\arg p$，只用位置。LAVD 只以两种身份出现：一是 $\varphi$ 在光滑流中的连续极限；二是验证时用的 DNS 涡量参照。
+\item 但目标本身有问题。在 BV 意义下，滑移线和带剪切的接触面上，涡量是集中在曲线上的奇异测度：
+  \begin{itemize}[leftmargin=1.2em]
+  \item 逐点的 $\int|\omega-\bar\omega|\,dt$ 在片上为无穷，片附近也没有分辨率无关的极限；
+  \item 任何逐点的转角场（包括 $\varphi$ 和 $P$）在片上都会继承这一问题；
+  \item 激波生成的涡量只是有界跳跃（Crocco），逐点几乎处处有定义，问题不大；
+  \item 参照 $\bar\omega$ 依赖集合（第 2.2 节）。
+  \end{itemize}
+\item 积分量不受影响：涡量测度在区域上的积分，即物质环路的环量，是良定义的（离散 Kelvin 定理，统一理论 T4）。
+\end{itemize}
+
+\subsection{涡片检验}
+$u=(U\tanh(y/\delta_s),0)$，$U=0.5$，$T=1$。$\delta_s=0.1$ 为可分辨的剪切层，$\delta_s=5\times10^{-4}$ 为远小于 $h$ 的涡片。环量取约 $0.2\times0.2$ 的物质方框边界上的示踪点环路，用梯形规则，速度由位置的时间差分得到。
+\begin{table}[H]\centering\small\caption{剪切层与涡片上的逐点转角、区域积分与环路环量。}\resizebox{\linewidth}{!}{\input{t4_sheet.tex}}\end{table}
+\begin{itemize}
+\item \keyp{可分辨层}：$\max|\varphi|$ 收敛到精确值 $\tfrac12(\omega-\bar\omega)T=1.67$，与帧数无关。
+\item \keyp{涡片}：
+  \begin{itemize}[leftmargin=1.2em]
+  \item 节点转角随 $h$ 和帧间隔都发散：$h$ 从 0.04 到 0.01 时由 8.2 涨到 23.1；帧数从 41 到 161 时由 13.1 涨到 21.7。
+  \item 区域积分同样不收敛。原因是剪切三角形的单步转角是 $\arctan(\gamma/2)$，会饱和。
+  \item 环量在每种设置下都严格守恒，且与帧数无关（$-0.1781$ 对 $-0.1781$）。
+  \end{itemize}
+\end{itemize}
+
+\subsection{基于环量的强度}
+\begin{definition}[环量强度]
+$C$ 为相干边界（周长判据），$R$ 为 $C$ 与外侧一条等值线之间的环带，取面积为 $C$ 的 1.8–3 倍。定义
+\begin{equation}
+S_\Gamma=\frac12\,T\,\Big\langle \frac{\Gamma_C(t)}{A_C(t)}-\frac{\Gamma_{C\cup R}(t)-\Gamma_C(t)}{A_{C\cup R}(t)-A_C(t)}\Big\rangle_t .
+\end{equation}
+\end{definition}
+\begin{itemize}
+\item 它只用物质环路上速度的线积分，速度由示踪点位置差分得到。在网络上就是速度 1-上链 $f$ 与边界 1-链 $\partial C$ 的配对，与内部剖分无关（统一理论命题 3）。
+\item 参考系转动给两项各加 $2\Omega$，相互抵消，所以客观。
+\item 参照是外侧环带，不是全局均值，所以不依赖集合。
+\end{itemize}
+\begin{table}[H]\centering\small\caption{环量强度与 $\varphi$ 型强度（$C$ 内平均减环带平均）的比较。旋转参考系为窗口内转 0.6 rad 并平移。}\resizebox{\linewidth}{!}{\input{t4_circ.tex}}\end{table}
+\begin{itemize}
+\item 双环流两者一致到 2\%，Lamb–Oseen 一致到 9\%–11\%。偏差来自外侧环路处在剪切中，P1 像不够准。
+\item 旋转参考系下的残差为 0.2\%–0.7\%，来自旋转后位置的有限差分。
+\item 激波–涡只有第三个涡找到了合适的外侧环路（0.112 对 0.109），另两个在面积达到 1.8 倍之前就与相邻结构合并；激波–气泡一个也没有找到。外侧环路的选取规则还需要改进，例如取合并树的终止等值线。
+\end{itemize}
+
+\begin{finding}
+\keyp{回答}\quad 用 LAVD 作为强度，确实会把涡量的逐点定义带进来，而在涡片上它没有良定义的极限。网络的 $\varphi$ 虽然只用位置，作为逐点场也有同样的问题。适定的做法是：
+\begin{itemize}[leftmargin=1.2em]
+\item \keyp{边界}：由 \AFE 导出的周长判据给出；跨越涡片的环路必然拉伸，自动不被判为相干。
+\item \keyp{强度}：相干环路上的环量，以外侧环带为参照。
+\item \keyp{$\varphi$ 的角色}：只用来提供候选等值线与核的位置，不再作为强度报告。
+\end{itemize}
+\end{finding}
+
+\section{第 3 版六算例复测}
+\begin{table}[H]\centering\small\caption{持续性核数与“涡”数（$J_{\max}=0.35$）。}\resizebox{\linewidth}{!}{\input{t_cores.tex}}\end{table}
+\begin{table}[H]\centering\small\caption{周长判据边界的噪声 IoU（与干净边界相比），三个版本。}\input{t4_versions.tex}\end{table}
+\begin{itemize}
+\item 涡数与第 2 版相同：双环流 2/2、Lamb–Oseen 2/2、Sod 0/0、爆炸波 0/0、激波–气泡 3/1、激波–涡 3/1。
+\item 第 3 版恢复了第 2 版中变差的两个边界：Lamb–Oseen 从 0.80 回到 0.94，激波–气泡小涡从 0.44 回到 0.58。
+\item 激波–涡第二个涡在噪声下未找到边界。
+\item 凸性判据在 Lamb–Oseen 上从 0.98 降到 0.86，因为小涡现在只平滑 2 次。
+\end{itemize}
+
+\section{结论与修订建议}
+\begin{enumerate}
+\item \keyp{分工。}
+  \begin{itemize}[leftmargin=1.2em]
+  \item 边界：由 \AFE 色散门导出的物质周长判据。
+  \item 强度：相干环路上的环量，以外侧环带为参照。
+  \item $\varphi$：只提供候选等值线与核的位置。
+  \item 合并树 $P$：作为不依赖集合参照的核检测场的候选，前提是簇的环境在观测区域内。
+  \end{itemize}
+\item \keyp{参数。}$n=2+60\hat\sigma/h$，且 $w(n)\le r_{\rm eq}/6$；$J_{\max}=0.35$；报告半径–$\delta$ 曲线。
+\item \keyp{理论稿要改的地方。}
+  \begin{itemize}[leftmargin=1.2em]
+  \item 写明逐点转角场（LAVD、$\varphi$）在涡片上没有良定义的极限；
+  \item 强度改用环路积分；
+  \item 写明同步语言与 LAVD 的对应：强度是频率失谐，层级给出局部参照。
+  \end{itemize}
+\item \keyp{尚未完成。}外侧环路的选取（激波–涡、激波–气泡大多找不到）；把环量强度接进流水线；合并树在噪声下的稳健性。
+\end{enumerate}
+
+\section*{参考文献}
+\small
+[1] A. P. Millán, J. J. Torres, G. Bianconi. Explosive higher-order Kuramoto dynamics on simplicial complexes. Phys. Rev. Lett. 124, 218301 (2020).\par\noindent [2] R. Ghorbanchian, J. G. Restrepo, J. J. Torres, G. Bianconi. Higher-order simplicial synchronization of coupled topological signals. Commun. Phys. 4, 120 (2021).\par\noindent [3] L. Calmon, J. G. Restrepo, J. J. Torres, G. Bianconi. Dirac synchronization is rhythmic and explosive. Commun. Phys. 5, 253 (2022).\par\noindent [4] L. M. Pecora, F. Sorrentino, A. M. Hagerstrom, T. E. Murphy, R. Roy. Cluster synchronization and isolated desynchronization in complex networks with symmetries. Nat. Commun. 5, 4079 (2014).\par\noindent [5] F. P. Kemeth, S. W. Haugland, L. Schmidt, I. G. Kevrekidis, K. Krischer. A classification scheme for chimera states. Chaos 26, 094815 (2016).\par\noindent [6] M. Budišić, I. Mezić. Geometry of the ergodic quotient reveals coherent structures in flows. Physica D 241, 1255–1269 (2012).\par\noindent [7] N. Tarshish, R. Abernathey, C. Zhang, C. O. Dufour, I. Frenger, S. M. Griffies. Identifying Lagrangian coherent vortices in a mesoscale ocean model. Ocean Modelling 130, 15–28 (2018).\par\noindent [8] A. Hadjighasem, D. Karrasch, H. Teramoto, G. Haller. Spectral-clustering approach to Lagrangian vortex detection. Phys. Rev. E 93, 063107 (2016).
+
+\normalsize
+\section*{复现}
+\begin{itemize}
+\item \texttt{tcx.py}：\texttt{[rev3]} 段改了 \texttt{n\_smooth} 的上限。
+\item \texttt{tcx\_run.py}：$J_{\max}=0.35$。
+\item 新增脚本：
+  \begin{itemize}[leftmargin=1.2em]
+  \item \texttt{sweep.py}、\texttt{sweep\_sum.py}：平滑与 $\delta$ 扫描；
+  \item \texttt{neff.py}：单步占比与参与比；
+  \item \texttt{sync\_lib.py}、\texttt{sync\_main.py}、\texttt{sync2.py}：合并树与集合检验；
+  \item \texttt{sheet.py}：涡片检验；
+  \item \texttt{circ\_strength.py}：环量强度；
+  \item \texttt{afe\_tables3.py}、\texttt{afe\_tables4.py}：本报告的表。
+  \end{itemize}
+\item 六算例重跑：\texttt{run\_all\_rev3.sh}。
+\end{itemize}
+\end{document}

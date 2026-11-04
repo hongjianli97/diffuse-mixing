@@ -1,0 +1,47 @@
+{
+ "rotation": {
+  "theta (ledger)": 1.7763568394002505e-13,
+  "omega (face circulation)": 3.33331671380499e-05,
+  "grad u (three-point)": 4.551914400963142e-13,
+  "S (pair strain)": 1.1784259278519442e-13,
+  "Phi/mu (three-point)": 4.415473189990675e-25,
+  "Kelvin dGamma/dt": 1.6344359731057833e-10,
+  "pressure (rel. or abs.)": 4.459153910396105e-06
+ },
+ "pure strain": {
+  "theta (ledger)": 1.3322676295501878e-13,
+  "omega (face circulation)": 3.6228677353614535e-13,
+  "grad u (three-point)": 3.5060843117662444e-13,
+  "S (pair strain)": 6.133469864044727e-05,
+  "Phi/mu (three-point)": 1.6058265828178264e-12,
+  "Kelvin dGamma/dt": 1.2123480642962626e-10,
+  "pressure (rel. or abs.)": 4.454083519538539e-06
+ },
+ "simple shear": {
+  "theta (ledger)": 8.881784197001252e-14,
+  "omega (face circulation)": 3.560485239972877e-13,
+  "grad u (three-point)": 3.5338398873818733e-13,
+  "S (pair strain)": 2.0255826569448576e-05,
+  "Phi/mu (three-point)": 7.065459328714496e-13,
+  "Kelvin dGamma/dt": 8.442147498270262e-11,
+  "pressure (rel. or abs.)": 7.116499224412033e-14
+ },
+ "dilatation": {
+  "theta (ledger)": 1.5631940186722204e-13,
+  "omega (face circulation)": 2.940210620973115e-13,
+  "grad u (three-point)": 2.9128072812205157e-13,
+  "S (pair strain)": 9.60898027813073e-14,
+  "Phi/mu (three-point)": 2.4369395390522186e-13,
+  "Kelvin dGamma/dt": 1.118366203667443e-10,
+  "pressure (rel. or abs.)": 1.1136491429909523e-06
+ },
+ "general": {
+  "theta (ledger)": 1.5523693441821251e-13,
+  "omega (face circulation)": 2.5649901937319086e-05,
+  "grad u (three-point)": 4.160560784782774e-13,
+  "S (pair strain)": 1.7121156524843584e-05,
+  "Phi/mu (three-point)": 6.536993168992922e-13,
+  "Kelvin dGamma/dt": 5.256855401924998e-06,
+  "curl(rho a) vs rho*tq": 5.225408701570178e-06
+ }
+}

@@ -1,0 +1,37 @@
+{
+ "t=5.0": {
+  "valid_network_triangles": 0.7100310839573093,
+  "vort_corr_network": 0.9559173750234082,
+  "vort_relL2_network": 0.3314559220454256,
+  "vort_corr_delaunay": 0.999887909036945,
+  "div_noise_network": 0.25858768355014056,
+  "div_noise_galerkin_delaunay": 0.009261270447547359,
+  "subcomplex_coverage": 0.4329467269510517,
+  "hodge_on_subcomplex": {
+   "grad": 0.706824867067305,
+   "coexact": 0.09664168388959918,
+   "harmonic": 0.19653344840567405
+  },
+  "torn_vs_FTLE_spearman": 0.44442810525613324
+ },
+ "t=9.8": {
+  "valid_network_triangles": 0.6835025341846969,
+  "vort_corr_network": 0.9182175778690577,
+  "vort_relL2_network": 0.46283258430328256,
+  "vort_corr_delaunay": 0.9998703106313516,
+  "div_noise_network": 0.3447129456350745,
+  "div_noise_galerkin_delaunay": 0.009271817812718415,
+  "subcomplex_coverage": 0.8784452296819788,
+  "hodge_on_subcomplex": {
+   "grad": 0.19259732759106196,
+   "coexact": 0.029910228068670917,
+   "harmonic": 0.777492444196864
+  },
+  "torn_vs_FTLE_spearman": 0.31625410863906356
+ },
+ "window_lnJ": {
+  "triangles_not_inverted": 0.7713606504662593,
+  "median_abs_lnJ_triangle": 0.3169253588968214,
+  "abs_lnJ_node_vs_FTLE_spearman": 0.8900003465499898
+ }
+}

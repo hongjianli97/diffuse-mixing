@@ -1,0 +1,137 @@
+{
+  "already_executed": false,
+  "type": "one_three_space_level_same_affine_shear_control_reuse_N32",
+  "reason": "direction and time controls resolved; fixed N32 space symbol error dominates time term; original METHOD requires three levels for a space study",
+  "scope": "same single affine-shear flow andrho1/D=.02/T=.05,s=5t; add only N16/N64,keep K4/8/16; no angle/model/flow scan",
+  "N_values": [
+    16,
+    32,
+    64
+  ],
+  "new_N_values": [
+    16,
+    64
+  ],
+  "reused_N_values": [
+    32
+  ],
+  "ordered_interval_counts": [
+    4,
+    8,
+    16
+  ],
+  "new_candidate_graphs": 56,
+  "new_candidate_transient_runs": 6,
+  "new_complete_independent_uniformization_sequences": 6,
+  "reused_N32_saved_paths": 3,
+  "old_candidate_reruns": 0,
+  "new_reference_PDE_solves": 0,
+  "new_material_definitions": 0,
+  "pure_source": {
+    "path": "runs/reconnect-affine-shear/original-pure-inputs.npz",
+    "sha256": "2213b1f71a9bed02108adb075d89b14868d9f8a9a8682cff4e1f5ba0da1c78ac"
+  },
+  "material_sources": {
+    "16": {
+      "path": "runs/reconnect-t1-uniform/n16/material-reference.npz",
+      "sha256": "ba96ae32c31a77ee4f448df642b917ce021a1e56aac353ec710b2f89b365f2b7",
+      "old_T1_static_reference_history_only": true,
+      "mass_c0_not_parsed_this_round": true
+    },
+    "64": {
+      "path": "runs/reconnect-t1-uniform/n64/material-reference.npz",
+      "sha256": "61164c4b715c67b5d40247f815e38e568f24dc84a1dae6fb710b5c44742eb975",
+      "old_T1_static_reference_history_only": true,
+      "mass_c0_not_parsed_this_round": true
+    }
+  },
+  "reused_N32_records": [
+    {
+      "path": "runs/reconnect-affine-shear/k4/native-results.json",
+      "sha256": "0018dafa65442f32eede0dcc1cdc49501e37ea7d1033acb52d6e88b6c956d81b"
+    },
+    {
+      "path": "runs/reconnect-affine-shear/k4/trajectory-states.npz",
+      "sha256": "8b9c885d05fea44a4ddc3770960a030a9dd76d70b9bae0b73e839766e421df8f"
+    },
+    {
+      "path": "runs/reconnect-affine-shear/k4/modal-residues.json",
+      "sha256": "07fb81545a49ea0405ae511c134eb1e194ffcf0991e13ebbc0fece81898ad41d"
+    },
+    {
+      "path": "runs/reconnect-affine-shear/k8/native-results.json",
+      "sha256": "3d03c1d3f092963181e7ed623e13c769459d5bde1852717ab31f08b73e1be178"
+    },
+    {
+      "path": "runs/reconnect-affine-shear/k8/trajectory-states.npz",
+      "sha256": "09396cd754f40163610adb945f2ff3f60211206427d07c540f78c3aeda759a49"
+    },
+    {
+      "path": "runs/reconnect-affine-shear/k8/modal-residues.json",
+      "sha256": "1d4c18931dc43e1c3da50ad17446f8c22546e01aec34f52d8a6ec15ad2854a91"
+    },
+    {
+      "path": "runs/reconnect-affine-shear/k16/native-results.json",
+      "sha256": "4b341661938a79a656c02eee9905ceac97d51b4b5107587ad6a752f1fd44a299"
+    },
+    {
+      "path": "runs/reconnect-affine-shear/k16/trajectory-states.npz",
+      "sha256": "291af9a682ef09355321d6cb0ed8cf0debceb93b49b932b95dc12e482369ca6d"
+    },
+    {
+      "path": "runs/reconnect-affine-shear/k16/modal-residues.json",
+      "sha256": "ba5363469567e3b674a01d5c60808b680b8a9a8cffb6e80301629debfe02f00f"
+    }
+  ],
+  "N32_valid_result": {
+    "path": "runs/reconnect-affine-shear/results-completed.json",
+    "sha256": "ca125e1bc1dded3c2d1fe3816c81e5ae81ade22b77cb793096f1321b0ac6cc44"
+  },
+  "source_protocol": {
+    "path": "runs/reconnect-affine-shear/implementation-protocol.json",
+    "sha256": "2f316b6e586b9676ea1e901066df9b9bbbcb7dfe99e45ae0c8774c571f4dccf3"
+  },
+  "reporting_policy": "retain original NumPy-bool serialization failure; use completed valid results and plain scalar JSON formatter in new study,without changing science/criteria",
+  "coefficient_inputs": "same actualworldpoints,IDs,givenrho/D/boundary only; all56 new local/world graphs sealed before any material/c0/reference or reused N32 state parse",
+  "geometry": "unchanged sliding-domain world Euclidean constructor; old rectangle/isometry/action code unchanged; exactfaces/rates/moments,all-cell halfplanes andfixed9image probes independently audited",
+  "fixed_geometry_probe_formula": "uniqueIDs [0,N//2,N-1,N^2//2,N^2-1]",
+  "references": "same true material two-mode clocks with each original cell mean; independent80/100digit evaluation,initial bridge,residue guards and raw original c0 retained",
+  "common_observation_N": 16,
+  "common_observation": "direct child component mass integrals divided by original N16 mass; retain all source capacity and initial/reference projection bridges",
+  "spatial_acceptance": "fixedK16,adjacent16/32 and32/64,bothnonzerotimes: native/common concentration andnative/common H error gains exceed predetermined positive time/input/numerical/reference/projection budgets",
+  "spatial_budgets": "both actual8/16 differences andanalytic midpoint16-to-continuous-grid time norms,all8/16 original numerical/reference/residue/initial-bridge terms;common observations include capacity factors and all projection bridges; H uses predeclared T1 structure direct absolute time H differences plus unchanged H norm indicator for numerical/reference/residue terms",
+  "time_and_direction": "all grids K4/8/16 frozen/reference/state/H controls and measuredtime decrease; fineN64 two raw tilted-mode observables and responsecontrast must pass unchanged whole-state positive CauchySchwarz plus observed8/16 indicators",
+  "planned_new_software_checks": 3,
+  "check_categories": [
+    "multi-N sliding direction,moments andmodeguards",
+    "original fixed-parent mass observations andnonzero bridges",
+    "native/common spatial,time andraw-direction budget classification/adversecase rejection"
+  ],
+  "recorded_checks_total_if_all_pass": 490,
+  "tail_per_interval_exact": "1/10000000000000000",
+  "original_algebra_tolerance": 1e-10,
+  "norm_estimator_seed": 20261101,
+  "main_wall_seconds_cap": 1500,
+  "main_peak_RSS_MiB_cap": 1024,
+  "resource_basis": "28N32 graphs/science toreporting fault149.100s; rough(.25+4)nodescale about634s forN16/N64;hard1500s/1024MiB envelope,not measured speed oraccuracy guarantee",
+  "stop": "preserve failure/unresolved; no furtherN/K/angle/flow/model scan,pointrepair,clipping,positivefacedeletion,mass/rho/state/row/weightnormalization,F_Cfit orH/tolerancechange",
+  "new_spatial_inputs_graphs_references_or_states_generated_this_round": false,
+  "general_T3_admitted": false,
+  "general_nonorthogonal_domains_admitted": false,
+  "stage3_physical_acceptance": "incomplete",
+  "fluid_orc_enabled": false,
+  "kappa_computed": false,
+  "implementation_protocol_fixed_before_new_scientific_inputs": true,
+  "previous_recorded_checks": 487,
+  "new_software_checks": 3,
+  "recorded_checks_total": 490,
+  "old_checks_rerun": 0,
+  "small_unit_fixtures_not_new_scientific_cases": true,
+  "unit_fixture_levels": [
+    3,
+    6,
+    12
+  ],
+  "all56_new_coefficients_before_material_reference_or_oldstates": true,
+  "original_backends_changed": false
+}

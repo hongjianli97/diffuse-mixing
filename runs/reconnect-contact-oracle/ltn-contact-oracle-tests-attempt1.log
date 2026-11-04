@@ -1,0 +1,20 @@
+test_mass_means_independent_quadrature_and_separate_time_tail_bounds (__main__.Checks.test_mass_means_independent_quadrature_and_separate_time_tail_bounds) ... ok
+test_point_faces_exact_contact_laws_independent_bisectors_and_bad_inputs (__main__.Checks.test_point_faces_exact_contact_laws_independent_bisectors_and_bad_inputs) ... FAIL
+test_unchanged_action_vs_cartesian_full_modes_and_adverse_controls (__main__.Checks.test_unchanged_action_vs_cartesian_full_modes_and_adverse_controls) ... ok
+
+======================================================================
+FAIL: test_point_faces_exact_contact_laws_independent_bisectors_and_bad_inputs (__main__.Checks.test_point_faces_exact_contact_laws_independent_bisectors_and_bad_inputs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/diffuse-mixing/research/reconnect/test_contact_oracle.py", line 24, in test_point_faces_exact_contact_laws_independent_bisectors_and_bad_inputs
+    _,g,_,cert=audit_geometry(packet,p['positions'],p['rho'],p['ids'],[0,2,3,8,15]);self.assertEqual(len(g),32)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/diffuse-mixing/research/reconnect/audit_shear_voronoi_time.py", line 74, in audit_geometry
+    assert R<min(periods)/4
+           ^^^^^^^^^^^^^^^^
+AssertionError
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.254s
+
+FAILED (failures=1)

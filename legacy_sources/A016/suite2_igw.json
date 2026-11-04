@@ -1,0 +1,9 @@
+{
+ "igw": {
+  "torque (Kelvin) vs exact -N^2 dzeta/dx": 0.014227802395391934,
+  "N^2 from positions / N^2 - 1": -0.0007923400675449166,
+  "zeta gradient vs exact": 0.03168452450745161,
+  "omega (face)": 0.014192370184740387,
+  "dispersion: omega_w": 0.7071067811865476
+ }
+}

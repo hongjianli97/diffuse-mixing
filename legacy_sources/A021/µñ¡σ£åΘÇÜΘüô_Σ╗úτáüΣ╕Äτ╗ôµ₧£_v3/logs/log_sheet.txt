@@ -1,0 +1,6 @@
+{"h": 0.01, "ds": 0.1, "frames": 41, "phi_max": 1.6734, "phi_band_median": 1.6705, "Q_phi_box": -0.0432, "Gamma_t0": -0.1344, "Gamma_tend": -0.1344, "Gamma_exact": -0.1523}
+{"h": 0.04, "ds": 0.0005, "frames": 41, "phi_max": 8.202, "phi_band_median": 5.3143, "Q_phi_box": -0.0817, "Gamma_t0": -0.1549, "Gamma_tend": -0.1549, "Gamma_exact": -0.2}
+{"h": 0.02, "ds": 0.0005, "frames": 41, "phi_max": 13.1491, "phi_band_median": 10.5062, "Q_phi_box": -0.0629, "Gamma_t0": -0.1781, "Gamma_tend": -0.1781, "Gamma_exact": -0.2}
+{"h": 0.01, "ds": 0.0005, "frames": 41, "phi_max": 23.1397, "phi_band_median": 15.0839, "Q_phi_box": -0.0442, "Gamma_t0": -0.1836, "Gamma_tend": -0.1836, "Gamma_exact": -0.2}
+{"h": 0.02, "ds": 0.0005, "frames": 161, "phi_max": 21.725, "phi_band_median": 14.4421, "Q_phi_box": -0.0805, "Gamma_t0": -0.1781, "Gamma_tend": -0.1781, "Gamma_exact": -0.2}
+{"h": 0.02, "ds": 0.1, "frames": 161, "phi_max": 1.6581, "phi_band_median": 1.651, "Q_phi_box": -0.045, "Gamma_t0": -0.1203, "Gamma_tend": -0.1203, "Gamma_exact": -0.1523}

@@ -1,0 +1,353 @@
+\documentclass[10.5pt,a4paper]{article}
+\usepackage[a4paper,margin=2.2cm,top=2.4cm,bottom=2.4cm]{geometry}
+\usepackage{fontspec}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\setmainfont{Noto Serif CJK SC}[BoldFont={Noto Serif CJK SC Bold}]
+\setsansfont{Noto Sans CJK SC}[BoldFont={Noto Sans CJK SC Bold}]
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+\linespread{1.18}
+\usepackage{xcolor}
+\definecolor{accent}{HTML}{1F5FA8}
+\definecolor{quiet}{HTML}{5A5A5A}
+\definecolor{tint}{HTML}{EEF3FA}
+\usepackage{titlesec}
+\titleformat{\section}{\sffamily\bfseries\Large\color{accent}}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\sffamily\bfseries\large}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}{\sffamily\bfseries\normalsize}{\thesubsubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.6em}{0.7em}
+\titlespacing*{\subsection}{0pt}{1.2em}{0.5em}
+\usepackage{enumitem}
+\setlist{itemsep=0.25em,topsep=0.35em,leftmargin=1.6em}
+\usepackage{array,booktabs,tabularx,xltabular,makecell}
+\renewcommand{\arraystretch}{1.25}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf,labelsep=quad}
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
+\renewcommand{\contentsname}{目录}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,calc,fit}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\color{quiet}轨迹复形理论补全（未成型部分）}
+\fancyhead[R]{\small\color{quiet}2026 年 10 月 15 日}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\usepackage[colorlinks=true,linkcolor=accent,citecolor=accent,urlcolor=accent]{hyperref}
+\newcommand{\AFH}{AFRC$_{\mathrm H}$}
+\newcommand{\AFE}{AFRC$_{\mathrm E}$}
+\newcommand{\lnJ}{$\ln J$}
+\newcommand{\keyp}[1]{\textbf{\sffamily #1}}
+\newenvironment{finding}{\begin{center}\begin{minipage}{0.94\linewidth}\setlength{\parskip}{0.3em}\color{black}}{\end{minipage}\end{center}}
+\setlength{\parskip}{0.35em}
+\setlength{\parindent}{0pt}
+\tolerance=2000 \emergencystretch=3em
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{definition}{定义}[section]
+\theoremstyle{plain}
+\newtheorem{proposition}[definition]{命题}
+\newtheorem{corollary}[definition]{推论}
+\theoremstyle{remark}
+\newtheorem{remark}[definition]{注}
+\renewcommand{\proofname}{证明}
+\newcommand{\status}[1]{\hfill{\small\color{accent}\textsf{[#1]}}}
+\newcommand{\re}{\operatorname{Re}}
+\newcommand{\im}{\operatorname{Im}}
+\begin{document}
+\begin{center}
+{\sffamily\bfseries\LARGE 轨迹复形理论补全（未成型部分）}\\[0.5em]
+{\sffamily\large 三点映射的复表示、合并穿越的锚定规则与物质胞腔复形}\\[0.8em]
+{\color{quiet}2026 年 10 月 15 日}
+\end{center}
+
+\vspace{0.4em}
+\noindent\fcolorbox{accent!40}{tint}{\begin{minipage}{0.96\linewidth}\vspace{0.4em}
+\keyp{范围与结论}\quad
+本稿不涉及已成型的论文（AFRC 两通道），只补统一理论中尚未成型的部分：物质三角形层、离散相对转角与 LAVD、激波签名与锚定规则、物质胞腔复形与空心胞腔、Hodge–Dirac 层的一般内积形式、阈值消除，以及与输运和掺混层的接口。
+
+补全的核心是一个工具：二维三点仿射映射的复表示 $F\zeta=p\zeta+q\bar\zeta$。面积比、转角、各向异性（Beltrami 系数 $\mu=q/p$）和切向拉伸都可以由 $(p,q)$ 精确读出，合成律是封闭的，参考系变换下的行为也可以精确写出。由此得到四个新结果：
+\begin{enumerate}[leftmargin=1.4em,itemsep=0.1em]
+\item 离散相对转角对刚体参考系变换严格客观，并在光滑区收敛到 Haller 的相对动态转角；
+\item 激波伪转动的来源是映射合成的非交换余项，上界为 $\sum_k\arcsin(|\mu_k||M_{k-1}|)$；把 $|\mu|$ 超阈的步合并为一个块之后，平面激波的伪转角从 0.02–0.2 rad 降到 $\le5\times10^{-3}$ rad；
+\item 位置噪声在固定物质三角形上望远相消，在逐帧重剖时按 $\sqrt n$ 累积，所以“逐帧重剖”是现有实验中噪声的主要来源；
+\item 单轴压缩满足 $|\mu|=\tanh(\tfrac12|\ln J|)$，给出只凭位置、只看单个三角形的激波签名，可以把 C 通道从“前提”降为“报告量”。
+\end{enumerate}
+每条命题标注状态：\textsf{[已证]}、\textsf{[已证+数值]}、\textsf{[数值]}、\textsf{[引用]} 或 \textsf{[待检验]}。
+\vspace{0.4em}\end{minipage}}
+
+\tableofcontents
+\newpage
+
+%=====================================================================
+\section{约定与原则}
+
+输入只有示踪点在快照上的位置 $x_i(t_s)$，$s=0,\dots,S-1$。物质元分三种：点对、物质三角形（以及第~\ref{sec:cells} 节的物质多边形）、物质区域。复平面记号为 $\zeta=X_1+iX_2$。分析区域记为 $U$，空间平均一律取面积加权，以与 Haller 的 $\bar\omega$ 定义一致。
+
+已定稿的三条原则保持不变：拉伸取点对，转动与环量取物质三角形，收支取物质区域；跨激波只报告积分量的有限跳变；穿越步由时间上的合成或稳健统计吸收，不在空间上挖洞插补。本稿新增第四条：
+
+\begin{finding}
+\keyp{原则 4（锚定）。} 所有三角形层的量都在“块映射”上计算。块的切分由三角形自身的 Beltrami 系数决定：$|\mu|$ 超阈的连续步合并为一个块，块内不重锚；重锚只发生在块的边界，且只在形状门失效时进行。整个过程只用位置，只看单个三角形，不需要全局激波检测。
+\end{finding}
+
+%=====================================================================
+\section{三点映射的复表示}\label{sec:complex}
+
+\begin{definition}[复表示与 Beltrami 系数]
+设物质三角形的三个顶点在锚定时刻 $t_a$ 位于 $X_a,X_b,X_c$，在时刻 $t$ 位于 $x_a,x_b,x_c$。三点唯一确定仿射映射 $x=FX+c$。在复平面上它写成
+\begin{equation}
+F\zeta=p\,\zeta+q\,\bar\zeta,\qquad
+p=\tfrac12\big[(F_{11}+F_{22})+i(F_{21}-F_{12})\big],\qquad
+q=\tfrac12\big[(F_{11}-F_{22})+i(F_{21}+F_{12})\big],
+\end{equation}
+称 $\mu=q/p$ 为该映射的 Beltrami 系数。
+\end{definition}
+
+\begin{proposition}[恒等式]\status{已证+数值}\label{prop:id}
+对保向映射（$\det F>0$）：
+\begin{enumerate}
+\item 面积比 $J=\det F=|p|^2-|q|^2$；奇异值 $\sigma_{1,2}=|p|\pm|q|$；$|\mu|=(\sigma_1-\sigma_2)/(\sigma_1+\sigma_2)<1$。
+\item 极分解 $F=RU$ 的转角为 $\arg p$。
+\item 位移 $D=x-X$ 沿锚定三角形边界的环量满足 $c_t/A_t(t_a)=F_{21}-F_{12}=2\,\im p$，位移的散度满足 $\mathrm{tr}\,F-2=2(\re p-1)$。
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+(1) $|p\zeta+q\bar\zeta|$ 在单位圆上的取值范围是 $[\,|p|-|q|,\,|p|+|q|\,]$，乘积即 $\det F$。(2) $F\zeta=e^{i\arg p}\big(|p|\zeta+q'\bar\zeta\big)$，其中 $q'=e^{-i\arg p}q$。后一映射的实矩阵为 $|p|I+\begin{psmallmatrix}\re q'&\im q'\\ \im q'&-\re q'\end{psmallmatrix}$，对称，且因 $|p|>|q'|$ 而正定，所以它就是 $U$，$R=e^{i\arg p}$。(3) 线性场在直边三角形上的线积分可由梯形公式精确求出，再用 Stokes 公式。
+\end{proof}
+
+\begin{proposition}[参考系变换]\status{已证+数值}\label{prop:frame}
+设 $x=Q(t)y+b(t)$，$Q(t)$ 为转角 $\beta(t)$ 的旋转。块映射 $t_a\to t$ 在新参考系中的系数为
+\begin{equation}
+p\;\mapsto\;e^{-i(\beta(t)-\beta(t_a))}\,p,\qquad q\;\mapsto\;e^{-i(\beta(t)+\beta(t_a))}\,q .
+\end{equation}
+因此 $|p|$、$|q|$、$|\mu|$、$J$、$\sigma_{1,2}$ 都不变；$\arg p$ 对所有三角形平移同一个量 $-\Delta\beta$。
+\end{proposition}
+\begin{proof}
+$y=Q^\top(x-b)$ 在复平面上即乘以 $e^{-i\beta}$。代入 $F$ 并整理 $\zeta$ 与 $\bar\zeta$ 的系数即得。数值上，随机映射与随机转角下 $\arg p$ 的平移与 $\beta(t_a)-\beta(t)$ 一致到 $10^{-16}$。
+\end{proof}
+
+\begin{proposition}[合成律与非交换余项]\status{已证+数值}\label{prop:comp}
+两步合成满足
+\begin{equation}
+(p_2,q_2)\circ(p_1,q_1)=\big(p_2p_1+q_2\bar q_1,\;p_2q_1+q_2\bar p_1\big).
+\end{equation}
+对块内各步 $(p_k,q_k)$，记累积系数 $(P_k,Q_k)$ 与累积 Beltrami 系数 $M_k=Q_k/P_k$，则
+\begin{equation}
+\Big|\arg P_N-\sum_{k=1}^N\arg p_k\Big|\;\le\;\sum_{k=1}^{N}\arcsin\!\big(|\mu_k|\,|M_{k-1}|\big),\qquad |\mu_kM_{k-1}|<1 .
+\end{equation}
+\end{proposition}
+\begin{proof}
+由 $P_k=p_kP_{k-1}\big(1+\mu_k\bar M_{k-1}\bar P_{k-1}/P_{k-1}\big)$，以及 $|z|<1$ 时 $|\arg(1+z)|\le\arcsin|z|$，逐步累加即得。在 246 次随机平面激波穿越试验中，该上界没有一次被违反。
+\end{proof}
+
+\begin{proposition}[光滑流的一致性]\status{已证}\label{prop:smooth}
+若单步映射 $F=I+\Delta t\,\nabla u+O(\Delta t^2)$，$\nabla u=S+W$，则
+\begin{equation}
+p=1+\tfrac12(\theta+i\omega)\Delta t+O(\Delta t^2),\qquad q=\tfrac12\big[(S_{11}-S_{22})+2iS_{12}\big]\Delta t+O(\Delta t^2),
+\end{equation}
+所以 $\arg p_k=\tfrac12\omega\Delta t+O(\Delta t^2)$、$|\mu_k|=O(|S_{\mathrm{dev}}|\Delta t)$。由命题~\ref{prop:comp}，在固定物质三角形上 $\sum_k\arg p_k=\tfrac12\int\omega\,dt+O(\Delta t)$（$\omega$ 取三角形平均，空间误差 $O(h)$）。
+\end{proposition}
+
+\begin{proposition}[单轴压缩的签名]\status{已证+数值}\label{prop:uni}
+平面激波的完整穿越是单轴压缩 $F=I-(1-1/\eta)\,nn^\top$，满足
+\begin{equation}
+J=1/\eta,\qquad \arg p=0,\qquad |\mu|=\frac{\eta-1}{\eta+1}=\tanh\!\big(\tfrac12|\ln J|\big),\qquad r\equiv\ln J-(\mathrm{tr}\,F-2)=1-\tfrac1\eta-\ln\eta .
+\end{equation}
+\end{proposition}
+
+各向同性压缩满足 $|\mu|=0$，纯剪切满足 $\ln J=0$，单轴压缩落在曲线 $|\mu|=\tanh(\frac12|\ln J|)$ 上（图~\ref{fig:checks}c）。这三种情况在 $(-\ln J,|\mu|)$ 平面上彼此分开。
+%=====================================================================
+\section{激波签名与锚定规则}\label{sec:anchor}
+
+\begin{definition}[热步与合并穿越块]
+对每个物质三角形逐步计算 $(p_k,q_k)$。若 $|\mu_k|>\mu^*$ 称第 $k$ 步为热步。阈值取背景的稳健倍数 $\mu^*=\max\big(\kappa\cdot\mathrm{median}|\mu|,\ \mu_{\min}\big)$，中位数在全部三角形与全部步上计算，$\kappa\approx5$–10。连续的热步（允许中间夹 $h_s$ 个冷步，$h_s=2$）用合成律并成一个块；冷步各自成块。
+\end{definition}
+
+由命题~\ref{prop:smooth}，光滑流中 $|\mu_k|=O(|S_{\mathrm{dev}}|\Delta t)$，所以阈值随 $\Delta t$ 自动缩放。激波穿越时 $|\mu_k|=O\big((\eta-1)/(\eta+1)\big)$，与 $\Delta t$ 无关。这与 C 通道依靠“面积台阶与 $\Delta t$ 无关”的逻辑相同，但 $|\mu|$ 还能看见面积不变的非仿射步（例如切向速度跳变跨过三角形）。
+
+\begin{definition}[块的激波签名]
+对每个块记签名 $\big(-\ln J_B,\ |\mu_B|,\ \arg p_B\big)$。若 $\big||\mu_B|-\tanh(\tfrac12|\ln J_B|)\big|\le\epsilon_\mu$ 且 $|\arg p_B|\le\epsilon_\psi$，判为平面激波块，压缩比 $\eta=e^{-\ln J_B}$。偏离这条曲线的量度量弯曲激波、剪切或斜压转动的贡献。
+\end{definition}
+
+\begin{proposition}[合并规则消除平面激波的伪转动]\status{数值}\label{prop:merge}
+在平面激波扫过随机物质三角形的试验中（$\eta=1.5$–6，$\Delta t$ 取三档），逐步求和 $\sum\arg p_k$ 的伪转角中位数为 0.006–0.07 rad、95 分位为 0.02–0.20 rad，与爆炸波中观察到的 0.1–0.18 rad 同量级；按合并规则（$\mu^*=0.01$，$h_s=2$）计算，95 分位降到 $1\times10^{-3}$–$5\times10^{-3}$ rad。完整穿越块的 $\arg p_B$ 精确为零（$10^{-15}$），签名精确落在单轴曲线上。
+\end{proposition}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{fig_checks.pdf}
+\caption{命题的数值检验。(a) 平面激波扫过物质三角形时的伪转角：逐步求和与合并穿越块。(b) 0.05$h$ 位置噪声下转角误差随步数的累积：固定物质三角形近似望远相消，每步独立取样按 $\sqrt n$ 增长。(c) 激波签名平面：完整穿越块落在单轴曲线 $|\mu|=\tanh(\frac12|\ln J|)$ 上，光滑流单步聚在原点附近。}
+\label{fig:checks}
+\end{figure}
+
+\begin{finding}
+\keyp{统一锚定规则。} 账本 $\ln J$、转角 $\varphi$、环量都在同一组块映射上计算：块内用合成律，块边界处若 $\Lambda_t<0.2$ 或最大内角 $>0.86\pi$ 才重锚，且不在热步中间重锚。这取代了“由 C 通道推迟重锚”，C 通道由前提降为报告量：节点 $i$ 的激波时刻就是其星内热块的并集。
+\end{finding}
+
+\begin{remark}
+Dirac 残差在块上写作 $r=\ln(|p|^2-|q|^2)-2(\re p-1)$。光滑流中为 $O(\Delta t^2)$；平面激波满足命题~\ref{prop:uni} 的 $r(\eta)$。它与签名 $(\ln J,|\mu|)$ 冗余，保留作光滑区的一致性检查。
+\end{remark}
+
+%=====================================================================
+\section{离散相对转角与离散 LAVD}\label{sec:rot}
+
+\begin{definition}[离散相对转角与离散 LAVD]
+对三角形 $t$ 的第 $k$ 个块取 $\psi_t^k=\arg p_t^{B_k}$；节点值 $\psi_i^k$ 取星内三角形按面积加权的平均；区域均值 $\bar\psi^k=\sum_{t\subset U}A_t\psi_t^k\big/\sum_{t\subset U}A_t$。定义
+\begin{equation}
+\varphi_i=\sum_k\big(\psi_i^k-\bar\psi^k\big),\qquad
+\mathrm{LAVD}_i=2\sum_k\big|\psi_i^k-\bar\psi^k\big|-b_i ,
+\end{equation}
+其中 $b_i$ 是噪底（命题~\ref{prop:noise}）。区域均值逐步计算，只用当步为冷步的三角形；热块覆盖多步时，扣除量取该块所含各步区域均值之和。块的平移等于各步平移之和，所以严格客观性不受影响。
+\end{definition}
+
+\begin{proposition}[严格客观]\status{已证}\label{prop:obj}
+在 $x=Q(t)y+b(t)$ 下，$\varphi_i$ 与 $\mathrm{LAVD}_i$ 严格不变。
+\end{proposition}
+\begin{proof}
+由命题~\ref{prop:frame}，同一块上所有三角形的 $\psi_t^k$ 都平移 $-\Delta\beta_k$。面积加权的节点值与区域均值同样平移 $-\Delta\beta_k$，差值不变。面积本身在刚体变换下不变。
+\end{proof}
+
+此前实验用的是 $c_t/A_t=2\im p$，它在旋转参考系下的残差为 $-\sin\alpha\,(\theta_t-\bar\theta)\Delta t$。在可压缩流中这一项不均匀，所以那个版本只客观到 $O(\Delta t)$。改用 $\arg p$ 后客观性是严格的。
+
+\begin{proposition}[一致性]\status{已证}\label{prop:cons}
+在光滑区域内，$\varphi_i\to\tfrac12\int(\omega-\bar\omega)\,dt$（Haller 2016 的二维相对动态转角，$\bar\omega$ 为 $U$ 上的面积加权均值），$\mathrm{LAVD}_i+b_i\to\int|\omega-\bar\omega|\,dt$。误差为 $O(\Delta t)+O(h)$。
+\end{proposition}
+\begin{proof}
+由命题~\ref{prop:smooth}，$\psi_t^k=\tfrac12\langle\omega\rangle_t\Delta t_k+O(\Delta t^2)$；面积加权平均把三角形平均转为节点值与区域均值，空间误差 $O(h)$。冷步上块长为一步，热步只占有限步数，不影响阶数。
+\end{proof}
+
+\begin{proposition}[噪声的累积方式]\status{数值}\label{prop:noise}
+位置噪声 $\sigma$ 下，固定物质三角形上 $\sum_k\arg p_k$ 的误差近似望远相消：0.05$h$ 噪声下，$n=10,20,40,80,160$ 步的标准差为 0.070、0.071、0.075、0.078、0.082 rad；而每步独立取样时为 0.22、0.31、0.42、0.60、0.86 rad，按 $\sqrt n$ 增长（图~\ref{fig:checks}b）。所以带符号的 $\varphi$ 应在物质三角形上锚定到形状门失效为止，逐帧重剖是现有实验中噪声的主要来源。$|\cdot|$ 不能望远相消，LAVD 的噪底取
+\begin{equation}
+b_i=2\,n_B\,s_i\sqrt{2/\pi},
+\end{equation}
+$s_i$ 由块转角序列二阶差分的 MAD 估计，$n_B$ 为块数。
+\end{proposition}
+\begin{proof}[依据]
+$\arg p_k$ 在小形变下近似等于三角形取向角 $\vartheta_{k+1}-\vartheta_k$ 加上形变与噪声的交叉项，求和后只剩端点噪声 $O(\sigma/h)$ 与交叉项的弱增长。每步独立取样破坏了这种相消。
+\end{proof}
+
+\begin{proposition}[激波]\status{已证+数值}
+在合并规则下，平面无旋激波对 $\varphi$ 的贡献为完整穿越块的 $\arg p_B$，精确为零；剩余误差来自未被并入热块的边缘步，数值上 $\le5\times10^{-3}$ rad。弯曲激波上，块的极转角给出物质三角形在穿越期间的净刚体转动，与 Crocco 涡量沉积相对应；其精度需在激波–气泡 DNS 上检验。
+\end{proposition}
+
+\begin{definition}[涡边界]
+在锚定构形（初始规则播种的三角剖分）上，取包围 $\varphi$ 或 LAVD 局部极大的最外层闭合等值线，要求凸性亏损 $\le d^*$（Haller 等取 $10^{-3}$）且弧长不小于数据可分辨的最小涡周长。不凸的涡（激波–气泡涡环、$\lambda$ 脚涡）需对 $d^*$ 做敏感性扫描；第~\ref{sec:persist} 节给出不依赖凸性的替代。
+\end{definition}
+
+%=====================================================================
+\section{物质账本与环量收支}
+
+\begin{proposition}[块链账本]\status{已证}
+节点账本 $\ln J_i=\sum_k\ln J^{B_k}_i$，其中星面积比在块映射上计算。平面激波前后两态均匀时，物质三角形的边保持直线，完整穿越块的面积比精确等于 $1/\eta$，跨激波的面积跳变精确为 $-\ln\eta$。
+\end{proposition}
+
+这条命题与此前“由 C 通道推迟重锚使望远相消”的结论相同，只是触发条件换成了三角形自身的 $|\mu|$，因此不需要全局检测。环量部分保持已有结论：区域环量是边界线积分，与内部剖分无关；物质三角形的环量跳变 $\Delta\Gamma_t/A_t(t_a)$ 取块端点三步位移环量的中位数，替代逐点力矩图。
+
+%=====================================================================
+\section{物质胞腔复形与空心胞腔}\label{sec:cells}
+
+\begin{definition}[物质胞腔复形]
+块边界处若某三角形未通过形状门，不在局部重新剖分，而是把它与共享其最长边的邻居合并为物质多边形，重复直到等周商 $4\pi A_P/P_P^2\ge\Lambda^*$。2-胞腔为多边形，边界矩阵 $B_2$ 由多边形的有向边界给出。
+\end{definition}
+
+\begin{proposition}[可加性]\status{已证}
+$c_P=\sum_{t\subset P}c_t$（内部边相互抵消），$A_P=\sum_{t\subset P}A_t$。面积比由多边形顶点直接计算，精确；$c_P/A_P$ 等于各三角形 $2\im p_t$ 的面积加权平均。环量跳变与 Kelvin 收支在胞腔上照常成立。
+\end{proposition}
+
+\begin{proposition}[噪声随合并降低]\status{量级}
+位置噪声 $\sigma$ 下，$\delta(c_P/A_P)\sim\sigma P_P/A_P$。由 $m$ 个尺寸为 $h$ 的三角形合并成紧凑胞腔时，$P_P\propto\sqrt m\,h$、$A_P\propto mh^2$，误差按 $m^{-1/2}$ 下降。胞腔合并因此同时缓解“重锚放大噪声、不重锚积累几何误差”的取舍。
+\end{proposition}
+
+\begin{definition}[非仿射度与撕裂]
+对顶点数不少于 4 的胞腔 $P$，定义
+\begin{equation}
+\varepsilon_P=\frac{1}{\mathrm{diam}\,P}\min_{F,c}\Big[\frac1{n_v}\sum_{v\in\partial P}|x_v-FX_v-c|^2\Big]^{1/2}.
+\end{equation}
+若 $\varepsilon_P>\varepsilon^*=\max\big(c_\sigma\sigma/\mathrm{diam}\,P,\ \varepsilon_0\big)$，判该胞腔被撕裂，保持空心（不填充）。物理含义是：这块物质已不再作为一个仿射体运动，流动的非线性在胞腔尺度上不可忽略（拉丝、卷起、滑移线）。数据驱动的替代判据是 Sardellitti–Barbarossa（2024）的“边信号沿胞腔的总变差加稀疏”准则。
+\end{definition}
+
+\begin{proposition}[空心胞腔与调和空间]\status{已证}
+若全部胞腔填充后的复形同胚于圆盘，则留空 $k$ 个胞腔后 $\beta_1=k$；对任意对称正定的度量矩阵，调和 1-上链空间的维数都等于 $k$。
+\end{proposition}
+\begin{proof}
+Euler 示性数 $\chi=V-E+(F-k)=1-k$；平面复形 $\beta_2=0$，连通时 $\beta_0=1$，故 $\beta_1=k$。Hodge 定理对任意内积成立，$\dim\ker L_1=\beta_1$。
+\end{proof}
+
+调和流绕空心胞腔环流，所以撕裂的位置与持续时间可以直接读出，可作为屏障与拉丝的拓扑指示，不需要人为阈值之外的参数。
+
+%=====================================================================
+\section{Hodge–Dirac 层的一般内积形式}
+
+\begin{proposition}[一般内积下的 Hodge 分解]\status{已证}
+在任意满足 $d_1d_0=0$ 的胞腔复形上，对任意对称正定的 $M_0,M_1,M_2$，有 $C^1=\mathrm{im}\,d_0\oplus\mathrm{im}\,\delta_2\oplus\ker L_1$，三部分在 $\langle\cdot,\cdot\rangle_{M_1}$ 下两两正交，$\delta_k=M_{k-1}^{-1}d_{k-1}^\top M_k$。
+\end{proposition}
+
+这就是 Lim（2020）在图上的框架推广到胞腔复形的形式，可以同时解决 T-08 冲突：T3–T5 的命题全部改写为“任意对称正定内积”，对角 cotan 只作为特例。推荐的度量为：三角形取 Whitney/Galerkin 质量（形状正则即收敛）；多边形取模仿有限差分或虚单元的内积（对线性场一致、对网格稳定）。组合 Laplacian（AFRC 所用）不含 Hodge 星，不给出物理分解（Ribando-Gros 等，2024），所以凡是涉及份额、谱、扩散的命题一律放在带 $M_k$ 的复形上。
+
+信号取块上的位移 1-上链 $f_e^{B}=\tfrac12(\Delta x_a+\Delta x_b)\cdot(x_b-x_a)$。$D(0,f,0)=(\delta_1f,0,d_1f)$ 的节点分量是弱散度，三角形或胞腔分量是位移环量。只报告在块或窗口上积分后的份额，不报告逐点散度或涡量。扇区分离与“线性声学即无质量 Dirac 方程”两条结论不变。
+
+%=====================================================================
+\section{阈值消除：持续拓扑}\label{sec:persist}
+
+\begin{definition}[过滤]
+在锚定胞腔复形上做 $|\varphi|$ 的上水平集过滤：$K_w$ 由全部顶点满足 $|\varphi|\ge w$ 的胞腔组成。长寿命的 $\beta_0$ 类为涡核。屏障一侧用 $\varepsilon_P$ 的过滤：按 $\varepsilon_P$ 从大到小把胞腔挖空，长寿命的 $\beta_1$ 类为持续的撕裂。
+\end{definition}
+
+\begin{proposition}[稳定性]\status{引用}
+持续图对过滤函数是 1-Lipschitz 的：$d_B(\mathrm{Dgm}\,f,\mathrm{Dgm}\,g)\le\|f-g\|_\infty$（Cohen-Steiner、Edelsbrunner、Harer 2007）。
+\end{proposition}
+
+结合命题~\ref{prop:noise}：固定锚定下 $\varphi$ 的噪声水平 $\epsilon_\varphi$ 由端点噪声决定、不随步数增长，所以“持续性大于 $2\epsilon_\varphi$ 的核”是由噪声推出的判据，取代 top-10\%、$\pi/4$ 和分水岭合并距离。多个窗口串成藤图后，涡的出生、合并与死亡就是 $\beta_0$ 类的出生与死亡；涡与间隙鞍点同时消失满足离散 Morse 恒等式 $\#\max-\#\mathrm{saddle}+\#\min=\chi$。
+
+%=====================================================================
+\section{与输运、掺混层的接口}
+
+\begin{itemize}
+\item \keyp{扩散网格与运动学网格分开。} 网络扩散的离散极大值原理当且仅当每条内部边的对角和 $\le\pi$（$\cot\alpha+\cot\beta\ge0$）时成立，所以扩散用当前 Delaunay 剖分，在 Delaunay 条件失效前重剖。三角形层的运动学量用锚定的物质三角形与胞腔。两者共用示踪点与质量。
+\item \keyp{切向拉伸的复形式。} 单位切向 $T=e^{i\vartheta_T}$ 时 $|FT|=|p+q\,e^{-2i\vartheta_T}|$。沿块用合成律串联 $(p,q)$，得到“三点链式拉伸”：对分片仿射运动精确，不需要 12 近邻最小二乘，噪声由命题~\ref{prop:noise} 的锚定规则控制。掺混分解 $\ln|\nabla c|/|\nabla c_0|=\ln\lambda-\ln J$ 的两项都由同一组 $(p,q)$ 给出。
+\item \keyp{转移算子、质量通量与片层钟} 不受本稿影响。
+\end{itemize}
+
+%=====================================================================
+\section{状态与最小检验}
+
+\begin{center}\small
+\begin{xltabular}{\linewidth}{@{}P{4.3cm}P{1.9cm}LP{2.6cm}@{}}
+\toprule
+命题 & 状态 & 最小检验（六算例） & 通过标准\\\midrule
+复表示恒等式、参考系变换、合成律 & 已证+数值 & 已完成 & 机器精度\\
+合并规则消除平面激波伪转动 & 数值 & Sod 与柱面爆炸波：$\varphi$ 的残余 & Sod $<10^{-3}$ rad；爆炸波从 0.1–0.18 降到 $<0.01$ rad\\
+激波签名与压缩比 & 已证+数值 & Sod、爆炸波、激波–气泡：块签名与单轴曲线的偏离 & 平面激波处偏离 $<0.01$；气泡界面处偏离与 DNS 斜压项同号\\
+$\varphi$ 严格客观、收敛到 Haller 转角 & 已证 & 双环流与涡对：旋转参考系与网格加密 & 客观性误差在机器精度；与解析 $\varphi$ 的 Spearman $\ge0.99$\\
+固定锚定下噪声望远相消 & 数值 & 激波–气泡加 0.1$h$ 噪声：锚定 $\varphi$ 对 DNS & Spearman 由 0.59 提高（目标 $\ge0.8$）\\
+LAVD 噪底 & 待检验 & 涡对加噪声 & 与解析 LAVD 相关 $\ge0.9$\\
+胞腔合并降噪 & 量级 & 激波–气泡加 0.1$h$ 噪声：环量跳变 & 相关由 0.41 提高到 $\ge0.8$\\
+空心胞腔与 $\beta_1$ & 已证 & 激波–气泡：撕裂位置与 DNS 卷起 & 位置一致，且对 $\varepsilon^*$ 稳健\\
+持续性核数 & 引用+待检验 & 涡对：$\beta_0$ 持续图 & 2 个核的持续性 $>2\epsilon_\varphi$，其余 $<2\epsilon_\varphi$\\
+三点链式拉伸 & 已证 & 六算例界面拉伸对参照 & 不劣于 12 近邻链式张量\\
+\bottomrule
+\end{xltabular}\end{center}
+
+尚未补上的理论空白有三处：弯曲激波上块极转角对斜压沉积的精度，需要激波–气泡 DNS 来定；多边形胞腔上内积的具体构造，可以直接采用模仿有限差分的现成形式；三维推广没有复表示可用，需改用四面体映射的极分解，Beltrami 系数换成奇异值比。
+
+\section*{参考文献}
+\addcontentsline{toc}{section}{参考文献}
+{\small
+\begin{enumerate}[label={[\arabic*]},leftmargin=2em,itemsep=0.1em]
+\item G. Haller, A. Hadjighasem, M. Farazmand, F. Huhn, Defining coherent vortices objectively from the vorticity, J.\ Fluid Mech.\ 795, 136–173 (2016).
+\item G. Haller, Dynamic rotation and stretch tensors from a dynamic polar decomposition, J.\ Mech.\ Phys.\ Solids 86, 70–93 (2016).
+\item L.-H. Lim, Hodge Laplacians on graphs, SIAM Rev.\ 62, 685–715 (2020).
+\item E. Ribando-Gros, R. Wang, J. Chen, Y. Tong, G.-W. Wei, Combinatorial and Hodge Laplacians: similarities and differences, SIAM Rev.\ (2024).
+\item S. Sardellitti, S. Barbarossa, Topological signal processing over generalized cell complexes, IEEE Trans.\ Signal Process.\ (2024).
+\item T. M. Roddenberry, M. T. Schaub, M. Hajij, Signal processing on cell complexes, ICASSP (2022).
+\item D. Cohen-Steiner, H. Edelsbrunner, J. Harer, Stability of persistence diagrams, Discrete Comput.\ Geom.\ 37, 103–120 (2007).
+\item C. Zhu, S. H. Christiansen, K. Hu, A. N. Hirani, Convergence and stability of discrete exterior calculus for the Hodge Laplace problem in two dimensions, arXiv:2505.08966 (2026).
+\item H. S. Huntley et al., Conditions for reliable divergence estimates from drifter triplets, J.\ Atmos.\ Oceanic Technol.\ 39, 1499 (2022).
+\item L. V. Ahlfors, Lectures on Quasiconformal Mappings（Beltrami 系数与合成律的标准来源）.
+\end{enumerate}
+}
+\end{document}

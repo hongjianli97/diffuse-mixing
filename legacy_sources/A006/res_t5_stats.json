@@ -1,0 +1,18 @@
+{
+ "30": {
+  "rho_lnq_afrc": 0.43553773176506727,
+  "rho_farx_mix_band": 0.3934941845902379,
+  "rho_mfpt_unmixed_heavy": -0.9114390647628827,
+  "farx_mean_band": 1.259141494435612,
+  "far_mean_all": 0.2168546365914787,
+  "raw_new_per_node": 1.7256892230576442
+ },
+ "70": {
+  "rho_lnq_afrc": 0.4035466166466893,
+  "rho_farx_mix_band": 0.7016493022733136,
+  "rho_mfpt_unmixed_heavy": -0.9639359396064554,
+  "farx_mean_band": 6.003179650238474,
+  "far_mean_all": 2.112468671679198,
+  "raw_new_per_node": 6.51140350877193
+ }
+}

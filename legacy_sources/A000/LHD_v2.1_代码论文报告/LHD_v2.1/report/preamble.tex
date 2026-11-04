@@ -1,0 +1,31 @@
+\documentclass[10.5pt,a4paper]{article}
+\usepackage[a4paper,margin=2.2cm,top=2.4cm,bottom=2.4cm]{geometry}
+\usepackage{fontspec}
+\usepackage{amsmath,amssymb,mathtools,bm,amsthm}
+\setmainfont{Noto Serif CJK SC}[BoldFont={Noto Serif CJK SC Bold}]
+\setsansfont{Noto Sans CJK SC}[BoldFont={Noto Sans CJK SC Bold}]
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+\linespread{1.2}
+\usepackage{xcolor}\definecolor{accent}{HTML}{1F5FA8}\definecolor{quiet}{HTML}{5A5A5A}\definecolor{tint}{HTML}{EEF3FA}
+\usepackage{titlesec}
+\titleformat{\section}{\sffamily\bfseries\Large\color{accent}}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\sffamily\bfseries\large}{\thesubsection}{0.6em}{}
+\usepackage{enumitem}\setlist{itemsep=0.2em,topsep=0.3em,leftmargin=1.6em}
+\usepackage{array,booktabs,tabularx,makecell}\renewcommand{\arraystretch}{1.22}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\usepackage{graphicx,caption}\captionsetup{font=small,labelfont=bf,labelsep=quad}
+\renewcommand{\figurename}{图}\renewcommand{\tablename}{表}\renewcommand{\contentsname}{目录}
+\usepackage{fancyhdr}\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\color{quiet}\HEADTITLE}
+\fancyhead[R]{\small\color{quiet}2026 年 10 月}\fancyfoot[C]{\small\thepage}
+\usepackage[colorlinks=true,linkcolor=accent,urlcolor=accent]{hyperref}
+\theoremstyle{definition}\newtheorem{definition}{定义}[section]
+\theoremstyle{plain}\newtheorem{theorem}[definition]{定理}\newtheorem{proposition}[definition]{命题}\newtheorem{corollary}[definition]{推论}
+\theoremstyle{remark}\newtheorem{remark}[definition]{注}
+\renewcommand{\proofname}{证明}
+\newcommand{\re}{\operatorname{Re}}\newcommand{\im}{\operatorname{Im}}
+\newcommand{\AFH}{AFRC$_{\mathrm H}$}
+\newcommand{\status}[1]{\hfill{\small\color{accent}\textsf{[#1]}}}
+\setlength{\parskip}{0.35em}\setlength{\parindent}{0pt}\tolerance=2000 \emergencystretch=3em
+

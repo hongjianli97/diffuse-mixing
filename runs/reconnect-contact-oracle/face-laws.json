@@ -1,0 +1,13 @@
+{
+  "all_world_axis_faces_and_two_half_resistances_exact": true,
+  "face_counts": {
+    "low": 992,
+    "high": 992,
+    "interface": 64
+  },
+  "g_low_exact": "5764607523034235/288230376151711744",
+  "g_high_exact": "5764607523034235/72057594037927936",
+  "g_interface_exact": "1152921504606847/36028797018963968",
+  "all_cell_areas_exact": true,
+  "internal_material_faces_or_precomputed_g_supplied_to_builder": false
+}

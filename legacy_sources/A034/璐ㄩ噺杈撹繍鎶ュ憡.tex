@@ -1,0 +1,422 @@
+\documentclass[10.5pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{Noto Serif CJK SC}[BoldFont={Noto Serif CJK SC Bold}]
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{graphicx,booktabs,tabularx,float,enumitem,caption}
+\usepackage[hidelinks]{hyperref}
+\captionsetup{font=small,labelsep=quad}
+\renewcommand{\tablename}{表}\renewcommand{\figurename}{图}\renewcommand{\abstractname}{摘要}
+\setlength{\parindent}{2em}\setlength{\parskip}{3pt}\linespread{1.25}
+\setlist{nosep,leftmargin=2.2em}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newtheorem{prop}{命题}\renewcommand{\proofname}{证明}
+\renewcommand{\thesection}{\Roman{section}}\renewcommand{\thesubsection}{\Alph{subsection}}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries 拉格朗日轨迹网络上的带质量物质输运：\\[4pt] 理论、算法与普适性验证}\\[10pt]
+2026 年 10 月
+\end{center}
+
+\begin{abstract}
+\noindent 我们在拉格朗日轨迹网络上建立一套只用示踪点位置的物质输运框架，涵盖质量输运、扩散与掺混，对可压缩与不可压缩流动给出统一的定量描述。
+
+\textbf{理论。}核心是把测度从面积换成质量 $\mu=\rho\,dA$：每个示踪点携带一个守恒的质量，密度由物质面积比给出，跨激波时以推迟重锚保持望远相消。在此基础上推导出四部分结果：
+\begin{itemize}
+\item 跨截面与区域间输运的估计量，以及按质量加权的转移算子；
+\item 网络上的拉格朗日对流—扩散方程：其质量矩阵在拉格朗日形式下与时间无关，并证明了按质量加权的标量守恒与方差单调衰减；
+\item 界面梯度增长的分解 $d\ln|\nabla c|/dt=\sigma_t-\theta$，它把掺混分成切向拉伸与压缩两部分；
+\item 不可压缩流动是所有结论在 $\rho$ 为常数时的特例。
+\end{itemize}
+
+\textbf{验证。}用同一套代码与同一组参数，在六个算例上逐项检验：双环流、Lamb–Oseen 涡对、Sod 激波管、柱面爆炸波、激波–重气泡与激波–等熵涡。参照包括精确轨迹、高分辨率欧拉解、质量坐标下的一维精确求解与 DNS。主要结果：
+\begin{itemize}
+\item 跨截面质量通量与区域间交换的误差为 0.2\%–2\%，且随分辨率收敛；
+\item 扩散解与参照之差为 0.2\%–6\%；在可压缩算例中，用体积代替质量作测度会使误差增大一个数量级；
+\item 掺混归因中的压缩项与解析值一致到 $10^{-3}$，局部拉伸与参照之差在 4\% 以内；
+\item 结果对 0.1 倍间距的位置噪声不敏感；对追踪方式，通量与扩散的差异约 1\%。
+\end{itemize}
+
+\textbf{局限。}我们同样报告了方法的失效边界：界面切向强剪切下有限点对的拉伸偏差，以及离线追踪对密度重建的影响。
+\end{abstract}
+
+\section{引言}
+物质输运、扩散与掺混是可压缩流动研究的核心问题，例如激波诱导掺混、激波–边界层相互作用中的质量交换，以及燃烧室中的燃料输运。拉格朗日相干结构（LCS）理论、有限时间相干集与动态 Laplacian 方法，已经为不可压流动建立了成熟的输运几何。但这些方法多以面积（体积）为测度。在可压缩流动中，流映射保持的是质量而不是面积：以面积计的“输运”会把压缩与膨胀误读为物质的迁移，以面积为测度的扩散算子也偏离守恒形式。
+
+另一方面，实验（拉格朗日粒子追踪）与数值后处理常常只提供示踪点轨迹。基于速度梯度的欧拉分析在激波处失效，且依赖插值。
+
+本文在拉格朗日轨迹网络上建立以质量为测度的输运框架，只用示踪点位置。主要贡献如下：
+\begin{enumerate}
+\item 统一的质量账本与输运估计量，以及按质量加权的转移算子（第 \ref{sec:theory} 节 A–C）；
+\item 网络上的拉格朗日对流—扩散：给出质量矩阵与时间无关的弱形式、守恒与耗散性质，并说明体积形式在可压缩流中的不一致性（第 \ref{sec:theory} 节 D）；
+\item 界面掺混的“拉伸—压缩”分解及其估计量与有效性判据（第 \ref{sec:theory} 节 E）；
+\item 在六个可压缩与不可压缩算例上用独立参照完成的全面验证，同时给出失效边界（第 \ref{sec:results} 节）。
+\end{enumerate}
+
+\section{理论}\label{sec:theory}
+
+\subsection{质量测度与物质账本}
+设示踪点 $x_i(t)$ 的快照为 $\{x_i(t_s)\}$，轨迹网络的几何激活 $K(t)$ 是当前位置的外剥离 Delaunay 复形。取质量测度 $\mu=\rho\,dA$，流映射 $\Phi_t$ 满足 $\mu(\Phi_t(A))=\mu(A)$，这是连续性方程的积分形式。给示踪点 $i$ 赋予质量
+\begin{equation}
+m_i=\rho_i(t_c)\,A^*_i(t_c)/3 ,\label{eq:mass}
+\end{equation}
+其中 $A^*_i$ 为 $i$ 的星面积，$t_c$ 为参考时刻。$m_i$ 在窗口内守恒，物质集合的质量为 $\mu(A)\approx\sum_{i\in A}m_i$。密度由物质面积比给出：
+\begin{equation}
+\rho_i(t)=\rho_i(t_c)\,e^{-\ln J_i(t)},\qquad \ln J_i(t)=\sum_k\ln\frac{A^*_{i,k}(t_{k+1})}{A^*_{i,k}(t_k)} ,
+\end{equation}
+即逐点锚定的星面积比之和。锚定星在激波模板内时推迟重锚，使每段面积比的两端分别位于激波前后，跨激波望远相消。激波由 C 通道只凭位置检测：单步物质面积比 $\ln(A^*(t_{s+1})/A^*(t_s))=\int\theta\,dt$，在光滑流中是 $O(\Delta t)$，激波处为 $O(1)$。
+
+\subsection{跨截面与控制体的输运}
+控制体 $\Omega$ 内的质量估计为 $\hat M_\Omega(t)=\sum_im_i\chi_\Omega(x_i(t))$。$[t_0,t_1]$ 内从 $\Omega^c$ 进入 $\Omega$ 的单向输运量与净输运量分别为
+\begin{equation}
+F^{\to}=\sum_im_i\,[x_i(t_0)\notin\Omega]\,[x_i(t_1)\in\Omega],\qquad
+F^{\rm net}=\hat M_\Omega(t_1)-\hat M_\Omega(t_0).
+\end{equation}
+两者只用位置。误差来源于截面附近一层示踪点的离散性，量级为 $O(h/L)$，$h$ 为示踪点间距，$L$ 为窗口内的输运距离。在双向交换的流动中（例如双环流的瓣输运），净输运量接近零，应以单向量刻画交换。
+
+\subsection{区域间输运与转移算子}
+给定 $t_0$ 时的分区 $\{B_i\}$ 与 $t_1$ 时的分区 $\{C_j\}$，定义按质量加权的转移矩阵
+\begin{equation}
+P_{ij}=\mu\big(B_i\cap\Phi_{t_1}^{-1}C_j\big)\approx\sum_k m_k\,[x_k(t_0)\in B_i]\,[x_k(t_1)\in C_j].
+\end{equation}
+行和为 $\mu(B_i)$，列和为 $\mu(C_j)$，两者都精确，因为 $\Phi$ 保持 $\mu$。对 $Q=D_p^{-1/2}PD_q^{-1/2}$ 做奇异值分解：第二奇异值 $\sigma_2$ 度量有限时间相干性，第二奇异向量的符号给出相干对（Froyland 意义下）。
+
+若以初始面积为权，列和等于“被推前的初始面积”，在可压缩流中不等于 $C_j$ 在 $t_1$ 的实际面积，二者之差就是 $\int(J-1)\,dA$。同理，区域的组分按来源计算时，必须用质量分数 $\sum m_kY_k/\sum m_k$，而不是计数或体积分数。
+
+\subsection{网络上的拉格朗日对流—扩散}
+被动标量满足 $\rho\,Dc/Dt=\nabla\!\cdot(\rho\kappa\nabla c)$。在物质区域 $\Omega(t)$ 上取弱形式：
+\begin{equation}
+\int_{\Omega(t)}\varphi\,\frac{Dc}{Dt}\,\rho\,dA=-\int_{\Omega(t)}\rho\kappa\,\nabla\varphi\cdot\nabla c\,dA .
+\end{equation}
+由于 $\rho\,dA=dm$ 沿轨迹守恒，用 P1 元离散并集中质量，得到
+\begin{equation}
+M\dot c=-K(t)\,c,\qquad M=\mathrm{diag}(m_i),\qquad K_{ij}(t)=\sum_{T\ni i,j}(\rho\kappa)_TA_T\,\nabla\lambda_i\cdot\nabla\lambda_j .\label{eq:ad}
+\end{equation}
+\textbf{质量矩阵与时间无关}，只有刚度 $K(t)$ 随当前几何变化；对流由示踪点精确完成，没有数值扩散。
+\begin{prop}
+对式 \eqref{eq:ad}：
+\begin{itemize}
+\item 按质量加权的标量守恒：$\frac{d}{dt}\sum_im_ic_i=0$；
+\item 若 $K_{ij}\le0$（$i\ne j$），这在 Delaunay 剖分的内部边上成立，则按质量加权的方差单调衰减：
+\[
+\frac{d}{dt}\sum_im_i(c_i-\bar c)^2=-\sum_{i<j}2|K_{ij}|(c_i-c_j)^2\le0 .
+\]
+\end{itemize}
+\end{prop}
+\begin{proof}
+$K$ 对称且行和为零（梯度对常数为零）。两式分别对应 $\mathbf 1^\top Kc=0$ 与 $c^\top Kc=\sum_{i<j}|K_{ij}|(c_i-c_j)^2$。
+\end{proof}
+
+\textbf{体积形式的不一致。}若改用 $M=\mathrm{diag}(A^*_i(t)/3)$ 与电导 $\kappa$，离散的是 $Dc/Dt=\kappa\nabla^2c$。而正确方程为
+\[
+\frac{Dc}{Dt}=\kappa\nabla^2c+\kappa\,\nabla\ln\rho\cdot\nabla c .
+\]
+所以体积形式在密度梯度处缺少一项，而且它守恒的是 $\int c\,dA$，不是 $\int\rho c\,dA$。不可压缩流中两种形式等价。
+
+把 $K(t)$ 在时间上平均，得到 $\langle\rho\kappa JC^{-1}\rangle$ 的刚度，即可压缩情形的动态 Laplacian。它的谱给出混合盆与混合时间。
+
+\subsection{搅拌与掺混：界面梯度增长的分解}
+\begin{prop}
+二维中，设物质界面元的切向长度为 $\ell_t$、法向厚度为 $\ell_n$，记 $\sigma_t=d\ln\ell_t/dt$。被动标量（$\kappa\to0$）在该元上满足
+\begin{equation}
+\frac{d}{dt}\ln|\nabla c|=\sigma_t-\theta .\label{eq:mix}
+\end{equation}
+\end{prop}
+\begin{proof}
+物质面元满足 $d\ln(\ell_t\ell_n)/dt=\theta$，且 $|\nabla c|\propto\ell_n^{-1}$。
+\end{proof}
+掺混增强因此分成两部分：切向拉伸（剪切与卷起）与压缩 $-\theta$（激波处为正）。不可压缩时只剩拉伸，即 Batchelor 机制。
+
+\textbf{估计量。}
+\begin{itemize}
+\item 压缩项：界面示踪点的 $-\ln J$，取自物质账本。
+\item 局部拉伸：对每个界面示踪点，取初始方向与界面切向夹角小于 $\alpha=22.5^\circ$ 的网络边，计算 $\ln(|r_e(t)|/|r_e(0)|)$ 的中位数；再对界面按质量加权平均。
+\end{itemize}
+这一估计量不依赖界面折线的连接顺序，也不受播种抖动影响。它给出的是局部物质元的平均对数拉伸，即式 \eqref{eq:mix} 中的量；它与界面总长度比 $\ln(L/L_0)$ 不同，后者由强拉伸段主导。
+
+\textbf{有效性判据。}若界面切向存在剪切率 $\dot\gamma$，与切向夹角为 $\alpha$ 的有限点对会被剪切拉伸，偏差随 $\dot\gamma t\sin\alpha$ 增长。因此该估计量只在 $\dot\gamma t\lesssim3$ 内可靠，见第 \ref{sec:results} 节 E。
+
+\subsection{不可压缩极限与普适性}
+$\rho$ 为常数时：
+\begin{itemize}
+\item $m_i\propto A^*_i$，质量形式与体积形式的扩散方程等价；
+\item 转移算子保面积；
+\item 式 \eqref{eq:mix} 退化为 $d\ln|\nabla c|/dt=\sigma_t$。
+\end{itemize}
+所以同一套公式与代码同时适用于可压缩与不可压缩流动，不需要按流动类型切换。
+
+\section{数值实现}
+所有算例使用相同的实现与参数：
+\begin{itemize}
+\item 每个快照建外剥离的 Delaunay 复形；
+\item C 通道阈值 $\tau=0.2$，检出步及其前后各一步删失；
+\item 网络边取互 kNN，$k=12$；
+\item 扩散在每个快照间隔内对 $K(t_s)$ 做一步隐式 Euler：$(M+\Delta tK)c^{s+1}=Mc^s$；
+\item 刚度中的 $\rho_T$ 取三角形三个顶点密度的平均，密度由物质账本只凭位置得到。
+\end{itemize}
+每个快照的计算量为 $O(N\log N)$。
+
+\section{算例与参照}
+\begin{table}[H]\centering\small
+\caption{算例与独立参照。}
+\begin{tabularx}{\linewidth}{@{}lYY@{}}\toprule
+算例 & 设置 & 参照 \\\midrule
+双环流（不可压） & 周期强迫，$160\times80$ 抖动网格，$T=10$；分辨率阶梯 $80\times40$ 至 $320\times160$ & $640\times320$ 精确轨迹；$512\times256$ 欧拉解（半拉格朗日对流 + 谱隐式扩散）；8000 点稠密物质线 \\
+Lamb–Oseen 涡对（不可压） & 共转对，$N=8000$，$T=6\pi$；$N$ 阶梯 2000 至 32000 & $N=128\,000$ 精确轨迹；$384^2$ 欧拉解；3000 点稠密圆环 \\
+Sod 激波管（可压） & 精确黎曼解与精确轨迹，$h=0.004$ & $10^5$ 个精确标签；质量坐标下 5000 点的一维隐式扩散（$\rho$ 取精确值） \\
+柱面爆炸波（可压） & Sedov 型运动学，$\eta=6$，$h=0.022$ & $2\times10^6$ 个径向标签；质量坐标下的一维径向扩散 \\
+激波–重气泡（可压，DNS） & MUSCL–HLLC，$M_s=1.5$，密度比 3，15\,960 个示踪点 & DNS 的 $\int\rho Y\,dA$；带 $\nabla\!\cdot(\rho\kappa\nabla Y)$ 的 DNS 标量 \\
+激波–等熵涡（可压，DNS） & $M_s=1.3$，14\,400 个示踪点，在线与离线两种追踪 & DNS 密度；两种追踪之间的一致性 \\
+\bottomrule\end{tabularx}
+\end{table}
+
+\section{结果}\label{sec:results}
+
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{fig_tr_summary.png}
+\caption{(a)–(d) 激波–重气泡 $t=1.4$：DNS 中带显式扩散的标量，网络上的质量形式、体积形式，以及纯对流。(e) 质量通量与单向交换的相对误差随示踪点间距的变化。(f) 各算例末时刻的扩散误差。(g) 掺混归因：网络估计与精确值或参照（圆点为拉伸，方块为压缩，叉号为 Lamb–Oseen 圆环的剪切偏差）。(h) 激波–重气泡界面的归因：边测法与折线法（上界）之间为拉伸的区间。}
+\label{fig:sum}
+\end{figure}
+
+\subsection{密度与质量重建}
+\begin{table}[H]\centering\small
+\caption{只凭位置重建的密度：$|\rho/\rho_{\rm ref}-1|$ 的中位数。}
+\begin{tabularx}{\linewidth}{@{}lY@{}}\toprule
+算例 & 结果 \\\midrule
+双环流 / Lamb–Oseen（$\rho_{\rm ref}=1$） & 1.3\% / 0.42\% \\
+Sod & 机器精度（$3.6\times10^{-15}$）；p95 为 0.97\% \\
+柱面爆炸波 & 0.58\%；p95 为 32\%，出现在星跨在激波薄壳上的点 \\
+激波–重气泡（对 DNS） & 0.30\%（$t=0.6$）、0.60\%（1.0）、0.70\%（1.4） \\
+激波–等熵涡（对 DNS） & 在线追踪 0.33\%，离线追踪 11.8\% \\
+\bottomrule\end{tabularx}
+\end{table}
+在线追踪与解析轨迹下，密度达到 1\% 以内甚至机器精度。离线追踪是一个明确的失效情形：时间插值把移动激波变成两道静止台阶，留下的位置印记扭曲了物质面积比。
+
+\subsection{质量通量与区域间交换}
+\begin{itemize}
+\item \textbf{Sod：}跨 $x=0$ 与 $x=0.3$ 的质量通量，在 $h=0.008$、0.004、0.002 时误差都 $\le0.83\%$。
+\item \textbf{柱面爆炸波：}跨 $r=0.6$、0.9 的外向通量误差 $\le0.83\%$。
+\item \textbf{双环流：}一个窗口内从左环流进入右环流的单向交换量（即瓣输运，参照 0.328），三档分辨率误差为 $-2.1\%$、$-0.8\%$、$-0.34\%$，一阶收敛（图 \ref{fig:sum}e）。
+\item \textbf{Lamb–Oseen：}跨中线的单向交换误差 $\le0.7\%$。
+\item \textbf{激波–重气泡：}重气体在 $x>X$ 一侧的质量分数（$X$ 取欧拉分布的 25\%、50\%、75\% 分位，三个时刻）与 DNS 相差 0.5–0.8 个百分点；总重气体质量相差 1.3\%，来自初始界面的平滑。
+\item \textbf{激波–等熵涡：}跨 $x=0.9$ 的质量通量在两种追踪下相差 0.6\%。通量只依赖示踪点在截面哪一侧，因此对追踪误差远比密度稳健。
+\end{itemize}
+
+\subsection{转移算子、相干集与组分}
+\begin{itemize}
+\item \textbf{双环流：}$\sigma_2=0.979$，质量与面积加权相同，因为流动不可压；相干集与左环流的 Jaccard 为 0.61。
+\item \textbf{激波–重气泡：}按质量加权 $\sigma_2=0.9967$、与气泡的 Jaccard 为 0.44；按面积加权为 0.9961、0.40。两种加权的相干集都包含全部重气体。
+\item \textbf{卷起涡内的组分（$t=1.4$，半径 0.06 的圆盘）：}DNS 的重气体质量分数为 0.377、体积分数为 0.356。示踪点按质量计为 0.290，按计数为 0.153。按计数的结果偏差达 2.5 倍，必须用质量分数。按质量计的结果仍低约 23\%，主要原因是 DNS 中被动标量的数值扩散：示踪点本身不扩散，DNS 的界面却被抹宽。
+\item \textbf{两个负面结果：}在 Lamb–Oseen 中，主导相干对给出的是旋转对的大尺度划分，与涡核的 Jaccard 只有 0.06，涡核需要更高阶的奇异向量。在激波–等熵涡中，粗分盒让转移图分成互不连通的两块（$\sigma_2=1$），属于退化情形。
+\end{itemize}
+
+\subsection{扩散}
+\begin{table}[H]\centering\small
+\caption{拉格朗日对流—扩散与参照的相对 L2 误差（以参照的标准差归一）。}
+\begin{tabularx}{\linewidth}{@{}lYYY@{}}\toprule
+算例 & 质量形式 & 体积形式 & 纯对流 \\\midrule
+双环流，$\kappa=10^{-3}$，$t=5$ / 10 & 1.5\% / 3.2\% & 同左（不可压） & 24\% / 66\% \\
+双环流，$\kappa=3\times10^{-4}$ & 1.4\% / 3.4\% & 同左 & 15\% / 40\% \\
+Lamb–Oseen，$\kappa=0.02$，$t=T/2$ / $T$ & 0.75\% / 1.5\% & 同左 & 15\% / 35\% \\
+Sod，$\kappa=10^{-3}$ & 0.17\% & 1.8\% & 7.4\% \\
+柱面爆炸波，$\kappa=2\times10^{-4}$ & 2.2\% & 22\% & 109\% \\
+激波–重气泡，$\kappa=10^{-3}$，$t=0.6$ / 1.0 / 1.4 & 1.4\% / 2.1\% / 6.1\% & 13\% / 19\% / 24\% & 26\% / 39\% / 54\% \\
+\bottomrule\end{tabularx}
+\end{table}
+\begin{itemize}
+\item 质量形式在全部算例上都与参照一致，误差比扩散效应本身小一到两个数量级。
+\item 方差衰减与参照相差：双环流 1.5\% 以内；激波–重气泡 0.4\% 以内（体积形式偏差 3\%–11\%）。
+\item 激波–重气泡中标量的质量总量严格守恒，与命题一致。
+\item 三个可压缩算例中，体积形式的误差都比质量形式大约一个数量级。这从数值上证实了第 \ref{sec:theory} 节 D 的论证：可压缩流中扩散必须以质量为测度、以 $\rho\kappa$ 为电导。
+\end{itemize}
+
+\subsection{掺混归因}
+\begin{table}[H]\centering\small
+\caption{式 \eqref{eq:mix} 两项的网络估计与精确值或参照。}
+\begin{tabularx}{\linewidth}{@{}lYY@{}}\toprule
+算例与界面 & 局部拉伸 $\langle\ln(\ell_t/\ell_{t,0})\rangle$ & 压缩 $-\ln J$ \\\midrule
+Sod，竖直物质线 $x_0=0.1$ & $-0.008$（精确 0） & 0.7536（精确 0.7536） \\
+柱面爆炸波，圆环 $r_0=0.5$ & 0.553（精确 0.578） & 0.634（精确 0.636） \\
+双环流，物质线 $x_0=0.5$，$t=5$ / 10 & 0.781 / 1.700（参照 0.797 / 1.674） & 0.001（精确 0） \\
+Lamb–Oseen，绕涡圆环，$t=2.4$ / 4.7 / 9.4 / 18.8 & $-0.03$ / $-0.06$ / 0.23 / 0.78（精确约 0） & 约 0 \\
+激波–等熵涡，绕涡圆环，$t=0.6$，在线 / 离线 & $-0.18$ / $-0.21$ & 0.39 / 0.42 \\
+\bottomrule\end{tabularx}
+\end{table}
+\begin{itemize}
+\item 压缩项在两个精确算例中误差 $\le2\times10^{-3}$。
+\item 局部拉伸在 Sod、爆炸波与双环流中与精确值或参照相差 4\% 以内。
+\item Lamb–Oseen 圆环是有效性判据的检验：纯差动旋转不拉伸同心物质圆，但带宽内的有限点对被剪切拉伸。在 $\dot\gamma t\lesssim3$（$t\le4.7$）时估计正确，之后偏大。
+\item 激波–等熵涡中，两种追踪方式的拉伸与压缩分别相差 0.03。
+\end{itemize}
+
+\textbf{激波–重气泡界面}（图 \ref{fig:sum}h，按质量加权）：
+\begin{itemize}
+\item $t=0.3$，激波刚扫过：压缩 0.32，切向略有缩短，压缩主导；
+\item $t=0.6$：压缩 0.48，边测法拉伸 $-0.08$，折线法 0.46；
+\item $t=1.0$：压缩 0.49，拉伸在 0.20 与 0.77 之间；
+\item $t=1.4$：压缩 0.45，拉伸在 0.60 与 1.05 之间。
+\end{itemize}
+后期界面处于强剪切的卷起区，两种估计分别受剪切偏差与折线锯齿影响，所以给出区间：$t=1.4$ 时压缩约占梯度增长的 30\%–43\%。可以确定的是物理图像：激波先以压缩把梯度变陡，随后卷起的拉伸逐渐接管掺混。
+
+\subsection{稳健性与普适性}
+\begin{itemize}
+\item \textbf{分辨率：}通量与交换在全部算例上误差 $\le2\%$；双环流的单向交换呈一阶收敛。
+\item \textbf{位置噪声：}在双环流扩散中加入 0.05、0.1 倍间距的高斯位置噪声，误差为 3.22\% 与 3.24\%，无噪声时为 3.22\%。
+\item \textbf{追踪方式：}激波–等熵涡中，在线与离线追踪的通量相差 0.6\%，扩散解相差 1.1\%，掺混两项各差约 0.03。密度重建在离线追踪下误差升到 11.8\%，是对追踪最敏感的量。
+\item \textbf{普适性：}六个算例覆盖不可压与可压缩、解析与 DNS、光滑流与激波，使用同一套代码和同一组参数，没有针对算例的调参。凡有精确参照的量都达到了上述精度。
+\end{itemize}
+
+\section{逐算例的输运演化}\label{sec:evo}
+每个算例取 4 个时刻，相邻时刻构成 3 个时间窗口。每个算例给出两类结果：
+\begin{itemize}
+\item \textbf{定性：}物质标签点图、密度云图、扩散标量云图；
+\item \textbf{定量：}四条随时间变化的曲线（尽量叠加独立参照），以及逐窗口的输运量。
+\end{itemize}
+逐窗口表中各列的含义：
+\begin{itemize}
+\item 单向流入、流出：窗口内跨过指定截面的物质质量；
+\item 相干度：按质量加权的转移算子的第二奇异值；
+\item 方差比：窗口末与窗口初的标量方差之比；
+\item 拉伸、压缩增量：界面上 $\ln|\nabla c|$ 增长两项在窗口内的变化。
+\end{itemize}
+\begin{figure}[H]\centering\includegraphics[width=\linewidth]{fig_evo_DG.jpg}\caption{双环流。第一行：按初始归属着色的示踪点（黑点为所跟踪的物质界面）；第二行：只凭位置重建的密度；第三行：网络上扩散标量（质量形式）；第四行：单向质量输运、按质量加权的标量方差、界面梯度增长的拉伸与压缩两项（虚线为参照），以及密度误差或逐窗口相干度。}\end{figure}
+\textbf{双环流（不可压）。}
+\begin{itemize}
+\item \textbf{定性：}左环流的物质（红）沿摆动的分界线（$x\approx1$）以瓣的形式被卷入右环流，右环流物质也同样卷入左侧。到 $t=10$，两侧形成交错的物质丝。跟踪的物质线 $x_0=0.5$ 被拉伸并折叠成 S 形，与 FTLE 主脊重合。密度保持均匀（不可压），只在高剪切物质丝处有约 1\% 的重建噪声。扩散标量的锋面沿物质丝被拉长、变薄，混合区随之扩大。
+\item \textbf{定量：}进入右半区的累计单向输运为 0.3255，参照 0.3244（误差 0.3\%）。每个窗口的流入与流出几乎相等，净输运为零，与对称的不可压环流一致。相干度从 0.997 降到 0.993，瓣的累积使相干性逐步下降。标量方差末值 0.558，参照 0.544；逐窗口方差比 0.955、0.899、0.649，混合随物质丝变薄而加速（Batchelor 机制）。界面只有拉伸（逐窗口 +0.45、+0.29、+0.97），压缩为零。
+\end{itemize}
+\begin{center}\small\begin{tabularx}{\linewidth}{@{}lYYYYY@{}}\toprule 窗口 & 单向流入 / 流出（质量） & 相干度 $\sigma_2$ & 方差比 & 拉伸增量 & 压缩增量 \\\midrule {[0, 2.4]} & 0.095 / 0.098 & 0.9973 & 0.955 & +0.450 & 0.000 \\ {[2.4, 5]} & 0.109 / 0.109 & 0.9970 & 0.899 & +0.292 & +0.001 \\ {[5, 10]} & 0.169 / 0.164 & 0.9932 & 0.649 & +0.967 & $-0.002$ \\ \bottomrule\end{tabularx}\end{center}
+\begin{figure}[H]\centering\includegraphics[width=\linewidth]{fig_evo_LO.jpg}\caption{Lamb–Oseen 共转涡对。第一行：按初始归属着色的示踪点（黑点为所跟踪的物质界面）；第二行：只凭位置重建的密度；第三行：网络上扩散标量（质量形式）；第四行：单向质量输运、按质量加权的标量方差、界面梯度增长的拉伸与压缩两项（虚线为参照），以及密度误差或逐窗口相干度。}\end{figure}
+\textbf{Lamb–Oseen 共转涡对（不可压）。}
+\begin{itemize}
+\item \textbf{定性：}左、右两侧的物质被涡对卷成两臂螺旋；扩散标量的锋面随之卷绕。绕左涡的物质圆环在纯差动旋转下基本保持圆形，只是随涡对公转。密度均匀，只在涡核强剪切处出现重建噪声（星严重变形，中位误差 0.42\%）。
+\item \textbf{定量：}累计单向输运 26.58，参照 26.52（0.2\%），每个窗口流入与流出平衡。相干度稳定在 0.9955：涡对的输运接近整体刚性旋转，相干性持久。方差末值 0.778，参照 0.767。界面拉伸逐窗口为 $-0.07$、$+0.31$、$+0.55$，而精确值约为 0。这正是第 \ref{sec:theory} 节 E 的剪切偏差：$\dot\gamma t\gtrsim3$ 后，有限点对被剪切拉伸。
+\end{itemize}
+\begin{center}\small\begin{tabularx}{\linewidth}{@{}lYYYYY@{}}\toprule 窗口 & 单向流入 / 流出（质量） & 相干度 $\sigma_2$ & 方差比 & 拉伸增量 & 压缩增量 \\\midrule {[0, 4.71]} & 8.03 / 8.05 & 0.9956 & 0.954 & $-0.067$ & $-0.004$ \\ {[4.71, 9.42]} & 7.59 / 7.57 & 0.9955 & 0.951 & +0.305 & 0.000 \\ {[9.42, 18.8]} & 10.97 / 10.72 & 0.9954 & 0.858 & +0.547 & +0.002 \\ \bottomrule\end{tabularx}\end{center}
+\begin{figure}[H]\centering\includegraphics[width=\linewidth]{fig_evo_SOD.jpg}\caption{Sod 激波管。第一行：按初始归属着色的示踪点（黑点为所跟踪的物质界面）；第二行：只凭位置重建的密度；第三行：网络上扩散标量（质量形式）；第四行：单向质量输运、按质量加权的标量方差、界面梯度增长的拉伸与压缩两项（虚线为参照），以及密度误差或逐窗口相干度。}\end{figure}
+\textbf{Sod 激波管（可压，精确）。}
+\begin{itemize}
+\item \textbf{定性：}驱动气体（红）推动被驱动气体，接触面右移。激波把被驱动气体压缩成平台区，稀疏扇使驱动气体逐渐膨胀。跟踪的物质线 $x_0=0.1$ 在 $t\approx0.057$ 被激波一次性压缩，之后随流平移。位于接触面的扩散标量锋面缓慢展宽。
+\item \textbf{定量：}跨 $x=0$ 的单向输运随时间线性增长，即质量通量恒定：逐窗口 0.00231、0.00235、0.00464，与窗口长度成正比，没有反向输运。累计 0.009302，精确值 0.009490（$-2.0\%$）。这一偏差来自上下边界两行示踪点的开星，它们按星面积分配到的质量偏低；总质量本身是精确的。平面流中物质只沿 $x$ 运动，各行之间不交换，转移算子可约，所以 $\sigma_2=1$。方差比 0.9718，精确值 0.9717。界面压缩在第一个窗口内为 +0.754，等于精确的激波压缩 $\ln(\rho_2/\rho_1)=\ln2.125$，之后为零；拉伸恒为零。所以平面激波的掺混增强完全来自压缩。
+\end{itemize}
+\begin{center}\small\begin{tabularx}{\linewidth}{@{}lYYYYY@{}}\toprule 窗口 & 单向流入 / 流出（质量） & 相干度 $\sigma_2$ & 方差比 & 拉伸增量 & 压缩增量 \\\midrule {[0.04, 0.09]} & 0.00231 / 0 & 1 & 0.991 & $-0.008$ & +0.754 \\ {[0.09, 0.14]} & 0.00235 / 0 & 1 & 0.993 & 0.000 & 0.000 \\ {[0.14, 0.24]} & 0.00464 / 0 & 1 & 0.987 & 0.000 & 0.000 \\ \bottomrule\end{tabularx}\end{center}
+\begin{figure}[H]\centering\includegraphics[width=\linewidth]{fig_evo_BLAST.jpg}\caption{柱面爆炸波（点图）。第一行：按初始归属着色的示踪点（黑点为所跟踪的物质界面）；第二行：只凭位置重建的密度；第三行：网络上扩散标量（质量形式）；第四行：单向质量输运、按质量加权的标量方差、界面梯度增长的拉伸与压缩两项（虚线为参照），以及密度误差或逐窗口相干度。}\end{figure}
+\textbf{柱面爆炸波（可压，精确）。}
+\begin{itemize}
+\item \textbf{定性：}内部气体（红）强烈膨胀，点图中中心区示踪点变得稀疏，密度降到 1 以下。外部气体被扫进紧贴激波的薄壳，壳内密度接近 6。物质圆环 $r_0=0.5$ 在 $t=6.25$ 被激波追上，瞬间被压缩，随后随流向外膨胀。扩散标量的环形锋面先被压进薄壳而变陡，之后被扩散展宽。
+\item \textbf{定量：}跨 $r=0.6$ 的外向输运从激波到达（$t=9$）时才开始，逐窗口为 0、0.952、0.341；累计 1.293，精确值 1.295（0.15\%）。方差比 0.925、0.784、0.771，末值 0.559，精确值 0.558。混合在标量被压进薄壳、梯度变陡时最快。界面上：
+\begin{itemize}
+\item 第一个窗口压缩 +1.64（激波扫过），之后两个窗口为 $-0.46$、$-0.55$（再膨胀）；
+\item 拉伸 +0.02、+0.26、+0.27，对应圆环半径的增长，精确值为 $p\ln(t/t_c)$；
+\item 因此掺混先被激波压缩强烈增强，随后因膨胀而减弱。
+\end{itemize}
+末时刻的密度误差为 0.42\%。
+\end{itemize}
+\begin{center}\small\begin{tabularx}{\linewidth}{@{}lYYYYY@{}}\toprule 窗口 & 单向流入 / 流出（质量） & 相干度 $\sigma_2$ & 方差比 & 拉伸增量 & 压缩增量 \\\midrule {[1, 7]} & 0 / 0 & 1 & 0.925 & +0.022 & +1.637 \\ {[7, 13]} & 0.952 / 0 & 1 & 0.784 & +0.258 & $-0.458$ \\ {[13, 25]} & 0.341 / 0 & 1 & 0.771 & +0.272 & $-0.545$ \\ \bottomrule\end{tabularx}\end{center}
+\begin{figure}[H]\centering\includegraphics[width=\linewidth]{fig_evo_SB.jpg}\caption{激波–重气泡（在线追踪；扩散参照为带显式扩散的 DNS 标量）。第一行：按初始归属着色的示踪点（黑点为所跟踪的物质界面）；第二行：只凭位置重建的密度；第三行：网络上扩散标量（质量形式）；第四行：单向质量输运、按质量加权的标量方差、界面梯度增长的拉伸与压缩两项（虚线为参照），以及密度误差或逐窗口相干度。}\end{figure}
+\textbf{激波–重气泡（可压，DNS）。}
+\begin{itemize}
+\item \textbf{定性：}激波在 $t\approx0.17$–0.5 扫过气泡，气泡被压缩，密度升高。斜压涡量随后把气泡卷成肾形，形成涡对。重气体（红）被卷入涡中，物质界面（黑）缠绕成螺旋，扩散标量沿螺旋臂展开。
+\item \textbf{定量：}
+\begin{itemize}
+\item 重气体进入 $x>1$ 的质量（图中曲线）与 DNS 的三个时刻吻合，末值相差 1.3\%，即初始界面平滑带来的总量差。
+\item 全部气体跨 $x=1$ 的逐窗口输运为 0.026、0.303、0.156（下表），主要发生在激波后流动最强的 $[0.6,1.0]$。
+\item 相干度在每个窗口都约为 0.998。方差比 0.843、0.896、0.885，末值 0.669，DNS 为 0.666（0.4\%）。
+\item 界面上：$[0,0.6]$ 压缩 +0.48、拉伸 $-0.09$，激波压缩主导；$[0.6,1.0]$ 拉伸 +0.27、压缩 +0.01；$[1.0,1.4]$ 拉伸 +0.41、压缩 $-0.05$。所以掺混机制在 $t\approx0.6$ 由压缩主导转为拉伸主导。卷起区的拉伸值受剪切偏差影响，应视为上限。
+\end{itemize}
+\end{itemize}
+\begin{center}\small\begin{tabularx}{\linewidth}{@{}lYYYYY@{}}\toprule 窗口 & 单向流入 / 流出（质量） & 相干度 $\sigma_2$ & 方差比 & 拉伸增量 & 压缩增量 \\\midrule {[0, 0.6]} & 0.026 / 0 & 0.9980 & 0.843 & $-0.090$ & +0.481 \\ {[0.6, 1.0]} & 0.303 / 0 & 0.9981 & 0.896 & +0.274 & +0.012 \\ {[1.0, 1.4]} & 0.156 / 0 & 0.9978 & 0.885 & +0.409 & $-0.048$ \\ \bottomrule\end{tabularx}\end{center}
+\begin{figure}[H]\centering\includegraphics[width=\linewidth]{fig_evo_SV.jpg}\caption{激波–等熵涡（在线追踪；右下图叠加了离线追踪的密度误差）。第一行：按初始归属着色的示踪点（黑点为所跟踪的物质界面）；第二行：只凭位置重建的密度；第三行：网络上扩散标量（质量形式）；第四行：单向质量输运、按质量加权的标量方差、界面梯度增长的拉伸与压缩两项（虚线为参照），以及密度误差或逐窗口相干度。}\end{figure}
+\textbf{激波–等熵涡（可压，DNS）。}
+\begin{itemize}
+\item \textbf{定性：}平面激波在 $t\approx0.1$–0.4 扫过涡，涡被压缩成椭圆，环境气体被压缩成台阶。涡核物质（红）保持相干并随流输运。初始位于 $x_0=0.75$ 的扩散锋面被激波压缩，又被涡卷成螺旋。
+\item \textbf{定量：}
+\begin{itemize}
+\item 跨 $x=0.9$ 的单向输运在激波扫过之前很小，之后由波后流动带动迅速增加，逐窗口为 0.0002、0.0009、0.072。
+\item 方差比 0.993、0.981、0.960。
+\item 界面圆环在激波扫过期间先后被压缩 +0.13、+0.29；拉伸 $-0.19$，即沿激波法向的弧段被缩短；之后两项都接近零。
+\item 右下图是最直观的离线追踪问题：在线追踪的密度误差始终在 0.33\% 以内，离线追踪的误差在激波扫过后跃升到 11.8\%，并保持不变（第 \ref{sec:offline} 节）。
+\end{itemize}
+\end{itemize}
+\begin{center}\small\begin{tabularx}{\linewidth}{@{}lYYYYY@{}}\toprule 窗口 & 单向流入 / 流出（质量） & 相干度 $\sigma_2$ & 方差比 & 拉伸增量 & 压缩增量 \\\midrule {[0, 0.2]} & 0.0002 / 0.0002 & 1.0000 & 0.993 & $-0.021$ & +0.126 \\ {[0.2, 0.4]} & 0.0009 / 0.0005 & 0.9987 & 0.981 & $-0.188$ & +0.288 \\ {[0.4, 0.6]} & 0.072 / 0 & 0.9987 & 0.960 & +0.023 & $-0.020$ \\ \bottomrule\end{tabularx}\end{center}
+
+\section{离线追踪的适用条件}\label{sec:offline}
+\textbf{性质：数值问题，但有理论结构。}位置法密度严格等于产生这些轨迹的流映射的 Jacobian。离线轨迹是“快照加线性时间插值”这一速度场的流映射，不是真实流动的流映射。两者之差满足一阶恒等式
+\begin{equation}
+\delta\ln J=\nabla\!\cdot\delta x ,
+\end{equation}
+即密度误差等于轨迹误差场的散度。在激波–等熵涡 DNS 上，$\delta\ln J$ 与 $\nabla\cdot\delta x$ 的相关为 0.72，斜率 0.73；斜率小于 1 来自误差已达 $O(0.1)$ 的非线性。按面积加权的平均误差只有 $-1.1\%$，中位误差却有 11.85\%：总质量守恒，局部分布出错。
+
+\textbf{机理与标度律。}设激波速度为 $U_s$、波后速度为 $u_p$、快照间隔为 $\Delta t_s$。线性时间插值在“相邻两快照的激波位置”之间的整个区间内给出同一个从 0 线性增长的速度，所以区间内所有示踪点得到同样的位移 $u_p\Delta t_s/2$，彼此之间没有压缩；全部压缩集中在各快照时刻的激波位置上，形成台阶。因此当快照激波 Courant 数 $C_s=U_s\Delta t_s/\Delta x$ 远大于激波的数值厚度时，区间内部的 $\delta\ln J$ 趋于 $\ln\eta$（整个激波压缩比），而且与 $\Delta t_s$ 无关。
+
+一维可控模型（$M_s=1.3$，$\ln\eta=0.416$）给出：
+\begin{itemize}
+\item $C_s\le2$ 时误差约为 0；
+\item $C_s=5.2$、10、20 时，中位 $|\delta\ln J|$ 为 0.151、0.275、0.409；
+\item 随激波平移坐标系的插值，在所有 $C_s$ 下误差都在 $10^{-4}$ 以下。
+\end{itemize}
+
+\begin{table}[H]\centering\small
+\caption{各算例实测的快照激波 Courant 数（由 C 通道检测到的穿越时刻拟合激波速度）与受影响情况。}
+\begin{tabularx}{\linewidth}{@{}lYY@{}}\toprule
+算例 & $C_s$ & 是否受影响 \\\midrule
+双环流、Lamb–Oseen & 无间断 & 不受影响（解析速度积分） \\
+Sod & 2.2（以示踪点间距计） & 本文用精确轨迹，不受影响；若离线追踪则处于临界 \\
+柱面爆炸波 & 0.56 & 不受影响 \\
+激波–重气泡 & 5.3（以网格计） & 本文为在线追踪，不受影响；若离线追踪会受影响 \\
+激波–等熵涡 & 5.3（以网格计） & 离线追踪受影响：密度误差 11.8\%，在线为 0.33\% \\
+\bottomrule\end{tabularx}
+\end{table}
+
+\textbf{判据与对策。}要求 $U_s\Delta t_s\lesssim\delta_{\rm shock}$；对 MUSCL 一类格式，$\delta_{\rm shock}\approx2\Delta x$。不满足时，有四种可行的做法：
+\begin{itemize}
+\item 在求解器内追踪；
+\item 加密存盘；
+\item 在随激波平移的坐标系中做时间插值；
+\item 若有欧拉密度场，直接把它插值到示踪点上。
+\end{itemize}
+提高时间插值的阶数、加密积分子步或删失都无效。这一判据适用于所有基于变形梯度的拉格朗日量（$J$、FTLE、Cauchy–Green 张量）；通量、标签与转移算子只依赖位置本身，不受影响。
+
+\section{讨论}
+\textbf{测度的选择是物理问题，不是数值细节。}在可压缩流动中，输运、扩散与组分都必须以质量为测度：
+\begin{itemize}
+\item 体积形式的扩散误差大一个数量级；
+\item 按计数估计的组分偏差 2.5 倍；
+\item 面积加权的转移算子不满足测度守恒。
+\end{itemize}
+这一点与 Hodge 分解中“质量不进入内积”并不矛盾。波—涡分离问的是速度场的几何结构，需要不加权的 $L^2$；输运问的是物质的去向，需要质量测度。
+
+\textbf{局限与失效边界。}
+\begin{itemize}
+\item \textbf{分辨率：}最小可分辨尺度为示踪点间距，比间距薄的结构与高 Péclet 数下的分子掺混需要亚格子处理。
+\item \textbf{剪切：}界面切向强剪切下，局部拉伸估计只在 $\dot\gamma t\lesssim3$ 内可靠；卷起后期需要沿界面自适应加点。
+\item \textbf{追踪质量：}密度重建对离线追踪敏感，适用条件是快照激波 Courant 数 $C_s\lesssim2$（第 \ref{sec:offline} 节）。
+\item \textbf{参照本身：}DNS 被动标量带有数值扩散，组分比较中约 23\% 的差异由此而来。
+\item \textbf{维度：}目前只验证了二维；三维推广中，质量账本与弱形式不变，刚度改为四面体 P1 元。
+\end{itemize}
+
+\section{结论}
+我们在拉格朗日轨迹网络上建立了以质量为测度的物质输运框架，只用示踪点位置：
+\begin{itemize}
+\item 质量账本与跨激波的推迟重锚，保证了密度与质量的精确重建；
+\item 输运估计量与按质量加权的转移算子，给出区域间输运与相干集；
+\item 质量矩阵与时间无关的拉格朗日对流—扩散方程，满足守恒与耗散；
+\item 拉伸—压缩分解，定量刻画掺混机理。
+\end{itemize}
+在六个覆盖不可压缩与可压缩、光滑与激波流动的算例中，同一实现在所有有精确参照的量上都达到 0.2\%–6\% 的精度，并明确了剪切与追踪两类失效边界。这表明该框架是普适的，可以直接用于激波–边界层相互作用等复杂可压缩流动中的质量输运与掺混机理分析。
+
+\vspace{6pt}\small
+\noindent\textbf{参考文献}（凭记忆，引用前请核对）。
+G.~Haller, Lagrangian coherent structures, \emph{Annu.\ Rev.\ Fluid Mech.} 47 (2015)；
+G.~Froyland, An analytic framework for identifying finite-time coherent sets, \emph{Physica D} 250 (2013)；
+G.~Froyland, A dynamic Laplacian for identifying Lagrangian coherent structures, \emph{Nonlinearity} 28 (2015)；
+G.~Froyland, E.~Kwok, A dynamic Laplace operator for finite-time coherent sets on weighted manifolds, \emph{J.\ Nonlinear Sci.} 30 (2020)；
+G.~Haller, D.~Karrasch, F.~Kogelbauer, Material barriers to diffusive and stochastic transport, \emph{PNAS} 115 (2018)；
+G.~K.~Batchelor, \emph{J.\ Fluid Mech.} 5 (1959)；
+J.~M.~Ottino, \emph{The Kinematics of Mixing} (1989)；
+W.~E.~Schaap, R.~van de Weygaert, \emph{A\&A} 363 (2000)；
+J.~J.~Quirk, S.~Karni, \emph{J.\ Fluid Mech.} 318 (1996)；
+G.~A.~Sod, \emph{J.\ Comput.\ Phys.} 27 (1978)。
+\end{document}

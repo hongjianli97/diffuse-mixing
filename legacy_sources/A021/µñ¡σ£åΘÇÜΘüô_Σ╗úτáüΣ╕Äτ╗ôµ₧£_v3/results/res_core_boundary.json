@@ -1,0 +1,102 @@
+{
+ "LO_Rd6.5": {
+  "n_lavd_vortices": 2,
+  "n_detected": 2,
+  "detected_area_frac": 0.14041451721686507,
+  "IoU_proposed": 0.8077810402684564,
+  "IoU_weight_only": 0.6075922818791947,
+  "IoU_afrcE_only": 0.8077810402684564,
+  "centre_offset_weight": 0.14966908952912628,
+  "centre_offset_afrcE": 0.5034124862318378,
+  "n_weight_convex": 1,
+  "IoU_weight_convex": 0.4212292476156835,
+  "IoU_adaptive": 0.8077810402684564,
+  "adaptive_sources": [
+   "curvature"
+  ]
+ },
+ "LO_a1.4_Rd5.6": {
+  "n_lavd_vortices": 2,
+  "n_detected": 2,
+  "detected_area_frac": 0.11008221075848994,
+  "IoU_proposed": 0.5373253848207136,
+  "IoU_weight_only": 0.48732093602633686,
+  "IoU_afrcE_only": 0.5028917163448705,
+  "centre_offset_weight": 0.011992090762588477,
+  "centre_offset_afrcE": 0.5802991450206086,
+  "n_weight_convex": 2,
+  "IoU_weight_convex": 0.8501552207162868,
+  "IoU_adaptive": 0.5373253848207136,
+  "adaptive_sources": [
+   "curvature"
+  ]
+ },
+ "DG": {
+  "n_lavd_vortices": 2,
+  "n_detected": 0,
+  "detected_area_frac": 0.0,
+  "IoU_proposed": 0.0,
+  "IoU_weight_only": 0.8824130009359312,
+  "IoU_afrcE_only": 0.05450752766189008,
+  "centre_offset_weight": 0.14969651973957737,
+  "centre_offset_afrcE": 1.243108435319804,
+  "n_weight_convex": 1,
+  "IoU_weight_convex": 0.025172478090620922,
+  "IoU_adaptive": 0.8824580815388544,
+  "adaptive_sources": [
+   "weight"
+  ]
+ },
+ "SB": {
+  "n_lavd_vortices": 0,
+  "n_detected": 2,
+  "detected_area_frac": 0.0531402064668698,
+  "n_weight_convex": 0,
+  "IoU_weight_convex": null,
+  "IoU_adaptive": null,
+  "adaptive_sources": [
+   "curvature"
+  ]
+ },
+ "SV_in": {
+  "n_lavd_vortices": 1,
+  "n_detected": 1,
+  "detected_area_frac": 0.05860998650472334,
+  "IoU_proposed": 0.6833569516611557,
+  "IoU_weight_only": 0.4973219911783239,
+  "IoU_afrcE_only": 0.6753795586163719,
+  "centre_offset_weight": 0.13358029000571237,
+  "centre_offset_afrcE": 0.22251045310474937,
+  "n_weight_convex": 1,
+  "IoU_weight_convex": 0.14634530560806552,
+  "IoU_adaptive": 0.6833569516611557,
+  "adaptive_sources": [
+   "curvature"
+  ]
+ },
+ "SV_off": {
+  "n_lavd_vortices": 1,
+  "n_detected": 1,
+  "detected_area_frac": 0.056963562753036434,
+  "IoU_proposed": 0.6594807238394964,
+  "IoU_weight_only": 0.5084584980237155,
+  "IoU_afrcE_only": 0.6650424394844389,
+  "centre_offset_weight": 0.1560925581957041,
+  "centre_offset_afrcE": 0.27199188711366346,
+  "n_weight_convex": 0,
+  "IoU_weight_convex": 0.0,
+  "IoU_adaptive": 0.6594807238394964,
+  "adaptive_sources": [
+   "curvature"
+  ]
+ },
+ "BLAST": {
+  "n_lavd_vortices": 0,
+  "n_detected": 0,
+  "detected_area_frac": 0.0,
+  "n_weight_convex": 0,
+  "IoU_weight_convex": null,
+  "IoU_adaptive": null,
+  "adaptive_sources": []
+ }
+}

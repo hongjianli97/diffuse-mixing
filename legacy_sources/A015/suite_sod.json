@@ -1,0 +1,36 @@
+{
+ "sod": {
+  "15": {
+   "ledger rho": 0.012435733443609279,
+   "ledger rho (off shock)": 0.011194271050194387,
+   "theta in rarefaction": 0.11256444985294561,
+   "pressure / std": 0.019064410123668545,
+   "pressure / std (off shock)": 0.007766726192913468,
+   "entropy abs rms (off shock)": 0.10612891907830241,
+   "entropy contrast exact": 1.6565376135020735
+  },
+  "25": {
+   "ledger rho": 0.012389181139964747,
+   "ledger rho (off shock)": 0.011581415094212292,
+   "theta in rarefaction": 0.08684201659996002,
+   "pressure / std": 0.01914736226846757,
+   "pressure / std (off shock)": 0.001353717780880684,
+   "entropy abs rms (off shock)": 0.08680204862360731,
+   "entropy contrast exact": 1.6565376135020735
+  },
+  "35": {
+   "ledger rho": 0.012999198394280001,
+   "ledger rho (off shock)": 0.012023960692499164,
+   "theta in rarefaction": 0.07586999918762106,
+   "pressure / std": 0.021151845727088732,
+   "pressure / std (off shock)": 0.005968035217770701,
+   "entropy abs rms (off shock)": 0.09371623831949706,
+   "entropy contrast exact": 1.6565376135020735
+  },
+  "shock": {
+   "eta ledger / exact - 1": 0.0,
+   "Delta s RH(eta ledger) / exact - 1": 0.0,
+   "n tracers": 2100
+  }
+ }
+}

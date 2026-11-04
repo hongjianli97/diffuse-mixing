@@ -1,0 +1,11 @@
+{
+ "test_thm1_polygon": true,
+ "test_thm2_polygon": true,
+ "test_pq_algebra": true,
+ "test_frame_rule": true,
+ "test_uniaxial_iff": true,
+ "test_nanson_2d": true,
+ "test_reduced_ring_affine": true,
+ "test_polygon_area_expansion": true,
+ "test_noise_constant_hexagon": true
+}

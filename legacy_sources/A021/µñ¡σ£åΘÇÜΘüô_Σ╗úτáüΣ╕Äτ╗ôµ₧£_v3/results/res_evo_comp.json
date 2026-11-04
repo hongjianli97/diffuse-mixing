@@ -1,0 +1,131 @@
+{
+ "SOD": {
+  "windows": [
+   {
+    "window": "[0.04, 0.09]",
+    "mass_into_side": 0.002308965523212548,
+    "mass_out_of_side": 0.0,
+    "sigma2_mass": 1.0,
+    "variance_ratio": 0.9912272751615631,
+    "d_stretch": -0.007804357312252917,
+    "d_compression": 0.7535786983882794
+   },
+   {
+    "window": "[0.09, 0.14]",
+    "mass_into_side": 0.0023496439074973843,
+    "mass_out_of_side": 0.0,
+    "sigma2_mass": 1.0,
+    "variance_ratio": 0.9927942811251965,
+    "d_stretch": 1.474514954580286e-17,
+    "d_compression": -9.992007221626409e-16
+   },
+   {
+    "window": "[0.14, 0.24]",
+    "mass_into_side": 0.004643167993345738,
+    "mass_out_of_side": 0.0,
+    "sigma2_mass": 1.0,
+    "variance_ratio": 0.9874688587660271,
+    "d_stretch": -1.0928757898653885e-16,
+    "d_compression": 3.3306690738754696e-16
+   }
+  ],
+  "C_s_tracer_spacing": 2.217864887308021
+ },
+ "BLAST": {
+  "windows": [
+   {
+    "window": "[1, 7]",
+    "mass_into_side": 0.0,
+    "mass_out_of_side": 0.0,
+    "sigma2_mass": 1.0000000000000002,
+    "variance_ratio": 0.9251627268136394,
+    "d_stretch": 0.022114512670529374,
+    "d_compression": 1.6366472147955817
+   },
+   {
+    "window": "[7, 13]",
+    "mass_into_side": 0.9520568482133012,
+    "mass_out_of_side": 0.0,
+    "sigma2_mass": 1.0000000000000004,
+    "variance_ratio": 0.784108597364826,
+    "d_stretch": 0.25793300350259313,
+    "d_compression": -0.45756700573315556
+   },
+   {
+    "window": "[13, 25]",
+    "mass_into_side": 0.3407331821868468,
+    "mass_out_of_side": 0.0,
+    "sigma2_mass": 1.0000000000000004,
+    "variance_ratio": 0.7711269998185822,
+    "d_stretch": 0.27246936141944333,
+    "d_compression": -0.5449387228388866
+   }
+  ],
+  "C_s_tracer_spacing": 0.5579789022246991
+ },
+ "SB": {
+  "windows": [
+   {
+    "window": "[0, 0.6]",
+    "mass_into_side": 0.026114168000507986,
+    "mass_out_of_side": 0.0,
+    "sigma2_mass": 0.998032189039647,
+    "variance_ratio": 0.8430156305494259,
+    "d_stretch": -0.09003423520480852,
+    "d_compression": 0.4813043198037131
+   },
+   {
+    "window": "[0.6, 1]",
+    "mass_into_side": 0.3026815125745839,
+    "mass_out_of_side": 0.0,
+    "sigma2_mass": 0.9980511813478733,
+    "variance_ratio": 0.8960819984375862,
+    "d_stretch": 0.27416391889661795,
+    "d_compression": 0.011844696456295933
+   },
+   {
+    "window": "[1, 1.4]",
+    "mass_into_side": 0.1555032144341018,
+    "mass_out_of_side": 0.0,
+    "sigma2_mass": 0.9978259018776487,
+    "variance_ratio": 0.885293895597128,
+    "d_stretch": 0.40909723158483785,
+    "d_compression": -0.048465430505731044
+   }
+  ],
+  "C_s_grid": 5.326344931401531
+ },
+ "SV": {
+  "windows": [
+   {
+    "window": "[0, 0.2]",
+    "mass_into_side": 0.0001945884057284078,
+    "mass_out_of_side": 0.0002062048646718706,
+    "sigma2_mass": 0.9999999999999996,
+    "variance_ratio": 0.9927516472182183,
+    "d_stretch": -0.020924260582382767,
+    "d_compression": 0.1257713185320907
+   },
+   {
+    "window": "[0.2, 0.4]",
+    "mass_into_side": 0.0008776946765312244,
+    "mass_out_of_side": 0.0004920698662940626,
+    "sigma2_mass": 0.9987316399188647,
+    "variance_ratio": 0.9814291193390247,
+    "d_stretch": -0.1875861737893696,
+    "d_compression": 0.2875395518955608
+   },
+   {
+    "window": "[0.4, 0.6]",
+    "mass_into_side": 0.07192443360327233,
+    "mass_out_of_side": 0.0,
+    "sigma2_mass": 0.9987264524727648,
+    "variance_ratio": 0.9603539155218049,
+    "d_stretch": 0.023275532213727773,
+    "d_compression": -0.020390920425508496
+   }
+  ],
+  "C_s_grid": 5.253383812782631,
+  "offline_density_err_final": 0.11770548651784507
+ }
+}

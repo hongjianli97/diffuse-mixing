@@ -1,0 +1,45 @@
+{
+ "case": "dg",
+ "S": 51,
+ "N0": 12800,
+ "E_G": 228613,
+ "s25": {
+  "t": 5.0,
+  "density ledger rel. dev. from 1 (median, 95%)": [
+   0.0060588490906263726,
+   0.03395261892304452
+  ],
+  "density DTFE rel. dev. from 1 (median, 95%)": [
+   0.2770322269674258,
+   2.0598802449307887
+  ],
+  "vorticity corr": 0.999841032541294,
+  "curl share of rho*a (Euler: ~0)": 0.2113883577471895,
+  "mu_E": 0.0001082085015394479,
+  "strain corr (pair vs three-point)": 0.9996642318098591
+ },
+ "s49": {
+  "t": 9.8,
+  "density ledger rel. dev. from 1 (median, 95%)": [
+   0.0124863472498985,
+   0.05799406504123559
+  ],
+  "density DTFE rel. dev. from 1 (median, 95%)": [
+   0.3201946238885448,
+   2.5617450949303926
+  ],
+  "vorticity corr": 0.9998081370556667,
+  "curl share of rho*a (Euler: ~0)": 0.20043753761550712,
+  "mu_E": 0.00020364774821023937,
+  "strain corr (pair vs three-point)": 0.999636645836165
+ },
+ "structures": {
+  "LAVD network vs exact: Spearman": 0.9997492954753833,
+  "LAVD top-10% Jaccard": 0.9829589465530596,
+  "Spearman afrc~ftle": 0.8576632548685501,
+  "Spearman afrc~dbs": 0.47504619606237,
+  "Spearman ftle~dbs": 0.5183831782318614,
+  "Spearman dbs~enc": 0.5041904433700758,
+  "Spearman lavd_net~ftle": -0.6864110901327429
+ }
+}

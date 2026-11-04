@@ -1,0 +1,74 @@
+{
+ "LO": {
+  "dome_corr_LAVD": 0.9911201300960237,
+  "cores": 2,
+  "edges_G": 42536,
+  "edges_afrc": 17831,
+  "sec": 3.71573543548584
+ },
+ "DG": {
+  "vort_r": 0.999887909036945,
+  "div_noise": 0.009261270447547359,
+  "grad_leak_med": 0.0007482758480044563,
+  "attribution_share_g_med": 0.0487896092236042,
+  "stretch_sp_FTLE": 0.8569290399125022,
+  "bottleneck_sp_FTLE": 0.6949946027471261,
+  "turnover_sp_FTLE": 0.19457987416915776,
+  "stokesLAVD_sp_LAVD": 0.9998396422180299,
+  "dome_corr_LAVD": 0.9626491738733921,
+  "cores": 2,
+  "sec": 25.142684936523438
+ },
+ "SOD": {
+  "lnJ_err_med": 3.6637359812630166e-15,
+  "detect_rate": 1.0,
+  "false_alarm": 0.0055948174322732625,
+  "spurious_LAVD_p99": 0.006379762653624322,
+  "Hodge_coexact_leak_med": 0.0003409913487813089,
+  "cores": 0,
+  "max_rotation_rad": 0.12923132537547125,
+  "sec": 9.100597381591797
+ },
+ "BLAST": {
+  "lnJ_err_med": 0.005790675973093684,
+  "detect_rate": 0.9998393316195373,
+  "false_alarm": 0.09371554575523705,
+  "spurious_LAVD_p99": 1.5782150411804318e-06,
+  "Hodge_coexact_leak_med": 0.0027318949531682573,
+  "cores": 0,
+  "max_rotation_rad": 0.0017950975019331745,
+  "sec": 18.923205137252808
+ },
+ "SB_full": {
+  "vort_r": 0.9951693018560156,
+  "div_r": 0.8062055478461553,
+  "rho_err_med": 0.006048737376919633,
+  "kelvin_L_t06": -0.2533766189811371,
+  "kelvin_E_t06": -0.2550690091012149,
+  "detect_rate_vs_pressure": 1.0,
+  "sec": 51.890275716781616
+ },
+ "SB_elliptic": {
+  "dome_corr_DNSLAVD": 0.9843198399842816,
+  "cores": 1,
+  "sec": 26.55339479446411
+ },
+ "SB_backward": {
+  "edge_step_stretch": -0.0051925504736280055,
+  "edge_step_bottleneck": -0.05850713489956399,
+  "edge_step_FTLE": 0.15242877822100004
+ },
+ "SV_in": {
+  "dome_corr_DNSLAVD": 0.9533792484648204,
+  "cores": 1,
+  "edge_step_stretch_bwd": 0.0012430474882008037,
+  "sec": 12.338632583618164
+ },
+ "SV_off": {
+  "dome_corr_DNSLAVD": 0.9531294299032357,
+  "cores": 1,
+  "edge_step_stretch_bwd": 0.0015159419223261554,
+  "sec": 10.64208173751831
+ },
+ "SV_stokesLAVD_mode_spearman": 0.9934368674411822
+}

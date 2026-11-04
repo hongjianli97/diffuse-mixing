@@ -1,0 +1,72 @@
+{
+  "sources": [
+    {
+      "path": "runs/reconnect-affine-shear-spatial/sha256.json",
+      "sha256": "904f0adf8b062530970fbe68277e876412111285f9d0ccfb8c47a48e8c80fff3",
+      "role": "parent cumulative seal6374entries"
+    },
+    {
+      "path": "runs/reconnect-affine-shear-spatial/next-gate-spec.json",
+      "sha256": "26fab9f87bfe3b30d2d3e557d94e20133787c63ef7cc9560c5ae118b5896975b",
+      "role": "immutable single N32 contact registration; old executedfalse retained"
+    },
+    {
+      "path": "runs/reconnect-affine-shear-spatial/results.json",
+      "sha256": "03a9b9e799b9a5c661b833fa8b284b7fde835d63b11c9192ffbb07a2721bb07f",
+      "role": "passed T3 affine shear three-space-level evidence"
+    },
+    {
+      "path": "research/reconnect/AFFINE_SHEAR_SPATIAL_COMPARISON.md",
+      "sha256": "6bf7595d81f576b5596479f4a735222f63f086f935413e6957ed9ddccf7e0b0e",
+      "role": "previous T3 report,unchanged"
+    },
+    {
+      "path": "exports/ltn-affine-shear-spatial.zip",
+      "sha256": "7466b3e90291dbb1132858d0f9521dda6f06f7d87b9c234d7d66e13ab496d183",
+      "role": "recovered parent22MB delivery,unchanged"
+    },
+    {
+      "path": "research/reconnect/CONTACT_PERIODIC_SPECTRAL_BASIS.md",
+      "sha256": "ee14cff8f18915caf6abd2c1971ca11b1f8b5d5e7018ccadf218aa2d6aa33572",
+      "role": "original complete weighted transmission basis andtailproof"
+    },
+    {
+      "path": "runs/reconnect-contact-finite-time-reference/reference-K128-p90.json",
+      "sha256": "38b465656337432d16389a2757306e657842111437bbc94ea31236be9a4f9aa0",
+      "role": "stored128mode90digit continuous initial projections"
+    },
+    {
+      "path": "research/reconnect/periodic_voronoi_fv.py",
+      "sha256": "b3b24dc9547d4bd6d1fba531104b552e2f37bb0950cb103e8923e7f00eccaa3e",
+      "role": "unchanged pointdefined geometry andordinary half resistance"
+    },
+    {
+      "path": "research/reconnect/voronoi_time_action.py",
+      "sha256": "0db8f151cfcec1b93889acfc6ba3ec6f4621d9bf7417dbf488df5eac3df1330a",
+      "role": "unchanged sparse exponential/fulluniformization"
+    },
+    {
+      "path": "research/reconnect/voronoi_time16_core.py",
+      "sha256": "faab14ab22563a3ee3a0f5981bbdc86acdfd733548c90106100a49aac556a484",
+      "role": "unchanged K16 chronology andactual H/I"
+    },
+    {
+      "path": "research/reconnect/cartesian_fv_modes.py",
+      "sha256": "3e03f374c99cb2cf9fc196ae14126724c75a93577ce8de9f34b5da1a8966daf4",
+      "role": "independent extra-geometry full-mode control only"
+    },
+    {
+      "path": "docs/METHOD.md",
+      "sha256": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+      "role": "original T1-T4,material PDE,threelevels,H andphysical accuracy criteria"
+    },
+    {
+      "path": "docs/CODEX_TASK.md",
+      "sha256": "b585447c6a038febc3c364723946aea80cedce91109db16bb99f15d0304b3142",
+      "role": "original three densitysource andshock/contact scope"
+    }
+  ],
+  "new_material_data_not_recoveredv080": true,
+  "old_candidate_reruns": 0,
+  "new_reference_PDE_solves": 0
+}

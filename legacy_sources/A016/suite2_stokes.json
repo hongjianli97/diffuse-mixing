@@ -1,0 +1,16 @@
+{
+ "free wall": {
+  "omega (all)": 0.011728830243377163,
+  "omega (first 2h at wall)": 0.002561972377381042,
+  "mu_E / nu - 1": -1.2002294753761318,
+  "Phi three-point": -0.0004911260317731481,
+  "gradient share of rho a (global; exact 0 up to the mean shear stress)": 0.30381265115131695
+ },
+ "wall extension": {
+  "omega (all)": 0.011991450147171475,
+  "omega (first 2h at wall)": 0.0028416760197345955,
+  "mu_E / nu - 1": 0.062484120116095276,
+  "Phi three-point": -0.0004945841795194195,
+  "gradient share of rho a (global; exact 0 up to the mean shear stress)": 0.029060386527242507
+ }
+}

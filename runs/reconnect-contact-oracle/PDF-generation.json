@@ -1,0 +1,12 @@
+{
+  "PDF_explicitly_requested_by_user": true,
+  "report_pdf": "exports/LTN_contact_oracle_report_20261104.pdf",
+  "sha256": "e0bc90250ccd903a4cd680da4404f2da0f7211693ae4910981aae11347e47795",
+  "pages": 4,
+  "xelatex_exit_code": 0,
+  "overfull_boxes": 0,
+  "missing_characters": 0,
+  "all_four_pages_rendered_and_visually_reviewed": true,
+  "contains_original_failure_records_and_Stage3_scope": true,
+  "software_or_environment_published": false
+}

@@ -1,0 +1,53 @@
+{
+ "LO_paper": {
+  "n_cores_LHDdome": 2,
+  "n_cores_paperdome": 2,
+  "Phi_max_rad": 24.066306673410207,
+  "sec": 2.8,
+  "corr_LHDdome": 0.987134621130568,
+  "corr_paperdome": 0.9922561416784478,
+  "corr_LHD_Phi": 0.9898347687760403
+ },
+ "DG": {
+  "n_cores_LHDdome": 2,
+  "n_cores_paperdome": 2,
+  "Phi_max_rad": 9.72775895374062,
+  "sec": 17.6,
+  "corr_LHDdome": 0.9631768796688467,
+  "corr_paperdome": 0.9269140327544548,
+  "corr_LHD_Phi": 0.9656964134480182
+ },
+ "SB": {
+  "n_cores_LHDdome": 1,
+  "n_cores_paperdome": 1,
+  "Phi_max_rad": 15.294058176265132,
+  "sec": 25.5,
+  "corr_LHDdome": 0.9819125868820846,
+  "corr_paperdome": 0.9008222433554341,
+  "corr_LHD_Phi": 0.993493904262587
+ },
+ "SV_in": {
+  "n_cores_LHDdome": 1,
+  "n_cores_paperdome": 1,
+  "Phi_max_rad": 5.813469256678614,
+  "sec": 12.2,
+  "corr_LHDdome": 0.9534820161358848,
+  "corr_paperdome": 0.9050850139976804,
+  "corr_LHD_Phi": 0.9997531980287385
+ },
+ "SV_off": {
+  "n_cores_LHDdome": 1,
+  "n_cores_paperdome": 2,
+  "Phi_max_rad": 5.988670973754158,
+  "sec": 11.8,
+  "corr_LHDdome": 0.9531160601302359,
+  "corr_paperdome": 0.27837422034299447,
+  "corr_LHD_Phi": 0.9997741136070727
+ },
+ "BLAST": {
+  "n_cores_LHDdome": 0,
+  "n_cores_paperdome": 38,
+  "Phi_max_rad": 0.0017950968227216316,
+  "sec": 15.6
+ }
+}

@@ -1,0 +1,31 @@
+{
+  "exact_rates_minimal_raw_tail_and_all_control_states_verified": true,
+  "maximum_primary_control_mass_norm_difference": 5.969238683202452e-16,
+  "maximum_shared_vs_symmetric_action_mass_norm_difference": 4.430809897766461e-15,
+  "maximum_raw_mass_drift": 3.3024798173908465e-16,
+  "positive_weights_or_states_normalized": false,
+  "independent_reference80_100_and_separate_time_tails_verified": true,
+  "independent_Pade17_full_mode_states_passed": true,
+  "independent_geometry_and_interface_conductances_verified": true,
+  "face_counts_by_exact_g": {
+    "5764607523034235/288230376151711744": 992,
+    "5764607523034235/72057594037927936": 992,
+    "1152921504606847/36028797018963968": 64
+  },
+  "old_candidate_reruns": 0,
+  "new_reference_PDE_solves": 0,
+  "registered_same_backend_contact_oracle_control_passed": true,
+  "comparison_decision": "T4_same_backend_static_contact_oracle_control_passed",
+  "original_files_verified": 782,
+  "historical_attachments_verified": 15,
+  "prior_formal_manifests_verified": 99,
+  "new_software_checks": 3,
+  "recorded_checks_total": 493,
+  "tests_first_attempt_passed": false,
+  "tests_second_attempt_passed": true,
+  "moving_shock_T4_closed": false,
+  "all_three_density_sources_closed": false,
+  "stage3_physical_acceptance": "incomplete",
+  "fluid_orc_enabled": false,
+  "kappa_computed": false
+}

@@ -1,0 +1,4 @@
+/home/claude/bench/cases.py:120: RuntimeWarning: invalid value encountered in multiply
+  xe = np.where(x0 < 0, C * te ** b + a * te / (1 - b), 0.0)
+SOD kernel rms width / h: {2: 0.79, 3: 0.96, 4: 1.11, 6: 1.36, 8: 1.57, 12: 1.92, 16: 2.22}
+SOD shares clean [1.005, 0.99, 0.996, 0.985, 0.511, 1.009, 0.995, 1.654, 1.009, 0.434]  noise [[], [], []]

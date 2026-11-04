@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/diffuse-mixing/research/reconnect/audit_contact_oracle.py", line 183, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--directory',required=True);a=p.parse_args();main(a.directory)
+                                                                                             ^^^^^^^^^^^^^^^^^
+  File "/workspace/diffuse-mixing/research/reconnect/audit_contact_oracle.py", line 153, in main
+    result=evaluate(data,meta,run,path,control,cm);assert plain_json(result)==read(out/'results.json')
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

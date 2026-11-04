@@ -1,0 +1,57 @@
+{
+ "rho_from_positions_vs_DNS_mederr_t1.4": 0.007011118123974258,
+ "t=0.6": {
+  "relL2_mass_form": 0.014182102187434958,
+  "relL2_volume_form": 0.1311909672751638,
+  "relL2_pure_advection": 0.2637522521546681,
+  "var_ratio_mass_form": 1.0037755494053788,
+  "var_ratio_volume_form": 0.9674982220738748,
+  "heavy_total_mass_form": 0.9999999999999982
+ },
+ "t=1.0": {
+  "relL2_mass_form": 0.021385374638135536,
+  "relL2_volume_form": 0.19111403698360271,
+  "relL2_pure_advection": 0.3910916501156716,
+  "var_ratio_mass_form": 1.0025028036715284,
+  "var_ratio_volume_form": 0.9356415893207206,
+  "heavy_total_mass_form": 0.999999999999997
+ },
+ "t=1.4": {
+  "relL2_mass_form": 0.06125883155709547,
+  "relL2_volume_form": 0.24337455633331262,
+  "relL2_pure_advection": 0.537025036849381,
+  "var_ratio_mass_form": 1.0038334129924433,
+  "var_ratio_volume_form": 0.8878653609113748,
+  "heavy_total_mass_form": 0.9999999999999959
+ },
+ "mixing": {
+  "t=0.3": {
+   "stretch": -0.06979119328754561,
+   "compression": 0.31528756972983807,
+   "total": 0.24549637644229244,
+   "compression_share": 1.2842860424212863,
+   "interface_length_ratio": 0.9710887217471461
+  },
+  "t=0.6": {
+   "stretch": 0.46417646273298074,
+   "compression": 0.481304319803713,
+   "total": 0.9454807825366938,
+   "compression_share": 0.509057749976038,
+   "interface_length_ratio": 2.1680896893296184
+  },
+  "t=1.0": {
+   "stretch": 0.7656521888403909,
+   "compression": 0.49314901626000907,
+   "total": 1.2588012051003998,
+   "compression_share": 0.39176083901244463,
+   "interface_length_ratio": 3.6181621500943297
+  },
+  "t=1.4": {
+   "stretch": 1.0479102156633813,
+   "compression": 0.4446835857542779,
+   "total": 1.4925938014176592,
+   "compression_share": 0.29792672683748206,
+   "interface_length_ratio": 5.274685099982863
+  }
+ }
+}

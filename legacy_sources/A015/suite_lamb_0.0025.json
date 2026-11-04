@@ -1,0 +1,11 @@
+{
+ "Lamb-Oseen dt=0.0025 h=0.0025": {
+  "omega (face)": 0.006965389473153009,
+  "enstrophy": -0.001499881311891155,
+  "Kelvin dGamma/dt (viscous torque)": 0.5485122565483802,
+  "pressure (cyclostrophic)": 0.0004588664669149947,
+  "mu_E / nu - 1": -0.0004066428838992442,
+  "Phi three-point": -0.000479145696001599,
+  "Phi pair strain": -0.002103411878121649
+ }
+}

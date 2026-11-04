@@ -1,0 +1,32 @@
+{
+ "15": {
+  "spearman_ledger": 0.5441398673356466,
+  "pearson_ledger": 0.68401897412061,
+  "dil2_ledger_tri": 3.6027193379055538,
+  "dil2_ledger_tri_offshock": 0.05195535355154891,
+  "dil2_dns": 8.424202316941361,
+  "dil2_dns_offshock": 0.0806714417843647,
+  "enstrophy_net": 1.6724150112696774,
+  "enstrophy_dns": 1.701747661517653
+ },
+ "30": {
+  "spearman_ledger": 0.9424458192414807,
+  "pearson_ledger": 0.7702770627939883,
+  "dil2_ledger_tri": 3.709535196951831,
+  "dil2_ledger_tri_offshock": 0.068943980435683,
+  "dil2_dns": 9.021759762363908,
+  "dil2_dns_offshock": 0.0767670745563031,
+  "enstrophy_net": 6.004237757482746,
+  "enstrophy_dns": 6.07240418617698
+ },
+ "50": {
+  "spearman_ledger": 0.9067136905977243,
+  "pearson_ledger": 0.7953570110682852,
+  "dil2_ledger_tri": 0.4454889054872254,
+  "dil2_ledger_tri_offshock": 0.4418356196196971,
+  "dil2_dns": 0.9735031456470319,
+  "dil2_dns_offshock": 0.2779763439242726,
+  "enstrophy_net": 4.7942430915369645,
+  "enstrophy_dns": 4.8413533380930565
+ }
+}

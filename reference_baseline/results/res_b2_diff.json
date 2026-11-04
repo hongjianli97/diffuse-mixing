@@ -1,0 +1,50 @@
+{
+ "sod": {
+  "network_mass": 0.0017448017844989186,
+  "network_volume": 0.01846267280199075,
+  "sph": 0.008797417777116257,
+  "pure_advection": 0.0742771724781663,
+  "time_network": 25.770968437194824,
+  "time_sph": 48.30455470085144,
+  "mass_cons_network": 6.661338147750939e-16,
+  "mass_cons_sph": 6.772360450213455e-15,
+  "overshoot_network": 3.0386626548306594e-10,
+  "overshoot_sph": 3.9968028886505635e-15
+ },
+ "blast": {
+  "network_mass": 0.02194476899090825,
+  "network_volume": 0.2229823747767802,
+  "sph": 0.04769300801284307,
+  "pure_advection": 1.0910782744642347,
+  "time_network": 64.63853025436401,
+  "time_sph": 113.37132000923157,
+  "mass_cons_network": 4.9960036108132044e-15,
+  "mass_cons_sph": 8.992806499463768e-15,
+  "overshoot_network": 0.0,
+  "overshoot_sph": 0.0
+ },
+ "dg": {
+  "network_mass": 0.032204066643794715,
+  "network_volume": 0.028213751213139245,
+  "sph": 0.16959821823459437,
+  "pure_advection": 0.6611982094766005,
+  "time_network": 63.3025906085968,
+  "time_sph": 101.37522888183594,
+  "mass_cons_network": 1.7763568394002505e-15,
+  "mass_cons_sph": 1.1435297153639112e-14,
+  "overshoot_network": 0.0,
+  "overshoot_sph": 0.0
+ },
+ "sb": {
+  "network_mass": 0.0629235126655364,
+  "network_volume": 0.23641019239182906,
+  "sph": 0.0665087115928518,
+  "pure_advection": 0.5181154133538926,
+  "time_network": 15.45612907409668,
+  "time_sph": 28.38857078552246,
+  "mass_cons_network": 3.9968028886505635e-15,
+  "mass_cons_sph": 1.6764367671839864e-14,
+  "overshoot_network": 0.0,
+  "overshoot_sph": 0.0
+ }
+}

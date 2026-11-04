@@ -1,0 +1,3100 @@
+[
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/build_notebook.py",
+    "line": 46,
+    "tags": [
+      "dynamic_exec"
+    ],
+    "code": "code(\"\"\"exec(open('scripts/n4_shock_lib.py').read())"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/build_notebook.py",
+    "line": 54,
+    "tags": [
+      "dynamic_exec"
+    ],
+    "code": "exec(src.split('# ================= D1')[0].split(\"R = {'D'\")[0]); exec('def lag1d' + src.split('def lag1d')[1].split('def polylen')[0])"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/build_notebook.py",
+    "line": 75,
+    "tags": [
+      "dynamic_exec"
+    ],
+    "code": "code(\"\"\"exec(open('scripts/g5_dynlap.py').read().split('out = {}')[0])"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/build_notebook.py",
+    "line": 115,
+    "tags": [
+      "dynamic_exec"
+    ],
+    "code": "exec(compile(src, \"cell%d\" % n, \"exec\"), ns)"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/lhd/bcom.py",
+    "line": 54,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "R[:, s] = np.nan_to_num(0.5*(np.log(A[2])+np.log(A[3]))-0.5*(np.log(A[0])+np.log(A[1])))"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/lhd/cases_mix.py",
+    "line": 125,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"dns_%s.pkl\" % which, \"rb\"))"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/lhd/classify.py",
+    "line": 99,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "wv = cand & ~sh & (np.nan_to_num(ind[\"W\"]) > Wc); sh_wv = sh | wv"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/lhd/lhdx.py",
+    "line": 138,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "w = np.nan_to_num(out[\"vort\"] - out[\"wbar\"][:, None])"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/lhd/lhdx.py",
+    "line": 218,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "return np.trapezoid(np.abs(np.nan_to_num(om - wb[:, None])), dx=dt, axis=0)"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/lhd/netdiff.py",
+    "line": 72,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "return K, np.where(M > 0, M, 1.0)"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/lhd/stream.py",
+    "line": 202,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "rho[:, st0] = rho_init[st0][None, :]*np.exp(-np.nan_to_num(lnJ[:, st0]-lnJ[0, st0]))"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/lhd/trajnet.py",
+    "line": 94,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "dev = np.nan_to_num(dev)"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/lhd/trajnet.py",
+    "line": 108,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "return np.abs(np.nan_to_num(med)) / self.dt"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/b1b.py",
+    "line": 4,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"sb_dns_dx0.005.pkl\", \"rb\")); fr = D[\"frames\"]; rho = D[\"E\"][\"rho\"]; x = fr[-1]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/b1b.py",
+    "line": 10,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"rm_dns_dx0.005.pkl\", \"rb\")); fr = D[\"frames\"]; rho = D[\"E\"][\"rho\"]; x = fr[-1]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/b1_density.py",
+    "line": 31,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"sv_dns.pkl\", \"rb\")); fr = D[\"fr_in\"]; rho = D[\"Ev\"][\"rho\"]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/b2b.py",
+    "line": 3,
+    "tags": [
+      "dynamic_exec"
+    ],
+    "code": "exec(open(\"b2_diff.py\").read().split(\"def three\")[1].join([\"def three\", \"\"]).split(\"# Sod\")[0]) if False else None"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/b2b.py",
+    "line": 4,
+    "tags": [
+      "dynamic_exec"
+    ],
+    "code": "src = open(\"b2_diff.py\").read(); exec(\"def three\" + src.split(\"def three\")[1].split(\"# Sod\")[0])"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/b2b.py",
+    "line": 6,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"sb_diff_dns.pkl\", \"rb\")); fr = D[\"frames\"]; S, N, _ = fr.shape; rho0 = D[\"rho\"][0]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/b2_diff.py",
+    "line": 2,
+    "tags": [
+      "dynamic_exec"
+    ],
+    "code": "exec(open(\"tr_b.py\").read().split(\"# ================= D1\")[0].split(\"R = {'D'\")[0])"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/b2_diff.py",
+    "line": 3,
+    "tags": [
+      "dynamic_exec"
+    ],
+    "code": "exec(\"def lag1d\" + open(\"tr_b.py\").read().split(\"def lag1d\")[1].split(\"def polylen\")[0])"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/b2_diff.py",
+    "line": 4,
+    "tags": [
+      "dynamic_exec"
+    ],
+    "code": "exec(\"def eul2d\" + open(\"tr_b.py\").read().split(\"def eul2d\")[1].split(\"def lag1d\")[0])"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/b2_diff.py",
+    "line": 30,
+    "tags": [
+      "dynamic_exec"
+    ],
+    "code": "exec(\"def kin\" + open(\"tr_b.py\").read().split(\"def kin\")[1].split(\"cref = lag1d\")[0])"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/b3_sens.py",
+    "line": 7,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"sv_dns.pkl\", \"rb\")); x = D[\"fr_in\"][-1]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/b3_t9.py",
+    "line": 7,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"sv_dns.pkl\", \"rb\")); x = D[\"fr_in\"][-1]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/b4c.py",
+    "line": 6,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"sv_dns.pkl\", \"rb\")); x = D[\"fr_in\"][-1]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/b4_real.py",
+    "line": 9,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"sv_dns.pkl\", \"rb\")); fr = D[\"fr_in\"]; rho0 = D[\"Ev\"][\"rho\"][0]; ref = D[\"Ev\"][\"rho\"][-1]; om = D[\"Ev\"][\"om\"]; t = D[\"t\"]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/b4_real.py",
+    "line": 13,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"sb_dns_dx0.005.pkl\", \"rb\")); fr = D[\"frames\"]; rho0 = D[\"E\"][\"rho\"][0]; ref = D[\"E\"][\"rho\"][-1]; om = None"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/dns_ref.py",
+    "line": 7,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"%s_dns_dx%g.pkl\" % (pre, dx), \"rb\")); fr = D[\"frames\"]; t = D[\"t\"]; rho = D[\"E\"][\"rho\"]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/dns_ref.py",
+    "line": 35,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(path, \"rb\")); fr = D[\"fr_in\"]; rho = D[\"Ev\"][\"rho\"]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/figs.py",
+    "line": 43,
+    "tags": [
+      "external_data"
+    ],
+    "code": "d = pickle.load(open(nm+\".pkl\", \"rb\")); sg = d[\"sig\"]; ok = np.isfinite(sg[:, 1])"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/figs.py",
+    "line": 52,
+    "tags": [
+      "external_data"
+    ],
+    "code": "b = pickle.load(open(\"bench.pkl\", \"rb\"))"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/figs.py",
+    "line": 65,
+    "tags": [
+      "external_data"
+    ],
+    "code": "d = pickle.load(open(nm+\".pkl\", \"rb\")); rs = d[\"rs\"]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/figs.py",
+    "line": 78,
+    "tags": [
+      "external_data"
+    ],
+    "code": "d = pickle.load(open(nm+\".pkl\", \"rb\")); P0 = d[\"P0\"]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/figs.py",
+    "line": 94,
+    "tags": [
+      "external_data"
+    ],
+    "code": "d = pickle.load(open(\"sv.pkl\", \"rb\")); rsv = json.load(open(\"res_sv.json\"))"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/figs_split.py",
+    "line": 1,
+    "tags": [
+      "dynamic_exec"
+    ],
+    "code": "exec(open(\"figs.py\").read().split(\"# ---------------- fig 1\")[0])"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/figs_split.py",
+    "line": 5,
+    "tags": [
+      "external_data"
+    ],
+    "code": "d = pickle.load(open(\"sod.pkl\", \"rb\")); P0 = d[\"P0\"]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/figs_split.py",
+    "line": 10,
+    "tags": [
+      "external_data"
+    ],
+    "code": "d = pickle.load(open(nm+\".pkl\", \"rb\"))"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/figs_split.py",
+    "line": 16,
+    "tags": [
+      "external_data"
+    ],
+    "code": "d = pickle.load(open(nm+\".pkl\", \"rb\")); sg = d[\"sig\"]; ok = np.isfinite(sg[:, 1])"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/figs_split.py",
+    "line": 24,
+    "tags": [
+      "external_data"
+    ],
+    "code": "d = pickle.load(open(\"sv.pkl\", \"rb\")); rsv = json.load(open(\"res_sv.json\"))"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/figs_split.py",
+    "line": 45,
+    "tags": [
+      "external_data"
+    ],
+    "code": "d = pickle.load(open(nm+\".pkl\", \"rb\")); f = d[\"ftle\"]; labmap(ax[k], d[\"P0\"], f[\"lab\"], f[\"cand\"], s=1.5)"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/figs_split.py",
+    "line": 48,
+    "tags": [
+      "external_data"
+    ],
+    "code": "d = pickle.load(open(\"sv.pkl\", \"rb\")); labmap(ax[2], d[\"P0\"], d[\"labf\"], d[\"candf\"], s=1.2); ax[2].set_title(\"(c) 激波–涡：后向 FTLE 候选点\", fontsize=7.5)"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/figs_v2.py",
+    "line": 1,
+    "tags": [
+      "dynamic_exec"
+    ],
+    "code": "exec(open(\"figs.py\").read().split(\"# ---------------- fig 1\")[0])"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/figs_v2.py",
+    "line": 5,
+    "tags": [
+      "external_data"
+    ],
+    "code": "d = pickle.load(open(\"rm.pkl\", \"rb\")); r = json.load(open(\"res_rm.json\"))"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/g1_adapt.py",
+    "line": 10,
+    "tags": [
+      "external_data"
+    ],
+    "code": "if nm == \"sv\": D = pickle.load(open(\"sv_dns.pkl\", \"rb\")); fr = D[\"fr_in\"]; rho = D[\"Ev\"][\"rho\"]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/g1_adapt.py",
+    "line": 11,
+    "tags": [
+      "external_data"
+    ],
+    "code": "else: D = pickle.load(open({\"sb\": \"sb_dns_dx0.005.pkl\", \"rm\": \"rm_dns_dx0.005.pkl\"}[nm], \"rb\")); fr = D[\"frames\"]; rho = D[\"E\"][\"rho\"]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/g6_sz.py",
+    "line": 10,
+    "tags": [
+      "external_data"
+    ],
+    "code": "try: D = pickle.load(open(f, \"rb\"))"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/n6_sv.py",
+    "line": 4,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"sv_dns.pkl\", \"rb\")); fr = D[\"fr_in\"]; t = D[\"t\"]; Ev = D[\"Ev\"]; S, N, _ = fr.shape"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/r1_rm.py",
+    "line": 6,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"rm_dns_dx0.005.pkl\", \"rb\")); fr = D[\"frames\"]; t = D[\"t\"]; Ev = D[\"E\"]; S, N, _ = fr.shape; a0 = D[\"a0\"]; dx = D[\"dx\"]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/s1_exp.py",
+    "line": 12,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"sv_dns.pkl\", \"rb\")); fr = D[\"fr_in\"]; RHO = D[\"Ev\"][\"rho\"].astype(float); x = fr[-1]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/s2_fair.py",
+    "line": 6,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"sv_dns.pkl\", \"rb\")); fr = D[\"fr_in\"]; RHO = D[\"Ev\"][\"rho\"].astype(float); x = fr[-1]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/tr_b.py",
+    "line": 119,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "S_ = pickle.load(open('/home/claude/bench/sv_dns.pkl', 'rb')); P0 = S_['P0']; r0 = np.hypot(P0[:, 0] - S_['xv'], P0[:, 1] - S_['yv'])"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/v1_circ_line.py",
+    "line": 15,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(f, \"rb\")); fr = D[\"frames\"]; t = D[\"t\"]; E = D[\"E\"]; S = len(t)"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/v5_diffusion.py",
+    "line": 9,
+    "tags": [
+      "dynamic_exec"
+    ],
+    "code": "exec(open(\"scripts/tr_b.py\").read().split(\"# ================= D1\")[0].split(\"R = {'D'\")[0])"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/v5_diffusion.py",
+    "line": 10,
+    "tags": [
+      "dynamic_exec"
+    ],
+    "code": "exec(\"def lag1d\" + open(\"scripts/tr_b.py\").read().split(\"def lag1d\")[1].split(\"def polylen\")[0])"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/v6_figure.py",
+    "line": 19,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"runs/sb_dns_dx0.005.pkl\", \"rb\")); fr = D[\"frames\"]; t = D[\"t\"]; E = D[\"E\"]; P0 = fr[0]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/v6_figure.py",
+    "line": 62,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "plt.tight_layout(); plt.savefig(\"figures/fig_verification.pdf\"); plt.savefig(\"/home/claude/tex/fig_verification.pdf\"); print(\"fig ok\")"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/v7_dns3.py",
+    "line": 19,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(FILES[nm], \"rb\")); fr = D[\"fr_in\"] if nm == \"sv\" else D[\"frames\"]; E = D[\"Ev\"] if nm == \"sv\" else D[\"E\"]; t = D[\"t\"]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/vcases.py",
+    "line": 16,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(f, \"rb\")); fr = D[\"fr_in\"] if nm == \"sv\" else D[\"frames\"]; rho = (D[\"Ev\"] if nm == \"sv\" else D[\"E\"])[\"rho\"]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/vcases.py",
+    "line": 24,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"runs/sb_dns_dx0.005.pkl\", \"rb\")); fr = D[\"frames\"]; rho = D[\"E\"][\"rho\"]; x = fr[-1]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/viz_fields.py",
+    "line": 11,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "OUT = \"/home/claude/w/viz/\""
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/viz_fields.py",
+    "line": 116,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"sv_dns.pkl\", \"rb\")); fr, t = D[\"fr_in\"], D[\"t\"]; dt = t[1]-t[0]; Ev = D[\"Ev\"]; N = fr.shape[1]; P0 = fr[0]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/viz_fields.py",
+    "line": 128,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"sb_dns_dx0.005.pkl\", \"rb\")); fr, t = D[\"frames\"], D[\"t\"]; dt = D[\"dt\"]; E = D[\"E\"]; N = fr.shape[1]; P0 = fr[0]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/viz_fields.py",
+    "line": 129,
+    "tags": [
+      "external_data"
+    ],
+    "code": "Dd = pickle.load(open(\"sb_diff_dns.pkl\", \"rb\"))"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/viz_fields.py",
+    "line": 144,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"sbv_dns_dx0.0035.pkl\", \"rb\")); fr, t = D[\"frames\"], D[\"t\"]; E = D[\"E\"]; P0 = fr[0]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/viz_fields.py",
+    "line": 155,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"rm_dns_dx0.005.pkl\", \"rb\")); fr, t = D[\"frames\"], D[\"t\"]; dt = D[\"dt\"]; E = D[\"E\"]; N = fr.shape[1]; P0 = fr[0]; a0 = D[\"a0\"]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/viz_stats.py",
+    "line": 60,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"sv_dns.pkl\", \"rb\")); fr, t = D[\"fr_in\"], D[\"t\"]; dt = t[1]-t[0]; Ev = D[\"Ev\"]; P0 = fr[0]; ss = [0, 10, 20, 30]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/viz_stats.py",
+    "line": 74,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(path, \"rb\")); fr, t = D[\"frames\"], D[\"t\"]; dt = D[\"dt\"]; E = D[\"E\"]; P0 = fr[0]; ss = [0, 30, 50, 70]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/viz_stats.py",
+    "line": 84,
+    "tags": [
+      "external_data"
+    ],
+    "code": "Dd = pickle.load(open(\"sb_diff_dns.pkl\", \"rb\")); lj = ledger(Dd[\"frames\"])[0]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/viz_stats.py",
+    "line": 91,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"rm_dns_dx0.005.pkl\", \"rb\")); fr, t = D[\"frames\"], D[\"t\"]; dt = D[\"dt\"]; E = D[\"E\"]; P0 = fr[0]; a0 = D[\"a0\"]; N = fr.shape[1]"
+  },
+  {
+    "path": "legacy_sources/A000/LHD_v2.1_代码论文报告/LHD_v2.1/scripts/viz_stats.py",
+    "line": 96,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "w = np.abs(np.nan_to_num(om))*X.star_area(fr[30])"
+  },
+  {
+    "path": "legacy_sources/A002/LHD_v3.2/scripts/run_sb_accel.py",
+    "line": 21,
+    "tags": [
+      "external_data"
+    ],
+    "code": "S_ = pickle.load(open(ST, \"rb\")); sv, P, fi, A, tf, frames = S_[\"sv\"], S_[\"P\"], S_[\"fi\"], S_[\"A\"], S_[\"tf\"], S_[\"frames\"]"
+  },
+  {
+    "path": "legacy_sources/A002/LHD_v3.2/scripts/run_sb_accel.py",
+    "line": 77,
+    "tags": [
+      "external_data"
+    ],
+    "code": "ref = pickle.load(open(REF, \"rb\"))[\"frames\"]; md = float(np.abs(frames - ref).max())"
+  },
+  {
+    "path": "legacy_sources/A002/LHD_v3.2/scripts/v9_viscous_shock.py",
+    "line": 56,
+    "tags": [
+      "external_data"
+    ],
+    "code": "if os.path.exists(cf): D = pickle.load(open(cf, \"rb\"))"
+  },
+  {
+    "path": "legacy_sources/A002/LHD_v3.2/scripts/run_sb_torque.py",
+    "line": 14,
+    "tags": [
+      "external_data"
+    ],
+    "code": "S_ = pickle.load(open(ST, \"rb\")); sv, P, fi, T, tf = S_[\"sv\"], S_[\"P\"], S_[\"fi\"], S_[\"T\"], S_[\"tf\"]; frames = S_[\"frames\"]"
+  },
+  {
+    "path": "legacy_sources/A002/LHD_v3.2/scripts/run_sb_torque.py",
+    "line": 40,
+    "tags": [
+      "external_data"
+    ],
+    "code": "ref = pickle.load(open(\"runs/sb_dns_dx0.005.pkl\", \"rb\"))[\"frames\"]"
+  },
+  {
+    "path": "legacy_sources/A002/LHD_v3.2/scripts/v8_ledger_v4.py",
+    "line": 33,
+    "tags": [
+      "external_data"
+    ],
+    "code": "Y = pickle.load(open(FILES[nm], \"rb\"))[\"E\"][\"Y1\"]; clean = np.abs(Y[-1] - Y[0]) <= 0.01"
+  },
+  {
+    "path": "legacy_sources/A002/LHD_v3.2/scripts/v8_ledger_v4.py",
+    "line": 53,
+    "tags": [
+      "external_data"
+    ],
+    "code": "if os.path.exists(hf): hot = np.load(hf)"
+  },
+  {
+    "path": "legacy_sources/A002/LHD_v3.2/scripts/v11_figure.py",
+    "line": 41,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "plt.tight_layout(); plt.savefig(\"paper/fig_v4.pdf\"); plt.savefig(\"report/fig_v4.pdf\"); plt.savefig(\"/tmp/fig_v4.png\", dpi=80); print(\"ok\")"
+  },
+  {
+    "path": "legacy_sources/A002/LHD_v3.2/scripts/v10_t4.py",
+    "line": 12,
+    "tags": [
+      "external_data"
+    ],
+    "code": "t0 = time.time(); D = pickle.load(open(FILES[nm], \"rb\")); fr, t, E = D[\"frames\"], D[\"t\"], D[\"E\"]"
+  },
+  {
+    "path": "legacy_sources/A002/LHD_v3.2/scripts/v10_t4.py",
+    "line": 13,
+    "tags": [
+      "external_data"
+    ],
+    "code": "hot = np.load(\"runs/hot_%s_2-3-4-6-8-12-16-24-32_ad.npy\" % nm); P0 = fr[0]"
+  },
+  {
+    "path": "legacy_sources/A002/LHD_v3.2/scripts/v10_t4.py",
+    "line": 37,
+    "tags": [
+      "external_data"
+    ],
+    "code": "Tq = np.load(\"runs/sb_torque.npz\")[\"T\"]; Sm = len(t); th = r[\"th\"]; triR = r[\"triR\"]"
+  },
+  {
+    "path": "legacy_sources/A002/LHD_v3.2/scripts/v10_t4.py",
+    "line": 51,
+    "tags": [
+      "external_data"
+    ],
+    "code": "Aq = np.load(af)[\"A\"]; Sm = len(t); th = r[\"th\"]; triR = r[\"triR\"]"
+  },
+  {
+    "path": "legacy_sources/A002/LHD_v3.2/scripts/v10_t4.py",
+    "line": 64,
+    "tags": [
+      "external_data"
+    ],
+    "code": "Z = np.load(mf); assert np.array_equal(Z[\"tri0\"], tri0)"
+  },
+  {
+    "path": "legacy_sources/A002/LHD_v3.2/scripts/v10b_t4_dt.py",
+    "line": 12,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(pk, \"rb\")); fr, t, E = D[\"frames\"][::step], D[\"t\"][::step], {k: v[::step] for k, v in D[\"E\"].items()}"
+  },
+  {
+    "path": "legacy_sources/A003/lhd/lhdx.py",
+    "line": 138,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "w = np.nan_to_num(out[\"vort\"] - out[\"wbar\"][:, None])"
+  },
+  {
+    "path": "legacy_sources/A003/lhd/lhdx.py",
+    "line": 218,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "return np.trapezoid(np.abs(np.nan_to_num(om - wb[:, None])), dx=dt, axis=0)"
+  },
+  {
+    "path": "legacy_sources/A006/t3_spec.py",
+    "line": 7,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A006/t5b.py",
+    "line": 3,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A006/t5b.py",
+    "line": 4,
+    "tags": [
+      "external_data"
+    ],
+    "code": "z = np.load('sb_lite_m.npz'); N0 = int(z['N0']); P0 = z['frames'][0][:N0]"
+  },
+  {
+    "path": "legacy_sources/A006/t5b.py",
+    "line": 6,
+    "tags": [
+      "external_data"
+    ],
+    "code": "mt3 = np.load('out/maps_t3.npz'); mp = np.load('out/maps_all.npz'); res = {}"
+  },
+  {
+    "path": "legacy_sources/A006/netmix.py",
+    "line": 13,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A006/netmix.py",
+    "line": 46,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "iso = self.m <= 0; self.m[iso] = np.median(self.m[~iso])      # isolated tracers (no triangle)"
+  },
+  {
+    "path": "legacy_sources/A006/netmix.py",
+    "line": 117,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "def load_sb(path_net=\"/home/claude/w/sb_net_m.pkl\", path_lite=\"/home/claude/w/sb_lite_m.npz\"):"
+  },
+  {
+    "path": "legacy_sources/A006/netmix.py",
+    "line": 119,
+    "tags": [
+      "external_data"
+    ],
+    "code": "d = pickle.load(open(path_net, 'rb')); z = np.load(path_lite)"
+  },
+  {
+    "path": "legacy_sources/A006/fig1.py",
+    "line": 2,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd'); import cjk"
+  },
+  {
+    "path": "legacy_sources/A006/fig1.py",
+    "line": 6,
+    "tags": [
+      "external_data"
+    ],
+    "code": "net, z = NM.load_sb(); N0 = int(z['N0']); fr = net.fr; t = z['t']; mp = dict(np.load('out/maps_all.npz')); af = np.load('out/maps_afrc.npz')"
+  },
+  {
+    "path": "legacy_sources/A006/fig1.py",
+    "line": 32,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "ax.tripcolor(Triangulation(P[:, 0], P[:, 1], T[ok]), np.nan_to_num(v), cmap=cmap, vmin=lim[0], vmax=lim[1], shading='gouraud', rasterized=True)"
+  },
+  {
+    "path": "legacy_sources/A006/fig2.py",
+    "line": 2,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); import cjk"
+  },
+  {
+    "path": "legacy_sources/A006/t2_build_m.py",
+    "line": 3,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A006/t2_build_m.py",
+    "line": 5,
+    "tags": [
+      "external_data"
+    ],
+    "code": "z = np.load('sb_lite.npz'); fr = z['frames']; N = fr.shape[1]"
+  },
+  {
+    "path": "legacy_sources/A006/t1b.py",
+    "line": 2,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A006/t2_series.py",
+    "line": 4,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A006/t4_afrc.py",
+    "line": 2,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A006/t4_afrc.py",
+    "line": 4,
+    "tags": [
+      "external_data"
+    ],
+    "code": "z = np.load('sb_lite.npz'); fr = z['frames']"
+  },
+  {
+    "path": "legacy_sources/A006/t3chk2.py",
+    "line": 3,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A006/t2_build.py",
+    "line": 2,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A006/t2_build.py",
+    "line": 4,
+    "tags": [
+      "external_data"
+    ],
+    "code": "o = pickle.load(open('LHD_v3.2/sb_dns_dx0.005.pkl', 'rb'))"
+  },
+  {
+    "path": "legacy_sources/A006/t3chk.py",
+    "line": 3,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A006/t1_sod_filter.py",
+    "line": 4,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A006/t1_sod_filter.py",
+    "line": 66,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "json.dump(res, open('/home/claude/w/out/res_t1_sod.json', 'w'), indent=1)"
+  },
+  {
+    "path": "legacy_sources/A006/t5c.py",
+    "line": 4,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A006/t5c.py",
+    "line": 10,
+    "tags": [
+      "external_data"
+    ],
+    "code": "mt2 = np.load('out/maps_t2_a.npz'); mp = dict(np.load('out/maps_all.npz')); af = np.load('out/maps_afrc.npz')"
+  },
+  {
+    "path": "legacy_sources/A006/t5_maps.py",
+    "line": 3,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A006/t5_maps.py",
+    "line": 8,
+    "tags": [
+      "external_data"
+    ],
+    "code": "mt3 = np.load('out/maps_t3.npz'); af = np.load('out/maps_afrc.npz')"
+  },
+  {
+    "path": "legacy_sources/A006/t5_maps.py",
+    "line": 9,
+    "tags": [
+      "external_data"
+    ],
+    "code": "mt2 = dict(np.load('out/maps_t2_a.npz'))"
+  },
+  {
+    "path": "legacy_sources/A007/rm/rm_series.py",
+    "line": 4,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A007/rm/rm_series.py",
+    "line": 8,
+    "tags": [
+      "external_data"
+    ],
+    "code": "b = np.load('base_%s.npz' % case); d = pickle.load(open('net_%s.pkl' % case, 'rb'))"
+  },
+  {
+    "path": "legacy_sources/A007/rm/rm_series.py",
+    "line": 43,
+    "tags": [
+      "external_data"
+    ],
+    "code": "mk = pickle.load(open('marker_%s.pkl' % case, 'rb')); xi = lambda y: 0.5 + 0.1 * np.cos(2 * np.pi * y)"
+  },
+  {
+    "path": "legacy_sources/A007/rm/rm_take2.py",
+    "line": 6,
+    "tags": [
+      "external_data"
+    ],
+    "code": "r = json.load(open('res_%s_G0.0001_ser.json' % case)); b = np.load('base_%s.npz' % case); net = pickle.load(open('net_%s.pkl' % case, 'rb'))"
+  },
+  {
+    "path": "legacy_sources/A007/rm/rm_take2.py",
+    "line": 8,
+    "tags": [
+      "external_data"
+    ],
+    "code": "mk = pickle.load(open('marker_%s.pkl' % case, 'rb'))"
+  },
+  {
+    "path": "legacy_sources/A007/rm/cutlam.py",
+    "line": 15,
+    "tags": [
+      "external_data"
+    ],
+    "code": "case = sys.argv[1]; b = np.load('base_%s.npz' % case); net = pickle.load(open('net_%s.pkl' % case, 'rb')); N = int(b['N'])"
+  },
+  {
+    "path": "legacy_sources/A007/rm/cutlam.py",
+    "line": 17,
+    "tags": [
+      "external_data"
+    ],
+    "code": "mk = pickle.load(open('marker_%s.pkl' % case, 'rb'))"
+  },
+  {
+    "path": "legacy_sources/A007/rm/rm_run.py",
+    "line": 8,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A007/rm/rm_run.py",
+    "line": 11,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "ck = '/home/claude/w/rm/rm_%s_ck.pkl' % case"
+  },
+  {
+    "path": "legacy_sources/A007/rm/rm_run.py",
+    "line": 61,
+    "tags": [
+      "external_data"
+    ],
+    "code": "st = pickle.load(open(ck, 'rb')); sv = RM.__new__(RM); sv.__dict__.update(st['sv']); P, M, lab = st['P'], st['M'], st['lab']"
+  },
+  {
+    "path": "legacy_sources/A007/rm/rm_build.py",
+    "line": 3,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A007/rm/rm_build.py",
+    "line": 6,
+    "tags": [
+      "external_data"
+    ],
+    "code": "st = pickle.load(open('rm_%s_ck.pkl' % case, 'rb')); rec = st['rec']"
+  },
+  {
+    "path": "legacy_sources/A007/rm/fig_rm_fields.py",
+    "line": 2,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); import cjk"
+  },
+  {
+    "path": "legacy_sources/A007/rm/fig_rm_fields.py",
+    "line": 6,
+    "tags": [
+      "external_data"
+    ],
+    "code": "b = np.load('base_%s.npz' % case); net = pickle.load(open('net_%s.pkl' % case, 'rb')); mk = pickle.load(open('marker_%s.pkl' % case, 'rb'))"
+  },
+  {
+    "path": "legacy_sources/A007/rm/fig_rm_fields.py",
+    "line": 7,
+    "tags": [
+      "external_data"
+    ],
+    "code": "ms = np.load('maps_series_%s.npz' % case); mc = np.load('maps_c_%s_G0.0001.npz' % case)"
+  },
+  {
+    "path": "legacy_sources/A007/rm/fig_rm_fields.py",
+    "line": 27,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "ax.tripcolor(Triangulation(P[:, 0], P[:, 1], T[ok]), np.nan_to_num(v), cmap=cmap, vmin=lim[0], vmax=lim[1], shading='gouraud', rasterized=True)"
+  },
+  {
+    "path": "legacy_sources/A007/rm/fig_rm_fields.py",
+    "line": 36,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "fig.savefig('/home/claude/w/out/图%s_%s_网络场.png' % ({'single': '3', 'reshock': '4'}[case], {'single': 'RM单次激波', 'reshock': 'RM再激波'}[case]), dpi=170)"
+  },
+  {
+    "path": "legacy_sources/A007/rm/fig_rm_quant.py",
+    "line": 2,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); import cjk"
+  },
+  {
+    "path": "legacy_sources/A007/rm/fig_rm_quant.py",
+    "line": 53,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "fig.savefig('/home/claude/w/out/图5_RM接管判据_网络与参照.png', dpi=170); print('ok')"
+  },
+  {
+    "path": "legacy_sources/A008/hodge_dynamics/hd_check3.py",
+    "line": 6,
+    "tags": [
+      "dynamic_exec"
+    ],
+    "code": "src = open('hodge_dyn.py').read(); exec(src[:src.index('res = dict(series')])"
+  },
+  {
+    "path": "legacy_sources/A008/hodge_dynamics/hodge_dyn.py",
+    "line": 18,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A008/hodge_dynamics/hodge_dyn.py",
+    "line": 22,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "z = np.load('/home/claude/w/sb_lite_m.npz'); d = pickle.load(open('/home/claude/w/sb_net_m.pkl', 'rb'))"
+  },
+  {
+    "path": "legacy_sources/A008/hodge_dynamics/hodge_dyn.py",
+    "line": 23,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "o = pickle.load(open('/home/claude/w/LHD_v3.2/sb_dns_dx0.005.pkl', 'rb'))"
+  },
+  {
+    "path": "legacy_sources/A008/hodge_dynamics/hodge_dyn.py",
+    "line": 30,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "if os.path.exists('/home/claude/w/hd/ledger_sb.npz'):"
+  },
+  {
+    "path": "legacy_sources/A008/hodge_dynamics/hodge_dyn.py",
+    "line": 31,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "_l = np.load('/home/claude/w/hd/ledger_sb.npz'); lnJ, hot = _l['lnJ'], _l['hot']"
+  },
+  {
+    "path": "legacy_sources/A008/hodge_dynamics/hodge_dyn.py",
+    "line": 43,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "np.savez_compressed('/home/claude/w/hd/ledger_sb.npz', lnJ=lnJ, hot=hot)"
+  },
+  {
+    "path": "legacy_sources/A008/hodge_dynamics/hodge_dyn.py",
+    "line": 141,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "json.dump(res, open('/home/claude/w/hd/res_hodge_dyn.json', 'w'), indent=1)"
+  },
+  {
+    "path": "legacy_sources/A008/hodge_dynamics/hodge_dyn.py",
+    "line": 142,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "np.savez_compressed('/home/claude/w/hd/maps_hodge_dyn.npz', **maps)"
+  },
+  {
+    "path": "legacy_sources/A008/hodge_dynamics/fig_hd.py",
+    "line": 2,
+    "tags": [
+      "dynamic_exec"
+    ],
+    "code": "src = open('hodge_dyn.py').read(); exec(src[:src.index('res = dict(series')])"
+  },
+  {
+    "path": "legacy_sources/A008/hodge_dynamics/fig_hd.py",
+    "line": 3,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); import cjk"
+  },
+  {
+    "path": "legacy_sources/A008/hodge_dynamics/fig_hd.py",
+    "line": 6,
+    "tags": [
+      "external_data"
+    ],
+    "code": "mp = np.load('maps_hodge_dyn.npz'); R = json.load(open('res_hodge_dyn.json'))['frames']"
+  },
+  {
+    "path": "legacy_sources/A008/hodge_dynamics/fig_hd.py",
+    "line": 36,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "fig.savefig('/home/claude/w/out/图6_运动学Hodge分解与动力学对应_场图.png', dpi=170)"
+  },
+  {
+    "path": "legacy_sources/A008/hodge_dynamics/fig_hd.py",
+    "line": 61,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "fig.savefig('/home/claude/w/out/图7_运动学–动力学对应_定量.png', dpi=160); print('ok')"
+  },
+  {
+    "path": "legacy_sources/A008/hodge_dynamics/hd_check2.py",
+    "line": 7,
+    "tags": [
+      "dynamic_exec"
+    ],
+    "code": "src = open('hodge_dyn.py').read(); exec(src[:src.index('res = dict(series')])"
+  },
+  {
+    "path": "legacy_sources/A009/dissipation_acoustics/ac_diag.py",
+    "line": 2,
+    "tags": [
+      "dynamic_exec"
+    ],
+    "code": "src = open('ac_dirac.py').read(); exec(src[:src.index('res = dict(frames={})')])"
+  },
+  {
+    "path": "legacy_sources/A009/dissipation_acoustics/ac_dirac.py",
+    "line": 11,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A009/dissipation_acoustics/ac_dirac.py",
+    "line": 13,
+    "tags": [
+      "external_data"
+    ],
+    "code": "z = np.load('ac.npz'); fr = z['frames']; S, N, _ = fr.shape; dt = float(z['dtf']); t = z['t']"
+  },
+  {
+    "path": "legacy_sources/A009/dissipation_acoustics/dissip_tpm.py",
+    "line": 5,
+    "tags": [
+      "dynamic_exec"
+    ],
+    "code": "src = open('visc_hodge.py').read(); exec(src[:src.index('res = {}; maps = {}')])"
+  },
+  {
+    "path": "legacy_sources/A009/dissipation_acoustics/ac_run.py",
+    "line": 4,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A009/dissipation_acoustics/ac_run.py",
+    "line": 32,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "np.savez_compressed('/home/claude/w/ac/ac.npz', **R, eps=eps, sig=sig, dtf=dtf)"
+  },
+  {
+    "path": "legacy_sources/A009/dissipation_acoustics/fig_ac.py",
+    "line": 2,
+    "tags": [
+      "dynamic_exec"
+    ],
+    "code": "src = open('ac_dirac.py').read(); exec(src[:src.index('res = dict(frames={})')])"
+  },
+  {
+    "path": "legacy_sources/A009/dissipation_acoustics/fig_ac.py",
+    "line": 3,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); import cjk"
+  },
+  {
+    "path": "legacy_sources/A009/dissipation_acoustics/fig_ac.py",
+    "line": 6,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "R = json.load(open('res_ac_dirac.json')); D = json.load(open('/home/claude/w/visc/res_dissip_tpm.json')); V = json.load(open('/home/claude/w/visc/res_visc_hodge_visc.json'))"
+  },
+  {
+    "path": "legacy_sources/A009/dissipation_acoustics/fig_ac.py",
+    "line": 29,
+    "tags": [
+      "external_data"
+    ],
+    "code": "mp = np.load('maps_ac.npz'); tr = Triangulation(mp['P0'][:, 0], mp['P0'][:, 1], mp['tri']); lim = np.abs(mp['rp_dns40']).max()"
+  },
+  {
+    "path": "legacy_sources/A009/dissipation_acoustics/fig_ac.py",
+    "line": 34,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "fig.savefig('/home/claude/w/out/图9_耗散闭合与Dirac声学通道.png', dpi=160); print('ok')"
+  },
+  {
+    "path": "legacy_sources/A010/viscous_channel/sbv_run.py",
+    "line": 5,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A010/viscous_channel/sbv_run.py",
+    "line": 8,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "CK = '/home/claude/w/visc/sbv_ck.pkl'; MU = V.MU"
+  },
+  {
+    "path": "legacy_sources/A010/viscous_channel/sbv_run.py",
+    "line": 12,
+    "tags": [
+      "external_data"
+    ],
+    "code": "st = pickle.load(open(CK, 'rb')); sv = V.ViscSolver.__new__(V.ViscSolver); sv.__dict__.update(st['sv']); P, R, fi = st['P'], st['R'], st['fi']"
+  },
+  {
+    "path": "legacy_sources/A010/viscous_channel/visc_hodge.py",
+    "line": 15,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A010/viscous_channel/visc_hodge.py",
+    "line": 19,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "R = pickle.load(open('/home/claude/w/visc/sbv_ck.pkl', 'rb'))['R']; fr0 = np.array(R['frames']); Ed = {k: np.array(R[k]) for k in ('rho', 'u', 'v', 'p', 'om', 'th', 'fvx', 'fvy', 'Phi')}"
+  },
+  {
+    "path": "legacy_sources/A010/viscous_channel/visc_hodge.py",
+    "line": 22,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "o = pickle.load(open('/home/claude/w/LHD_v3.2/sb_dns_dx0.005.pkl', 'rb')); fr0 = o['frames']; Ed = {k: o['E'][k] for k in ('rho', 'u', 'v', 'p', 'om', 'th')}"
+  },
+  {
+    "path": "legacy_sources/A010/viscous_channel/visc_hodge.py",
+    "line": 27,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "LC = '/home/claude/w/visc/ledger_%s.npz' % case"
+  },
+  {
+    "path": "legacy_sources/A010/viscous_channel/visc_hodge.py",
+    "line": 28,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "if case == 'inv' and os.path.exists('/home/claude/w/hd/ledger_sb.npz'): LC = '/home/claude/w/hd/ledger_sb.npz'"
+  },
+  {
+    "path": "legacy_sources/A010/viscous_channel/visc_hodge.py",
+    "line": 30,
+    "tags": [
+      "external_data"
+    ],
+    "code": "_l = np.load(LC); lnJ, hot = _l['lnJ'], _l['hot']"
+  },
+  {
+    "path": "legacy_sources/A010/viscous_channel/visc_hodge.py",
+    "line": 115,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "json.dump(res, open('/home/claude/w/visc/res_visc_hodge_%s.json' % case, 'w'), indent=1)"
+  },
+  {
+    "path": "legacy_sources/A010/viscous_channel/visc_hodge.py",
+    "line": 116,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "np.savez_compressed('/home/claude/w/visc/maps_visc_%s.npz' % case, **maps)"
+  },
+  {
+    "path": "legacy_sources/A010/viscous_channel/fig_visc.py",
+    "line": 2,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); import cjk"
+  },
+  {
+    "path": "legacy_sources/A010/viscous_channel/fig_visc.py",
+    "line": 8,
+    "tags": [
+      "external_data"
+    ],
+    "code": "mp = np.load('maps_visc_visc.npz'); s = 50"
+  },
+  {
+    "path": "legacy_sources/A010/viscous_channel/fig_visc.py",
+    "line": 40,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "fig.savefig('/home/claude/w/out/图8_粘性通道_由位置反演粘度与耗散.png', dpi=160)"
+  },
+  {
+    "path": "legacy_sources/A011/entropy_channel/entropy.py",
+    "line": 14,
+    "tags": [
+      "absolute_path",
+      "dynamic_exec"
+    ],
+    "code": "src = open('/home/claude/w/visc/visc_hodge.py').read(); exec(src[:src.index('res = {}; maps = {}')])"
+  },
+  {
+    "path": "legacy_sources/A011/entropy_channel/entropy.py",
+    "line": 50,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "np.savez_compressed('/home/claude/w/visc/entropy_%s.npz' % case, pr=pr, rl=rl, phiN=phiN, condN=condN, prodPhi=prodPhi, prodCond=prodCond, hot=hot)"
+  },
+  {
+    "path": "legacy_sources/A011/entropy_channel/fig_entropy.py",
+    "line": 2,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd'); import cjk, lhdx as X"
+  },
+  {
+    "path": "legacy_sources/A011/entropy_channel/fig_entropy.py",
+    "line": 6,
+    "tags": [
+      "external_data"
+    ],
+    "code": "R = json.load(open('res_entropy.json')); C = json.load(open('res_entropy_cond.json')); J = np.load('jumps_inv.npz')"
+  },
+  {
+    "path": "legacy_sources/A011/entropy_channel/fig_entropy.py",
+    "line": 7,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "z = np.load('entropy_inv.npz'); o = pickle.load(open('/home/claude/w/LHD_v3.2/sb_dns_dx0.005.pkl', 'rb'))"
+  },
+  {
+    "path": "legacy_sources/A011/entropy_channel/fig_entropy.py",
+    "line": 13,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "a = ax[0, c]; a.tripcolor(tr, np.nan_to_num(v), cmap='cividis', vmin=-4.2, vmax=0.6, shading='gouraud', rasterized=True)"
+  },
+  {
+    "path": "legacy_sources/A011/entropy_channel/fig_entropy.py",
+    "line": 37,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "fig.savefig('/home/claude/w/out/图10_熵通道.png', dpi=160); print('ok')"
+  },
+  {
+    "path": "legacy_sources/A011/entropy_channel/entropy_an.py",
+    "line": 2,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A011/entropy_channel/entropy_an.py",
+    "line": 6,
+    "tags": [
+      "external_data"
+    ],
+    "code": "z = np.load('entropy_%s.npz' % case)"
+  },
+  {
+    "path": "legacy_sources/A011/entropy_channel/entropy_an.py",
+    "line": 8,
+    "tags": [
+      "external_data"
+    ],
+    "code": "R = pickle.load(open('sbv_ck.pkl', 'rb'))['R']; fr0 = np.array(R['frames']); pd, rd = np.array(R['p']), np.array(R['rho'])"
+  },
+  {
+    "path": "legacy_sources/A011/entropy_channel/entropy_an.py",
+    "line": 10,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "o = pickle.load(open('/home/claude/w/LHD_v3.2/sb_dns_dx0.005.pkl', 'rb')); fr0 = o['frames']; pd, rd = o['E']['p'], o['E']['rho']"
+  },
+  {
+    "path": "legacy_sources/A011/entropy_channel/entropy_an.py",
+    "line": 11,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "led = np.load('/home/claude/w/hd/ledger_sb.npz' if case == 'inv' else 'ledger_visc.npz')"
+  },
+  {
+    "path": "legacy_sources/A011/entropy_channel/entropy_cond.py",
+    "line": 6,
+    "tags": [
+      "dynamic_exec"
+    ],
+    "code": "src = open('visc_hodge.py').read(); exec(src[:src.index('res = {}; maps = {}')])"
+  },
+  {
+    "path": "legacy_sources/A011/entropy_channel/entropy_cond.py",
+    "line": 8,
+    "tags": [
+      "external_data"
+    ],
+    "code": "z = np.load('entropy_visc.npz'); pr, rl, phiN, hotv = z['pr'], z['rl'], z['phiN'], z['hot']"
+  },
+  {
+    "path": "legacy_sources/A012/ltn_framework/ltn_dyn.py",
+    "line": 13,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd'); sys.path.insert(0, '/home/claude/w')"
+  },
+  {
+    "path": "legacy_sources/A012/ltn_framework/rmv2_run.py",
+    "line": 8,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A012/ltn_framework/rmv2_run.py",
+    "line": 12,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "ck = '/home/claude/w/rm/rmv2_%s_ck.pkl' % case"
+  },
+  {
+    "path": "legacy_sources/A012/ltn_framework/rmv2_run.py",
+    "line": 62,
+    "tags": [
+      "external_data"
+    ],
+    "code": "st = pickle.load(open(ck, 'rb')); sv = RM.__new__(RM); sv.__dict__.update(st['sv']); P, M, lab = st['P'], st['M'], st['lab']"
+  },
+  {
+    "path": "legacy_sources/A012/ltn_framework/run_ltn_sb.py",
+    "line": 6,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w/ltn'); import ltn_dyn as LD"
+  },
+  {
+    "path": "legacy_sources/A012/ltn_framework/run_ltn_sb.py",
+    "line": 7,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "t0 = time.time(); R = pickle.load(open('/home/claude/w/visc/sbv_ck.pkl', 'rb'))['R']"
+  },
+  {
+    "path": "legacy_sources/A012/ltn_framework/run_ltn_sb.py",
+    "line": 11,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "old = json.load(open('/home/claude/w/visc/res_visc_hodge_visc.json')); oldD = json.load(open('/home/claude/w/visc/res_dissip_tpm.json'))"
+  },
+  {
+    "path": "legacy_sources/A012/ltn_framework/run_ltn_sb.py",
+    "line": 37,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "json.dump(out, open('/home/claude/w/ltn/res_ltn_sb.json', 'w'), indent=1)"
+  },
+  {
+    "path": "legacy_sources/A012/ltn_framework/rmv_run.py",
+    "line": 8,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A012/ltn_framework/rmv_run.py",
+    "line": 11,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "ck = '/home/claude/w/rm/rmv_%s_ck.pkl' % case"
+  },
+  {
+    "path": "legacy_sources/A012/ltn_framework/rmv_run.py",
+    "line": 61,
+    "tags": [
+      "external_data"
+    ],
+    "code": "st = pickle.load(open(ck, 'rb')); sv = RM.__new__(RM); sv.__dict__.update(st['sv']); P, M, lab = st['P'], st['M'], st['lab']"
+  },
+  {
+    "path": "legacy_sources/A012/ltn_framework/run_ltn_rm.py",
+    "line": 4,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w/ltn'); import ltn_dyn as LD"
+  },
+  {
+    "path": "legacy_sources/A012/ltn_framework/run_ltn_rm.py",
+    "line": 6,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "ck = {'inv': '/home/claude/w/rm/rm_single_ck.pkl', 'visc': '/home/claude/w/rm/rmv_single_ck.pkl', 'visc2': '/home/claude/w/rm/rmv2_single_ck.pkl'}[case]"
+  },
+  {
+    "path": "legacy_sources/A012/ltn_framework/run_ltn_rm.py",
+    "line": 7,
+    "tags": [
+      "external_data"
+    ],
+    "code": "rec = pickle.load(open(ck, 'rb'))['rec']; fr0 = np.array(rec['frames']); rho = np.array(rec['rho'])"
+  },
+  {
+    "path": "legacy_sources/A012/ltn_framework/run_ltn_rm.py",
+    "line": 21,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "json.dump(out, open('/home/claude/w/ltn/res_ltn_rm_%s.json' % case, 'w'), indent=1)"
+  },
+  {
+    "path": "legacy_sources/A012/ltn_framework/fig12.py",
+    "line": 2,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); import cjk"
+  },
+  {
+    "path": "legacy_sources/A012/ltn_framework/fig12.py",
+    "line": 24,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "fig.savefig('/home/claude/w/out/图12_统一建立在LTN之上.png', dpi=160); print('ok')"
+  },
+  {
+    "path": "legacy_sources/A012/ltn_framework/fig13.py",
+    "line": 2,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); import cjk"
+  },
+  {
+    "path": "legacy_sources/A012/ltn_framework/fig13.py",
+    "line": 4,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "cases = [('inv', '/home/claude/w/rm', '无粘', 0.0, 'k'), ('visc', '/home/claude/w/rmv', 'μ = 5×10⁻⁴', 5e-4, 'C0'), ('visc2', '/home/claude/w/rmv2', 'μ = 2×10⁻³', 2e-3, 'C3')]"
+  },
+  {
+    "path": "legacy_sources/A012/ltn_framework/fig13.py",
+    "line": 34,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "fig.savefig('/home/claude/w/out/图13_有限雷诺数RM.png', dpi=160)"
+  },
+  {
+    "path": "legacy_sources/A013/noise_harmonic/gcv_ell.py",
+    "line": 8,
+    "tags": [
+      "dynamic_exec"
+    ],
+    "code": "src = open('visc_hodge.py').read(); exec(src[:src.index('res = {}; maps = {}')])"
+  },
+  {
+    "path": "legacy_sources/A013/noise_harmonic/gcv_ell.py",
+    "line": 10,
+    "tags": [
+      "external_data"
+    ],
+    "code": "z = np.load('entropy_visc.npz'); pr, rl, phiN, hotv = z['pr'], z['rl'], z['phiN'], z['hot']"
+  },
+  {
+    "path": "legacy_sources/A013/noise_harmonic/cross_dirichlet.py",
+    "line": 11,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A013/noise_harmonic/cross_dirichlet.py",
+    "line": 13,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "t0 = time.time(); R = pickle.load(open('/home/claude/w/visc/sbv_ck.pkl', 'rb'))['R']"
+  },
+  {
+    "path": "legacy_sources/A013/noise_harmonic/cross_dirichlet.py",
+    "line": 73,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "json.dump(out, open('/home/claude/w/visc/res_cross_dirichlet.json', 'w'), indent=1)"
+  },
+  {
+    "path": "legacy_sources/A013/noise_harmonic/harm_lo.py",
+    "line": 11,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd')"
+  },
+  {
+    "path": "legacy_sources/A013/noise_harmonic/harm_lo.py",
+    "line": 69,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "json.dump(res, open('/home/claude/w/harm/res_harm_lo.json', 'w'), indent=1)"
+  },
+  {
+    "path": "legacy_sources/A013/noise_harmonic/harm_lo.py",
+    "line": 70,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "np.savez_compressed('/home/claude/w/harm/maps_harm.npz', P=fr[10], tri=tri, uh=uh, E=E)"
+  },
+  {
+    "path": "legacy_sources/A013/noise_harmonic/fig11.py",
+    "line": 3,
+    "tags": [
+      "dynamic_exec"
+    ],
+    "code": "src = open('visc_hodge.py').read(); exec(src[:src.index('res = {}; maps = {}')])"
+  },
+  {
+    "path": "legacy_sources/A013/noise_harmonic/fig11.py",
+    "line": 4,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); import cjk"
+  },
+  {
+    "path": "legacy_sources/A013/noise_harmonic/fig11.py",
+    "line": 7,
+    "tags": [
+      "external_data"
+    ],
+    "code": "z = np.load('entropy_visc.npz'); pr, rl = z['pr'], z['rl']; GC = json.load(open('res_gcv.json')); CR = json.load(open('res_cross_dirichlet.json'))"
+  },
+  {
+    "path": "legacy_sources/A013/noise_harmonic/fig11.py",
+    "line": 19,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "H = json.load(open('/home/claude/w/harm/res_harm_lo.json'))['frames']; ks = sorted(H, key=lambda k: H[k]['t']); th = np.array([H[k]['t'] for k in ks])"
+  },
+  {
+    "path": "legacy_sources/A013/noise_harmonic/fig11.py",
+    "line": 20,
+    "tags": [
+      "absolute_path",
+      "dynamic_exec"
+    ],
+    "code": "hs = open('/home/claude/w/harm/harm_lo.py').read(); hs = hs[:hs.index('res = dict(N=')]; exec(hs)"
+  },
+  {
+    "path": "legacy_sources/A013/noise_harmonic/fig11.py",
+    "line": 35,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "Mh = np.load('/home/claude/w/harm/maps_harm.npz'); E = Mh['E']; uh = Mh['uh']; P_ = fr[nF - 2]; mid = 0.5 * (P_[E[:, 0]] + P_[E[:, 1]]); ln = np.linalg.norm(P_[E[:, 1]] - P_[E[:, 0]], axis=1)"
+  },
+  {
+    "path": "legacy_sources/A013/noise_harmonic/fig11.py",
+    "line": 50,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "fig.savefig('/home/claude/w/out/图11_噪声偏置与调和通道.png', dpi=160); print('ok')"
+  },
+  {
+    "path": "legacy_sources/A014/verify.py",
+    "line": 5,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w/ltn'); import ltn_dyn as LD"
+  },
+  {
+    "path": "legacy_sources/A014/verify.py",
+    "line": 7,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "R = pickle.load(open('/home/claude/w/visc/sbv_ck.pkl', 'rb'))['R']; fr0 = np.array(R['frames']); Ed = {k: np.array(R[k]) for k in ('rho', 'p', 'Phi')}"
+  },
+  {
+    "path": "legacy_sources/A014/fig14.py",
+    "line": 2,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); import cjk"
+  },
+  {
+    "path": "legacy_sources/A014/fig14.py",
+    "line": 18,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "fig.savefig('/home/claude/w/out/图14_验证_敏感性.png', dpi=160); print('ok')"
+  },
+  {
+    "path": "legacy_sources/A014/tg_verify.py",
+    "line": 6,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w/ltn'); import ltn_dyn as LD"
+  },
+  {
+    "path": "legacy_sources/A015/suite.py",
+    "line": 9,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w/ltn'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd'); sys.path.insert(0, '/home/claude/w')"
+  },
+  {
+    "path": "legacy_sources/A015/suite.py",
+    "line": 225,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "json.dump(out, open('/home/claude/w/verify/suite_%s%s.json' % (case, ('_' + sys.argv[2]) if len(sys.argv) > 2 else ''), 'w'), indent=1, default=float)"
+  },
+  {
+    "path": "legacy_sources/A015/fig15.py",
+    "line": 2,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); sys.path.insert(0, '/home/claude/w/ltn'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd'); import cjk"
+  },
+  {
+    "path": "legacy_sources/A015/fig15.py",
+    "line": 8,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sod = J('suite_sod.json')['sod']; lam = J('suite_lamella.json')['lamella']; hm = J('/home/claude/w/harm/res_harm_lo.json')['frames']"
+  },
+  {
+    "path": "legacy_sources/A015/fig15.py",
+    "line": 48,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "fig.savefig('/home/claude/w/out/图15_精确解验证矩阵.png', dpi=150); print('ok')"
+  },
+  {
+    "path": "legacy_sources/A016/viz.py",
+    "line": 2,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); import cjk"
+  },
+  {
+    "path": "legacy_sources/A016/viz.py",
+    "line": 5,
+    "tags": [
+      "external_data"
+    ],
+    "code": "F = {c: np.load('fields_%s.npz' % c) for c in ('lamb', 'tg', 'vortex', 'acoustic', 'lamella')}"
+  },
+  {
+    "path": "legacy_sources/A016/viz.py",
+    "line": 33,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "fig.savefig('/home/claude/w/out/图16_精确解场图_涡压力熵耗散.png', dpi=120)"
+  },
+  {
+    "path": "legacy_sources/A016/viz.py",
+    "line": 48,
+    "tags": [
+      "external_data"
+    ],
+    "code": "I = np.load('suite2_igw.npz'); Pf = np.c_[I['igw__cx'], I['igw__cy']]; tf_ = Delaunay(Pf).simplices"
+  },
+  {
+    "path": "legacy_sources/A016/viz.py",
+    "line": 54,
+    "tags": [
+      "external_data"
+    ],
+    "code": "S2 = np.load('suite2_stokes.npz'); a = ax[2, 3]"
+  },
+  {
+    "path": "legacy_sources/A016/viz.py",
+    "line": 61,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "fig.savefig('/home/claude/w/out/图17_精确解场图_声学掺混重力波壁面.png', dpi=120)"
+  },
+  {
+    "path": "legacy_sources/A016/viz.py",
+    "line": 77,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "fig.savefig('/home/claude/w/out/图18_收敛与噪声.png', dpi=140); print('ok')"
+  },
+  {
+    "path": "legacy_sources/A016/suite2.py",
+    "line": 11,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w/ltn'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd'); sys.path.insert(0, '/home/claude/w')"
+  },
+  {
+    "path": "legacy_sources/A016/suite2.py",
+    "line": 118,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "json.dump(out, open('/home/claude/w/verify/suite2_%s.json' % case, 'w'), indent=1, default=float)"
+  },
+  {
+    "path": "legacy_sources/A016/suite2.py",
+    "line": 119,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "np.savez_compressed('/home/claude/w/verify/suite2_%s.npz' % case, **{k + '__' + kk: vv for k, d in save.items() for kk, vv in d.items()})"
+  },
+  {
+    "path": "legacy_sources/A016/suite.py",
+    "line": 9,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w/ltn'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd'); sys.path.insert(0, '/home/claude/w')"
+  },
+  {
+    "path": "legacy_sources/A016/suite.py",
+    "line": 234,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "json.dump(out, open('/home/claude/w/verify/suite_%s%s.json' % (case, ('_' + sys.argv[2]) if len(sys.argv) > 2 else ''), 'w'), indent=1, default=float)"
+  },
+  {
+    "path": "legacy_sources/A016/suite.py",
+    "line": 235,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "np.savez_compressed('/home/claude/w/verify/fields_%s.npz' % case, **SAVE)"
+  },
+  {
+    "path": "legacy_sources/A017/allcases.py",
+    "line": 7,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w/ltn'); sys.path.insert(0, '/home/claude/w/LHD_v3.2/lhd'); sys.path.insert(0, '/home/claude/w'); sys.path.insert(0, '/home/claude/w/cmp')"
+  },
+  {
+    "path": "legacy_sources/A017/allcases.py",
+    "line": 24,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "o = pickle.load(open('/home/claude/w/recalc/sv_dns.pkl', 'rb')); fr = np.asarray(o['frames'], float); dt = float(o['dt']); h = 0.005"
+  },
+  {
+    "path": "legacy_sources/A017/allcases.py",
+    "line": 28,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "o = pickle.load(open('/home/claude/w/LHD_v3.2/sb_dns_dx0.005.pkl', 'rb')); fr = o['frames']; Ed = o['E']"
+  },
+  {
+    "path": "legacy_sources/A017/allcases.py",
+    "line": 30,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "o = pickle.load(open('/home/claude/w/visc/sbv_ck.pkl', 'rb'))['R']; fr = np.array(o['frames']); Ed = o"
+  },
+  {
+    "path": "legacy_sources/A017/allcases.py",
+    "line": 33,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "o = pickle.load(open({'rm': '/home/claude/w/rm/rm_single_ck.pkl', 'rmv': '/home/claude/w/rm/rmv_single_ck.pkl'}[case], 'rb'))['rec']"
+  },
+  {
+    "path": "legacy_sources/A017/allcases.py",
+    "line": 104,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "json.dump(res, open('/home/claude/w/recalc/res_%s.json' % case, 'w'), indent=1, default=float)"
+  },
+  {
+    "path": "legacy_sources/A017/allcases.py",
+    "line": 105,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "np.savez_compressed('/home/claude/w/recalc/fields_%s.npz' % case, **fields)"
+  },
+  {
+    "path": "legacy_sources/A017/fig21.py",
+    "line": 2,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); import cjk"
+  },
+  {
+    "path": "legacy_sources/A017/fig21.py",
+    "line": 38,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "fig.savefig('/home/claude/w/out/图21_报告算例_定量对比.png', dpi=140); print('ok')"
+  },
+  {
+    "path": "legacy_sources/A017/viz_recalc.py",
+    "line": 2,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/w'); import cjk"
+  },
+  {
+    "path": "legacy_sources/A017/viz_recalc.py",
+    "line": 5,
+    "tags": [
+      "external_data"
+    ],
+    "code": "F = {c: np.load('fields_%s.npz' % c) for c, _ in cases}; R = {c: json.load(open('res_%s.json' % c)) for c, _ in cases}"
+  },
+  {
+    "path": "legacy_sources/A017/viz_recalc.py",
+    "line": 35,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "fig.savefig('/home/claude/w/out/图19_报告算例_通道场图.png', dpi=110)"
+  },
+  {
+    "path": "legacy_sources/A017/viz_recalc.py",
+    "line": 48,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "fig.savefig('/home/claude/w/out/图20_报告算例_输运结构对比.png', dpi=100)"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/wp3_core.py",
+    "line": 19,
+    "tags": [
+      "silent_fill",
+      "cg_status"
+    ],
+    "code": "x, _ = sla.cg(op, w * B['M2'] * np.nan_to_num(c), x0=np.where(w > 0, np.nan_to_num(c), 0.0), maxiter=400); return x"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/wp3_core.py",
+    "line": 31,
+    "tags": [
+      "silent_fill",
+      "cg_status"
+    ],
+    "code": "c2, _ = sla.cg(op, w * B['M2'] * np.nan_to_num(c0), x0=np.where(w > 0, np.nan_to_num(c0), 0.0), maxiter=400)"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/afrcE_study.py",
+    "line": 18,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open('sb_dns.pkl', 'rb')); fr = D['frames'][30:71]; Ed = D['E']; dt = D['dt']; del D"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs3.py",
+    "line": 61,
+    "tags": [
+      "external_data"
+    ],
+    "code": "F = pickle.load(open(\"res_afrcE_study.pkl\", \"rb\")); R = json.load(open(\"res_afrcE_study.json\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs3.py",
+    "line": 74,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "ax[i, 3].contour(np.linspace(ext[0], ext[1], Fe.shape[1]), np.linspace(ext[2], ext[3], Fe.shape[0]), np.nan_to_num(Fe), levels=[0.5], colors=\"c\", linewidths=0.7)"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs3.py",
+    "line": 89,
+    "tags": [
+      "external_data"
+    ],
+    "code": "F = pickle.load(open(\"res_afrc_improve.pkl\", \"rb\")); R = json.load(open(\"res_afrc_improve.json\"))[\"DG\"]"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs3.py",
+    "line": 101,
+    "tags": [
+      "external_data"
+    ],
+    "code": "S = pickle.load(open(\"res_sv.pkl\", \"rb\")); R = json.load(open(\"res_sv.json\")); F = S[\"F\"]"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs3.py",
+    "line": 142,
+    "tags": [
+      "external_data"
+    ],
+    "code": "O = pickle.load(open(\"res_afrcH_paper.pkl\", \"rb\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/tcx_run.py",
+    "line": 314,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "json.dump(R, open(f\"/home/claude/bench/tcx_res_{name}.json\", \"w\"), indent=1)"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/tcx_run.py",
+    "line": 315,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "pickle.dump(F, open(f\"/home/claude/bench/tcx_fields_{name}.pkl\", \"wb\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs_new.py",
+    "line": 8,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "FIG = \"/tmp/work/report/\""
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs_new.py",
+    "line": 27,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "im = ax.tripcolor(T, np.nan_to_num(v), shading=\"gouraud\", cmap=cmap, norm=norm, vmin=None if norm else vmin, vmax=None if norm else vmax, rasterized=True)"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs_new.py",
+    "line": 43,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "O = pickle.load(open(\"/tmp/work/run/out_%s.pkl\" % g, \"rb\")); B = O[\"base\"]; res = B[\"res\"]"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs_new.py",
+    "line": 121,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "O = pickle.load(open(\"/tmp/work/run/out_toy.pkl\", \"rb\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs_new.py",
+    "line": 147,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"/tmp/work/run/out_dg.pkl\", \"rb\")); L = pickle.load(open(\"/tmp/work/run/out_lo.pkl\", \"rb\")); Bl = pickle.load(open(\"/tmp/work/run/out_blast.pkl\", \"rb\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs_new.py",
+    "line": 162,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "S = pickle.load(open(\"/tmp/work/run/out_sb.pkl\", \"rb\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/tr_a.py",
+    "line": 53,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "D = pickle.load(open('/home/claude/bench/sb_dns.pkl', 'rb')); fr, Ed, grids, xc, yc, dx = D['frames'], D['E'], D['grids'], D['xc'], D['yc'], D['dx']; del D"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/tr_a.py",
+    "line": 68,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "S = pickle.load(open('/home/claude/bench/sv_dns.pkl', 'rb')); P0 = S['P0']; r0 = np.hypot(P0[:, 0] - S['xv'], P0[:, 1] - S['yv']); core = r0 < 2 * S['Rv']"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/run_lhd_dome.py",
+    "line": 4,
+    "tags": [
+      "external_data"
+    ],
+    "code": "U = pickle.load(open('res_unifiedE.pkl', 'rb')); R = {}; OUT = {}"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/run_lhd_dome.py",
+    "line": 22,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "D = pickle.load(open('/home/claude/bench/sb_dns.pkl', 'rb')); go('SB', D['frames'][30:71], D['dt'], 0.06); del D"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/run_lhd_dome.py",
+    "line": 23,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "S = pickle.load(open('/home/claude/bench/sv_dns.pkl', 'rb'))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/wp3_ell.py",
+    "line": 7,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "S = pickle.load(open('/home/claude/bench/sv_dns.pkl', 'rb')); nets = {}"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/wp3_ell.py",
+    "line": 10,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "D = pickle.load(open('/home/claude/bench/sb_dns.pkl', 'rb')); fr, dt, xc, yc, grids = D['frames'], D['dt'], D['xc'], D['yc'], D['grids']; del D"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/topo_run.py",
+    "line": 15,
+    "tags": [
+      "external_data"
+    ],
+    "code": "Fp = pickle.load(open(f\"tcx_fields_{name}.pkl\", \"rb\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/afrc_improve.py",
+    "line": 17,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open('sv_dns.pkl', 'rb')); fr = D['fr_off'][10:31]; traj = np.ascontiguousarray(np.transpose(fr, (1, 0, 2))); T = 0.4"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/tcx_run_orig.py",
+    "line": 267,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "json.dump(R, open(f\"/home/claude/bench/tcx_res_{name}.json\", \"w\"), indent=1)"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/tcx_run_orig.py",
+    "line": 268,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "pickle.dump(F, open(f\"/home/claude/bench/tcx_fields_{name}.pkl\", \"wb\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/tcx_report.py",
+    "line": 6,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "OUT = \"/home/claude/tcxrep\"; os.makedirs(OUT, exist_ok=True)"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/tcx_report.py",
+    "line": 8,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "R = {c: json.load(open(f\"/home/claude/bench/tcx_res_{c}.json\")) for c in CASES}"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/tcx_report.py",
+    "line": 9,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "F = {c: pickle.load(open(f\"/home/claude/bench/tcx_fields_{c}.pkl\", \"rb\")) for c in CASES}"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs.py",
+    "line": 47,
+    "tags": [
+      "external_data"
+    ],
+    "code": "d = np.load(\"res_dg.npz\"); R = json.load(open(\"res_dg.json\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs.py",
+    "line": 68,
+    "tags": [
+      "external_data"
+    ],
+    "code": "d = np.load(\"res_sod.npz\"); R = json.load(open(\"res_sod.json\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs.py",
+    "line": 120,
+    "tags": [
+      "external_data"
+    ],
+    "code": "d = np.load(\"res_blast.npz\"); R = json.load(open(\"res_blast.json\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs.py",
+    "line": 148,
+    "tags": [
+      "external_data"
+    ],
+    "code": "S = pickle.load(open(\"res_sb.pkl\", \"rb\")); R = json.load(open(\"res_sb.json\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/tr_e2.py",
+    "line": 20,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "D = pickle.load(open('/home/claude/bench/sb_dns.pkl', 'rb')); fr = D['frames']; d0 = fr[0] - [D['xb'], 0.0]; ring = np.where(np.abs(np.hypot(*d0.T) - D['R']) < 0.003)[0]"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/tr_e2.py",
+    "line": 23,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "S = pickle.load(open('/home/claude/bench/sv_dns.pkl', 'rb')); d0 = S['P0'] - [S['xv'], S['yv']]; ring = np.where(np.abs(np.hypot(*d0.T) - 2 * S['Rv']) < 0.0025)[0]"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/evo_comp.py",
+    "line": 42,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "D = pickle.load(open('/home/claude/bench/sb_diff_dns.pkl', 'rb')); fr, t, Y, rhoD = D['frames'], D['t'], D['Y'], D['rho']; P0 = fr[0]; N = len(P0)"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/evo_comp.py",
+    "line": 43,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "G = pickle.load(open('/home/claude/bench/sb_dns.pkl', 'rb')); grids, xc, dxg = G['grids'], G['xc'], G['dx']; Y1 = G['E']['Y1'][0]; del G"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/evo_comp.py",
+    "line": 55,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "S = pickle.load(open('/home/claude/bench/sv_dns.pkl', 'rb')); fr, t = S['fr_in'][:31], S['t'][:31]; P0 = S['P0']; Ev = S['Ev']; rhoE = Ev['rho'][:31]"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/lhd_dome.py",
+    "line": 16,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "return np.abs(0.5 * np.trapezoid(np.nan_to_num(dev), dx=dt, axis=0))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/tcx_run_rev1.py",
+    "line": 300,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "json.dump(R, open(f\"/home/claude/bench/tcx_res_{name}.json\", \"w\"), indent=1)"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/tcx_run_rev1.py",
+    "line": 301,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "pickle.dump(F, open(f\"/home/claude/bench/tcx_fields_{name}.pkl\", \"wb\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/run_dirac.py",
+    "line": 25,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "D = pickle.load(open('/home/claude/bench/sb_dns.pkl', 'rb')); fr, Ed, dt = D['frames'], D['E'], D['dt']; xc, yc = D['xc'], D['yc']"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/run_dirac.py",
+    "line": 57,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "S = pickle.load(open('/home/claude/bench/sv_dns.pkl', 'rb')); tqs = {}"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs2.py",
+    "line": 12,
+    "tags": [
+      "external_data"
+    ],
+    "code": "d = np.load(\"res_dg.npz\"); R = json.load(open(\"res_dg.json\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs2.py",
+    "line": 33,
+    "tags": [
+      "external_data"
+    ],
+    "code": "d = np.load(\"res_dg.npz\"); R = json.load(open(\"res_dg.json\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs2.py",
+    "line": 89,
+    "tags": [
+      "external_data"
+    ],
+    "code": "d = np.load(\"res_sod.npz\"); R = json.load(open(\"res_sod.json\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs2.py",
+    "line": 132,
+    "tags": [
+      "external_data"
+    ],
+    "code": "d = np.load(\"res_blast.npz\"); R = json.load(open(\"res_blast.json\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs2.py",
+    "line": 162,
+    "tags": [
+      "external_data"
+    ],
+    "code": "R = json.load(open(\"res_sb.json\")); S = pickle.load(open(\"res_sb.pkl\", \"rb\")); A = np.load(\"sb_afrc.npz\")"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs2.py",
+    "line": 163,
+    "tags": [
+      "external_data"
+    ],
+    "code": "Z = np.load(\"sb_stage1.npz\"); inner0, lavd, ftle = Z[\"inner0\"], Z[\"lavd_dns\"], Z[\"ftle_ls\"]"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs2.py",
+    "line": 181,
+    "tags": [
+      "external_data"
+    ],
+    "code": "Z = np.load(\"sb_stage1.npz\"); vc = Z[\"vort_c\"]; S, N = vc.shape"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs2.py",
+    "line": 189,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "return np.trapezoid(np.nan_to_num(g), dx=dt, axis=0)"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs2.py",
+    "line": 193,
+    "tags": [
+      "external_data"
+    ],
+    "code": "S = pickle.load(open(\"res_sb.pkl\", \"rb\")); R = json.load(open(\"res_sb.json\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs2.py",
+    "line": 288,
+    "tags": [
+      "external_data"
+    ],
+    "code": "d = np.load(\"res_dg.npz\"); R = json.load(open(\"res_dg.json\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs2.py",
+    "line": 310,
+    "tags": [
+      "external_data"
+    ],
+    "code": "d = np.load(\"res_blast.npz\"); R = json.load(open(\"res_blast.json\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/figs2.py",
+    "line": 352,
+    "tags": [
+      "external_data"
+    ],
+    "code": "d = np.load(\"res_sb_phys.npz\"); S = pickle.load(open(\"res_sb.pkl\", \"rb\")); G = pickle.load(open(\"sb_grid_tc.pkl\", \"rb\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/tcx_tables.py",
+    "line": 3,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "R = {c: json.load(open(f\"/home/claude/bench/tcx_res_{c}.json\")) for c in CASES}"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/tcx_tables.py",
+    "line": 103,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "open(\"/home/claude/tcxrep/tables.tex\", \"w\").write(\"\\n\".join(L))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/run_kelvin_chain.py",
+    "line": 3,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "D = pickle.load(open('/home/claude/bench/sb_dns.pkl', 'rb')); fr, dt, GamE = D['frames'], D['dt'], D['Gam']; r0 = np.hypot(fr[0][:, 0] - D['xb'], fr[0][:, 1]); Rb = D['R']; del D"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/run_dg_phys.py",
+    "line": 18,
+    "tags": [
+      "external_data"
+    ],
+    "code": "d = dict(np.load('res_dg.npz')); d.update(psi_lhd=-psi_n, psi_ex=psi_ex, afrcH_k12=Fs[0], afrcH_k16=Fs[1], afrcH_k24=Fs[2])"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/make_tables.py",
+    "line": 2,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "L = lambda g: pickle.load(open(\"/tmp/work/run/out_%s.pkl\" % g, \"rb\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/make_tables.py",
+    "line": 93,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "open(\"/tmp/work/report/tables_auto.tex\", \"w\").write(\"\\n\\n\".join(out))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/circ_strength.py",
+    "line": 42,
+    "tags": [
+      "external_data"
+    ],
+    "code": "F = pickle.load(open(f\"tcx_fields_{name}.pkl\", \"rb\")); R = json.load(open(f\"tcx_res_{name}.json\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/run_dg.py",
+    "line": 61,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "TH = 0.5 * np.nan_to_num(o['vort'][:-1] + o['vort'][1:]) * 0.5 * dt   # node rotation per step = omega dt / 2"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/afrcH_density.py",
+    "line": 9,
+    "tags": [
+      "external_data"
+    ],
+    "code": "O = pickle.load(open('res_afrcH_paper.pkl', 'rb'))['DG']"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/run_sv.py",
+    "line": 3,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open('sv_dns.pkl', 'rb')); t = D['t']; dt = D['dt']; a, b = 10, 30; Tw = t[b] - t[a]"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/run_sv.py",
+    "line": 32,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "return np.trapezoid(np.nan_to_num(g), dx=dt, axis=0), o['vort'], W"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/lhd_window.py",
+    "line": 21,
+    "tags": [
+      "external_data"
+    ],
+    "code": "z = np.load(npz_path, allow_pickle=False)"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/lhd_window.py",
+    "line": 58,
+    "tags": [
+      "external_data"
+    ],
+    "code": "z = np.load(euler_npz, allow_pickle=False)"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/wp3.py",
+    "line": 19,
+    "tags": [
+      "silent_fill",
+      "cg_status"
+    ],
+    "code": "x, _ = sla.cg(op, w * B['M2'] * np.nan_to_num(c), x0=np.where(w > 0, np.nan_to_num(c), 0.0), maxiter=400); return x"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/wp3.py",
+    "line": 24,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "S = pickle.load(open('/home/claude/bench/sv_dns.pkl', 'rb')); TQ = {}"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/wp3.py",
+    "line": 32,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "D = pickle.load(open('/home/claude/bench/sb_dns.pkl', 'rb')); fr, dt, xc, yc, grids = D['frames'], D['dt'], D['xc'], D['yc'], D['grids']; del D"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/run_sb.py",
+    "line": 10,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"sb_dns.pkl\", \"rb\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/mass_transport.py",
+    "line": 37,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "D = pickle.load(open('/home/claude/bench/sb_dns.pkl', 'rb')); fr, Ed, grids, xc, yc, dx = D['frames'], D['E'], D['grids'], D['xc'], D['yc'], D['dx']; del D"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/run_dg2.py",
+    "line": 4,
+    "tags": [
+      "external_data"
+    ],
+    "code": "R = json.load(open('res_dg.json')); old = dict(np.load('res_dg.npz'))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/dgbench.py",
+    "line": 41,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "def _dgb_nz(a): a = np.nan_to_num(a); a = a-a.min(); return a/(a.max()+1e-12)"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/smoke_window.py",
+    "line": 2,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, '/home/claude/pkg')"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/smoke_window.py",
+    "line": 4,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "D = pickle.load(open('/home/claude/bench/sb_dns.pkl', 'rb'))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/smoke_window.py",
+    "line": 10,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "mock = '/home/claude/pkg/tracking_layers_sb.npz'"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/smoke_window.py",
+    "line": 18,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "eul = '/home/claude/pkg/euler_context_sb.npz'; np.savez_compressed(eul, x=gx, y=gy, rho=rho0)"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/smoke_window.py",
+    "line": 20,
+    "tags": [
+      "external_data"
+    ],
+    "code": "z = np.load(summ['path'])"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/tcx_cases.py",
+    "line": 5,
+    "tags": [
+      "absolute_path"
+    ],
+    "code": "sys.path.insert(0, \"/home/claude/stretch/run\")"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/tcx_cases.py",
+    "line": 56,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"/home/claude/bench/sb_dns.pkl\", \"rb\")); fr = D[\"frames\"]; E = D[\"E\"]; P0 = fr[0]"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/tcx_cases.py",
+    "line": 61,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "M = pickle.load(open(\"/home/claude/stretch/run/dns_sb.pkl\", \"rb\")); frm = M[\"frames\"]; S = len(frm)"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/tcx_cases.py",
+    "line": 70,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"/home/claude/bench/sv_dns.pkl\", \"rb\")); k = 31"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/tcx_cases.py",
+    "line": 74,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "M = pickle.load(open(\"/home/claude/stretch/run/dns_sv.pkl\", \"rb\")); frm = M[\"frames\"]"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/iss_sb.py",
+    "line": 3,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"sb_dns.pkl\", \"rb\")); out = {}"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/offline_theory.py",
+    "line": 35,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "S = pickle.load(open('/home/claude/bench/sv_dns.pkl', 'rb')); s = 30; L = {}"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/afe_figs.py",
+    "line": 16,
+    "tags": [
+      "external_data"
+    ],
+    "code": "F = pickle.load(open(f\"tcx_fields_{nm}.pkl\", \"rb\")); R = json.load(open(f\"tcx_res_{nm}.json\"))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/core_boundary.py",
+    "line": 10,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "gen = contourpy.contour_generator(xg, yg, np.nan_to_num(F))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/core_boundary.py",
+    "line": 11,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "mx = (F == ndi.maximum_filter(np.nan_to_num(F), size=nbhd)) & (F > np.nanquantile(F, peak_q))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/core_boundary.py",
+    "line": 46,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "W0 = np.nan_to_num(FW); E0 = np.nan_to_num(FE)"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/core_boundary.py",
+    "line": 78,
+    "tags": [
+      "external_data"
+    ],
+    "code": "S = pickle.load(open('res_afrcE_study.pkl', 'rb'))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/core_boundary.py",
+    "line": 81,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open('sv_dns.pkl', 'rb'))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/run_sb_afrc.py",
+    "line": 3,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"sb_dns.pkl\", \"rb\")); fr, t = D[\"frames\"], D[\"t\"]; N = fr.shape[1]; del D; gc.collect()"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/run_sb_afrc.py",
+    "line": 4,
+    "tags": [
+      "external_data"
+    ],
+    "code": "Z = np.load(\"sb_stage1.npz\"); sc, E, cs, dt = Z[\"sc\"], Z[\"E\"], Z[\"cs\"], float(Z[\"dt\"])"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/run_sb_afrc.py",
+    "line": 16,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "TH = 0.5 * np.nan_to_num(o[\"vort_c\"][:-1] + o[\"vort_c\"][1:]) * 0.5 * dt"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/run_sb_phys.py",
+    "line": 5,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open('sb_dns.pkl', 'rb')); fr, t, dt, Ed = D['frames'], D['t'], D['dt'], D['E']"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/run_sb_phys.py",
+    "line": 33,
+    "tags": [
+      "external_data"
+    ],
+    "code": "vc = np.load('sb_stage1.npz')['vort_c'][el[0]:el[1] + 1]"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/run_sb_phys.py",
+    "line": 40,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "lavd_st = np.trapezoid(np.nan_to_num(g), dx=dt, axis=0)"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/val_sb_diff.py",
+    "line": 3,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "D = pickle.load(open('/home/claude/bench/sb_diff_dns.pkl', 'rb')); fr, dt, Y, rhoD, kappa = D['frames'], D['dt'], D['Y'], D['rho'], D['kappa']"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/afe_cases.py",
+    "line": 18,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"sb_dns.pkl\", \"rb\")); fr = D[\"frames\"]; P0 = fr[0]"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/afe_cases.py",
+    "line": 22,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"sb_dns.pkl\", \"rb\")); fr = D[\"frames\"][40:71]; P0 = fr[0]"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/afe_cases.py",
+    "line": 26,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open(\"sv_dns.pkl\", \"rb\")); k = 31; fr = D[\"fr_in\"][:k]"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/run_unified.py",
+    "line": 44,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "D = pickle.load(open('/home/claude/bench/sb_dns.pkl', 'rb')); fr, Ed, dt = D['frames'], D['E'], D['dt']; GamE = D['Gam']; xb, Rb = D['xb'], D['R']"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/run_unified.py",
+    "line": 51,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "line('SB_full', dict(vort_r=float(np.corrcoef(net.L_['vort_c'][s][m], Ed['om'][s][m])[0, 1]), div_r=float(np.corrcoef(np.nan_to_num(net.L_['div'][s][m]), Ed['th'][s][m])[0, 1]),"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/run_unified.py",
+    "line": 58,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "Z = np.load('/home/claude/bench/res_sb_phys.npz'); quiet, x0 = Z['quiet'], fr[0][:, 0]"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/run_unified.py",
+    "line": 66,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "S = pickle.load(open('/home/claude/bench/sv_dns.pkl', 'rb'))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/verify_perim.py",
+    "line": 22,
+    "tags": [
+      "external_data"
+    ],
+    "code": "F = pickle.load(open(f\"tcx_fields_{nm}.pkl\", \"rb\")); R = json.load(open(f\"tcx_res_{nm}.json\")); c = AC.load(nm)"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/afrcH_paper.py",
+    "line": 23,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open('sb_dns.pkl', 'rb')); fr = D['frames']; Ed = D['E']; dlp = np.diff(np.log(Ed['p']), axis=0); del D"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/afrcH_paper.py",
+    "line": 30,
+    "tags": [
+      "external_data"
+    ],
+    "code": "S = pickle.load(open('sv_dns.pkl', 'rb'))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/run_unifiedE.py",
+    "line": 24,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "D = pickle.load(open('/home/claude/bench/sb_dns.pkl', 'rb')); fr = D['frames'][30:71]; Ed = D['E']; dt = D['dt']; del D"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/run_unifiedE.py",
+    "line": 27,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "S = pickle.load(open('/home/claude/bench/sv_dns.pkl', 'rb'))"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/improve_test.py",
+    "line": 27,
+    "tags": [
+      "silent_fill"
+    ],
+    "code": "w = np.abs(np.nan_to_num(med)); N = traj.shape[0]; acc = np.zeros(N); cnt = np.zeros(N)"
+  },
+  {
+    "path": "legacy_sources/A021/µñ¡σ£åΘÇÜΘüô_Σ╗úτáüΣ╕Äτ╗ôµ₧£_v3/code/improve_test.py",
+    "line": 45,
+    "tags": [
+      "absolute_path",
+      "external_data"
+    ],
+    "code": "S = pickle.load(open('/home/claude/bench/sv_dns.pkl', 'rb')); x0 = S['P0'][:, 0]; y0 = S['P0'][:, 1]; lam = S['Ms'] * S['dt']; xe = S['xs0'] + S['Ms'] * S['t'][10]"
+  },
+  {
+    "path": "legacy_sources/A033/wp3_common.py",
+    "line": 20,
+    "tags": [
+      "external_data"
+    ],
+    "code": "S = pickle.load(open('sv_dns.pkl', 'rb')); TQ = {}"
+  },
+  {
+    "path": "legacy_sources/A033/wp3_common.py",
+    "line": 35,
+    "tags": [
+      "external_data"
+    ],
+    "code": "D = pickle.load(open('sb_dns.pkl', 'rb')); fr, dt, xc, yc, grids = D['frames'], D['dt'], D['xc'], D['yc'], D['grids']; del D"
+  },
+  {
+    "path": "legacy_sources/A035/opt1_sbi.py",
+    "line": 27,
+    "tags": [
+      "cg_status"
+    ],
+    "code": "c, _ = cg(A, self.m * c, x0=c, rtol=1e-11, maxiter=4000, M=sp.diags(1 / A.diagonal()))"
+  },
+  {
+    "path": "legacy_sources/A035/sbcore.py",
+    "line": 12,
+    "tags": [
+      "external_data"
+    ],
+    "code": "return pickle.load(open(path, 'rb'))"
+  },
+  {
+    "path": "legacy_sources/A035/sbcore.py",
+    "line": 67,
+    "tags": [
+      "cg_status"
+    ],
+    "code": "c, info = cg(A, self.m * c, x0=c, rtol=1e-11, maxiter=2000, M=sp.diags(1 / d))"
+  }
+]

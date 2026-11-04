@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+.venv/
+.venvs/
+.env
+.env.*
+.DS_Store
+
+# Keep the selected reproducible case; do not accidentally add 18 GB of history.
+/runs/*
+!/runs/reconnect-contact-oracle/
+!/runs/reconnect-affine-shear-spatial/
+/runs/reconnect-affine-shear-spatial/*
+!/runs/reconnect-affine-shear-spatial/sha256.json
+!/runs/reconnect-affine-shear-spatial/results.json
+!/runs/reconnect-affine-shear-spatial/next-gate-spec.json
+
+# Download artifacts selected for this backup, not 21 GB of previous exports.
+/exports/*
+!/exports/LTN_contact_oracle_report_20261104.pdf
+!/exports/LTN_contact_oracle_code_results_20261104.zip
+!/exports/LTN_contact_oracle_delivery_20261104.json
+!/exports/LTN_contact_oracle_downloads_20261104.md

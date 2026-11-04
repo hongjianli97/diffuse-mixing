@@ -1,0 +1,22 @@
+import json, numpy as np, matplotlib
+matplotlib.use('Agg'); import matplotlib.pyplot as plt
+from matplotlib import font_manager as fm
+_p='/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc'; fm.fontManager.addfont(_p); fam=fm.FontProperties(fname=_p).get_name()
+plt.rcParams.update({'font.family':[fam,'DejaVu Sans'],'axes.unicode_minus':False,'font.size':9})
+d=json.load(open('figdata.json'))
+fig,ax=plt.subplots(1,3,figsize=(12,3.6),constrained_layout=True)
+e=np.array(d['eta'])
+ax[0].semilogy(e,d['inc_p95'],'o-',c='#7f7f7f',label='逐步求和，95 分位'); ax[0].semilogy(e,d['inc_med'],'o--',c='#7f7f7f',label='逐步求和，中位数')
+ax[0].semilogy(e,np.maximum(d['mer_p95'],1e-16),'s-',c='#1f5fa8',label='合并穿越步，95 分位')
+ax[0].set_xlabel('激波密度比 η'); ax[0].set_ylabel('伪转角 |φ|（rad）'); ax[0].set_ylim(5e-4,0.5); ax[0].legend(fontsize=7.5)
+ax[0].set_title('(a) 平面激波扫过物质三角形',loc='left',fontsize=9)
+n=np.array(d['n']); ax[1].loglog(n,d['resamp'],'o-',c='#7f7f7f',label='每步重取三角形'); ax[1].loglog(n,d['fixed'],'s-',c='#1f5fa8',label='固定物质三角形')
+ax[1].loglog(n,d['resamp'][0]*np.sqrt(n/n[0]),'k:',lw=0.8,label='∝√n')
+ax[1].set_xlabel('步数 n'); ax[1].set_ylabel('转角误差标准差（rad）'); ax[1].legend(fontsize=7.5); ax[1].set_title('(b) 0.05h 位置噪声下的累积',loc='left',fontsize=9)
+s=d['sig']; x=-np.array(s['lnJ']); y=np.array(s['mu']); k=np.array(s['kind'])
+xx=np.linspace(0,1.9,100); ax[2].plot(xx,np.tanh(xx/2),'k-',lw=1,label='单轴压缩 |μ| = tanh(|ln J|/2)')
+ax[2].scatter(x[k=='smooth'],y[k=='smooth'],s=8,c='#2ca02c',label='光滑流单步')
+ax[2].scatter(x[k=='partial'],y[k=='partial'],s=10,c='#ff7f0e',marker='^',label='部分穿越单步')
+ax[2].scatter(x[k=='shock'],y[k=='shock'],s=14,c='#1f5fa8',marker='s',label='完整穿越块')
+ax[2].set_xlabel('−ln J'); ax[2].set_ylabel('|μ|'); ax[2].legend(fontsize=7); ax[2].set_title('(c) 激波签名平面',loc='left',fontsize=9)
+fig.savefig('fig_checks.pdf'); fig.savefig('fig_checks.png',dpi=110)

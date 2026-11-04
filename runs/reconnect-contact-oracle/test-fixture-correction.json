@@ -1,0 +1,7 @@
+{
+  "first_attempt_passed": false,
+  "first_attempt_failures": 1,
+  "reason": "N4 square has rebuilt L1radius=1/4,at existing independent auditor strictR<1/4 boundary",
+  "change": "only geometric test fixture N4 toN8 andcorresponding fixedIDs/facecount; other two fixtures unchanged",
+  "scientific_N32_or_audit_guard_formula_threshold_changed": false
+}

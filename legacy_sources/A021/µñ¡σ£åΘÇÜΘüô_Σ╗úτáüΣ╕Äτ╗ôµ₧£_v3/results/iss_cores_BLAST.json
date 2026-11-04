@@ -1,0 +1,22 @@
+{
+ "case": "BLAST",
+ "thr": 0.23521244690456333,
+ "z": 5.162741868401046,
+ "cores_clean": [],
+ "ref_vortices": [],
+ "noise": [
+  {
+   "seed": 5,
+   "thr_noise": 2.199766339144936,
+   "n_cores": 0,
+   "cores": [],
+   "ref_vortex_snr": [],
+   "iou_vs_ref_by_smoothing": {
+    "2": [],
+    "4": [],
+    "8": [],
+    "16": []
+   }
+  }
+ ]
+}

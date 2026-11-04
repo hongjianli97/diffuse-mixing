@@ -1,0 +1,430 @@
+\documentclass[10.5pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{Noto Serif CJK SC}[BoldFont={Noto Serif CJK SC Bold}]
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=2.1cm]{geometry}
+\usepackage{graphicx,booktabs,tabularx,float,enumitem,caption,multirow}
+\usepackage[hidelinks]{hyperref}
+\captionsetup{font=small,labelsep=quad}
+\renewcommand{\tablename}{表}\renewcommand{\figurename}{图}\renewcommand{\abstractname}{摘要}
+\renewcommand{\contentsname}{目录}
+\setlength{\parindent}{2em}\setlength{\parskip}{3pt}\linespread{1.25}
+\setlist{nosep,leftmargin=2.2em}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\theoremstyle{plain}
+\newtheorem{prop}{命题}\newtheorem{coro}{推论}\newtheorem{defi}{定义}
+\renewcommand{\proofname}{证明}
+\newcommand{\dd}{\mathrm{d}}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries 界面拉伸的张量估计与 Nanson 余向量估计：\\[4pt] 理论重推与六算例重算}\\[10pt]
+拉格朗日轨迹网络上的掺混归因 · 2026 年 10 月
+\end{center}
+
+\begin{abstract}
+\noindent 原报告用两种只凭示踪点位置的估计量计算界面切向拉伸：点对中位数（“边测法”）与折线法。本文先从理论上说明这两种估计量为何在界面成为剪切面时失效，再给出两种新估计量，并在原有的全部六个算例上重算、与精确值或独立参照逐项对比。
+
+\textbf{理论。}(1) 二维 Nanson 公式 $\lambda=J\,|F^{-\top}N|$ 把切向拉伸改写成初始标签梯度的增长，式 (7) 的积分形式 $\ln(|\nabla c|/|\nabla c_0|)=\ln\lambda-\ln J$ 由此对任意流动精确成立，不需要“薄界面元”假设。(2) 点对估计量的偏差只依赖点对方向，与示踪点间距 $h$ 无关，所以加密网络不会收敛；按点取中位数在 $\dot\gamma t<2\cot\alpha_{\max}\approx4.8$ 内无偏。(3) 链式张量估计（新）用二次最小二乘拟合增量变形梯度，按物质账本的锚定规则串联，是一致估计；其误差被各向异性 $A=\sigma_{\max}(F)/\lambda$ 放大。(4) Nanson 余向量估计（新）用当前复形上标签场的 P1 梯度，不做时间积分，不受剪切放大，但当物质层薄于 $h$ 时失效。两者失效条件互补，同时失效时就是只凭位置无法越过的信息极限。
+
+\textbf{重算结果。}
+\begin{itemize}
+\item 链式张量估计在全部算例上与参照一致：精确算例中逐点误差中位数为 $10^{-3}$ 量级，Lamb–Oseen 涡对随分辨率二阶收敛（0.78、0.26、0.06），而点对法停在 0.8–1.0 不收敛。
+\item Nanson 余向量在纯切向剪切中精确到 $10^{-4}$，加 $0.1h$ 噪声仍在 $0.01$ 以内；在卷起与细丝化后期偏低。它是有效的交叉检验，但不宜单独作为主估计。
+\item \textbf{激波–重气泡的掺混归因需要修正。}原报告的拉伸 $0.46/0.77/1.05$（$t=0.6/1.0/1.4$）与界面长度 5.3 倍都来自折线锯齿；在求解器内自适应加点的参照曲线给出 $-0.41/-0.09/0.39$，长度只有 2.2 倍。激波压缩后界面先被\emph{切向缩短}，抵消了大部分压缩带来的梯度增长；到 $t=1.4$ 压缩仍占总增长的 54\%–62\%，而不是原报告的 30\%。
+\item 原报告中“Lamb–Oseen 绕涡圆环的精确拉伸约为 0”也不成立：在涡对的应变下，逐点拉伸在 $-2.5$ 与 $0.7$ 之间，界面平均为 $-0.31$。
+\end{itemize}
+质量通量、扩散与转移算子不依赖拉伸估计量，原结论不变。压缩项（物质账本）在精确算例中再次与解析值一致到 $10^{-3}$；但本次新发现，激波算例中账本对位置噪声敏感。
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{问题与结论概要}
+
+原报告用式 (7) $\dd\ln|\nabla c|/\dd t=\sigma_t-\theta$ 把界面掺混分成切向拉伸与压缩两项。压缩项 $-\ln J$ 取自物质账本，在 Sod 与爆炸波中与解析值一致到 $2\times10^{-3}$；拉伸项则依赖两个有限点对估计量：
+\begin{itemize}
+\item \textbf{点对中位数（边测法）}：对每个界面示踪点，取初始方向与界面切向夹角小于 $\alpha_{\max}=22.5^\circ$ 的互 kNN 边，求 $\ln(|r(t)|/|r(0)|)$ 的中位数；
+\item \textbf{折线法}：把 $|\varphi_0|<0.6h$ 带内的示踪点按初始参数排序连成折线，取各段对数长度比的平均（气泡）或总长度比。
+\end{itemize}
+在激波–重气泡的卷起后期，两者相差悬殊（$t=1.4$ 时 0.60 与 1.05），原报告只能给出区间。本文回答三个问题：两者为何不准；能否从理论上构造一致的估计量；新估计量在全部算例上的表现如何，以及原结论哪些需要修正。
+
+\textbf{一句话结论。}新理论中最有用的是\emph{链式张量估计}：它在所有算例上都收敛到参照，使原报告的区间收窄成一个数；\emph{Nanson 余向量估计}在纯剪切与噪声下更稳，在细丝化后期偏低，适合作交叉检验。用它们重算后，激波–重气泡的掺混归因发生了定性变化（第 \ref{sec:sbattr} 节）。
+
+\section{理论}\label{sec:theory}
+
+\subsection{记号：界面元的切向拉伸}
+流映射 $\Phi_t:X\mapsto x$，变形梯度 $F=\nabla_X\Phi_t$，$J=\det F$。界面取为初始标签函数 $\varphi_0(X)$ 的零等值线，本文取 $\varphi_0$ 为初始界面的符号距离。记初始单位法向 $N=\nabla_X\varphi_0/|\nabla_X\varphi_0|$，单位切向 $T=R^\top N$，其中 $R$ 为逆时针旋转 $90^\circ$。物质线元的切向拉伸为
+\begin{equation}
+\lambda(X,t)=|F\,T|,\qquad \sigma_t=\frac{\dd}{\dd t}\ln\lambda .
+\end{equation}
+$\varphi_0$ 在全场有定义，所以 $\lambda$ 是 $\varphi_0$ 等值线族的拉伸场，界面只是其中 $\varphi_0=0$ 的一条。
+
+\subsection{Nanson 公式与梯度增长的精确分解}
+
+\begin{prop}[二维 Nanson 公式]\label{prop:nanson}
+对任意可逆 $F$ 与单位向量 $T$，$N=RT$，有
+\begin{equation}
+|F\,T| = J\,|F^{-\top}N| .\label{eq:nanson}
+\end{equation}
+\end{prop}
+\begin{proof}
+二维中余子式矩阵满足 $\operatorname{cof}F=RFR^\top$（直接展开 $F=\begin{pmatrix}a&b\\c&d\end{pmatrix}$ 可验证），且 $F^{-\top}=\operatorname{cof}F/J$。于是 $J|F^{-\top}N|=|RFR^\top RT|=|FT|$。
+\end{proof}
+这是连续介质力学中面元变换 $n\,\dd a=J F^{-\top}N\,\dd A$ 的二维形式（“面积”即长度）。
+
+\begin{coro}[标签梯度形式]\label{coro:label}
+标签场 $\varphi(x,t)=\varphi_0(\Phi_t^{-1}x)$ 满足 $\nabla_x\varphi=F^{-\top}\nabla_X\varphi_0$，所以
+\begin{equation}
+\lambda = J\,\frac{|\nabla_x\varphi_0|}{|\nabla_X\varphi_0|}. \label{eq:lamcov}
+\end{equation}
+\end{coro}
+
+\begin{prop}[梯度增长的精确分解]\label{prop:split}
+设 $\kappa\to0$，且界面附近 $c_0=g(\varphi_0)$。则对任意（光滑）流动，沿每个物质点
+\begin{equation}
+\ln\frac{|\nabla c|}{|\nabla c_0|}=\ln\frac{|\nabla_x\varphi_0|}{|\nabla_X\varphi_0|}=\underbrace{\ln\lambda}_{\text{拉伸}}\;\underbrace{-\ln J}_{\text{压缩}} .\label{eq:split}
+\end{equation}
+\end{prop}
+\begin{proof}
+$c(x,t)=g(\varphi(x,t))$，故 $|\nabla c|/|\nabla c_0|=|\nabla_x\varphi|/|\nabla_X\varphi_0|$，再用式 \eqref{eq:lamcov}。
+\end{proof}
+对时间求导即得原报告的式 (7)。原推导用了“切向长度 $\ell_t$、法向厚度 $\ell_n$ 的薄界面元”，命题 \ref{prop:split} 表明这一假设不需要：式 (7) 的积分形式是一个代数恒等式。另一个直接后果是：总增长 $\ln|\nabla_x\varphi_0|$ 本身可以直接测量，拉伸项可以定义为总增长加上 $\ln J$，而不必单独去测一个沿弱方向的量。
+
+\subsection{点对估计量的偏差}
+
+点对 $r$ 在局部仿射流下满足 $|r(t)|/|r(0)|=|F\hat r|$，与 $|r|$ 无关。记 $\hat r=\cos\alpha\,T+\sin\alpha\,N$。
+
+\begin{prop}[点对偏差与 $h$ 无关]\label{prop:pair}
+(i) 点对估计的偏差 $b(\alpha)=\ln|F\hat r|-\ln|FT|$ 只依赖方向 $\alpha$ 与 $F$，不依赖 $h$，所以加密网络不会使其收敛。\\
+(ii) 取沿界面的简单剪切 $F=I+\dot\gamma t\,TN^\top$（真值 $\lambda=1$），有
+\begin{equation}
+|F\hat r|^2=1+\dot\gamma t\sin2\alpha+\dot\gamma^2t^2\sin^2\alpha .
+\end{equation}
+当 $\alpha$ 在 $[-\alpha_{\max},\alpha_{\max}]$ 内对称分布时，按点取的中位数在 $\dot\gamma t<2\cot\alpha_{\max}$ 内恰为 0；超过此阈值后偏差约为 $\ln(\dot\gamma t\sin\alpha)$，无界增长。$\alpha_{\max}=22.5^\circ$ 时阈值约 4.8。
+\end{prop}
+\begin{proof}
+(ii) 中 $F\hat r=(\cos\alpha+\dot\gamma t\sin\alpha)T+\sin\alpha N$。对 $\alpha=-\beta<0$，$|F\hat r|<1$ 当且仅当 $\dot\gamma t\sin\beta<2\cos\beta$。阈值内所有负 $\alpha$ 的点对缩短、所有正 $\alpha$ 的点对伸长，中位数落在 $\alpha=0$。
+\end{proof}
+折线法的情形更糟：带厚与切向间距都是 $O(h)$，相邻点连线与切向的夹角为 $O(1)$，$h\to0$ 时比例不变。在剪切下这些近乎横向的线段被大幅拉长，所以折线法系统性偏大。
+
+\subsection{链式张量估计（向量法）}
+
+\begin{defi}[链式张量估计]
+在锚定帧 $a$ 上，对示踪点 $i$ 取 $k=12$ 个近邻 $j$，令 $r_j=x_j(a)-x_i(a)$，用最小二乘拟合
+\begin{equation}
+x_j(t)-x_i(t)\approx F_{\rm inc}\,r_j+Q(r_j),
+\end{equation}
+$Q$ 为二次项。取线性部分 $F_{\rm inc}$，令 $F(t)=F_{\rm inc}(a\to t)\,F(a)$。锚定规则与物质账本相同：每 5 帧重锚；若近邻中有示踪点处于 C 通道检出的激波模板内，推迟重锚，最多推迟 4 个周期。估计量为
+\begin{equation}
+\hat\lambda_{\rm vec}=|F\,T|,\qquad A=\frac{\sigma_{\max}(F)}{\hat\lambda_{\rm vec}} .
+\end{equation}
+\end{defi}
+
+它与 $\ln J$ 账本同构：账本是 $\sum\ln\det F_{\rm inc}$，这里串联的是整个张量，所以 $\ln\det F$ 是一个“张量账本”。平面激波前后两态均匀时，锚定星一端完全在激波前、另一端完全在激波后，其间映射是仿射的，所以望远相消对整个 $F$ 成立，而不只对行列式成立。
+
+\begin{prop}[一致性与条件数]\label{prop:vec}
+(i) 若流映射在每个近邻域内为仿射，估计量精确，与剪切强弱无关。\\
+(ii) 若 $F$ 的相对误差为 $\varepsilon$，则 $|\delta\ln\hat\lambda_{\rm vec}|\le\varepsilon A$。各增量误差不相关时，累积误差约为 $A(t)\big(\sum_k\varepsilon_k^2\big)^{1/2}$。\\
+(iii) 光滑速度场下，每个增量只覆盖一个短时间段，其非仿射部分由速度场的光滑性决定，$\varepsilon_k\to0$（$h\to0$），估计量一致。
+\end{prop}
+\begin{proof}
+(ii) $\delta(FT)=\delta F\,T$，$|\delta F\,T|\le\|\delta F\|=\varepsilon\,\sigma_{\max}(F)$，除以 $|FT|$ 即得。
+\end{proof}
+关键在于 (iii)：累积流映射 $\Phi_t$ 会产生薄于 $h$ 的细丝，但短时增量只继承速度场的光滑性，所以链式估计不需要在当前时刻解析这些细丝。代价是 (ii)：当界面恰好是剪切面时，$A\gg1$，误差被放大。
+这里用最小二乘残差的协方差估计 $\varepsilon_k$，得到逐点误差指标 $e_v=A\big(\sum_k\varepsilon_k^2\big)^{1/2}$。
+
+\subsection{Nanson 余向量估计}
+
+\begin{defi}[Nanson 余向量估计]
+在当前复形 $K(t)$（外剥离 Delaunay）上，对节点值 $\varphi_0(X_i)$ 求 P1 梯度，按面积加权平均到节点，得到 $\widehat{\nabla_x\varphi_0}$；$\hat J$ 取自物质账本。估计量为
+\begin{equation}
+\hat\lambda_{\rm cov}=\hat J\,\frac{|\widehat{\nabla_x\varphi_0}|}{|\nabla_X\varphi_0|}.
+\end{equation}
+\end{defi}
+
+\begin{prop}[性质与失效条件]\label{prop:cov}
+(i) 若 $\varphi=\varphi_0\circ\Phi_t^{-1}$ 在节点星内为线性，P1 梯度精确；特别地，仿射流中的直线界面精确。\\
+(ii) 不做时间积分：没有误差累积，也没有 $A$ 的放大；位置噪声 $\sigma$ 只以 $O(\sigma/h)$ 进入一次。\\
+(iii) $\varphi_0$ 是法向标签，跨涡片连续，界面滑移不会让跨界面的三角形产生 $O(1)$ 误差。\\
+(iv) 失效条件：当前构形中 $\varphi$ 在小于 $h$ 的尺度上变化（物质层薄于 $h$），P1 梯度在层间平均，$|\nabla\varphi|$ 偏低；节点星跨在激波上时也有瞬时误差；账本 $\hat J$ 的误差直接进入。
+\end{prop}
+逐点误差指标取 $e_c=h\|\nabla^2\varphi\|/|\nabla\varphi|$，由近邻上的二次最小二乘拟合给出。
+
+\subsection{组合估计与信息极限}
+两种估计量估计的是同一个 $\lambda$（命题 \ref{prop:nanson}），失效条件互补：向量法怕界面是剪切面（$A$ 大），余向量法怕物质层薄于 $h$。逐点取误差指标较小者，得到组合估计
+\begin{equation}
+\hat\lambda_{\rm comb}=\begin{cases}\hat\lambda_{\rm vec},& e_v\le e_c\\ \hat\lambda_{\rm cov},& e_v>e_c\end{cases}.
+\end{equation}
+两种估计同时失效，当且仅当界面既是强剪切面、物质层又薄于示踪点间距。此时当前点云不包含所需的结构，历史信息又是病态的，只凭位置无法确定拉伸，需要速度场或沿界面加点。这就是只凭位置的信息极限。
+
+\subsection{涡片上拉伸的两值性}
+设界面是切向速度跳跃为 $\Delta u_t$ 的滑移面。法向速度连续，两侧物质线沿同一几何曲线运动，切向拉伸率为 $\sigma^\pm=T\cdot\partial_s u^\pm$，于是
+\begin{equation}
+\sigma^+-\sigma^-=\partial_s\Delta u_t ,
+\end{equation}
+即涡片强度沿弧长的梯度。所以在涡片上，“界面拉伸”本来就不是单值的。激波–重气泡中，斜压沉积的涡片强度沿界面变化，两侧拉伸确实不同；本文用 $r_0=R$ 与 $R\pm0.01$ 三条参照曲线给出这一物理范围（第 \ref{sec:sb} 节）。
+
+\subsection{三维推广}
+三维 Nanson 公式 $\dd a/\dd A=J|F^{-\top}N|=J|\nabla_x\varphi_0|/|\nabla_X\varphi_0|$ 给出物质面的面积拉伸，余向量估计不需修改；向量法改为 $|\operatorname{cof}F\,N|$，需要两个切向量。物质账本与 P1 梯度改用四面体即可。
+
+\section{实现与参照}
+
+\textbf{统一参数（全部算例相同）。}界面示踪点为 $|\varphi_0|<0.6h$ 的带；界面平均为带内示踪点的均匀平均（气泡另给质量加权）；链式张量：$k=12$，二次最小二乘，锚定周期 5 帧，最多推迟 4 个周期，激波模板来自 C 通道（$\tau=0.2$）；余向量：外剥离 Delaunay 复形上的面积加权 P1 梯度；物质账本与原报告相同。
+
+\textbf{参照。}
+\begin{itemize}
+\item \emph{逐点精确值}（双环流、Lamb–Oseen、Sod、爆炸波）：对每个带内示踪点，沿 $\pm10^{-5}T$ 各放一个点并用精确速度场积分，得到该点所在 $\varphi_0$ 等值线的精确 $\ln\lambda$。
+\item \emph{自适应物质曲线}：标记点按标签排序，段长超过 $d_{\max}$ 或转角超过 0.15 rad 时，在标签中点插入新点，位置由相邻 4 点的三次 Lagrange 插值给出。在一个可解析的螺旋算例上，它与 40000 点精确曲线一致到 $10^{-4}$。
+\item \emph{DNS 参照}：重跑两个 DNS，用与示踪点相同的 Heun/双线性格式在求解器内推进标记曲线并自适应加点（$d_{\max}=0.001=h/5$）。激波–重气泡同时推进 $r_0=R$、$R\pm0.01$ 三条曲线；$t=1.4$ 时中线有 3120 个标记点。
+\item \emph{压缩参照}：Sod、爆炸波为解析值；DNS 为沿示踪点插值的密度比 $\ln(\rho(t)/\rho(0))$。
+\end{itemize}
+
+\section{机理检验：单个 Lamb–Oseen 涡}\label{sec:toy}
+
+先在两个只有理论意义的流动上检验第 \ref{sec:theory} 节的预言。
+\begin{itemize}
+\item 同心圆环（$R=1.5$）：纯差动旋转，界面就是剪切面，精确 $\ln\lambda\equiv0$；
+\item 偏心圆环（圆心 $(0.8,0)$，半径 0.5）：被卷成螺旋，界面与拉伸方向一致，但物质层随时间变薄。
+\end{itemize}
+
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{fig_toy.png}
+\caption{机理检验。(a) 同心圆环：点对法在 $\dot\gamma t\approx4.8$ 后偏离，加密后不变；链式张量随 $h$ 收敛；Nanson 精确。(b) 位置噪声下的逐点误差：链式张量的误差随 $\dot\gamma t$ 被放大，Nanson 保持在噪声水平。(c) 偏心螺旋：链式张量收敛，Nanson 在物质层变薄后偏低。}
+\label{fig:toy}
+\end{figure}
+
+\begin{table}[H]\centering\small
+\caption{机理检验：界面平均 $\langle\ln\lambda\rangle$。}\label{tab:toy}
+\begin{tabular}{llrrrrr}\toprule
+流动与分辨率 & 时刻 & 精确 & 点对（旧） & 链式张量 & Nanson & 组合 \\\midrule
+同心圆环 $h$=0.05 & $\dot\gamma t$=15 & 0 & 0.811 & $-$0.057 & $-$0.000 & $-$0.002 \\
+同心圆环 $h$=0.05 & $\dot\gamma t$=30 & 0 & 1.510 & $-$0.235 & $-$0.000 & $-$0.000 \\
+同心圆环 $h$=0.025 & $\dot\gamma t$=15 & 0 & 0.868 & $-$0.014 & 0.000 & $-$0.014 \\
+同心圆环 $h$=0.025 & $\dot\gamma t$=30 & 0 & 1.541 & $-$0.055 & $-$0.000 & $-$0.000 \\
+同心圆环，噪声 0.1$h$ & $\dot\gamma t$=30 & 0 & 1.666 & 0.693 & 0.001 & 0.001 \\
+偏心螺旋 $h$=0.04 & $t$=40 & 2.048 & 1.995 & 1.955 & 1.645 & 1.955 \\
+偏心螺旋 $h$=0.04 & $t$=80 & 2.729 & 2.603 & 2.389 & 1.923 & 2.389 \\
+偏心螺旋 $h$=0.02 & $t$=40 & 2.024 & 2.047 & 2.004 & 1.928 & 2.004 \\
+偏心螺旋 $h$=0.02 & $t$=80 & 2.694 & 2.674 & 2.618 & 2.336 & 2.618 \\\bottomrule
+\end{tabular}
+\end{table}
+
+三条预言都得到确认：
+\begin{itemize}
+\item 点对法的偏差与 $h$ 无关（同心圆环中 $h$ 减半，0.81 变为 0.87）；
+\item 链式张量一致，误差随 $h$ 约二阶下降（$-0.235\to-0.055$），但被 $A$ 放大，噪声下尤其明显；
+\item Nanson 对剪切与噪声都不敏感，却在物质层变薄后偏低；组合估计在两种流动中都选中了正确的一方。
+\end{itemize}
+偏心螺旋中点对法表现不差，因为界面与拉伸方向一致、$A\approx1$。这说明点对法的问题专门出在界面是剪切面的情形。
+
+\section{六个算例的重算}\label{sec:cases}
+
+表 \ref{tab:main} 汇总界面平均拉伸，表 \ref{tab:medabs} 给出有逐点精确值的算例的逐点误差。各算例的云图与曲线见图 \ref{fig:dg}–\ref{fig:sv}。每幅图的六个子图依次为：(a) 背景场（物质标签或 DNS 密度）与参照界面；(b) 链式张量给出的 $\varphi_0$ 等值线族拉伸场；(c) 物质账本给出的压缩场；(d) 各向异性 $A$，它标出了向量法与点对法病态的位置；(e) 沿界面的逐点拉伸；(f) 界面平均拉伸的时间历程。
+
+\begin{table}[H]\centering\small
+\caption{界面平均拉伸 $\langle\ln\lambda\rangle$：参照、原报告数值与四种估计。参照：双环流、LO、Sod、爆炸波为带内示踪点的逐点精确值的平均；DNS 算例为自适应参照曲线。}\label{tab:main}
+\begin{tabular}{lrrlrrrrr}\toprule
+算例 & $t$ & 参照 & 原报告 & 点对 & 折线 & \textbf{链式张量} & Nanson & 组合 \\\midrule
+双环流 & 5.00 & 0.805 & 0.781 & 0.788 & 0.504 & \textbf{0.804} & 0.820 & 0.804 \\
+双环流 & 10.00 & 1.711 & 1.700 & 1.647 & 1.577 & \textbf{1.708} & 1.648 & 1.708 \\
+LO 涡对 & 4.71 & $-$0.015 & $-$0.06 & $-$0.058 & 0.375 & \textbf{$-$0.030} & $-$0.017 & $-$0.030 \\
+LO 涡对 & 9.42 & $-$0.064 & 0.23 & 0.209 & 0.933 & \textbf{$-$0.137} & $-$0.014 & $-$0.137 \\
+LO 涡对 & 18.85 & $-$0.310 & 0.78 & 0.781 & 1.551 & \textbf{$-$0.551} & $-$0.044 & $-$0.333 \\
+Sod & 0.24 & 0.000 & $-$0.008 & $-$0.008 & $-$0.336 & \textbf{0.000} & 0.000 & 0.000 \\
+爆炸波 & 25.00 & 0.577 & 0.553 & 0.552 & 0.360 & \textbf{0.576} & 0.577 & 0.576 \\
+激波–气泡 & 0.30 & $-$0.067 & $-$0.07 & $-$0.075 & $-$0.076 & \textbf{$-$0.067} & $-$0.066 & $-$0.067 \\
+激波–气泡 & 0.60 & $-$0.411 & [$-$0.08, 0.46] & $-$0.068 & 0.453 & \textbf{$-$0.394} & $-$0.356 & $-$0.379 \\
+激波–气泡 & 1.00 & $-$0.086 & [0.20, 0.77] & 0.202 & 0.773 & \textbf{$-$0.165} & $-$0.155 & $-$0.153 \\
+激波–气泡 & 1.40 & 0.390 & [0.60, 1.05] & 0.606 & 1.050 & \textbf{0.277} & 0.303 & 0.323 \\
+激波–涡（在线） & 0.60 & $-$0.224 & $-$0.18 & $-$0.185 & 0.442 & \textbf{$-$0.231} & $-$0.232 & $-$0.231 \\
+激波–涡（离线） & 0.60 & $-$0.224 & $-$0.21 & $-$0.212 & 0.408 & \textbf{$-$0.247} & $-$0.240 & $-$0.244 \\\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]\centering\small
+\caption{逐点误差中位数 $\operatorname{med}|\ln\hat\lambda_i-\ln\lambda_i|$（有逐点精确值的算例）。}\label{tab:medabs}
+\begin{tabular}{lrrrrrr}\toprule
+算例 & $t$ & 点对 & 折线 & \textbf{链式张量} & Nanson & 组合 \\\midrule
+双环流 & 5.00 & 0.033 & 0.271 & \textbf{0.001} & 0.013 & 0.001 \\
+双环流 & 10.00 & 0.144 & 0.385 & \textbf{0.007} & 0.205 & 0.007 \\
+LO 涡对 & 9.42 & 0.531 & 0.962 & \textbf{0.065} & 0.094 & 0.065 \\
+LO 涡对 & 18.85 & 0.978 & 1.561 & \textbf{0.261} & 0.317 & 0.261 \\
+Sod & 0.24 & 0.005 & 0.377 & \textbf{0.000} & 0.000 & 0.000 \\
+爆炸波 & 7.00 & 0.019 & 0.110 & \textbf{0.001} & 0.144 & 0.001 \\
+爆炸波 & 25.00 & 0.019 & 0.110 & \textbf{0.001} & 0.014 & 0.001 \\\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{双环流（不可压）}
+物质线 $x_0=0.5$ 在两个环流间被拉伸成瓣（图 \ref{fig:dg}a），$A$ 的中位数只有 1.3，界面与拉伸方向基本一致。链式张量与逐点精确值几乎重合（逐点误差中位数 0.007）；点对法在界面平均上与精确值相差 0.06，但逐点误差达 0.14；折线法偏低 0.13–0.30。Nanson 估计在 $t\ge8$ 后系统偏低（$t=10$ 时界面平均低 0.06，逐点误差 0.2，图 \ref{fig:dg}e 中多处偏离）：这正是命题 \ref{prop:cov}(iv) 的物质层薄于 $h$ 的情形。组合估计在本例中全部选中向量法。
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{fig_dg.png}
+\caption{双环流，$t=10$。黑线为自适应参照曲线。}\label{fig:dg}
+\end{figure}
+
+\subsection{Lamb–Oseen 共转涡对（不可压）}
+这是对拉伸估计最苛刻的不可压算例。绕涡圆环处于差动旋转的强剪切中（$A$ 中位数在 $t=18.8$ 时为 13），同时受另一个涡的应变，逐点拉伸在 $-2.5$ 与 $0.7$ 之间（图 \ref{fig:lo}e）。原报告认为精确值“约为 0”，这一说法不成立：参照曲线的总长度确实几乎不变（$\ln(L/L_0)=0.02$），但局部拉伸的界面平均为 $-0.31$。
+
+点对法给出 $+0.78$，符号都错了；加密到 $N=32000$ 仍为 0.64，不收敛，与命题 \ref{prop:pair} 一致。链式张量的逐点误差随分辨率为 0.78、0.26、0.06（表 \ref{tab:conv}），二阶收敛。Nanson 在 $N=8000$ 时界面平均偏高 0.27：圆环外侧的物质层被另一个涡剥成细丝，当前构形无法解析。本例中 $h=0.13$ 约为涡核半径的八分之一，处在第 \ref{sec:theory} 节所说的信息极限附近。
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{fig_lo.png}
+\caption{Lamb–Oseen 涡对，$t=18.85$（$N=8000$）。}\label{fig:lo}
+\end{figure}
+
+\subsection{Sod 激波管（可压）}
+竖直物质线在激波扫过时只受法向压缩，精确拉伸为 0。链式张量与 Nanson 都精确到 $10^{-4}$，说明推迟重锚对整个张量成立。点对法有 $-0.008$ 的小偏差，与原报告一致。折线法为 $-0.34$：带内相邻示踪点的连线含有 $x$ 方向分量，被激波压缩，这是折线法的锯齿效应在一维问题中的直接表现。压缩项 0.754 与解析值一致到 $10^{-4}$。
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{fig_sod.png}
+\caption{Sod 激波管，$t=0.24$（只显示 $x\in[-0.25,0.45]$）。}\label{fig:sod}
+\end{figure}
+
+\subsection{柱面爆炸波（可压）}
+圆环被径向自相似地拉伸，精确值为 $p\ln(t/t_c)$；$A=1$，界面就是最大拉伸方向。链式张量在三档分辨率下误差都在 $3\times10^{-3}$ 以内；点对法系统偏低约 0.025，加密不变。Nanson 在终态精确，但在 $t=7$（激波正好扫过圆环）时逐点误差达 0.14：节点星跨在激波上，同时账本处于推迟重锚中，属于命题 \ref{prop:cov}(iv) 的瞬时失效。
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{fig_blast.png}
+\caption{柱面爆炸波，$t=25$。}\label{fig:blast}
+\end{figure}
+
+\subsection{激波–重气泡（可压，DNS）}\label{sec:sb}
+这是原报告中拉伸估计分歧最大的算例。图 \ref{fig:sb}a 显示，求解器内自适应加点得到的参照界面与 DNS 密度界面完全吻合，包括主涡与下部次级涡的卷起。参照给出 $\langle\ln\lambda\rangle=-0.07,\,-0.41,\,-0.09,\,0.39$（$t=0.3,0.6,1.0,1.4$），界面总长度比为 2.16，而不是原报告的 5.3。
+
+链式张量与参照之差在 0.02（$t\le0.6$）到 0.11（$t=1.4$）之间，Nanson 与组合估计相近。三者都落在涡片两侧参照曲线给出的范围内（图 \ref{fig:sb}f 灰带），这一范围本身就是命题中涡片拉伸两值性的体现：$t=1.4$ 时内侧 0.06、中线 0.39、外侧 0.32。点对法在 $t=0.6$ 给出 $-0.07$（参照 $-0.41$），$t=1.4$ 给出 0.61；折线法在 $t=0.6$ 已为 $+0.45$，符号相反。图 \ref{fig:sb}e 显示，链式张量在逐点上跟踪了参照曲线的起伏，而点对与折线散布在参照之上。
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{fig_sb.png}
+\caption{激波–重气泡，$t=1.4$。(a)–(d) 中实线为 $r_0=R$ 参照曲线，虚线与点线为 $R\mp0.01$。(f) 灰带为三条参照曲线的范围。}\label{fig:sb}
+\end{figure}
+
+\subsection{激波–等熵涡（可压，DNS）}
+绕涡圆环先被激波压缩，再被涡卷曲（图 \ref{fig:sv}a）。在线追踪下链式张量、Nanson 与参照之差都不超过 0.01；离线追踪下为 0.02。点对法差 0.04，折线法 $+0.44$，符号相反。图 \ref{fig:sv}e 中新估计逐点跟踪了参照曲线的两个波峰与波谷。压缩项在线 0.396、离线 0.421，DNS 为 0.398。
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{fig_sv.png}
+\caption{激波–等熵涡，$t=0.6$（在线追踪）。}\label{fig:sv}
+\end{figure}
+
+\section{稳健性}
+
+\subsection{分辨率}
+\begin{table}[H]\centering\small
+\caption{分辨率收敛。每格为“界面平均 / 逐点误差中位数”。}\label{tab:conv}
+\begin{tabular}{llrrrr}\toprule
+算例 & 分辨率 & 精确 & 点对 & \textbf{链式张量} & Nanson \\\midrule
+双环流 $t=10$ & 80$\times$40 & 1.751 & 1.738 / 0.244 & \textbf{1.730} / 0.027 & 1.525 / 0.287 \\
+ & 160$\times$80 & 1.711 & 1.647 / 0.144 & \textbf{1.708} / 0.007 & 1.648 / 0.205 \\
+ & 320$\times$160 & 1.680 & 1.683 / 0.079 & \textbf{1.679} / 0.002 & 1.633 / 0.060 \\
+LO $t=18.8$ & $N$=2000 & $-$0.321 & 0.580 / 0.777 & \textbf{$-$0.761} / 0.782 & $-$0.010 / 0.620 \\
+ & $N$=8000 & $-$0.310 & 0.781 / 0.978 & \textbf{$-$0.551} / 0.261 & $-$0.044 / 0.317 \\
+ & $N$=32000 & $-$0.333 & 0.638 / 0.823 & \textbf{$-$0.395} / 0.060 & $-$0.237 / 0.195 \\
+爆炸波 $t=25$ & $h$=0.044 & 0.578 & 0.557 / 0.018 & \textbf{0.575} / 0.003 & 0.572 / 0.033 \\
+ & $h$=0.022 & 0.577 & 0.552 / 0.019 & \textbf{0.576} / 0.001 & 0.577 / 0.014 \\
+ & $h$=0.011 & 0.578 & 0.555 / 0.020 & \textbf{0.577} / 0.000 & 0.577 / 0.006 \\
+爆炸波 $t=7$ & $h$=0.044 & 0.048 & 0.029 / 0.017 & \textbf{0.053} / 0.005 & 0.015 / 0.217 \\
+（激波在环上） & $h$=0.022 & 0.047 & 0.022 / 0.019 & \textbf{0.047} / 0.001 & $-$0.144 / 0.144 \\
+ & $h$=0.011 & 0.047 & 0.024 / 0.020 & \textbf{0.047} / 0.000 & 0.024 / 0.008 \\\bottomrule
+\end{tabular}
+\end{table}
+链式张量在三个算例中都收敛：双环流与 LO 约为二阶，爆炸波已接近机器精度。点对法的逐点误差在 LO 中停在 0.8–1.0，在爆炸波中停在 0.02，与命题 \ref{prop:pair}(i) 一致。Nanson 收敛较慢，在 LO 中受细丝化限制。
+
+\subsection{位置噪声}
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{fig_robust.png}
+\caption{(a) 逐点误差随示踪点间距的变化。(b) 不可压算例中界面平均误差随噪声的变化。(c) 激波–重气泡 $t=1.4$：各估计与账本压缩项随噪声的变化。}\label{fig:robust}
+\end{figure}
+
+\begin{table}[H]\centering\small
+\caption{位置噪声（每帧独立高斯噪声，标准差为 $h$ 的倍数）。前两组每格为“界面平均 / 逐点误差中位数”；最后一列为账本压缩项 $-\ln J$。}\label{tab:noise}
+\setlength{\tabcolsep}{3.5pt}\footnotesize
+\begin{tabular}{llrrrrrr}\toprule
+算例 & 噪声 & 精确/参照 & 点对 & \textbf{链式张量} & Nanson & 组合 & $-\ln J$ \\\midrule
+双环流 $t=10$ & 0 & 1.711 & 1.647 / 0.144 & \textbf{1.708} / 0.007 & 1.648 / 0.205 & 1.708 / 0.007 & 0.001 \\
+ & 0.05$h$ & 1.711 & 1.661 / 0.157 & \textbf{1.739} / 0.069 & 1.673 / 0.252 & 1.737 / 0.076 & $-$0.030 \\
+ & 0.1$h$ & 1.711 & 1.672 / 0.147 & \textbf{1.764} / 0.210 & 1.647 / 0.349 & 1.766 / 0.218 & $-$0.065 \\
+LO $t=18.8$ & 0 & $-$0.310 & 0.781 / 0.978 & \textbf{$-$0.551} / 0.261 & $-$0.044 / 0.317 & $-$0.333 / 0.261 & $-$0.006 \\
+ & 0.05$h$ & $-$0.310 & 0.756 / 1.009 & \textbf{$-$0.382} / 0.516 & $-$0.006 / 0.334 & 0.002 / 0.351 & $-$0.032 \\
+ & 0.1$h$ & $-$0.310 & 0.798 / 0.981 & \textbf{$-$0.381} / 0.686 & 0.006 / 0.429 & 0.010 / 0.429 & $-$0.056 \\
+激波–气泡 $t=1.4$ & 0 & 0.390 & 0.606 & \textbf{0.277} & 0.303 & 0.323 & 0.450 \\
+ & 0.05$h$ & 0.390 & 0.624 & \textbf{0.215} & 0.880 & 0.691 & $-$0.139 \\
+ & 0.1$h$ & 0.390 & 0.641 & \textbf{0.354} & 1.716 & 1.210 & $-$0.975 \\\bottomrule
+\end{tabular}
+\end{table}
+
+三点观察：
+\begin{itemize}
+\item 链式张量的界面平均在噪声下没有系统性恶化（气泡中 0.28、0.22、0.35 对参照 0.39），但逐点误差随噪声增大，这是条件数 $A$ 的放大（命题 \ref{prop:vec}）。
+\item Nanson 的逐点误差在纯剪切中几乎不受噪声影响（图 \ref{fig:toy}b），但它依赖账本 $J$。
+\item \textbf{新发现：激波算例中物质账本对位置噪声敏感。}激波–重气泡加 $0.05h$ 噪声后，界面上的 $-\ln J$ 从 0.45 降到 $-0.14$；Sod 与爆炸波加 $0.1h$ 噪声后分别偏低 0.14 与 0.21。原报告的噪声检验只做了双环流扩散，没有覆盖这一点。可能的原因是噪声触发 C 通道误检，导致推迟重锚与长锚定段。由链式张量行列式给出的“张量账本” $-\ln\det F$ 在气泡中稳健得多（$0.05h$ 噪声下 0.55，$0.1h$ 下 0.31），在爆炸波中为 0.63（精确 0.64），但在 Sod 中同样偏低（0.65）。因此在有噪声的激波数据上，Nanson 与组合估计不可用，应以链式张量为主；账本本身需要单独改进。
+\end{itemize}
+
+\subsection{追踪方式}
+激波–等熵涡中，在线与离线追踪的链式张量相差 0.016，Nanson 相差 0.008，都远小于点对与折线法本身的误差。
+
+\section{激波–重气泡掺混归因的修正}\label{sec:sbattr}
+
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{fig_sb_attr.png}
+\caption{(a) 气泡界面上压缩项、拉伸项与总增长的时间历程，以及原报告的两种拉伸估计。(b) 新旧归因对比：旧为“折线拉伸 + 账本压缩”，新为“链式张量拉伸 + 账本压缩”。}\label{fig:sbattr}
+\end{figure}
+
+\begin{table}[H]\centering\small
+\caption{激波–重气泡界面的掺混归因。拉伸参照为中线曲线，方括号为三条参照曲线的范围；“总增长”为链式张量拉伸加账本压缩；最后一列为参照曲线的总长度比。}\label{tab:sbattr}
+\setlength{\tabcolsep}{3.5pt}\footnotesize
+\begin{tabular}{rrlrlrrrr}\toprule
+$t$ & 旧压缩 & 旧拉伸（折线 / 边测） & 新压缩 & 拉伸参照 [范围] & 链式张量 & 质量加权 & 总增长 & $\ln(L/L_0)$ \\\midrule
+0.3 & 0.32 & $-$0.07 & 0.315 & $-$0.067 [$-$0.079, $-$0.061] & $-$0.067 & $-$0.067 & 0.249 & $-$0.062 \\
+0.6 & 0.48 & 0.46 / $-$0.08 & 0.480 & $-$0.411 [$-$0.526, $-$0.331] & $-$0.394 & $-$0.394 & 0.086 & $-$0.281 \\
+1.0 & 0.49 & 0.77 / 0.20 & 0.496 & $-$0.086 [$-$0.375, $-$0.086] & $-$0.165 & $-$0.157 & 0.331 & 0.198 \\
+1.4 & 0.45 & 1.05 / 0.60 & 0.450 & 0.390 [0.056, 0.390] & 0.277 & 0.290 & 0.727 & 0.771 \\\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{修正后的物理图像。}
+\begin{itemize}
+\item $t\le0.3$：激波刚扫过，压缩 0.32，界面略有切向缩短（$-0.07$），压缩主导。这一点与原报告相同。
+\item $0.4\le t\le0.9$：\textbf{界面被切向缩短}，拉伸项在 $t\approx0.7$ 达到 $-0.42$（参照）或 $-0.51$（链式张量）。激波把气泡沿 $x$ 方向压扁，与激波大致平行的界面段被沿切向压缩，这部分压缩只缩短界面而不使梯度变陡。所以拉伸项抵消了大部分压缩项，$t=0.6$ 时总增长只有 0.07–0.09。原报告在 $t=0.6$ 给出拉伸 $+0.46$（折线法），方向完全相反。
+\item $t\ge1.0$：卷起开始拉伸界面，拉伸项回升，$t=1.4$ 时为 0.28（链式张量）至 0.39（参照中线）；总增长 0.73–0.84，压缩约占 54\%–62\%。原报告的结论“压缩只占约 30\%，卷起的拉伸逐渐接管掺混”需要修正为：到 $t=1.4$ 压缩仍是主要贡献，拉伸项是在前期缩短之后才转正的。
+\end{itemize}
+
+\textbf{压缩参照的说明。}界面上账本压缩比 DNS 插值密度给出的值高 0.05–0.09。表 \ref{tab:compchk} 表明这一差异来自 DNS 本身：在界面两侧 $0.005$–$0.015$ 的带内，DNS 给出的压缩在重气体一侧偏低、轻气体一侧偏高，方向相反，幅度达 0.3–0.45，这是接触间断的数值扩散把两种气体的密度混在一起；离界面 $0.03$–$0.06$ 时，两者之差缩小到 0.01–0.06。所以 DNS 在界面附近不能作为压缩项的参照，账本给出的是示踪点所代表物质本身的压缩。
+
+\begin{table}[H]\centering\small
+\caption{激波–重气泡：压缩项 $-\ln J$，账本与 DNS 插值密度比 $\ln(\rho(t)/\rho(0))$ 随离界面距离的变化（负 $\varphi_0$ 为重气体一侧）。}\label{tab:compchk}
+\begin{tabular}{lrrrr}\toprule
+$\varphi_0$ 区间 & $t=0.6$ 账本 & $t=0.6$ DNS & $t=1.4$ 账本 & $t=1.4$ DNS \\\midrule
+$[-0.06,-0.03]$ & 0.600 & 0.611 & 0.585 & 0.568 \\
+$[-0.03,-0.015]$ & 0.548 & 0.528 & 0.557 & 0.441 \\
+$[-0.015,-0.005]$ & 0.514 & 0.387 & 0.527 & 0.210 \\
+$[-0.003,0.003]$（界面带） & 0.480 & 0.426 & 0.450 & 0.363 \\
+$[0.005,0.015]$ & 0.469 & 0.607 & 0.502 & 0.956 \\
+$[0.015,0.03]$ & 0.468 & 0.522 & 0.564 & 0.717 \\
+$[0.03,0.06]$ & 0.487 & 0.503 & 0.558 & 0.620 \\\bottomrule
+\end{tabular}
+\end{table}
+
+其余算例的压缩项：Sod 0.754（精确 0.754），爆炸波 $t=25$ 为 0.637（精确 0.638），激波–等熵涡在线 0.396、离线 0.421（DNS 0.398）。爆炸波 $t=7$ 激波正在扫过圆环时为 1.612（精确 1.698），属于推迟重锚的过渡段。
+
+\section{结论：新方法有没有用}
+
+\textbf{有用的部分。}
+\begin{enumerate}
+\item \textbf{链式张量估计应当取代点对法与折线法，作为拉伸项的默认估计。}它在全部六个算例上与参照一致，随分辨率收敛，对噪声与追踪方式的界面平均稳健。它把原报告激波–重气泡的区间收窄成一个数，与独立参照之差在 0.11 以内，并落在涡片两侧的物理范围内。
+\item \textbf{Nanson 公式是理论上的主要收获。}它使式 (7) 的积分形式成为精确恒等式，给出了总梯度增长的直接测量方式，并且直接推广到三维。作为估计量，它在纯剪切与噪声下最稳，适合作为与链式张量互相独立的交叉检验。
+\item \textbf{点对法的失效有了定量解释}（命题 \ref{prop:pair}）：偏差与 $h$ 无关，有效区为 $\dot\gamma t<2\cot\alpha_{\max}$。原报告中经验性的“$\dot\gamma t\lesssim3$”判据由此有了推导。
+\item \textbf{物理结论的修正}：激波–重气泡界面在压缩后先被切向缩短，压缩到 $t=1.4$ 仍占主导；Lamb–Oseen 圆环的拉伸并不为零。
+\end{enumerate}
+
+\textbf{作用有限或尚待改进的部分。}
+\begin{enumerate}
+\item Nanson 估计在物质层薄于 $h$ 时偏低（双环流后期、LO、螺旋），且依赖账本 $J$，有噪声的激波数据上不可用。
+\item 组合估计在机理检验与无噪声算例中有效，但余向量的误差指标 $e_c$ 与实际误差相关性弱（Spearman 相关系数常低于 0.3），且不包含 $J$ 的误差，噪声下会选错。它目前只是启发式规则。
+\item 信息极限真实存在：LO 在 $N=8000$ 时两种估计的逐点误差都在 0.26–0.32。超出这一极限需要速度场或在求解器内沿界面加点，本文的 DNS 参照正是这样得到的。
+\item 激波算例中物质账本对位置噪声敏感，这是本次重算的新发现，影响所有依赖 $J$ 的量（密度、Nanson 估计、质量形式扩散中的 $\rho$），需要另作改进。张量账本 $\ln\det F$ 在气泡中更稳，是一个候选方向。
+\end{enumerate}
+
+\textbf{不受影响的部分。}质量通量、单向交换、转移算子与扩散都不依赖拉伸估计量，原报告的这些结论保持不变。
+
+\appendix
+\section{代码与可复现性}
+\sloppy 新增文件：\texttt{stretch\_est.py}（四种估计量与自适应标记曲线）、\texttt{evalcore.py}（统一评估）、\texttt{cases\_mix.py}（算例设置与参照）、\texttt{dns\_markers.py}（带标记曲线的 DNS 重跑）、\texttt{run\_all.py}、\texttt{figs\_new.py}、\texttt{make\_tables.py}。物质账本、C 通道与复形沿用原代码（\texttt{lhdx.chained\_lnJ\_v2}、\texttt{trajnet}、\texttt{complex\_peeled}），参数未改。全部计算在单核上约 15 分钟。
+
+\end{document}

@@ -1,0 +1,97 @@
+{
+ "eta": 1.515695067264574,
+ "up_over_Us": 0.3402366863905325,
+ "model": {
+  "Cs=0.25": {
+   "linear": {
+    "median_abs_dlnJ": 7.404077351225169e-13,
+    "mean_dlnJ": 4.851770754242558e-13,
+    "rms_dx_over_h": 0.016313535732614584
+   },
+   "shock_fitted": {
+    "median_abs_dlnJ": 7.404077351225169e-13,
+    "mean_dlnJ": 4.856481449143133e-13,
+    "rms_dx_over_h": 0.013149785398555821
+   }
+  },
+  "Cs=0.5": {
+   "linear": {
+    "median_abs_dlnJ": 2.692401857018467e-12,
+    "mean_dlnJ": 4.615832855601548e-13,
+    "rms_dx_over_h": 0.017392207152816124
+   },
+   "shock_fitted": {
+    "median_abs_dlnJ": 2.692401857018467e-12,
+    "mean_dlnJ": 4.612072672871497e-13,
+    "rms_dx_over_h": 0.010017283142669243
+   }
+  },
+  "Cs=1": {
+   "linear": {
+    "median_abs_dlnJ": 1.4135359549527493e-12,
+    "mean_dlnJ": 3.125775553971917e-13,
+    "rms_dx_over_h": 0.02167158861285363
+   },
+   "shock_fitted": {
+    "median_abs_dlnJ": 1.4135359549527493e-12,
+    "mean_dlnJ": 3.0975703070194987e-13,
+    "rms_dx_over_h": 0.007403209165886404
+   }
+  },
+  "Cs=2": {
+   "linear": {
+    "median_abs_dlnJ": 1.9519941218959502e-12,
+    "mean_dlnJ": 3.809201557532793e-13,
+    "rms_dx_over_h": 0.03798013259045697
+   },
+   "shock_fitted": {
+    "median_abs_dlnJ": 1.9519941218959502e-12,
+    "mean_dlnJ": 3.8054413748027426e-13,
+    "rms_dx_over_h": 0.0073939010203258075
+   }
+  },
+  "Cs=5.2": {
+   "linear": {
+    "median_abs_dlnJ": 0.15112335527290865,
+    "mean_dlnJ": -0.011052692652040664,
+    "rms_dx_over_h": 0.1808797893239283
+   },
+   "shock_fitted": {
+    "median_abs_dlnJ": 6.0747873798783214e-05,
+    "mean_dlnJ": 1.3637818632610104e-06,
+    "rms_dx_over_h": 0.00735425653491986
+   }
+  },
+  "Cs=10": {
+   "linear": {
+    "median_abs_dlnJ": 0.27541243746532085,
+    "mean_dlnJ": -0.06661897101907327,
+    "rms_dx_over_h": 0.5486419438785541
+   },
+   "shock_fitted": {
+    "median_abs_dlnJ": 1.9519941218959502e-12,
+    "mean_dlnJ": 3.805439824211926e-13,
+    "rms_dx_over_h": 0.0073939010203253105
+   }
+  },
+  "Cs=20": {
+   "linear": {
+    "median_abs_dlnJ": 0.40921370896183484,
+    "mean_dlnJ": -0.1550900959013405,
+    "rms_dx_over_h": 1.3622350481260908
+   },
+   "shock_fitted": {
+    "median_abs_dlnJ": 1.9519941218959502e-12,
+    "mean_dlnJ": 3.8054413748027426e-13,
+    "rms_dx_over_h": 0.0073939010203253105
+   }
+  }
+ },
+ "DNS": {
+  "pearson_dlnJ_vs_div_dx": 0.7212038402932744,
+  "regression_slope": 0.7301300525748678,
+  "median_abs_dlnJ": 0.11854093028920704,
+  "area_weighted_mean_dlnJ": -0.01122627835039296,
+  "median_abs_dx_over_h": 0.13620735734439166
+ }
+}

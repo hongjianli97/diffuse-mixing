@@ -1,0 +1,30 @@
+{
+ "k=8": {
+  "edges_endpoints": 81514,
+  "edges_all_snapshots": 148734,
+  "t=5.0": {
+   "delaunay_triangles_covered": 0.897582071948103,
+   "grad_leak": 0.1537200181887282,
+   "harmonic": 0.7596739378554391
+  },
+  "t=9.8": {
+   "delaunay_triangles_covered": 0.8317235963879074,
+   "grad_leak": 0.25555353135133,
+   "harmonic": 0.7271765578865916
+  }
+ },
+ "k=12": {
+  "edges_endpoints": 121279,
+  "edges_all_snapshots": 223264,
+  "t=5.0": {
+   "delaunay_triangles_covered": 0.9708669156673875,
+   "grad_leak": 0.054391423537218486,
+   "harmonic": 0.681478389258344
+  },
+  "t=9.8": {
+   "delaunay_triangles_covered": 0.9484884177463683,
+   "grad_leak": 0.08393489619347047,
+   "harmonic": 0.8428784630948849
+  }
+ }
+}

@@ -1,0 +1,17 @@
+{
+ "12": {
+  "curvature_B": 0.26096875986603063,
+  "edge_weight_input": 0.5848348389828656,
+  "kept_edges": 0.446
+ },
+ "16": {
+  "curvature_B": 0.30593433522716695,
+  "edge_weight_input": 0.562917281156887,
+  "kept_edges": 0.454
+ },
+ "24": {
+  "curvature_B": 0.32227932205213855,
+  "edge_weight_input": 0.532390605010275,
+  "kept_edges": 0.468
+ }
+}

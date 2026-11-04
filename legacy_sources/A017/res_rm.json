@@ -1,0 +1,49 @@
+{
+ "case": "rm",
+ "S": 121,
+ "N0": 7868,
+ "E_G": 396852,
+ "s40": {
+  "t": 2.0,
+  "density ledger (median, 95%)": [
+   0.026956667131212125,
+   0.29696839447514034
+  ],
+  "density DTFE (median, 95%)": [
+   0.18250332110008646,
+   1.1962765236307302
+  ],
+  "curl share of rho*a (Euler: ~0)": 0.00474186045517524,
+  "mu_E": 6.551153990041343e-05,
+  "pressure rms/std (off shock)": 0.045202308394272646,
+  "pressure rms/std (all)": 0.045202308394272646,
+  "entropy corr": 0.9762432466331509,
+  "entropy rms / range": 0.10934535471763526,
+  "strain corr (pair vs three-point)": 0.9890181045604498
+ },
+ "s80": {
+  "t": 4.0,
+  "density ledger (median, 95%)": [
+   0.03782680386907207,
+   0.39268310568989845
+  ],
+  "density DTFE (median, 95%)": [
+   0.21451409021124276,
+   1.6246061867728576
+  ],
+  "curl share of rho*a (Euler: ~0)": 0.023864853198326066,
+  "mu_E": 2.6186979111365772e-05,
+  "pressure rms/std (off shock)": 0.050293960268629354,
+  "pressure rms/std (all)": 0.050293960268629354,
+  "entropy corr": 0.9511138879140761,
+  "entropy rms / range": 0.1574175310280607,
+  "strain corr (pair vs three-point)": 0.9955156947440527
+ },
+ "structures": {
+  "Spearman afrc~ftle": 0.9432538285732128,
+  "Spearman afrc~dbs": 0.6537853859233341,
+  "Spearman ftle~dbs": 0.701935806846645,
+  "Spearman dbs~enc": 0.5744565921338483,
+  "Spearman lavd_net~ftle": 0.031835854684957754
+ }
+}

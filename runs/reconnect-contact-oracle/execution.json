@@ -1,0 +1,20 @@
+{
+  "tests_exit_code": 0,
+  "study_exit_code": 0,
+  "tests_first_attempt_passed": false,
+  "tests_second_attempt_passed": true,
+  "main_first_attempt_passed": true,
+  "preflight_manifest_verification_seconds": 22.829694831999973,
+  "elapsed_main_seconds": 2.9185150400000452,
+  "peak_RSS_MiB": 65.8359375,
+  "resource_caps_passed": true,
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "threads": 4,
+  "norm_estimator_seed": 20261101,
+  "network_used": false,
+  "environment_configuration_changed": false,
+  "committed_or_pushed": false,
+  "published": false
+}

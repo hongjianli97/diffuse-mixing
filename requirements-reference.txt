@@ -1,0 +1,7 @@
+# Dependency inventory, not a fully verified lockfile.
+# Numerical audit environment: Python 3.12.14, numpy 2.3.5, scipy 1.17.0.
+numpy>=2.0
+scipy>=1.12
+matplotlib
+sympy
+scikit-image
