@@ -1,0 +1,329 @@
+{
+  "type": "read_only_Stage3_evidence_and_H_obstruction_review",
+  "date": "2026-11-07",
+  "timezone": "Etc/UTC",
+  "parent_seal_sha256": "359a47af4ecef50e8b2af334af8b2b618349a246d706201fae24bb489a9735df",
+  "sources": {
+    "README.md": "ddaeb6c06aed00ae286da1208bda0c1d38ecfaec9679b3d3fc5865a32192fc28",
+    "docs/CODEX_TASK.md": "b585447c6a038febc3c364723946aea80cedce91109db16bb99f15d0304b3142",
+    "docs/METHOD.md": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+    "docs/PHASE3_CURRENT.md": "0cce27e4bc63b10aa786bc964fa8bbf20bece48daefd78d6345711ced8b5e0bb",
+    "docs/PHASE3_REBUILD.md": "0caeaea573787275b5f099123113768574d4babf56eb24115d4c04d6f9dbb34e",
+    "research/reconnect/BECKER_FINE_TIME_PROBE_CONTRACT.md": "96acdaa46212e3308a2e8df061022e4559a6d2887fb5e1f2a0a725bf14601c4f",
+    "research/reconnect/BECKER_POINT_SPATIAL_CONTRACT.md": "e05bb6d255ac2b3b1e6b49c69d7b20701713a390278f65dadf3bf679518b47a6",
+    "research/reconnect/BECKER_SPATIAL_BUDGET.md": "78ee18fe8abe25ffb23ebb4f2cfadac71aa1f17803d73079fc8c952561f9f600",
+    "research/reconnect/T3_COVERAGE_REVIEW.md": "d7cc013050a6bd8c909c7bcbb210993cc73e7c34b4ae881876caaeec9fb4a09e",
+    "runs/reconnect-affine-shear-spatial/audit-execution.json": "2f31ed93a8b19bc1fe82c57a78408c3d35ba83a08a5265c4ac76d86bd3495579",
+    "runs/reconnect-affine-shear-spatial/common-material-audit.json": "850b2b3037644dd1e1b583f46d8e511673910fad8078604fe3491d1ee26261f5",
+    "runs/reconnect-affine-shear-spatial/geometry-audit-execution.json": "fd0eb32fb51d4483aa75e32616c553cc8550e3baf2ba44e6b2f80e8c8ac1eb49",
+    "runs/reconnect-affine-shear-spatial/implementation-lock.json": "9f46ee5188f4ea2942939b288e23b798d2a0e5d741bf2964238e9e5ccf774f40",
+    "runs/reconnect-affine-shear-spatial/numerical-audit.json": "5618bfeaee42a34584bfa153a7fccbf9ad2e275d387ace87b50d889e0650b3a4",
+    "runs/reconnect-affine-shear-spatial/results.json": "03a9b9e799b9a5c661b833fa8b284b7fde835d63b11c9192ffbb07a2721bb07f",
+    "runs/reconnect-becker-fine-time/audit.json": "c54b1851f64a46d33505209f8e2e20d75030b828aabc1bb00c5b76c977a03f1b",
+    "runs/reconnect-becker-fine-time/implementation-lock.json": "88677771b8ec36da1d720ef4f03c1311459b65d233981b2e870f3c2b58d27002",
+    "runs/reconnect-becker-fine-time/next-gate-spec.json": "0795b50c7cea70380dacc4c84481d1ae0ebeadc8c5f50c428318945533160906",
+    "runs/reconnect-becker-fine-time/results.json": "22bd3ed2b4b19e323e7f3e83897ba63eab9659016f438019c5e114ecc8467399",
+    "runs/reconnect-becker-spatial-budget/completion-audit.json": "eef175aec6f62c4249ee40c5b7e1b8570d246fcbf1af6d0d5fa386d432244596",
+    "runs/reconnect-becker-spatial-budget/planning-correction.json": "52a2fa5950f39f3de3ac015bda20489ef09c4a66ffa3af5a4436a3629bbc7293",
+    "runs/reconnect-becker-spatial/audit.json": "c4008016c05e09af2e4f89f052863311c76aeca454821c668360b1823b5e2f06",
+    "runs/reconnect-becker-spatial/implementation-lock.json": "0158a26f1ad888a7a848e6ce67f19d83c914766c6c77cf3d4a552b9e6f2cda02",
+    "runs/reconnect-becker-spatial/results.json": "ee400ab9ec0196af5c93a10931852a02e7ad0f2472b4667c64e878f03dc79284",
+    "runs/reconnect-contact-spatial/audit-execution.json": "d668fe313c99aca2bf59bdedaf9be711071dc27d9154bf57c9e50fef81aef973",
+    "runs/reconnect-contact-spatial/common-material-audit.json": "4720a7a666ac84b7a7e36225f7b91267bf8fab299ea781987d1aa245dfe89f6c",
+    "runs/reconnect-contact-spatial/implementation-lock.json": "c7c8324efe45fade675f42d48fc40487faec94e3aee653646272d7a7f59bacdd",
+    "runs/reconnect-contact-spatial/numerical-audit.json": "75a5b1c6341e922cc7e996221295977af3e2bed43d1a34fefe335217552a11de",
+    "runs/reconnect-contact-spatial/results.json": "97da05fcb8e9701cae56b6d4dd07960accf80164f76b25206048cd259501c261",
+    "runs/reconnect-t1-uniform/audit-execution.json": "f160ba47ca7d222ae3fbab0dc378d67948f9f60778338ee003420adcfb966de0",
+    "runs/reconnect-t1-uniform/geometry-audit-execution.json": "5ed806a82ba86f5c0e2817c7886d63996fbb7d6a23c8d6e9a73a70d6395ec1db",
+    "runs/reconnect-t1-uniform/implementation-lock.json": "612a62559e67dc03f17d5d90838c74a98318ede5770ad4a15dd150703b7fab2e",
+    "runs/reconnect-t1-uniform/independent-reference-audit.json": "6f0b7b4a9aa5c60a5000c521a21718948fb571d195ced14578f075151dee3f89",
+    "runs/reconnect-t1-uniform/numerical-audit.json": "0f79b9d2bdba1d93282583c2085d736c9f9ad3e068f2cf59f158b5b7f0d1719f",
+    "runs/reconnect-t1-uniform/results.json": "de58064cdc4957ac14378e74e607291f56e7564a6f1f15fb869e0fe82a0f1f89",
+    "runs/reconnect-t2-d0/audit-execution.json": "a7e96fea4a040e5683646837cbc81153678199ab2c582dffb7c185e851e42249",
+    "runs/reconnect-t2-d0/geometry-audit-execution.json": "d3b1a1c8e9fd8ae9aa31822b8d934d293d1198e768c67a4d26efb72b7e846761",
+    "runs/reconnect-t2-d0/implementation-lock.json": "ee83b5b7f5743b6d7d0f9e251f004cfdad0767f6c43d2e0e433014fc0a4d834a",
+    "runs/reconnect-t2-d0/numerical-audit.json": "dbeeac6f07bb30c83c89cc2eaad6e6e38d843837e309bc60805c1e47edaa0b4c",
+    "runs/reconnect-t2-d0/results.json": "7c60b52738fb11afc0ed869e2dcbee1deefe0f5008abdaa6e72bf4f213624d8f",
+    "runs/reconnect-t2-rotation/audit-execution.json": "fe4adcd3259197060809b3c22124b4c54e6dc46cb66beec918c5ea396f3c12ee",
+    "runs/reconnect-t2-rotation/geometry-audit-execution.json": "8abb677efe7cd775bea94928674a5550551d8ff39c6fbe5bc710ac77d64e0c41",
+    "runs/reconnect-t2-rotation/implementation-lock.json": "52c52caa75be857ac3e892a346d5efe1c46d474e207a3c00674e19d69aaee500",
+    "runs/reconnect-t2-rotation/numerical-audit.json": "f9c924ab2da58c2409c93419e2e877e8949f02b220049d4937c675867479fb06",
+    "runs/reconnect-t2-rotation/results.json": "319b080720db9794394a591c2223296b6830033816ab5affa34beae9dfe2115b",
+    "runs/reconnect-t2-translation/audit-execution.json": "032c58c8a85232fecaf08d68352d181368a100dba2186cdb4a58b95a253f52e1",
+    "runs/reconnect-t2-translation/geometry-audit-execution.json": "149157c3876602648cded9b0f7c6edbf3c5ffe15a279312e7aef49986268af24",
+    "runs/reconnect-t2-translation/implementation-lock.json": "9c5c2eb86ef61db19d429a19af24f2dc2653c15f6aecf7250f0d88501409e2f6",
+    "runs/reconnect-t2-translation/numerical-audit.json": "41b5391a2b595deccfbf71349f7bc4e5246e398bd150fb4137a6cc79adf0363f",
+    "runs/reconnect-t2-translation/results.json": "b9803f9804feca49287daebb32460fc2b5d2d0182b3bebe12c6440788318cf10",
+    "runs/reconnect-t3-affine-spatial/audit-execution.json": "5bf4c9395074cc750b5b3acc16ab0f0194052696f6e38d3c1a623e60f4c46861",
+    "runs/reconnect-t3-affine-spatial/common-material-audit.json": "02cf9c03aed3ea567b721f3d8a5df430a524f3068d3fdf1939d7c9d891fe29a3",
+    "runs/reconnect-t3-affine-spatial/geometry-audit-execution.json": "8eb82186534383ff0ddb987d8c1902028651fd7af4eb0c7276df55e336d7ce6c",
+    "runs/reconnect-t3-affine-spatial/implementation-lock.json": "6f586bcce9a051b997b6f4c06b908bc741b9699e29af16cfe3a6502f0a50540d",
+    "runs/reconnect-t3-affine-spatial/numerical-audit.json": "639651a8af309cdcd8a1298a018481a8792dbced5bd8bc6872df533e759369e9",
+    "runs/reconnect-t3-affine-spatial/results.json": "566394cb48869a98c61996d7121819b5dc6458fe54738f4c69e3c2eeee4d1db2",
+    "runs/reconnect-t3-affine/analytic-reference-audit.json": "54188a20ec1b9ad977bedb752f74bef19147f1b1fa6ac0fceb2f7419eec5336d",
+    "runs/reconnect-t3-affine/audit-execution.json": "70b7e3a35b30298269fd189f879fc1c2358d4950d42963f5281762e497c6c409",
+    "runs/reconnect-t3-affine/audit-first-attempt.json": "c0f3a5b75062a3aed0e684e3947ab66f85cb12fef57fe5d8ec38ef7412bd21c9",
+    "runs/reconnect-t3-affine/geometry-audit-execution.json": "7821913df24b7851bb5280acc60e11377250143acce2a6f8040b6ecb65614c1f",
+    "runs/reconnect-t3-affine/implementation-lock.json": "403c72ab3d6ff57709316295cc43b55ddb6e70a290e1e7464830e50167bafb75",
+    "runs/reconnect-t3-affine/numerical-audit.json": "5d5153ad9e718acfe65e67848cdcb9937ce3e769e20ff1e28ebcd1386b7a5c2c",
+    "runs/reconnect-t3-affine/results.json": "c7dfda44310558103c689e4da5eccc8fd80083be29754d190f3fad6653bdd873",
+    "runs/reconnect-t3-coverage/acceptance-ledger.json": "d56cc92040e48d20a2857ea280195e353bb3b72d7fadb04ded96bd2168925672"
+  },
+  "requirements": [
+    {
+      "id": "METHOD_78",
+      "path": "docs/METHOD.md",
+      "line": 78,
+      "sha256": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+      "text": "主指标 I=V(t)/V(0)，混合度 H=1−I。V(0)=0 时输出 constant_initial_state，不除零。二元质量分数可报告 B=Σm_i4c_i(1−c_i)/Σm_i，但其均匀终值为4c̄(1−c̄)，一般不是1。旧 mixed_fraction 分母为初始组分质量，其数值不保证在[0,1]，不能沿用同名而隐瞒归一化。"
+    },
+    {
+      "id": "METHOD_82",
+      "path": "docs/METHOD.md",
+      "line": 82,
+      "sha256": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+      "text": "隐式 Euler 为默认：A_n=(M+Δt_n L_n)⁻¹M；c_(n+1)=A_nc_n。初版 L_n 使用左端几何，误差一阶；可选步内平均导通率，但仍须按顺序相乘。P=A_(K−1)…A_1 A_0。P1=1，mᵀP=mᵀ，P≥0。每个 A_n 对质量可逆，但总 P 一般不满足详细平衡。"
+    },
+    {
+      "id": "METHOD_125",
+      "path": "docs/METHOD.md",
+      "line": 125,
+      "sha256": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+      "text": "|T1|静止均匀介质周期正弦扩散|与 exp(−Dk²t) 衰减对比，空间/时间收敛|"
+    },
+    {
+      "id": "METHOD_126",
+      "path": "docs/METHOD.md",
+      "line": 126,
+      "sha256": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+      "text": "|T2|平移和刚体旋转；D=0 任意轨迹|客观性；质量方差及 κ 不产生伪混合|"
+    },
+    {
+      "id": "METHOD_127",
+      "path": "docs/METHOD.md",
+      "line": 127,
+      "sha256": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+      "text": "|T3|光滑仿射压缩与剪切|方向效应；恒 D 与恒 Γ；正交几何基准|"
+    },
+    {
+      "id": "METHOD_128",
+      "path": "docs/METHOD.md",
+      "line": 128,
+      "sha256": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+      "text": "|T4|一维移动激波及独立接触间断|单侧密度、有限区域平均密度、跳跃与扩散通量|"
+    },
+    {
+      "id": "METHOD_132",
+      "path": "docs/METHOD.md",
+      "line": 132,
+      "sha256": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+      "text": "每个空间实验至少三档 h；时间实验至少三档 Δt，避免同时变化无法归因。噪声用固定种子与重复样本，报告分位数和失效比例。误差采用质量加权 L² 与单侧密度相对误差；近常量参考不用 std(reference) 作分母。参考解也须收敛，不将旧低分辨 DNS 当绝对真值。"
+    },
+    {
+      "id": "METHOD_134",
+      "path": "docs/METHOD.md",
+      "line": 134,
+      "sha256": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+      "text": "质量相对漂移、常数残差、矩阵符号、线性求解残差为硬检查；建议 float64 小图相对容差1e−10，接近机器精度时按矩阵尺度处理。该容差不是 PDE 精度门槛。物理精度门槛按参考误差、用途和收敛曲线预先制定，禁止为通过测试调参数后隐瞒。"
+    },
+    {
+      "id": "METHOD_136",
+      "path": "docs/METHOD.md",
+      "line": 136,
+      "sha256": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+      "text": "密度误差拆分：oracleρ+同一算子 vs 重构ρ+同一算子；离散后端误差：同一ρ、D、m与边界；物理模型差异：恒D/恒Γ单独归类。面积度量与质量度量往往对应不同 PDE，不能把全部差异归为密度估计优劣。"
+    },
+    {
+      "id": "METHOD_144",
+      "path": "docs/METHOD.md",
+      "line": 144,
+      "sha256": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+      "text": "论文建议四部分：质量测度与两图定义；局部交换及连续一致性验证；时序传播与动态 ORC；激波掺混应用和误差分解。创新应落在可靠的物理—网络映射及新的解释能力，不能仅以搬用曲率公式为创新。生产后端尚未通过 T1–T4 前，论文只可声明离散图层结论。"
+    },
+    {
+      "id": "CODEX_TASK_29",
+      "path": "docs/CODEX_TASK.md",
+      "line": 29,
+      "sha256": "b585447c6a038febc3c364723946aea80cedce91109db16bb99f15d0304b3142",
+      "text": "引入一维移动激波/接触间断 oracle 参考；点值跳变与有限区域平均分开。oracle、kernel、ledger 三种密度来源使用同一交换后端与物理 D 比较。ledger 是实验适配器，默认不启用 F 修正，不要擅自以旧 v4 替换无梯度路线。"
+    },
+    {
+      "id": "CODEX_TASK_31",
+      "path": "docs/CODEX_TASK.md",
+      "line": 31,
+      "sha256": "b585447c6a038febc3c364723946aea80cedce91109db16bb99f15d0304b3142",
+      "text": "平面激波上的特殊精确关系不外推到曲面非定常激波。跨冲击质量条件只适用于非零质量通量；接触面不能除以零推密度比。分别细化 h、Δt、物理层厚度δ。没有原始 DNS 数据时运行解析小算例，并清楚报告缺失项。"
+    }
+  ],
+  "cases": [
+    {
+      "id": "t1-uniform",
+      "flag": "T1_registered_case_passed",
+      "expected": true,
+      "requirement": "T1",
+      "scope": "均匀周期正弦物质平均；16/32/64，K4/8/16；不声称一般收敛阶"
+    },
+    {
+      "id": "t2-translation",
+      "flag": "T2_registered_translation_case_passed",
+      "expected": true,
+      "requirement": "T2",
+      "scope": "正D刚体平移；限定已登记边界和输入"
+    },
+    {
+      "id": "t2-d0",
+      "flag": "T2_registered_D0_case_passed",
+      "expected": true,
+      "requirement": "T2",
+      "scope": "D=0非刚性物质运动；条件Q=0恒等传播，不计算κ"
+    },
+    {
+      "id": "t2-rotation",
+      "flag": "T2_registered_rotation_case_passed",
+      "expected": true,
+      "requirement": "T2",
+      "scope": "精确共转正交周期域；不承诺任意浮点世界边界"
+    },
+    {
+      "id": "t3-affine",
+      "flag": "T3_registered_affine_case_passed",
+      "expected": false,
+      "requirement": "T3",
+      "scope": "原N32模型响应未分辨，保留失败记录"
+    },
+    {
+      "id": "t3-affine-spatial",
+      "flag": "T3_registered_three_space_level_affine_control_passed",
+      "expected": true,
+      "requirement": "T3",
+      "scope": "正交仿射压缩三空间档；constD/constΓ；原N32未决不改"
+    },
+    {
+      "id": "affine-shear-spatial",
+      "flag": "registered_three_space_level_affine_shear_control_passed",
+      "expected": true,
+      "requirement": "T3",
+      "scope": "仿射剪切三空间档；方向响应及原生/共同浓度H；不外推任意非正交域"
+    },
+    {
+      "id": "contact-spatial",
+      "flag": "registered_three_space_level_contact_oracle_control_passed",
+      "expected": true,
+      "requirement": "T4",
+      "scope": "独立静态接触面三档oracle；不能代替移动激波或三来源"
+    },
+    {
+      "id": "becker-spatial",
+      "flag": "registered_spatial_control_passed",
+      "expected": false,
+      "requirement": "T4",
+      "scope": "δ=.08固定8行的32/64/128列、共同K16；浓度两项未分辨"
+    },
+    {
+      "id": "becker-fine-time",
+      "flag": "concentration_diagnostic_resolved",
+      "expected": true,
+      "requirement": "T4",
+      "scope": "64/K16与128/K32混合时间浓度诊断；不是原空间门通过"
+    }
+  ],
+  "coverage": [
+    {
+      "id": "T1",
+      "requirements": "METHOD_125;METHOD_132",
+      "status": "registered_scope_passed",
+      "evidence": "reconnect-t1-uniform",
+      "scope": "三空间档解析正弦，物质平均，研究传播器",
+      "gap": "不扩大到任意流动/一般阶/生产默认迁移"
+    },
+    {
+      "id": "T2",
+      "requirements": "METHOD_126",
+      "status": "registered_scope_passed",
+      "evidence": "reconnect-t2-translation;reconnect-t2-d0;reconnect-t2-rotation",
+      "scope": "平移、D0非刚性、精确共转边界条件控制",
+      "gap": "κ未计算；边界输入受登记范围限定"
+    },
+    {
+      "id": "T3",
+      "requirements": "METHOD_127;METHOD_136",
+      "status": "registered_scopes_passed",
+      "evidence": "reconnect-t3-affine-spatial;reconnect-affine-shear-spatial",
+      "scope": "压缩及仿射剪切的空间、时间、方向/本构对照",
+      "gap": "不是一般T3准入；原N32响应未决保留"
+    },
+    {
+      "id": "T4_contact",
+      "requirements": "METHOD_128",
+      "status": "registered_oracle_scope_passed",
+      "evidence": "reconnect-contact-spatial",
+      "scope": "独立静态接触面三空间档；有限质量平均和共享阻力",
+      "gap": "三密度来源未闭合；不能用接触条件推跨激波密度比"
+    },
+    {
+      "id": "T4_Becker_space",
+      "requirements": "METHOD_128;METHOD_132",
+      "status": "original_common_K16_unresolved",
+      "evidence": "reconnect-becker-spatial;reconnect-becker-fine-time",
+      "scope": "K16空间6项分辨2项未决；新增混合时间4项分辨",
+      "gap": "尚缺共同K32三档空间诊断；混合时间不能替代原门；仅一维列细化"
+    },
+    {
+      "id": "T4_Becker_time",
+      "requirements": "METHOD_132",
+      "status": "original_triple_passed_shifted_H_unresolved",
+      "evidence": "reconnect-becker-spatial;reconnect-becker-fine-time",
+      "scope": "三个网格K4/8/16状态与H均通过；128新状态差下降可分辨",
+      "gap": "后移8/16/32 H下降未分辨，必须保留；不宣布无限细化必能通过"
+    },
+    {
+      "id": "T4_layer_thickness",
+      "requirements": "CODEX_TASK_31",
+      "status": "incomplete",
+      "evidence": "reconnect-t3-coverage;reconnect-becker-spatial",
+      "scope": "最终点后端仅δ=.08；独立δ控制早在原规范和旧覆盖表中要求",
+      "gap": "固定空间时间误差后须另行预登记最小物理层厚度对照，未执行"
+    },
+    {
+      "id": "density_sources",
+      "requirements": "CODEX_TASK_29;METHOD_136",
+      "status": "incomplete",
+      "evidence": "reconnect-contact-spatial;reconnect-becker-fine-time",
+      "scope": "当前已隔离oracle路径；旧密度/界面理论保留",
+      "gap": "同m,c0,D,边界和交换后端的oracle/kernel/ledger比较未闭合，禁拟合F/C"
+    },
+    {
+      "id": "research_production",
+      "requirements": "METHOD_82",
+      "status": "scope_boundary",
+      "evidence": "research/reconnect/explicit_duration_action.py",
+      "scope": "研究指数传播+完整独立原始统一化；适配有界/滑移几何",
+      "gap": "不声称原默认隐式Euler/CLI/schema迁移已交付；不增设为当前解析诊断前提"
+    },
+    {
+      "id": "Stage3_ORC",
+      "requirements": "METHOD_144;CODEX_TASK_31",
+      "status": "incomplete_ORC_off",
+      "evidence": "docs/CODEX_TASK.md;docs/METHOD.md",
+      "scope": "旧失败和正面局部证据同时保留",
+      "gap": "无通过百分比或日期承诺；不增设DNS、T5/T6、旧v080恢复为当前解析试验前提"
+    }
+  ],
+  "shared_core": {
+    "periodic_voronoi_fv.py": "b3b24dc9547d4bd6d1fba531104b552e2f37bb0950cb103e8923e7f00eccaa3e",
+    "voronoi_time_action.py": "0db8f151cfcec1b93889acfc6ba3ec6f4621d9bf7417dbf488df5eac3df1330a",
+    "voronoi_time16_core.py": "faab14ab22563a3ee3a0f5981bbdc86acdfd733548c90106100a49aac556a484"
+  },
+  "new_graphs": 0,
+  "new_candidate_paths": 0,
+  "new_reference_PDE_solves": 0,
+  "new_density_sources": 0,
+  "new_software_checks": 0,
+  "recorded_checks_total": 502,
+  "main_wall_seconds_cap": 120,
+  "main_peak_RSS_MiB_cap": 1024,
+  "frozen_before_review_output": true,
+  "no_automatic_scientific_execution": true,
+  "stage3_physical_acceptance": "incomplete",
+  "fluid_orc_enabled": false
+}

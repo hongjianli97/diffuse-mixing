@@ -1,0 +1,417 @@
+{
+  "date": "2026-11-07",
+  "timezone": "Asia/Shanghai",
+  "base_commit": "93c68b96a160a9ffb5a9ce471b787ae20ae91b51",
+  "source_gate_sha256": "81f0cec20b174a3efc1d2ab164b2ef31d6830999136d28c81a8f432977d6377a",
+  "sources": {
+    "docs/CODEX_TASK.md": "b585447c6a038febc3c364723946aea80cedce91109db16bb99f15d0304b3142",
+    "docs/METHOD.md": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+    "research/reconnect/BECKER_COMMON_K32_COMPARISON.md": "e694532d7f209d2e57c6b2a52061cc6b74dcb0b0327167c39b5fd93fcb1bfb75",
+    "research/reconnect/BECKER_DELTA004_COMPARISON.md": "71f7718f121a90d5413dd5da0e30589422716377ad693aaab51317fdd894d3c6",
+    "research/reconnect/COMPRESSION_DENSITY_CONTRACT.md": "0069f3c4dc58b06ac3f80e68104d9b22d521effef03eaebfe2430985f09db0e7",
+    "research/reconnect/T1_DENSITY_CALIBRATION.md": "7b16850dc9a947951a1b99e752db5eeb1de811911a02055d15941afd7146ae35",
+    "research/reconnect/compression_probe.py": "f460fbf7cbc770c4e23a976b9821d06e65aaf3efef19ad37450fc21c4e92a747",
+    "runs/reconnect-affine-shear-spatial/results.json": "03a9b9e799b9a5c661b833fa8b284b7fde835d63b11c9192ffbb07a2721bb07f",
+    "runs/reconnect-becker-common-k32/results.json": "415623ef4d33a3b4e25bba9c361c7fa90b6cb60e713e96c0bdd5f7c91ff66d1a",
+    "runs/reconnect-becker-delta004/results.json": "7e9b2d52861e91f42fe69d38c6e316dc3b77ec0923ac5a80fb1a52dbad416eee",
+    "runs/reconnect-becker-fine-time/results.json": "22bd3ed2b4b19e323e7f3e83897ba63eab9659016f438019c5e114ecc8467399",
+    "runs/reconnect-becker-spatial/results.json": "ee400ab9ec0196af5c93a10931852a02e7ad0f2472b4667c64e878f03dc79284",
+    "runs/reconnect-compression-density-calibration/results.json": "d01bab0b1acb24547f2d23df43ea314a97e83961f1c464a543b9d34bebb06b4a",
+    "runs/reconnect-compression-joint-control/audit.json": "9000c580e799cd3786a581c7c40ff2d8e7f8433b599ceb0326921a538b7aff4b",
+    "runs/reconnect-compression-joint-control/coefficient-seal.json": "e20e5739e929bc21f12da0aea60b3b3436bc2c93de42e511bda7574b597c7037",
+    "runs/reconnect-compression-joint-control/comparison-inputs.npz": "4961bf4a768f68d947fbe0d4528abdd9c6255135b9096c97621de11ef101c3bc",
+    "runs/reconnect-compression-joint-control/execution.json": "a17f1fb36a648a22daa5a204641ced0d1e759714a4c8264128eb556f67fb7835",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step00.npz": "021be05b1e44d241a483fc8adc83f143909e8dd3c14a8aa8569d1c92e9ab6b8a",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step01.npz": "cf8b15d9dc1ab129fd80491fa2bb6c90b125a472448e5900fef2f9d5bba95401",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step02.npz": "2c29b53da57835a8807e76e00c59788fab47e6c5d699c6656666e147890c5e80",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step03.npz": "cc0af4006168f899c4ac42a069a008f38ec5fa9f2ddbd157d9c0aedfb9e6d9a8",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step04.npz": "e729f54db35ebe1699bc58bcdfa27f685df9307b9850d08eb640d88de47ea105",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step05.npz": "0ba54f975c2c4199ed539808f049322e6ae09f7092dcacd907bbfcdcbe03c39e",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step06.npz": "cda981b52f113d2ffe2ca180bd3e901df57449fad59518b933444149af2ed0a1",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step07.npz": "d1e62d4c44e67934c9bb1fbc52630b159af8cbb0ebd74f1ecf6a111c6a6955fe",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step08.npz": "806bd83e58d1d72dd89860d9735b172cc91393300852818989459344627a4ea7",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step09.npz": "64061d8d36b1d378754e2ef10af635afcce18701b6109d94b12b63fc7eacc4fe",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step10.npz": "94e2853ab0ccbc7dbda5818fa00a5dd3ea3f1921eae93d457306f33061160210",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step11.npz": "b8d7839b9ed8ec7d2622b576196fac6eeaa6e233d931b389d79d4a80ecb248b6",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step12.npz": "f956b72fdc874aaa6a6373f9fc48ba567e621e80bf856931935c36d042c7274c",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step13.npz": "fea6dfc65eb963eca76d83fdc21d51b465d8e4b7779b3252784397961525cce0",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step14.npz": "5186cf407fdb4d7766f6900a44ac2d0bd40db1d3ad0ed1ef0ae6b1b02b0f9b78",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step15.npz": "37e81f24ff6a3c92cb8a9355528437c92d89852fa1017ccbd0f12d70a798a733",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step16.npz": "1636ff59a8e5b3868d2e8df3f0c26fc76c692412b0a916fbbc2ea35602ffa436",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step17.npz": "1b077a3a5aaf73dcd9d0838ca9b7b64010a3d1c223b501559f8baa710bb865e0",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step18.npz": "8bb5b1c2de722d8fba1ab73ee62b3de70ee9835fbf80392e23f0ad015c8fcfbc",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step19.npz": "24d48efe7c540c5023008b983e3cbba1457953c1e9b0474aaf93b7a5b4e5392b",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step20.npz": "fff8267f6ffc310da31208bdd3a31c9634e20007d532e755c3b8c047028ce0e3",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step21.npz": "27794b772cf1509c34f6e79e880e7b0fe29a680927f37b7604bb016d88680473",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step22.npz": "454a30351828aba4915727314a324a6b938f919b29e8fc881e73fed6a8053fd4",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step23.npz": "8383e9626e62be4a59be49cffabe2f021d074d9b1b2b39768769d4e21fe676b2",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step24.npz": "159003d1c55e69ae36660f3ac49a42afba066ff9027d009b898c1c63a18e6519",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step25.npz": "7dd05c95392f4c051e4d072ff3fa890b7bd144acd1971581872ad822418170bc",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step26.npz": "39c4da2ef15fd9e0a331d77092fbb021c213d66d3a42132fb69cf5dd54337483",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step27.npz": "d35e58f88b59042209c70a5c828f453d3b80ca73d811add5a5de428f443d2d1c",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step28.npz": "9fa563f7bce50636c0f752b4d51add205aff067c0400ca7d0dd24023d4a114f3",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step29.npz": "2eb4c6f6ad3763f51522cfd2abd6f8373f2d4030468c4d02801a48abe2b60c36",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step30.npz": "f2cffe13dd42d9998e72e725f5f707cd03f90aebc79d5af65f790cd527bdc4ae",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step31.npz": "2e2d329ec593e5c2f2fa567c1f8799c6a666059e2720e45f356a90ab3177bac7",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step32.npz": "f72f4923d0f114f496aab4b798bf3b87d958ab64aa673c5bd6953da9ba4ec111",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step33.npz": "a99944dd8ea6304ff6d65742cbde2f3fb81fe2a39bcf2fc37ed211fec785925c",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step34.npz": "83203524ca4bb96ac70a7ba9931ebe710c520a54ec3509f8588abbf6e80ba1e2",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step35.npz": "9ce40a667688cba9f52f752d0160b5de87e3c57ca93ee88d081ad3a43a835863",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step36.npz": "6bc9bbd0936380349e443898060c88c374802efd497bd5fb4456d965813983f2",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step37.npz": "f9dd315db4fdfe96eb8747afa0c9295402fa61d5c26e875271d769a417d0b6fc",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step38.npz": "ae51c60f308e59dbfae237f8362e9ad80457ba7f0dfb4f6670461189908bfdb1",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step39.npz": "d9b335922996c71a3df8bb0929392cfe53023e501564e24c67c3acc256dfe1fd",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step40.npz": "959b93d47ae105ab0ec6df5108b2fe24ea266022552daab6e2493088819844aa",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step41.npz": "c08844d4e6688222281ed9ba8f64a6f58cdc04d28dda21e79d13f6970774fe40",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step42.npz": "28e624dda099ab0d68cb4340ca6b4df886668117dcbcd9d9ebd01fafb3e1e16d",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step43.npz": "ed40502a606b04124b4547101c2a32175ea6f78b18d7d7c802bec8f1e4b9623c",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step44.npz": "307b63aab7886e3d645aeec06f813a7a52224e0e502b2c21b24c92e559df6b18",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step45.npz": "d66d14e556e97ae70cea438d24f698130228ce5d686d65968ab145570900b816",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step46.npz": "c86762a2be73715a79e70687bca39ba12242390db63524649076549649a23703",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step47.npz": "5e48c651f1b5eefe9e11415962a396d2dbef0f7fb74710e9ce58f78d96017235",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step48.npz": "5390788181662657cee6d80bcc1c6df071c0fc4c0fd41017e09f3087c3b89ed6",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step49.npz": "7e4363a5c2aa088ef6fc0acc6d27abda6369982a6b59c5c519e7dc0b3f1edeea",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step50.npz": "ee35cf736127abb8149798da2c0b3c6e4ad07ba5d644b822f6b0d8b981d4f74d",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step51.npz": "496a5b77e82e3b197799cea8cdef296556bcebcee095d8efa787ba0119be8520",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step52.npz": "0189d8c796dd7e5c3ae62d01889a5ed803ae07b6cd0f5de7844a7f84f44f0d8a",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step53.npz": "b91451dc44a5588c23bbb77d61cc5de5c6962055613dad7bca4da98071f66e32",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step54.npz": "124709aa2e1aca901c5975355ab6d6f645b4d767c5cfbb11544356dff6858dd1",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step55.npz": "9322627fb30f0eaa7dc22834aa209005ea12ceb9a6120fa1b6da59dadb8aa1ba",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step56.npz": "9f486b5f450a6dbc0f4310c5bf17fc7574aabf3932948412aeacc6a7d4aea9d9",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step57.npz": "ada15ea8290d55dc84d7251765e5b7532f68a8b6a4c8537b4eac2e76e000224f",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step58.npz": "12ce27820dbd651e1cd02d5c79f3e4a35816c421e1fbced9f0d0bb7403b0ac40",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step59.npz": "d04fcdd8c041ea1953003ddb6b8ec43579204bef8ecd2bfd417e655c59bb13f0",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step60.npz": "8a87cb1621e2175c99e4bff5879daea819097993919c97e1537dc4e4c4ef4b3e",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step61.npz": "ef52522fc21727a9b75d9ca21c15c8779803041f72f52ed2052b64e3a6a8c5d2",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step62.npz": "a2d47012d495fb765a1c49ac9cffa3f6441799445560436a8e3fe4976d6d274d",
+    "runs/reconnect-compression-joint-control/ledger/k64/density-step63.npz": "39f8c38bc0055c8efbc64b5d4c4c92efa211ec821fd2ea8ee093e6d8b2123255",
+    "runs/reconnect-compression-joint-control/ledger/k64/trajectory-states.npz": "756d39d517411d1362419f80e0cf0df1278480ca707a977e99fb3c60adb092a8",
+    "runs/reconnect-compression-joint-control/next-gate-spec.json": "81f0cec20b174a3efc1d2ab164b2ef31d6830999136d28c81a8f432977d6377a",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step00.npz": "13c99315e37099b95891ca248ae6732f04733eae72b5051c38fa32f7df78eb5b",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step01.npz": "f84dd2bd1adf1c487d0f2cc0689108c6825c315a02196c96d7f0f346d0cd5dc3",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step02.npz": "465f32df8b7690866f2835114249e7840ec8edddf7f6d19254de41cbce1ef568",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step03.npz": "4725ea852edfd7c0f892259d3abb0b4325547a0e6c0ab5d2947432ec21913e54",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step04.npz": "1b7df1d379da0e3689a819e0f3a290328c513d4fe71bbe93c231b691c543c095",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step05.npz": "85345ba7307fd50543d3a57f05ebee69605b1f3544f4bd5714dedf265354dc96",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step06.npz": "9c681a51e6ff2f1681566556a45a01d22cede4244004d08677dd3fddf7135ac5",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step07.npz": "de81223bd2a013b8f6cb3fc6052ccd9175e6b364e326cb2f09c4c77481abe1f6",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step08.npz": "faaf2ea35b2bf809e0cc94778040f5d98a39efb997538384e03cd16286228d25",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step09.npz": "d481f294ad17c85d62f7e25035bd702c5d0c5bf2ab5512299b3714366e69afb6",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step10.npz": "f89a767caebe53c6339ffba0cd213465defc874ccde5af8fb4f54a374a765115",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step11.npz": "7b0b3fe4e87bce65fd62f9a6070b98d345f68df0c384ba628e18e3329dfd8eee",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step12.npz": "1c494228ae5cf8eed01eb219bd7ad114409c96691c04a5b096bc869458b87c26",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step13.npz": "68aaea231aff49d5cebfa90e468ebd71cc016c2fcd15eb91d8fd3096c94bbe72",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step14.npz": "bf6c40b23a3789fb19c557fcd84db9594606c53e701bb537b3e4be71b9a8b939",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step15.npz": "47943cb823e2be741989d7be8aaecdbde8e9e32ab5a4401bb054c58d90068b05",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step16.npz": "a2ee381cdc1bd2bbb1257195494143bf0a50008bb377e74f442aeac741186516",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step17.npz": "1d1af337aab27f4650105299dc8e1e6894f40ba6957384432d9649b13a449a61",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step18.npz": "55f8f0bf12d06d08631dd995d6649aa3c6d9201abc521a6875fb27302b02ab6f",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step19.npz": "3feec11300259caece6fdcf3d4b055739a8fecbb115db64513537483338ddd34",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step20.npz": "e028a77a5f45ce53e47062d722e68e3b66beb4e6b5b90c6ac5a634d87ba348f2",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step21.npz": "6379158c31e1d6cceef3c479c3affad919d28133604e7a4d2739c3af1651097b",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step22.npz": "8e193e0e0d7979baf689c27e59d1400aaa2fb4e3ef7f0ff12db1a51adad44e86",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step23.npz": "d2c589cdbdcf998bfaf595a8444c73c914667635ea220daa463a9ef2537404d0",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step24.npz": "c36c9aa25a1f13d537b2014afb77831177616b5ce57121f3f3866058bb2db455",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step25.npz": "71da4a4710bf9824e81069d5aa6be5710b85d8e0945d74ef05dd3506280082e0",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step26.npz": "6136069dc0b61e2d4b4e6c8677299c5c1a94e4b319f4af4ba882a163e538d4aa",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step27.npz": "3b0aa2c4aaea5fc7b0d6835efcdc6ac9306c238decd0c04f44178ec9d7b5e390",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step28.npz": "616e3f601e491b6a80311193fee3ac661011261c458bb330517a2a2177963655",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step29.npz": "9afd2cc267a1d2d411d824f965b0e2ba33694b9840554677f5dc1957c9ace82f",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step30.npz": "c8c002a4a658a6409b9d125b207e3472ba069d3e4c06d954be8c62c3c66aa595",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step31.npz": "ba81348ddc4d106aa4a64b310d04dd894d0449c3eb3e709b71a5a5cffbfd9da0",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step32.npz": "5bde9effdc76874db6adaffb7d58bd437075e8de8be5470cd87540827276b961",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step33.npz": "385b11ccf0b421a74b342b99d343e7320da8eaa07ef04ebc01cb940ae2f99dcb",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step34.npz": "7458e7746d1268dc6513e9a5898311c2301e12bbff2a2911c92bb3baacee252c",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step35.npz": "ef227167a4eaed977c4afd0517c6b39f6779b10abc22cd8f8078080a3321d520",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step36.npz": "e943047ae49a34ac56f9a6d9f97ffbc1170661c9739097d9ded2d46d43a1f19f",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step37.npz": "3ec27e8d0a1dd507aad6bbc7e429885d52bde356487ec5659699ff1ef8743d0d",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step38.npz": "1797a10885c9bb0c61a0da717aaeb66fb31e9501d59108caaf8f10828e0b5579",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step39.npz": "f9b9731b30d07ff6eb841021d24f6a869a52fb42d78bf49b70e2de544f2cd83a",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step40.npz": "9aeee279b47dd61169bc01fd70d6b6e7830fd478091005fec67dcf5cef3f6cad",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step41.npz": "a0769160cb8431d2710a0cce49faf1f246b49bc57048ede66e4a5ce1fb458e0d",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step42.npz": "49d910c317454cc9759ae4e40fb0aa41898f41683275c82b99fe14fc24583062",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step43.npz": "fa8fc84a5a80ecac3f35773fadd55b338a3fd2eba1f2859147e2a1e59ae41567",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step44.npz": "e1641e9645406967f221ebd6cedc0426dde01c62cd6042e8dd3a549eac10f15f",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step45.npz": "e94cc8cee87320a539d6354c3756342adba1dafddef4d9501c4b30cfcb30fa8e",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step46.npz": "bae51118f2ea6709eee921e8d5a355e48d13b661646c251f4ee9cdaa83e4e6b2",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step47.npz": "bd4040bbbc0d02ad9c576c82019dd3afd1ebcbfda48ed7bd07f87be52665c535",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step48.npz": "08702ccb6517ece2ce9c4a82db1f1ca2116fa667231c1ec3d4253c7d36dbb957",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step49.npz": "de8859eaf7b6fdd60c912af09483e6b26cc39fd0c80ca4b0978cca7f0f3ca539",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step50.npz": "99e25231940ffc90cdd456c2dfff49126a95a944c5a7d11e5ec540e6d1966c50",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step51.npz": "f8d50f4ab90837455dab364ed636c2b032e851407cab9b96da81882158a57493",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step52.npz": "229abb8943f789726ec8ed886ea70fc8b4c3a24d9a11bfcc412a283f3cae7b6b",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step53.npz": "ad7773c52ba8de79f51fb54a170b54758ddf5c8987de31a035ca54e19f803fa8",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step54.npz": "abc9aab15957ab96de99c1a8fd4696d54f01fcfb79e076b386f0655708ecee8b",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step55.npz": "82cfe6f16b52d4e2b1de7c836d1699bb29cf2aefd3d2bc01258194a62abe776b",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step56.npz": "511be47b6832c7f2f29176b02ecd3233e3c0d071430dc829d46ddb91ee8bdc02",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step57.npz": "c375fa172b6d5ccd3987a0b44e793f0c020c930fcd6de6fc2c29f6b1ef066819",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step58.npz": "8377d35e8078f056b298d2d1e873201fdcc5a2b709f4c5fe9c7647ceaa49dcde",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step59.npz": "1de65e56e74aafbc4ad49e7119ff7c2e44c57f24228d0bbe8d16097447831604",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step60.npz": "f9837e72679889e881a1c99470f47fd95ec0d9da2d36f5b7fc285e462f073edf",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step61.npz": "e16b7894dc816496fb1811c10aaceef2d35ff0f077b63dd0f55f16fb378641dd",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step62.npz": "13bca2bb01b1d643c649da0e7a02fc768e92b24a00caa334e47da8d4275c80cd",
+    "runs/reconnect-compression-joint-control/oracle/k64/density-step63.npz": "4dd72e9fad37f716f05c1eebe205800e07e27baa3518601eb91b5bf581235217",
+    "runs/reconnect-compression-joint-control/oracle/k64/trajectory-states.npz": "736ad4c8c1311a8ac0e75e676857e4589067874adc86f69131c1e4baf836b453",
+    "runs/reconnect-compression-joint-control/preservation.json": "ea452b5cc26e73498108c3e819995fed58f893d8a1dce2cc49204d9777048b45",
+    "runs/reconnect-compression-joint-control/results.json": "555850adb398e0292b1b5a887f398beec993fef264e2cf8394d8e1b3f5f78fcc",
+    "runs/reconnect-compression-joint-control/sha256.json": "98b87028f7f21a0b33f1240d2e946247320e7dcffb13a5c548735fcbace9c3be",
+    "runs/reconnect-compression-union64/results.json": "465780d1e8e2f464cddb1ba879ba5d0b8409b08c31f8fed170a3bf53b0e8ed88",
+    "runs/reconnect-contact-spatial/results.json": "97da05fcb8e9701cae56b6d4dd07960accf80164f76b25206048cd259501c261",
+    "runs/reconnect-stage3-evidence/evidence-ledger.json": "51c1fb67316532666e4dd95ad626866aaa2b7941e8a9883cc7d591fb6e18410e",
+    "runs/reconnect-t1-density-calibration/results.json": "ccd6e6c25f14edda79d25e763c0191795e726bac6553abd62bc33bf39238a30f",
+    "runs/reconnect-t1-uniform/results.json": "de58064cdc4957ac14378e74e607291f56e7564a6f1f15fb869e0fe82a0f1f89",
+    "runs/reconnect-t2-d0/results.json": "7c60b52738fb11afc0ed869e2dcbee1deefe0f5008abdaa6e72bf4f213624d8f",
+    "runs/reconnect-t2-rotation/results.json": "319b080720db9794394a591c2223296b6830033816ab5affa34beae9dfe2115b",
+    "runs/reconnect-t2-translation/results.json": "b9803f9804feca49287daebb32460fc2b5d2d0182b3bebe12c6440788318cf10",
+    "runs/reconnect-t3-affine-spatial/results.json": "566394cb48869a98c61996d7121819b5dc6458fe54738f4c69e3c2eeee4d1db2",
+    "runs/reconnect-t3-affine/results.json": "c7dfda44310558103c689e4da5eccc8fd80083be29754d190f3fad6653bdd873"
+  },
+  "implementation_files": [
+    "research/reconnect/joint_evidence_review.py",
+    "research/reconnect/audit_joint_evidence_review.py",
+    "research/reconnect/joint_evidence_protocol.json"
+  ],
+  "requirements": [
+    {
+      "id": "METHOD_78",
+      "path": "docs/METHOD.md",
+      "line": 78,
+      "sha256": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+      "text": "主指标 I=V(t)/V(0)，混合度 H=1−I。V(0)=0 时输出 constant_initial_state，不除零。二元质量分数可报告 B=Σm_i4c_i(1−c_i)/Σm_i，但其均匀终值为4c̄(1−c̄)，一般不是1。旧 mixed_fraction 分母为初始组分质量，其数值不保证在[0,1]，不能沿用同名而隐瞒归一化。"
+    },
+    {
+      "id": "METHOD_82",
+      "path": "docs/METHOD.md",
+      "line": 82,
+      "sha256": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+      "text": "隐式 Euler 为默认：A_n=(M+Δt_n L_n)⁻¹M；c_(n+1)=A_nc_n。初版 L_n 使用左端几何，误差一阶；可选步内平均导通率，但仍须按顺序相乘。P=A_(K−1)…A_1 A_0。P1=1，mᵀP=mᵀ，P≥0。每个 A_n 对质量可逆，但总 P 一般不满足详细平衡。"
+    },
+    {
+      "id": "METHOD_125",
+      "path": "docs/METHOD.md",
+      "line": 125,
+      "sha256": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+      "text": "|T1|静止均匀介质周期正弦扩散|与 exp(−Dk²t) 衰减对比，空间/时间收敛|"
+    },
+    {
+      "id": "METHOD_126",
+      "path": "docs/METHOD.md",
+      "line": 126,
+      "sha256": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+      "text": "|T2|平移和刚体旋转；D=0 任意轨迹|客观性；质量方差及 κ 不产生伪混合|"
+    },
+    {
+      "id": "METHOD_127",
+      "path": "docs/METHOD.md",
+      "line": 127,
+      "sha256": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+      "text": "|T3|光滑仿射压缩与剪切|方向效应；恒 D 与恒 Γ；正交几何基准|"
+    },
+    {
+      "id": "METHOD_128",
+      "path": "docs/METHOD.md",
+      "line": 128,
+      "sha256": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+      "text": "|T4|一维移动激波及独立接触间断|单侧密度、有限区域平均密度、跳跃与扩散通量|"
+    },
+    {
+      "id": "METHOD_132",
+      "path": "docs/METHOD.md",
+      "line": 132,
+      "sha256": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+      "text": "每个空间实验至少三档 h；时间实验至少三档 Δt，避免同时变化无法归因。噪声用固定种子与重复样本，报告分位数和失效比例。误差采用质量加权 L² 与单侧密度相对误差；近常量参考不用 std(reference) 作分母。参考解也须收敛，不将旧低分辨 DNS 当绝对真值。"
+    },
+    {
+      "id": "METHOD_134",
+      "path": "docs/METHOD.md",
+      "line": 134,
+      "sha256": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+      "text": "质量相对漂移、常数残差、矩阵符号、线性求解残差为硬检查；建议 float64 小图相对容差1e−10，接近机器精度时按矩阵尺度处理。该容差不是 PDE 精度门槛。物理精度门槛按参考误差、用途和收敛曲线预先制定，禁止为通过测试调参数后隐瞒。"
+    },
+    {
+      "id": "METHOD_136",
+      "path": "docs/METHOD.md",
+      "line": 136,
+      "sha256": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+      "text": "密度误差拆分：oracleρ+同一算子 vs 重构ρ+同一算子；离散后端误差：同一ρ、D、m与边界；物理模型差异：恒D/恒Γ单独归类。面积度量与质量度量往往对应不同 PDE，不能把全部差异归为密度估计优劣。"
+    },
+    {
+      "id": "METHOD_144",
+      "path": "docs/METHOD.md",
+      "line": 144,
+      "sha256": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+      "text": "论文建议四部分：质量测度与两图定义；局部交换及连续一致性验证；时序传播与动态 ORC；激波掺混应用和误差分解。创新应落在可靠的物理—网络映射及新的解释能力，不能仅以搬用曲率公式为创新。生产后端尚未通过 T1–T4 前，论文只可声明离散图层结论。"
+    },
+    {
+      "id": "CODEX_TASK_29",
+      "path": "docs/CODEX_TASK.md",
+      "line": 29,
+      "sha256": "b585447c6a038febc3c364723946aea80cedce91109db16bb99f15d0304b3142",
+      "text": "引入一维移动激波/接触间断 oracle 参考；点值跳变与有限区域平均分开。oracle、kernel、ledger 三种密度来源使用同一交换后端与物理 D 比较。ledger 是实验适配器，默认不启用 F 修正，不要擅自以旧 v4 替换无梯度路线。"
+    },
+    {
+      "id": "CODEX_TASK_31",
+      "path": "docs/CODEX_TASK.md",
+      "line": 31,
+      "sha256": "b585447c6a038febc3c364723946aea80cedce91109db16bb99f15d0304b3142",
+      "text": "平面激波上的特殊精确关系不外推到曲面非定常激波。跨冲击质量条件只适用于非零质量通量；接触面不能除以零推密度比。分别细化 h、Δt、物理层厚度δ。没有原始 DNS 数据时运行解析小算例，并清楚报告缺失项。"
+    }
+  ],
+  "latest_cases": [
+    {
+      "id": "becker_common_k32",
+      "path": "runs/reconnect-becker-common-k32/results.json",
+      "fields": [
+        "comparison_decision",
+        "all_eight_spatial_comparisons_resolved",
+        "shifted_H_time_controls_resolved",
+        "old_spatial_decision_unchanged",
+        "all_three_density_sources_closed"
+      ]
+    },
+    {
+      "id": "becker_delta004",
+      "path": "runs/reconnect-becker-delta004/results.json",
+      "fields": [
+        "comparison_decision",
+        "new_delta_temporal_qualified",
+        "H_response_directions_consistent",
+        "new_delta_three_grid_control_completed",
+        "delta_zero_limit_claimed",
+        "time_control"
+      ]
+    },
+    {
+      "id": "T1_density",
+      "path": "runs/reconnect-t1-density-calibration/results.json",
+      "fields": [
+        "implementation_controls_passed",
+        "general_density_or_smooth_flow_acceptance",
+        "density_and_symbol_records",
+        "source_comparisons"
+      ]
+    },
+    {
+      "id": "compression_density_K32",
+      "path": "runs/reconnect-compression-density-calibration/results.json",
+      "fields": [
+        "source_comparisons",
+        "general_density_physical_acceptance"
+      ]
+    },
+    {
+      "id": "compression_density_K64",
+      "path": "runs/reconnect-compression-joint-control/results.json",
+      "fields": [
+        "case",
+        "source_comparisons",
+        "time_differences",
+        "stop_expansion",
+        "old_rows_rejudged"
+      ]
+    },
+    {
+      "id": "compression_oracle_spatial",
+      "path": "runs/reconnect-compression-union64/results.json",
+      "fields": [
+        "comparison_decision"
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "id": "T1",
+      "status": "registered_oracle_scope_passed",
+      "evidence": [
+        "t1-uniform"
+      ],
+      "remaining": "三档静止均匀oracle证据保留；N32三密度单例不建立三来源空间一致性。"
+    },
+    {
+      "id": "T2",
+      "status": "registered_scopes_passed",
+      "evidence": [
+        "t2-translation",
+        "t2-d0",
+        "t2-rotation"
+      ],
+      "remaining": "合法输入和已登记边界范围保持；κ未运行，不外推任意边界。"
+    },
+    {
+      "id": "T3",
+      "status": "registered_oracle_scopes_passed",
+      "evidence": [
+        "t3-affine-spatial",
+        "affine-shear-spatial",
+        "compression_oracle_spatial"
+      ],
+      "remaining": "已有仿射压缩/剪切、方向/恒D恒Gamma、非线性周期流的三空间档证据；不能说全部缺失，也不能代替三密度来源空间控制。"
+    },
+    {
+      "id": "T4_contact",
+      "status": "registered_static_oracle_scope_passed",
+      "evidence": [
+        "contact-spatial"
+      ],
+      "remaining": "独立静态接触面三空间档oracle证据保留；不代表移动激波或密度适配器验证。"
+    },
+    {
+      "id": "T4_Becker_space",
+      "status": "new_common_K32_resolved_old_K16_unchanged",
+      "evidence": [
+        "becker-spatial",
+        "becker_common_k32"
+      ],
+      "remaining": "共同K32八项空间改善已分辨；旧K16两项浓度未决保留，固定8行的一维列细化不冒称二维联合收敛。"
+    },
+    {
+      "id": "T4_Becker_time",
+      "status": "old_triples_passed_shifted_H_unresolved",
+      "evidence": [
+        "becker_common_k32"
+      ],
+      "remaining": "原K4/8/16资格保持；后移H在64/128列未分辨；不删正项也不增设无限后移三元组。"
+    },
+    {
+      "id": "T4_delta",
+      "status": "delta004_executed_not_qualified",
+      "evidence": [
+        "becker_delta004"
+      ],
+      "remaining": "delta=.04已执行；H时间未分辨、空间只有N32；两厚度不构成delta趋零极限。"
+    },
+    {
+      "id": "density_sources",
+      "status": "smooth_single_case_evidence_only",
+      "evidence": [
+        "T1_density",
+        "compression_density_K32",
+        "compression_density_K64"
+      ],
+      "remaining": "T1 N32及运动N64三来源均有结果；新ledger/oracle K64三项改善分辨、终时H未分辨。密度本身的空间一致性和同后端接触/激波三来源证据尚未闭合。"
+    },
+    {
+      "id": "research_production",
+      "status": "scope_boundary",
+      "evidence": [
+        "docs/METHOD.md"
+      ],
+      "remaining": "研究中点指数/完整独立统一化证据不冒称默认隐式Euler/CLI迁移；不作为下一解析诊断的新前提。"
+    },
+    {
+      "id": "Stage3",
+      "status": "incomplete_ORC_off",
+      "evidence": [
+        "docs/METHOD.md",
+        "docs/CODEX_TASK.md"
+      ],
+      "remaining": "不把ledger优于oracle设为门槛；不新增DNS、T5/T6、旧v080恢复或ORC计算作为当前解析检验前提，不给完成百分比。"
+    }
+  ],
+  "new_physical_fields_or_solves": 0,
+  "new_software_tests": 0,
+  "recorded_checks_total": 508,
+  "main_cap_seconds": 120,
+  "audit_cap_seconds": 120,
+  "peak_RSS_MiB_cap": 1024
+}

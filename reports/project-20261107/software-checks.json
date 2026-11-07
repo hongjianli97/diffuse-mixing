@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "group": "graph",
+      "returncode": 0
+    },
+    {
+      "group": "material_fv",
+      "returncode": 0
+    }
+  ],
+  "passed": true,
+  "existing_checks_rerun": 15,
+  "new_physical_experiments": 0,
+  "historical_recorded_checks": 508,
+  "stage3": "incomplete",
+  "fluid_orc_enabled": false
+}

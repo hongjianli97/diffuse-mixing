@@ -1,0 +1,226 @@
+{
+  "date": "2026-11-07",
+  "timezone": "Asia/Shanghai",
+  "type": "read_only_saved_spatial_budget_obstruction_review",
+  "sources": [
+    {
+      "path": "runs/reconnect-becker-spatial/results.json",
+      "sha256": "ee400ab9ec0196af5c93a10931852a02e7ad0f2472b4667c64e878f03dc79284"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/reused-original-results.json",
+      "sha256": "8268eb454186360d606829c966693ad45acf5629f7702ef1196779529f39f337"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/reused-aligned-results.json",
+      "sha256": "f090b05d6ecca65a0ae9667a7cf7e44c8ec67397d89614ee724e23aeed993bb3"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n32/column.npz",
+      "sha256": "1a77246ec8f4e514d431252c778e0dfc21fc86e8829346a2befc58cb288ea17e"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n32/material.npz",
+      "sha256": "b08e9fa3e66eed71ead7ea12bbdc9581aba7df3d682eb30b0f52f2cc7be8667f"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n32/k4/native-results.json",
+      "sha256": "7b925c9a6d30b6532877cdd2ef1a26055d6983d5e1c66e2ebeb53208c4a419a2"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n32/k4/trajectory-states.npz",
+      "sha256": "8c1ec848668e0d2e06463c880e7368af1ed45fa60196f7e85c47287a9708729c"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n32/k8/native-results.json",
+      "sha256": "b70d4c821c894637099b7ea8385c9495dfdc6080bb6e608bcfb5acad9379e858"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n32/k8/trajectory-states.npz",
+      "sha256": "25e3c326ec630170806deeab6396ed2d956160632b2b849f966c0992f5a465bc"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n32/k16/native-results.json",
+      "sha256": "9db8d19c263b2dab814f1317cf6b4af14c4744a4aadca753702a01bf685d6309"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n32/k16/trajectory-states.npz",
+      "sha256": "359ce7e3b709bae08cbba61b55c431c4b3615aca06c23d63483a99a62c9a9b88"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n64/column.npz",
+      "sha256": "589a99e56f0b087c2874617769ceae876bb1874c51fa4fbc3e1270beefa5e123"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n64/material.npz",
+      "sha256": "63808080d466c80601728f7f7a40b64a3d4c1e3575194d3f9d4a58ce404f27c4"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n64/k4/native-results.json",
+      "sha256": "986703ac05d1b0c59890fe079c87f321be6dad48c26b739cdca4f04898b275cc"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n64/k4/trajectory-states.npz",
+      "sha256": "dda0a5404a05d541fcca8a81c0f01bf4fa572878169ff62934fbaafde221e759"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n64/k8/native-results.json",
+      "sha256": "3c314991fd2cb46e8466d65d334656479d2b1b9eaf421108c14b7f4cbb6a2057"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n64/k8/trajectory-states.npz",
+      "sha256": "7ec968dd717394eb22cbb81ccaa34a70cc4b29c944ddbc3126452515500bba2c"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n64/k16/native-results.json",
+      "sha256": "ed0363600ed291ad7fbb0d93fa588ef2b7dd0101aff50fa77576b8b97c05c7fc"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n64/k16/trajectory-states.npz",
+      "sha256": "147742da06e236ed56a08f190d7dbd18aef3496df335c3236c9d31f6d93eb642"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n128/column.npz",
+      "sha256": "602d493de5131880ffcfeb93ec54d30dd944228af573967c0223fa08d74a7e98"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n128/material.npz",
+      "sha256": "28f61d24b6ea3574199f1d708eec101a3c948646faa47594349d36aee9e120f6"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n128/k4/native-results.json",
+      "sha256": "37ccbebe10013cf58d99822fa3cf47fff7a1cab8571349fccaf3564a6842a3e7"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n128/k4/trajectory-states.npz",
+      "sha256": "e1891e28ffcae446c3c18597d6f26b3696668bb549b7352f1d0acd1342ad1eeb"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n128/k8/native-results.json",
+      "sha256": "b116bbf1c94d76760d1d934e24de8c163b1cfa9dcb5a4cc699914eb6ec8ca631"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n128/k8/trajectory-states.npz",
+      "sha256": "ff405cc67da6508f106817eeb6370ed24793a0cd2f642defc413633d32ee1977"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n128/k16/native-results.json",
+      "sha256": "8444043342ca3c82699dfc54a9473aea1be49f8107efdf18f802062ebca7568f"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n128/k16/trajectory-states.npz",
+      "sha256": "ec5a1c58ad8a3702d2b438a2cd01269f842d9548b6af764933977e6b48592952"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/reference/observations-l0-k8192.npz",
+      "sha256": "48750257176329a0535ae4a42a06f6c6f6adce7911fe316f31790013166113ad"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/reference/observations-l1-k8192.npz",
+      "sha256": "3949678a97ef4b8f78dd4d4804af1a8694763d2544a7acfe27c54624ffa959fa"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/reference/observations-l1-k16384.npz",
+      "sha256": "c2983b66d90b84f0cb8f741096a7f58cd87d15493aec8a46c8e9e985613fe410"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/next-gate-spec.json",
+      "sha256": "4e25bed65ad9df7aa6bdf74ac8a42608d1131f8db986f833d942d72408e2a3f1"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/sha256.json",
+      "sha256": "f8e9681581279d66ed580a1950f72f42aeaa4fb0ca52b2d6c0c19bff58b4a8bd"
+    },
+    {
+      "path": "research/reconnect/BECKER_SPATIAL_BUDGET.md",
+      "sha256": "78ee18fe8abe25ffb23ebb4f2cfadac71aa1f17803d73079fc8c952561f9f600"
+    },
+    {
+      "path": "research/reconnect/becker_spatial_budget_review.py",
+      "sha256": "055299ced6d4440987110cf691c1608b43f07df0b5351e0c98e366a23df0c3fc"
+    },
+    {
+      "path": "research/reconnect/becker_spatial_core.py",
+      "sha256": "e61d9047f1197888e779c1bbf88bba63935b5da4ebaab96aec18fbae02b77619"
+    },
+    {
+      "path": "research/reconnect/audit_route_decision.py",
+      "sha256": "e9441dad19d0d90dcbec68233be264d2df24601f567a66ec22a95156c62eca4f"
+    },
+    {
+      "path": "research/reconnect/aligned_becker_check.py",
+      "sha256": "9272b47a04b6d9ff3aad1dd65a7b92e986d2d0334259a90546f5d91857815665"
+    },
+    {
+      "path": "research/reconnect/voronoi_time_action.py",
+      "sha256": "0db8f151cfcec1b93889acfc6ba3ec6f4621d9bf7417dbf488df5eac3df1330a"
+    },
+    {
+      "path": "research/reconnect/t1_uniform_core.py",
+      "sha256": "bbd7e9ab8ad55860c4d66d3fbda2673ab4f30ae48f6b2f1d1e4e51e7df205d5e"
+    },
+    {
+      "path": "research/reconnect/becker_point_core.py",
+      "sha256": "4c62bff643cc11e7e7d63fb05a5324f2b0b03d0c039c34a5c917164a664a18f3"
+    },
+    {
+      "path": "research/reconnect/affine_shear_completion.py",
+      "sha256": "e014f5789dfed76eb17018fbe506c59880de3567fc6354a3f1c54aecaf225e13"
+    }
+  ],
+  "saved_data_files": [
+    "results.json",
+    "reused-original-results.json",
+    "reused-aligned-results.json",
+    "n32/column.npz",
+    "n32/material.npz",
+    "n32/k4/native-results.json",
+    "n32/k4/trajectory-states.npz",
+    "n32/k8/native-results.json",
+    "n32/k8/trajectory-states.npz",
+    "n32/k16/native-results.json",
+    "n32/k16/trajectory-states.npz",
+    "n64/column.npz",
+    "n64/material.npz",
+    "n64/k4/native-results.json",
+    "n64/k4/trajectory-states.npz",
+    "n64/k8/native-results.json",
+    "n64/k8/trajectory-states.npz",
+    "n64/k16/native-results.json",
+    "n64/k16/trajectory-states.npz",
+    "n128/column.npz",
+    "n128/material.npz",
+    "n128/k4/native-results.json",
+    "n128/k4/trajectory-states.npz",
+    "n128/k8/native-results.json",
+    "n128/k8/trajectory-states.npz",
+    "n128/k16/native-results.json",
+    "n128/k16/trajectory-states.npz",
+    "reference/observations-l0-k8192.npz",
+    "reference/observations-l1-k8192.npz",
+    "reference/observations-l1-k16384.npz"
+  ],
+  "implementation_files": [
+    "research/reconnect/becker_spatial_budget_review.py",
+    "research/reconnect/becker_spatial_core.py",
+    "research/reconnect/becker_spatial_budget_review_protocol.json",
+    "research/reconnect/audit_route_decision.py",
+    "research/reconnect/aligned_becker_check.py",
+    "research/reconnect/voronoi_time_action.py",
+    "research/reconnect/t1_uniform_core.py",
+    "research/reconnect/becker_point_core.py",
+    "research/reconnect/affine_shear_completion.py"
+  ],
+  "decomposition": "exact binary64 fractions; separate observed time increment and every positive retained term; signed accumulation defects only bookkeeping,never used to reduce physical criterion",
+  "forward_feasibility": "reverse triangle inequality 2*new_pair_increment/sigma+C_retained+C_additional<saved_gain; sufficient planning condition only,not a new acceptance threshold; no extrapolated state or fitted order",
+  "H_obstruction": "test the algebraic ceiling oldH8_16 <= old_h_indicator; cannot assert finer shifted H decrease resolves just by adding K32",
+  "main_wall_seconds_cap": 120,
+  "main_peak_RSS_MiB_cap": 1024,
+  "new_graphs": 0,
+  "new_candidate_paths": 0,
+  "new_reference_PDE_solves": 0,
+  "new_software_checks": 0,
+  "recorded_checks_total": 502,
+  "stage3": "incomplete",
+  "fluid_orc_enabled": false
+}

@@ -1,0 +1,85 @@
+{
+  "date": "2026-11-07",
+  "timezone": "Etc/UTC",
+  "type": "read_only_delta004_error_and_time_budget_review",
+  "source_gate_sha256": "159e1305322193c296a507aec8de82b18155f4965a5f3db048162a1181c1c9de",
+  "parent_seal_sha256": "6342909ff3475ac4f60802b82f8b67cd928eaefb13e98d0f32f219bdc31db198",
+  "sources": {
+    "docs/CODEX_TASK.md": "b585447c6a038febc3c364723946aea80cedce91109db16bb99f15d0304b3142",
+    "docs/METHOD.md": "eb1d707e3b7a52ed1fe2e63995292c62539d2e327bb4096511bf5b4329939943",
+    "research/reconnect/BECKER_DELTA004_COMPARISON.md": "71f7718f121a90d5413dd5da0e30589422716377ad693aaab51317fdd894d3c6",
+    "research/reconnect/BECKER_DELTA004_CONTRACT.md": "db73d4d811b18664019e00405903ceb5401945f063af309beb51ac5c678550bd",
+    "research/reconnect/STAGE3_EVIDENCE_REVIEW.md": "c52faf2ebc4a2136d3284d98ac7a62a4dde7d57eacb6da61dc69d61ec3cba293",
+    "research/reconnect/audit_becker_delta004.py": "25e8767a444ac337ca2202732c14b26331b2e0652d217690c433e23de4fb69d6",
+    "research/reconnect/audit_route_decision.py": "e9441dad19d0d90dcbec68233be264d2df24601f567a66ec22a95156c62eca4f",
+    "research/reconnect/becker_delta004_core.py": "7458e2d47df6df12b8b264217ab9dfc572abf3b69324e885655a1f19ded8446e",
+    "research/reconnect/t1_uniform_core.py": "bbd7e9ab8ad55860c4d66d3fbda2673ab4f30ae48f6b2f1d1e4e51e7df205d5e",
+    "runs/reconnect-becker-delta004/audit.json": "66a0cf1a4bd9a497b3df1e2200502a67873f00c8752a59283a32e87ad27c3247",
+    "runs/reconnect-becker-delta004/execution.json": "d5bb6a10b4d985bebb66e824999ec5c0677b0bb936c52899f57ed15cf13ad8e3",
+    "runs/reconnect-becker-delta004/n32/k16/native-results.json": "372c8e91391caea3c8b05a8be3384245834795d3ecd6f266e250345fa13ddb0c",
+    "runs/reconnect-becker-delta004/n32/k16/trajectory-states.npz": "a78ac68ad373b25f5e1b0ce75dd340a3ca9fdd24e5a8f15a1610e21b9b586454",
+    "runs/reconnect-becker-delta004/n32/k32/native-results.json": "a3539c4c34702923a605d6979a46d6a27412337bcdfc187fcaa753821f836e1a",
+    "runs/reconnect-becker-delta004/n32/k32/trajectory-states.npz": "b468e31af2fd426a75daa4f1824e49b86f4996a2ece4ef025202938247476cf2",
+    "runs/reconnect-becker-delta004/n32/k8/native-results.json": "14c991d2faf7c8e44054dd0e20788d028493f3e8f3b835f5da459b2bdb247490",
+    "runs/reconnect-becker-delta004/n32/k8/trajectory-states.npz": "ad1d3daf9afb2fc25217527882e28fbc69e02211e89b011b8c27c1f2fe534a0e",
+    "runs/reconnect-becker-delta004/n32/material.npz": "b08e9fa3e66eed71ead7ea12bbdc9581aba7df3d682eb30b0f52f2cc7be8667f",
+    "runs/reconnect-becker-delta004/physical-geometry.json": "9cbb5c13a4d76b1fd8de991b622c4f5257b3ad0f53f164c19aeae129225c7375",
+    "runs/reconnect-becker-delta004/protocol.json": "5572545669a76d2a7545140eb7b785d3e6fe4b685ba599cf68d9b93957573fa5",
+    "runs/reconnect-becker-delta004/results.json": "7e9b2d52861e91f42fe69d38c6e316dc3b77ec0923ac5a80fb1a52dbad416eee"
+  },
+  "saved_data_files": [
+    "results.json",
+    "audit.json",
+    "execution.json",
+    "physical-geometry.json",
+    "protocol.json",
+    "n32/material.npz",
+    "n32/k8/native-results.json",
+    "n32/k8/trajectory-states.npz",
+    "n32/k16/native-results.json",
+    "n32/k16/trajectory-states.npz",
+    "n32/k32/native-results.json",
+    "n32/k32/trajectory-states.npz"
+  ],
+  "implementation_files": [
+    "research/reconnect/becker_delta004_budget_review.py",
+    "research/reconnect/audit_becker_delta004_budget.py",
+    "research/reconnect/becker_delta004_budget_protocol.json",
+    "research/reconnect/audit_route_decision.py"
+  ],
+  "scope": "read-only saved-state budget attribution and exact variance moment identity; no flow/geometry/PDE imports or calls",
+  "positive_group_rules": [
+    "2sum machine",
+    "2sum raw tail",
+    "2sum measured complete sequence difference",
+    "2 reference space",
+    "2 reference time",
+    "2 all reference observation/geometry bridges",
+    "all transverse bridges"
+  ],
+  "accumulation_residual_policy": "signed binary64 bookkeeping only; no positive term removed or acceptance recomputed",
+  "original_H_polynomial": "(A E+E^2)/V0; same stored binary64 A and V0 evaluation as parent",
+  "conditional_proofs": [
+    "reference-only refinement with saved paths retains machine allowance floor",
+    "future shifted K16/32/64 H decrease <= saved |H16-H32| with all old B retained",
+    "machine-only tightening with saved reference terms retains reference floor"
+  ],
+  "exact_identity": "H(v)-H(u)=-(2<uc,wc>+||wc||^2)/V0,w=v-u; show signed cell sums; independent audit uses second moments",
+  "precision_digits": [
+    80,
+    100
+  ],
+  "main_wall_seconds_cap": 120,
+  "main_peak_RSS_MiB_cap": 1024,
+  "not_allowed": [
+    "changing acceptance",
+    "removing terms",
+    "new simulations",
+    "time order fitting",
+    "state extrapolation",
+    "claiming physical error causation"
+  ],
+  "new_software_checks": 0,
+  "recorded_checks_total": 502,
+  "fluid_orc_enabled": false
+}

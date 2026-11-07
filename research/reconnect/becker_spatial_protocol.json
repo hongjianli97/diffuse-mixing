@@ -1,0 +1,180 @@
+{
+  "already_executed": false,
+  "type": "same_backend_moving_Becker_three_column_resolution_oracle_control",
+  "sources": [
+    {
+      "path": "research/reconnect/BECKER_POINT_SPATIAL_CONTRACT.md",
+      "sha256": "e05bb6d255ac2b3b1e6b49c69d7b20701713a390278f65dadf3bf679518b47a6"
+    },
+    {
+      "path": "research/reconnect/aligned_mass_reference.py",
+      "sha256": "c40f0e0078e020208d7944fe40484669e9f956e19a7a30e6adc8009662fed84f"
+    },
+    {
+      "path": "research/rebuild/becker.py",
+      "sha256": "6c42c00550bf2614d6d8baf978606936fff059f006308656bdb934e1f740c11e"
+    },
+    {
+      "path": "research/reconnect/bounded_periodic_voronoi.py",
+      "sha256": "76064c05f67820e68aa88b3140a8271b9135b99df770dc4675c974d6bedeacaa"
+    },
+    {
+      "path": "research/reconnect/periodic_voronoi_fv.py",
+      "sha256": "b3b24dc9547d4bd6d1fba531104b552e2f37bb0950cb103e8923e7f00eccaa3e"
+    },
+    {
+      "path": "research/reconnect/explicit_duration_action.py",
+      "sha256": "3723a80d73c56748b60de843528193bd88e38e6bf14a29f9d3db1f009be88dcc"
+    },
+    {
+      "path": "research/reconnect/voronoi_time_action.py",
+      "sha256": "0db8f151cfcec1b93889acfc6ba3ec6f4621d9bf7417dbf488df5eac3df1330a"
+    },
+    {
+      "path": "research/reconnect/voronoi_time16_core.py",
+      "sha256": "faab14ab22563a3ee3a0f5981bbdc86acdfd733548c90106100a49aac556a484"
+    },
+    {
+      "path": "research/reconnect/t1_uniform_core.py",
+      "sha256": "bbd7e9ab8ad55860c4d66d3fbda2673ab4f30ae48f6b2f1d1e4e51e7df205d5e"
+    },
+    {
+      "path": "runs/reconnect-becker-point/graph-index.json",
+      "sha256": "58fb3bfc85f6968b2ed2a5d084ae39a0499992e2ee2c3a81ad05a12f203e5dc7"
+    },
+    {
+      "path": "runs/reconnect-becker-point/results.json",
+      "sha256": "8268eb454186360d606829c966693ad45acf5629f7702ef1196779529f39f337"
+    },
+    {
+      "path": "runs/reconnect-aligned-becker/results.json",
+      "sha256": "f090b05d6ecca65a0ae9667a7cf7e44c8ec67397d89614ee724e23aeed993bb3"
+    },
+    {
+      "path": "runs/reconnect-aligned-becker/audit.json",
+      "sha256": "dfdef8df40346926bcb8f3404194707849f9ff4217d097f098d2986c97e21789"
+    },
+    {
+      "path": "runs/rebuild-stage3-space/inputs-cells32.npz",
+      "sha256": "1a77246ec8f4e514d431252c778e0dfc21fc86e8829346a2befc58cb288ea17e"
+    },
+    {
+      "path": "runs/rebuild-stage3-space/inputs-cells64.npz",
+      "sha256": "589a99e56f0b087c2874617769ceae876bb1874c51fa4fbc3e1270beefa5e123"
+    },
+    {
+      "path": "runs/rebuild-stage3-space/inputs-cells128.npz",
+      "sha256": "602d493de5131880ffcfeb93ec54d30dd944228af573967c0223fa08d74a7e98"
+    },
+    {
+      "path": "runs/reconnect-becker-point/k4/trajectory-states.npz",
+      "sha256": "8c1ec848668e0d2e06463c880e7368af1ed45fa60196f7e85c47287a9708729c"
+    },
+    {
+      "path": "runs/reconnect-becker-point/k8/trajectory-states.npz",
+      "sha256": "25e3c326ec630170806deeab6396ed2d956160632b2b849f966c0992f5a465bc"
+    },
+    {
+      "path": "runs/reconnect-becker-point/k16/trajectory-states.npz",
+      "sha256": "359ce7e3b709bae08cbba61b55c431c4b3615aca06c23d63483a99a62c9a9b88"
+    },
+    {
+      "path": "research/reconnect/becker_spatial_core.py",
+      "sha256": "e61d9047f1197888e779c1bbf88bba63935b5da4ebaab96aec18fbae02b77619"
+    },
+    {
+      "path": "research/reconnect/becker_spatial_study.py",
+      "sha256": "5ae65b63a960f9ac94f20af758ead8ee9453907045d627b993e1c89568d6d0bf"
+    },
+    {
+      "path": "research/reconnect/BECKER_SPATIAL_BUDGET.md",
+      "sha256": "78ee18fe8abe25ffb23ebb4f2cfadac71aa1f17803d73079fc8c952561f9f600"
+    },
+    {
+      "path": "research/reconnect/audit_bounded_geometry.py",
+      "sha256": "a6eb7b2998aacccd9cc9e6518fffaa4371e8e4083194bd967900cba81be84bd6"
+    },
+    {
+      "path": "research/reconnect/becker_point_core.py",
+      "sha256": "4c62bff643cc11e7e7d63fb05a5324f2b0b03d0c039c34a5c917164a664a18f3"
+    },
+    {
+      "path": "research/reconnect/aligned_becker_check.py",
+      "sha256": "9272b47a04b6d9ff3aad1dd65a7b92e986d2d0334259a90546f5d91857815665"
+    },
+    {
+      "path": "research/reconnect/affine_shear_completion.py",
+      "sha256": "e014f5789dfed76eb17018fbe506c59880de3567fc6354a3f1c54aecaf225e13"
+    },
+    {
+      "path": "research/reconnect/shear_union64_study.py",
+      "sha256": "483240641382641d553abf92cb5be0f5f2c34a63874c527b7177a3d858936311"
+    }
+  ],
+  "contract": "research/reconnect/BECKER_POINT_SPATIAL_CONTRACT.md",
+  "reason": "registered32-column temporal comparison resolved under complete-child reference observation; candidate spatial evidence remains missing",
+  "physical_case": {
+    "delta": 0.08,
+    "D": 0.02,
+    "T": 0.1,
+    "material_columns": [
+      32,
+      64,
+      128
+    ],
+    "transverse_rows_fixed": 8,
+    "K_values": [
+      4,
+      8,
+      16
+    ]
+  },
+  "staged_dependency": "freeze executable positive time/spatial budget and source/geometry contract before new inputs; seal all56 new graphs before scalar/mass/old-state/reference loading; never change frozen backends",
+  "reuse": "original32-column saved graphs and all3 actual/independent paths; no rerun; original32/64/128 fixedmass/c0 remain unchanged",
+  "new_reference": "3 fixed aligned-reference solves on original128 material parent intervals, h=M/16384 and doubled child counts, steps8192/8192/16384; complete child sums at all32/64/128 levels; monitor and old guards; no partial-cell interpolation or corrections",
+  "spatial_acceptance": "both32->64 and64->128 native/common concentration and H improvement must exceed frozen sum of original numeric, empirical reference, initial/observation/geometry bridges AND K8->16 temporal indicators; unchanged H helper, strict greater-than; empirical,not certified PDE error",
+  "new_candidate_graphs": 56,
+  "new_candidate_transient_runs": 6,
+  "new_complete_independent_uniformization_sequences": 6,
+  "old_candidate_reruns": 0,
+  "new_reference_PDE_solves": 3,
+  "new_software_checks": 0,
+  "recorded_checks_total": 502,
+  "main_wall_seconds_cap": 2400,
+  "reference_part_wall_seconds_cap": 300,
+  "main_peak_RSS_MiB_cap": 1024,
+  "stop": "on failure/unresolved/cap preserve and stop; no extra N/K/rows/reference/model or F/C fitting, clipping,normalization,threshold change",
+  "old_unresolved_results_and_current_single_grid_temporal_pass_preserved": true,
+  "no_new_spatial_inputs_graphs_states_or_references_executed_this_turn": true,
+  "moving_shock_T4_closed": false,
+  "all_three_density_sources_closed": false,
+  "stage3_physical_acceptance": "incomplete",
+  "fluid_orc_enabled": false,
+  "kappa_computed": false,
+  "source_gate_sha256": "2a9c1c4461cd0536c6650518c42502db775fce705ef105c325392f5f9d373cf1",
+  "execution_date": "2026-11-06",
+  "timezone": "Asia/Shanghai",
+  "implementation_files": [
+    "research/reconnect/becker_spatial_core.py",
+    "research/reconnect/becker_spatial_study.py",
+    "research/reconnect/BECKER_SPATIAL_BUDGET.md",
+    "research/reconnect/becker_spatial_protocol.json",
+    "research/reconnect/bounded_periodic_voronoi.py",
+    "research/reconnect/audit_bounded_geometry.py",
+    "research/reconnect/periodic_voronoi_fv.py",
+    "research/reconnect/explicit_duration_action.py",
+    "research/reconnect/becker_point_core.py",
+    "research/reconnect/voronoi_time_action.py",
+    "research/reconnect/voronoi_time16_core.py",
+    "research/reconnect/t1_uniform_core.py",
+    "research/reconnect/aligned_mass_reference.py",
+    "research/reconnect/aligned_becker_check.py",
+    "research/reconnect/affine_shear_completion.py",
+    "research/reconnect/shear_union64_study.py",
+    "research/rebuild/becker.py"
+  ],
+  "budget_contract": {
+    "path": "research/reconnect/BECKER_SPATIAL_BUDGET.md",
+    "sha256": "78ee18fe8abe25ffb23ebb4f2cfadac71aa1f17803d73079fc8c952561f9f600"
+  }
+}

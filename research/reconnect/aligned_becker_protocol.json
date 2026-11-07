@@ -1,0 +1,164 @@
+{
+  "already_executed": false,
+  "type": "one_fixed_material_aligned_Becker_reference_only_L_shape",
+  "sources": [
+    {
+      "path": "research/rebuild/reference.py",
+      "sha256": "015fb90420c836fb42185193bfad64649c7a23dd4f86c021834d3f65455cadd6"
+    },
+    {
+      "path": "research/rebuild/becker.py",
+      "sha256": "6c42c00550bf2614d6d8baf978606936fff059f006308656bdb934e1f740c11e"
+    },
+    {
+      "path": "research/reconnect/becker_budget_review_protocol.json",
+      "sha256": "cb466e7aa3078f1d9d750881c271e9fde97a2473fbca9aef727b017615b8ae0f"
+    },
+    {
+      "path": "runs/reconnect-becker-point/source-column-inputs.npz",
+      "sha256": "1a77246ec8f4e514d431252c778e0dfc21fc86e8829346a2befc58cb288ea17e"
+    },
+    {
+      "path": "runs/reconnect-becker-point/source-reference-n8192-k8192.npz",
+      "sha256": "0da610049bde539f6028de7ac34a49baccfe068b256aaa5251f80e54c5a5ea97"
+    },
+    {
+      "path": "runs/reconnect-becker-point/results.json",
+      "sha256": "8268eb454186360d606829c966693ad45acf5629f7702ef1196779529f39f337"
+    },
+    {
+      "path": "runs/reconnect-becker-point/implementation-protocol.json",
+      "sha256": "2352c33793d57266ff464b854af045a6746c36d4082c9c01c479f5ed0bebd73d"
+    },
+    {
+      "path": "runs/reconnect-becker-point/k4/native-results.json",
+      "sha256": "7b925c9a6d30b6532877cdd2ef1a26055d6983d5e1c66e2ebeb53208c4a419a2"
+    },
+    {
+      "path": "runs/reconnect-becker-point/k4/trajectory-states.npz",
+      "sha256": "8c1ec848668e0d2e06463c880e7368af1ed45fa60196f7e85c47287a9708729c"
+    },
+    {
+      "path": "runs/reconnect-becker-point/k8/native-results.json",
+      "sha256": "b70d4c821c894637099b7ea8385c9495dfdc6080bb6e608bcfb5acad9379e858"
+    },
+    {
+      "path": "runs/reconnect-becker-point/k8/trajectory-states.npz",
+      "sha256": "25e3c326ec630170806deeab6396ed2d956160632b2b849f966c0992f5a465bc"
+    },
+    {
+      "path": "runs/reconnect-becker-point/k16/native-results.json",
+      "sha256": "9db8d19c263b2dab814f1317cf6b4af14c4744a4aadca753702a01bf685d6309"
+    },
+    {
+      "path": "runs/reconnect-becker-point/k16/trajectory-states.npz",
+      "sha256": "359ce7e3b709bae08cbba61b55c431c4b3615aca06c23d63483a99a62c9a9b88"
+    },
+    {
+      "path": "research/reconnect/aligned_mass_reference.py",
+      "sha256": "c40f0e0078e020208d7944fe40484669e9f956e19a7a30e6adc8009662fed84f"
+    },
+    {
+      "path": "research/reconnect/ALIGNED_REFERENCE_PROTOTYPE_CONTRACT.md",
+      "sha256": "01e28f025cc93901dba2cb0d9d6ca972280c0454f501e53d058ebd6ea930d68b"
+    },
+    {
+      "path": "runs/reconnect-aligned-reference/results.json",
+      "sha256": "14abb11d329d317cbdfe2ad4368fb481a9e340f491745bf52ceb8ef3ee65c839"
+    },
+    {
+      "path": "runs/reconnect-aligned-reference/audit.json",
+      "sha256": "30a911c98bff8681c86524dcf7279a19e679d1b751ec81315d149f991a7b142e"
+    },
+    {
+      "path": "runs/reconnect-initial-projection/results.json",
+      "sha256": "eeaab7bbecd210ed08c63ce79cfa1603fe12cea0afd7f2dd0c1e3e77445744ed"
+    },
+    {
+      "path": "research/reconnect/t1_uniform_core.py",
+      "sha256": "bbd7e9ab8ad55860c4d66d3fbda2673ab4f30ae48f6b2f1d1e4e51e7df205d5e"
+    },
+    {
+      "path": "runs/reconnect-becker-point/material-inputs.npz",
+      "sha256": "aedd3b596210c1f5d6900e0b1eafae01a0d42e5e600cc6c25b79ae6a316aeba2"
+    },
+    {
+      "path": "runs/reconnect-becker-reference/results.json",
+      "sha256": "d8f3b65426d11ca242d66d1b9332f70fc16336916f1b6279d99796bbfae8c1a8"
+    },
+    {
+      "path": "research/reconnect/voronoi_time_action.py",
+      "sha256": "0db8f151cfcec1b93889acfc6ba3ec6f4621d9bf7417dbf488df5eac3df1330a"
+    }
+  ],
+  "physical_case": {
+    "delta": 0.08,
+    "D_original_float": 0.02,
+    "T_original_float": 0.1,
+    "material_columns": 32,
+    "transverse_rows": 8,
+    "candidate_K_values_unchanged": [
+      4,
+      8,
+      16
+    ]
+  },
+  "mesh": "original32 material mass intervals unchanged; h=exact total mass/16384; n_i=ceil(exact m_i/h); nested fine counts=2*n_i. Rational construction from saved endpoints, no inserted slivers or normalization. Reject nonrepresentable cells",
+  "reference_levels": [
+    {
+      "child_count_level": 0,
+      "steps": 8192
+    },
+    {
+      "child_count_level": 1,
+      "steps": 8192
+    },
+    {
+      "child_count_level": 1,
+      "steps": 16384
+    }
+  ],
+  "base_cell_count_range": [
+    16384,
+    16415
+  ],
+  "fine_cell_count_range": [
+    32768,
+    32830
+  ],
+  "reference_method": "frozen isolated aligned_mass_reference.py, midpoint CN, rho^2 D at mass face/centre distance, zero exterior scalar flux; unchanged Becker density and analytic finite-interval initial means",
+  "positivity_policy_fixed_before_physical_inputs": "monitor; record every failure of sufficient RHS-diagonal condition, keep original finite/mass/extrema guards. This is monitored reference integration, not unconditional maximum-principle certification. Never switch after failure",
+  "reference_guards": "same preexisting max_relative_mass_drift <=1e-9; min/max stay within original fine initial extrema +/-1e-10; nonfinite or guard failure stops without clipping/normalization",
+  "observation": "sum complete child mass integrals over each original parent, divided by original parent mass; independent Fraction sums; retain all production-vs-exact aggregation and child mass geometric closure differences positively",
+  "reference_indicator": "norm_m(base8192-fine8192)+norm_m(fine8192-fine16384), original32 column mass; empirical only, no Richardson or certified PDE-error claim",
+  "fixed_positive_budget": "retain every original candidate numeric/observation component; in this separate result replace original reference component by 2*(new space+time). Add 2*sum(all3 initial-mean bridges), 2*sum(all3 terminal production/exact aggregation bridges), and 2*sum(all3 initial+terminal child geometric-mass defect bounds). No cancellation or deletion; old result budgets unchanged",
+  "geometry_bridge": "for each parent use sum(abs(binary64 child mass - exact endpoint difference)*abs(saved child mean))/original parent mass, then original mass norm; evaluate both initial and terminal. Retain nonzero mismatch, do not reweight",
+  "comparison": "saved original32x8 candidate K4/8/16 only; unchanged original sigma,H helper and strict greater-than rule. Retain saved H and state differences, report any floating re-evaluation differences separately; old two unresolved decisions remain",
+  "new_reference_PDE_solves": 3,
+  "new_candidate_graphs": 0,
+  "new_candidate_transient_runs": 0,
+  "old_candidate_reruns": 0,
+  "new_software_checks": 0,
+  "recorded_checks_total": 502,
+  "no_true_internal_reference_faces_to_candidate_builder": true,
+  "main_wall_seconds_cap": 300,
+  "main_peak_RSS_MiB_cap": 1024,
+  "resource_basis": "previous uniform three reference solves about62s; aligned overhead not yet measured. Caps are limits, not performance claims",
+  "audit_scope": "independent exact complete-child mass/observation and 80/100-digit positive budget audit of saved endpoints/diagnostics; no fourth PDE, no independent all-time-step validation claim",
+  "stop": "preserve failure/unresolved and stop; no fourth reference, automatic N/K/parameter scan, clipping, normalization, F/C fitting or altered H/threshold. A resolved temporal comparison still does not close candidate spatial convergence or all Stage3",
+  "moving_shock_T4_closed": false,
+  "all_three_density_sources_closed": false,
+  "stage3_physical_acceptance": "incomplete",
+  "fluid_orc_enabled": false,
+  "kappa_computed": false,
+  "source_gate_sha256": "e9b0ba448c679cb145327fec2cac5432b3e0c024f139c1df5273d7a8f6a3cff1",
+  "execution_date": "2026-11-06",
+  "timezone": "Asia/Shanghai",
+  "implementation_accounting_detail": {
+    "new_reference_observations": "production complete-child means; independently exact Fraction sums are diagnostics, not corrected states",
+    "initial_mean_bridge": "norm(exact stored-child mass mean - saved original coarse c0) + norm(production initial mean - exact stored-child mass mean), positive triangle sum fixed before inputs",
+    "terminal_bridge": "norm(production terminal mean - exact stored-child mass mean), computed before rounding exact means to binary64",
+    "geometry": "absolute child binary64 mass vs exact edge difference weighted by absolute saved mean, both endpoints; no reweighting",
+    "saved_state_decrease": "use unchanged previous comparison state decrease; reevaluation difference diagnostic under original numeric allowance"
+  }
+}

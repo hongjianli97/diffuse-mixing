@@ -1,0 +1,213 @@
+{
+  "date": "2026-11-07",
+  "timezone": "Etc/UTC",
+  "type": "new_common_K32_three_column_spatial_diagnostic_with_all_H_outcomes_retained",
+  "source_gate_sha256": "73b29fcd57d51a0502c5bd29c44b7cd0fbee6019da51313d5f4d32c012267dd8",
+  "parent_seal_sha256": "ea3001f3c7784c48b06618ab03a99cca9a02c913c0f4c9b922fb681f2dee9514",
+  "source_files": {
+    "research/rebuild/becker.py": "6c42c00550bf2614d6d8baf978606936fff059f006308656bdb934e1f740c11e",
+    "research/reconnect/BECKER_COMMON_K32_DIAGNOSTIC_CONTRACT.md": "e36745aa80f2e1116990e15d193e486a4fe119fe7f0cbc4442f306b1b002180b",
+    "research/reconnect/BECKER_FINE_TIME_PROBE_CONTRACT.md": "96acdaa46212e3308a2e8df061022e4559a6d2887fb5e1f2a0a725bf14601c4f",
+    "research/reconnect/affine_shear_completion.py": "e014f5789dfed76eb17018fbe506c59880de3567fc6354a3f1c54aecaf225e13",
+    "research/reconnect/aligned_becker_check.py": "9272b47a04b6d9ff3aad1dd65a7b92e986d2d0334259a90546f5d91857815665",
+    "research/reconnect/audit_aligned_becker.py": "3bd4322c2f0223989546e30de6a8faee97660f4e0e012c08f798abe796d13367",
+    "research/reconnect/audit_becker_fine_time.py": "7218d432c6719c863e36a21c7ea36af6089ec64e07f675e86b845bd90863476a",
+    "research/reconnect/audit_becker_spatial.py": "1f45ab7b924737af9b143ab6f7eaebd121f32178e611725ac4a951d6fa9d5ddc",
+    "research/reconnect/audit_bounded_geometry.py": "a6eb7b2998aacccd9cc9e6518fffaa4371e8e4083194bd967900cba81be84bd6",
+    "research/reconnect/audit_route_decision.py": "e9441dad19d0d90dcbec68233be264d2df24601f567a66ec22a95156c62eca4f",
+    "research/reconnect/becker_fine_time_core.py": "354fa5a6032b981e38c9ffeffd3e463a280b86e5312ee445f3bbb0e92c708ba7",
+    "research/reconnect/becker_fine_time_protocol.json": "6b9cdd6a84afe0c21f2b6b2508c0def04bebf7ef5e7f2de0dc13b89c7d1ace4c",
+    "research/reconnect/becker_fine_time_study.py": "db97a2a060ca4afbf34c1e1a92b2d14ac5558aeb82e99d03c6e24f045c578799",
+    "research/reconnect/becker_point_core.py": "4c62bff643cc11e7e7d63fb05a5324f2b0b03d0c039c34a5c917164a664a18f3",
+    "research/reconnect/becker_spatial_core.py": "e61d9047f1197888e779c1bbf88bba63935b5da4ebaab96aec18fbae02b77619",
+    "research/reconnect/bounded_periodic_voronoi.py": "76064c05f67820e68aa88b3140a8271b9135b99df770dc4675c974d6bedeacaa",
+    "research/reconnect/explicit_duration_action.py": "3723a80d73c56748b60de843528193bd88e38e6bf14a29f9d3db1f009be88dcc",
+    "research/reconnect/periodic_voronoi_fv.py": "b3b24dc9547d4bd6d1fba531104b552e2f37bb0950cb103e8923e7f00eccaa3e",
+    "research/reconnect/shear_union64_study.py": "483240641382641d553abf92cb5be0f5f2c34a63874c527b7177a3d858936311",
+    "research/reconnect/stage3_evidence_review.py": "451fef03984f57fee8ad9bef93cee6500a9c0925b37607a4d80ea724bb49c7ad",
+    "research/reconnect/t1_uniform_core.py": "bbd7e9ab8ad55860c4d66d3fbda2673ab4f30ae48f6b2f1d1e4e51e7df205d5e",
+    "research/reconnect/voronoi_time_action.py": "0db8f151cfcec1b93889acfc6ba3ec6f4621d9bf7417dbf488df5eac3df1330a",
+    "runs/reconnect-becker-fine-time/audit.json": "c54b1851f64a46d33505209f8e2e20d75030b828aabc1bb00c5b76c977a03f1b",
+    "runs/reconnect-becker-fine-time/common-observations.npz": "735c6690033cb110600c0e5e9d59540699773feed1f6c17aa3decbf40d9c9baa",
+    "runs/reconnect-becker-fine-time/n128/k32/native-results.json": "0e317ce4eb63321b5f64e2a5ce89600163d4bca72ff90572cc1cbf0bc0ef4d70",
+    "runs/reconnect-becker-fine-time/n128/k32/trajectory-states.npz": "f8758d008b9b33ed2a662e94ac5031acb1c9a3c55a42a03d0dddb052acbd38fd",
+    "runs/reconnect-becker-fine-time/n128/material.npz": "28f61d24b6ea3574199f1d708eec101a3c948646faa47594349d36aee9e120f6",
+    "runs/reconnect-becker-fine-time/results.json": "22bd3ed2b4b19e323e7f3e83897ba63eab9659016f438019c5e114ecc8467399",
+    "runs/reconnect-becker-point/pure-inputs.json": "7c30875ae5c7864f546f13576b1c4a872398494ec07da6bbf1417063b4dcbbfc",
+    "runs/reconnect-becker-spatial/audit.json": "c4008016c05e09af2e4f89f052863311c76aeca454821c668360b1823b5e2f06",
+    "runs/reconnect-becker-spatial/common-observations.npz": "cd241e88422395129932c97543143b248b9981f7d7774dba8ed246c8967e100e",
+    "runs/reconnect-becker-spatial/n128/column.npz": "602d493de5131880ffcfeb93ec54d30dd944228af573967c0223fa08d74a7e98",
+    "runs/reconnect-becker-spatial/n128/k16/trajectory-states.npz": "ec5a1c58ad8a3702d2b438a2cd01269f842d9548b6af764933977e6b48592952",
+    "runs/reconnect-becker-spatial/n32/column.npz": "1a77246ec8f4e514d431252c778e0dfc21fc86e8829346a2befc58cb288ea17e",
+    "runs/reconnect-becker-spatial/n32/k16/trajectory-states.npz": "359ce7e3b709bae08cbba61b55c431c4b3615aca06c23d63483a99a62c9a9b88",
+    "runs/reconnect-becker-spatial/n32/material.npz": "b08e9fa3e66eed71ead7ea12bbdc9581aba7df3d682eb30b0f52f2cc7be8667f",
+    "runs/reconnect-becker-spatial/n64/column.npz": "589a99e56f0b087c2874617769ceae876bb1874c51fa4fbc3e1270beefa5e123",
+    "runs/reconnect-becker-spatial/n64/k16/trajectory-states.npz": "147742da06e236ed56a08f190d7dbd18aef3496df335c3236c9d31f6d93eb642",
+    "runs/reconnect-becker-spatial/n64/material.npz": "63808080d466c80601728f7f7a40b64a3d4c1e3575194d3f9d4a58ce404f27c4",
+    "runs/reconnect-becker-spatial/n64/pure-inputs.json": "64dc8203d62fb32fae10fe173ffdcd5adace0026a42fbdd3e686ff3e77f5ef34",
+    "runs/reconnect-becker-spatial/reference/observations-l0-k8192.npz": "48750257176329a0535ae4a42a06f6c6f6adce7911fe316f31790013166113ad",
+    "runs/reconnect-becker-spatial/reference/observations-l1-k16384.npz": "c2983b66d90b84f0cb8f741096a7f58cd87d15493aec8a46c8e9e985613fe410",
+    "runs/reconnect-becker-spatial/reference/observations-l1-k8192.npz": "3949678a97ef4b8f78dd4d4804af1a8694763d2544a7acfe27c54624ffa959fa",
+    "runs/reconnect-becker-spatial/results.json": "ee400ab9ec0196af5c93a10931852a02e7ad0f2472b4667c64e878f03dc79284",
+    "runs/reconnect-stage3-evidence/next-gate-spec.json": "73b29fcd57d51a0502c5bd29c44b7cd0fbee6019da51313d5f4d32c012267dd8"
+  },
+  "implementation_files": [
+    "research/reconnect/becker_fine_time_core.py",
+    "research/reconnect/becker_fine_time_study.py",
+    "research/reconnect/becker_fine_time_protocol.json",
+    "research/reconnect/becker_point_core.py",
+    "research/reconnect/becker_spatial_core.py",
+    "research/reconnect/bounded_periodic_voronoi.py",
+    "research/reconnect/audit_bounded_geometry.py",
+    "research/reconnect/periodic_voronoi_fv.py",
+    "research/reconnect/explicit_duration_action.py",
+    "research/reconnect/voronoi_time_action.py",
+    "research/reconnect/t1_uniform_core.py",
+    "research/reconnect/aligned_becker_check.py",
+    "research/reconnect/affine_shear_completion.py",
+    "research/reconnect/shear_union64_study.py",
+    "research/reconnect/audit_route_decision.py",
+    "research/rebuild/becker.py",
+    "research/reconnect/BECKER_FINE_TIME_PROBE_CONTRACT.md",
+    "research/reconnect/audit_becker_fine_time.py",
+    "research/reconnect/audit_becker_spatial.py",
+    "research/reconnect/audit_aligned_becker.py",
+    "research/reconnect/stage3_evidence_review.py",
+    "research/reconnect/BECKER_COMMON_K32_DIAGNOSTIC_CONTRACT.md",
+    "research/reconnect/becker_common_k32_core.py",
+    "research/reconnect/becker_common_k32_study.py",
+    "research/reconnect/audit_becker_common_k32.py",
+    "research/reconnect/becker_common_k32_protocol.json"
+  ],
+  "saved_data_files": [
+    {
+      "source": "runs/reconnect-becker-spatial/results.json",
+      "copy": "source/old/results.json"
+    },
+    {
+      "source": "runs/reconnect-becker-fine-time/results.json",
+      "copy": "source/fine/results.json"
+    },
+    {
+      "source": "runs/reconnect-becker-spatial/audit.json",
+      "copy": "source/old/audit.json"
+    },
+    {
+      "source": "runs/reconnect-becker-fine-time/audit.json",
+      "copy": "source/fine/audit.json"
+    },
+    {
+      "source": "runs/reconnect-becker-spatial/common-observations.npz",
+      "copy": "source/old/common-observations.npz"
+    },
+    {
+      "source": "runs/reconnect-becker-fine-time/common-observations.npz",
+      "copy": "source/fine/common-observations.npz"
+    },
+    {
+      "source": "runs/reconnect-becker-spatial/n32/column.npz",
+      "copy": "source/old/n32/column.npz"
+    },
+    {
+      "source": "runs/reconnect-becker-spatial/n32/k16/trajectory-states.npz",
+      "copy": "source/old/n32/k16/trajectory-states.npz"
+    },
+    {
+      "source": "runs/reconnect-becker-spatial/n64/column.npz",
+      "copy": "source/old/n64/column.npz"
+    },
+    {
+      "source": "runs/reconnect-becker-spatial/n64/k16/trajectory-states.npz",
+      "copy": "source/old/n64/k16/trajectory-states.npz"
+    },
+    {
+      "source": "runs/reconnect-becker-spatial/n128/column.npz",
+      "copy": "source/old/n128/column.npz"
+    },
+    {
+      "source": "runs/reconnect-becker-spatial/n128/k16/trajectory-states.npz",
+      "copy": "source/old/n128/k16/trajectory-states.npz"
+    },
+    {
+      "source": "runs/reconnect-becker-spatial/n32/material.npz",
+      "copy": "n32/material.npz"
+    },
+    {
+      "source": "runs/reconnect-becker-point/pure-inputs.json",
+      "copy": "source/old/n32/pure-inputs.json"
+    },
+    {
+      "source": "runs/reconnect-becker-spatial/n64/material.npz",
+      "copy": "n64/material.npz"
+    },
+    {
+      "source": "runs/reconnect-becker-spatial/n64/pure-inputs.json",
+      "copy": "source/old/n64/pure-inputs.json"
+    },
+    {
+      "source": "runs/reconnect-becker-fine-time/n128/material.npz",
+      "copy": "source/fine/n128/material.npz"
+    },
+    {
+      "source": "runs/reconnect-becker-fine-time/n128/k32/trajectory-states.npz",
+      "copy": "source/fine/n128/k32/trajectory-states.npz"
+    },
+    {
+      "source": "runs/reconnect-becker-fine-time/n128/k32/native-results.json",
+      "copy": "source/fine/n128/k32/native-results.json"
+    },
+    {
+      "source": "runs/reconnect-becker-spatial/reference/observations-l0-k8192.npz",
+      "copy": "source/old/reference/observations-l0-k8192.npz"
+    },
+    {
+      "source": "runs/reconnect-becker-spatial/reference/observations-l1-k8192.npz",
+      "copy": "source/old/reference/observations-l1-k8192.npz"
+    },
+    {
+      "source": "runs/reconnect-becker-spatial/reference/observations-l1-k16384.npz",
+      "copy": "source/old/reference/observations-l1-k16384.npz"
+    }
+  ],
+  "old_pure_input_files": {
+    "32": "runs/reconnect-becker-point/pure-inputs.json",
+    "64": "runs/reconnect-becker-spatial/n64/pure-inputs.json"
+  },
+  "new_columns": [
+    32,
+    64
+  ],
+  "reused_columns": [
+    128
+  ],
+  "K": 32,
+  "delta": 0.08,
+  "D": 0.02,
+  "T": 0.1,
+  "rows": 8,
+  "new_graphs": 64,
+  "new_primary_paths": 2,
+  "new_independent_paths": 2,
+  "old_candidate_reruns": 0,
+  "new_reference_PDE_solves": 0,
+  "new_density_sources": 0,
+  "new_software_checks": 0,
+  "recorded_checks_total": 502,
+  "main_wall_seconds_cap": 900,
+  "main_peak_RSS_MiB_cap": 1024,
+  "budget_formulas": {
+    "B_N_star": "old_B_N + 2*(machine_K32 + tail_K32 + complete_independent_terminal_norm) + new_K32_transverse_bridge",
+    "J_N_star": "old_capacity_norm_factor*B_N_star + all_old_common_bridge_positive_terms + new_K32_common_rounding + new_K32_capacity_terminal_bound",
+    "native": "(norm_m(u16-u32)+B_N_star)/original_sigma32",
+    "common": "(norm_m32(Pu16-Pu32)+J_N_star)/original_sigma32",
+    "native_H": "abs(H16-H32)+original_h_indicator(m,c0,B_N_star)",
+    "common_H": "abs(H(Pu16)-H(Pu32))+original_h_indicator(m32,c032,J_N_star)",
+    "adjacent": "actual coarse-minus-fine reference errors compared strictly with sum of both grid positive indicators",
+    "new_state_time": "old_state8_16 - new_state16_32 > B_N_star",
+    "shifted_H_time": "old_abs_H8_H16 - new_abs_H16_H32 > original_h_indicator; report regardless of outcome, no exemption"
+  },
+  "reused128_policy": "reuse every saved outcome, budget, numeric part and state; no new graph/actual/independent path",
+  "diagnostic_success": "8 spatial gains, all state-time controls, all raw/independent/capacity guards; H time separately retained; never full Stage3 acceptance",
+  "new_full_spatial_or_Stage3_pass_allowed": false,
+  "no_new_scientific_data_generated_when_protocol_written": true
+}

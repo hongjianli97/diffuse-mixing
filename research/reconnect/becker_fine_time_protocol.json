@@ -1,0 +1,182 @@
+{
+  "date": "2026-11-07",
+  "timezone": "Asia/Shanghai",
+  "type": "single_finest_Becker_K32_concentration_time_diagnostic",
+  "source_gate_sha256": "0a04ee31b38cd50e58fe3e97f6f2f1d0658192b8a0d54c543cc7135dfb941097",
+  "sources": [
+    {
+      "path": "runs/reconnect-becker-spatial/results.json",
+      "sha256": "ee400ab9ec0196af5c93a10931852a02e7ad0f2472b4667c64e878f03dc79284"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/audit.json",
+      "sha256": "c4008016c05e09af2e4f89f052863311c76aeca454821c668360b1823b5e2f06"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/common-observations.npz",
+      "sha256": "cd241e88422395129932c97543143b248b9981f7d7774dba8ed246c8967e100e"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n32/column.npz",
+      "sha256": "1a77246ec8f4e514d431252c778e0dfc21fc86e8829346a2befc58cb288ea17e"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n64/column.npz",
+      "sha256": "589a99e56f0b087c2874617769ceae876bb1874c51fa4fbc3e1270beefa5e123"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n64/material.npz",
+      "sha256": "63808080d466c80601728f7f7a40b64a3d4c1e3575194d3f9d4a58ce404f27c4"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n64/k16/trajectory-states.npz",
+      "sha256": "147742da06e236ed56a08f190d7dbd18aef3496df335c3236c9d31f6d93eb642"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n128/column.npz",
+      "sha256": "602d493de5131880ffcfeb93ec54d30dd944228af573967c0223fa08d74a7e98"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n128/k16/trajectory-states.npz",
+      "sha256": "ec5a1c58ad8a3702d2b438a2cd01269f842d9548b6af764933977e6b48592952"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/reference/observations-l0-k8192.npz",
+      "sha256": "48750257176329a0535ae4a42a06f6c6f6adce7911fe316f31790013166113ad"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/reference/observations-l1-k8192.npz",
+      "sha256": "3949678a97ef4b8f78dd4d4804af1a8694763d2544a7acfe27c54624ffa959fa"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/reference/observations-l1-k16384.npz",
+      "sha256": "c2983b66d90b84f0cb8f741096a7f58cd87d15493aec8a46c8e9e985613fe410"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n128/material.npz",
+      "sha256": "28f61d24b6ea3574199f1d708eec101a3c948646faa47594349d36aee9e120f6"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial/n128/pure-inputs.json",
+      "sha256": "3ac98520090bbe61d54440d8897a331c2d15003c312d3fe04b9c605e2876fe6e"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial-budget/next-gate-spec.json",
+      "sha256": "0a04ee31b38cd50e58fe3e97f6f2f1d0658192b8a0d54c543cc7135dfb941097"
+    },
+    {
+      "path": "runs/reconnect-becker-spatial-budget/sha256.json",
+      "sha256": "fe5a23539267da1f08ccc75ea238abdf0e38acb87faf32cdf5af1da64db20424"
+    },
+    {
+      "path": "research/reconnect/becker_fine_time_core.py",
+      "sha256": "354fa5a6032b981e38c9ffeffd3e463a280b86e5312ee445f3bbb0e92c708ba7"
+    },
+    {
+      "path": "research/reconnect/becker_fine_time_study.py",
+      "sha256": "db97a2a060ca4afbf34c1e1a92b2d14ac5558aeb82e99d03c6e24f045c578799"
+    },
+    {
+      "path": "research/reconnect/becker_point_core.py",
+      "sha256": "4c62bff643cc11e7e7d63fb05a5324f2b0b03d0c039c34a5c917164a664a18f3"
+    },
+    {
+      "path": "research/reconnect/becker_spatial_core.py",
+      "sha256": "e61d9047f1197888e779c1bbf88bba63935b5da4ebaab96aec18fbae02b77619"
+    },
+    {
+      "path": "research/reconnect/bounded_periodic_voronoi.py",
+      "sha256": "76064c05f67820e68aa88b3140a8271b9135b99df770dc4675c974d6bedeacaa"
+    },
+    {
+      "path": "research/reconnect/audit_bounded_geometry.py",
+      "sha256": "a6eb7b2998aacccd9cc9e6518fffaa4371e8e4083194bd967900cba81be84bd6"
+    },
+    {
+      "path": "research/reconnect/periodic_voronoi_fv.py",
+      "sha256": "b3b24dc9547d4bd6d1fba531104b552e2f37bb0950cb103e8923e7f00eccaa3e"
+    },
+    {
+      "path": "research/reconnect/explicit_duration_action.py",
+      "sha256": "3723a80d73c56748b60de843528193bd88e38e6bf14a29f9d3db1f009be88dcc"
+    },
+    {
+      "path": "research/reconnect/voronoi_time_action.py",
+      "sha256": "0db8f151cfcec1b93889acfc6ba3ec6f4621d9bf7417dbf488df5eac3df1330a"
+    },
+    {
+      "path": "research/reconnect/t1_uniform_core.py",
+      "sha256": "bbd7e9ab8ad55860c4d66d3fbda2673ab4f30ae48f6b2f1d1e4e51e7df205d5e"
+    },
+    {
+      "path": "research/reconnect/aligned_becker_check.py",
+      "sha256": "9272b47a04b6d9ff3aad1dd65a7b92e986d2d0334259a90546f5d91857815665"
+    },
+    {
+      "path": "research/reconnect/affine_shear_completion.py",
+      "sha256": "e014f5789dfed76eb17018fbe506c59880de3567fc6354a3f1c54aecaf225e13"
+    },
+    {
+      "path": "research/reconnect/shear_union64_study.py",
+      "sha256": "483240641382641d553abf92cb5be0f5f2c34a63874c527b7177a3d858936311"
+    },
+    {
+      "path": "research/reconnect/audit_route_decision.py",
+      "sha256": "e9441dad19d0d90dcbec68233be264d2df24601f567a66ec22a95156c62eca4f"
+    },
+    {
+      "path": "research/rebuild/becker.py",
+      "sha256": "6c42c00550bf2614d6d8baf978606936fff059f006308656bdb934e1f740c11e"
+    },
+    {
+      "path": "research/reconnect/BECKER_FINE_TIME_PROBE_CONTRACT.md",
+      "sha256": "96acdaa46212e3308a2e8df061022e4559a6d2887fb5e1f2a0a725bf14601c4f"
+    }
+  ],
+  "implementation_files": [
+    "research/reconnect/becker_fine_time_core.py",
+    "research/reconnect/becker_fine_time_study.py",
+    "research/reconnect/becker_fine_time_protocol.json",
+    "research/reconnect/becker_point_core.py",
+    "research/reconnect/becker_spatial_core.py",
+    "research/reconnect/bounded_periodic_voronoi.py",
+    "research/reconnect/audit_bounded_geometry.py",
+    "research/reconnect/periodic_voronoi_fv.py",
+    "research/reconnect/explicit_duration_action.py",
+    "research/reconnect/voronoi_time_action.py",
+    "research/reconnect/t1_uniform_core.py",
+    "research/reconnect/aligned_becker_check.py",
+    "research/reconnect/affine_shear_completion.py",
+    "research/reconnect/shear_union64_study.py",
+    "research/reconnect/audit_route_decision.py",
+    "research/rebuild/becker.py",
+    "research/reconnect/BECKER_FINE_TIME_PROBE_CONTRACT.md"
+  ],
+  "saved_data_files": [
+    "results.json",
+    "audit.json",
+    "common-observations.npz",
+    "n32/column.npz",
+    "n64/column.npz",
+    "n64/material.npz",
+    "n64/k16/trajectory-states.npz",
+    "n128/column.npz",
+    "n128/k16/trajectory-states.npz",
+    "reference/observations-l0-k8192.npz",
+    "reference/observations-l1-k8192.npz",
+    "reference/observations-l1-k16384.npz"
+  ],
+  "new_graphs": 32,
+  "new_primary_paths": 1,
+  "new_independent_paths": 1,
+  "old_candidate_reruns": 0,
+  "new_reference_PDE_solves": 0,
+  "new_density_sources": 0,
+  "new_software_checks": 0,
+  "recorded_checks_total": 502,
+  "main_wall_seconds_cap": 2400,
+  "main_peak_RSS_MiB_cap": 1024,
+  "scope": "128/K32 versus saved64/K16; old spatial decision and shifted H obstruction retained; no automatic spatial/Stage3 pass",
+  "fixed_formula_contract": "research/reconnect/BECKER_FINE_TIME_PROBE_CONTRACT.md",
+  "no_new_scientific_data_generated_when_protocol_written": true
+}

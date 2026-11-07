@@ -1,0 +1,150 @@
+{
+  "already_executed": false,
+  "type": "one_fixed_reference_only_Becker_space_time_L_shape_check",
+  "reason": "reference-space part dominates fixed H indicator; same-formula nonreference floor is below observed decline. One more space level alone is not predicted sufficient under formal O(h^2); fixed L-shape independently controls space and time without candidate changes",
+  "source_review_decision": "saved_reference_space_dominates_reference_only_check_justified",
+  "sources": [
+    {
+      "path": "research/rebuild/reference.py",
+      "sha256": "015fb90420c836fb42185193bfad64649c7a23dd4f86c021834d3f65455cadd6"
+    },
+    {
+      "path": "research/rebuild/becker.py",
+      "sha256": "6c42c00550bf2614d6d8baf978606936fff059f006308656bdb934e1f740c11e"
+    },
+    {
+      "path": "research/reconnect/becker_budget_review_protocol.json",
+      "sha256": "cb466e7aa3078f1d9d750881c271e9fde97a2473fbca9aef727b017615b8ae0f"
+    },
+    {
+      "path": "runs/reconnect-becker-point/source-column-inputs.npz",
+      "sha256": "1a77246ec8f4e514d431252c778e0dfc21fc86e8829346a2befc58cb288ea17e"
+    },
+    {
+      "path": "runs/reconnect-becker-point/source-reference-n8192-k8192.npz",
+      "sha256": "0da610049bde539f6028de7ac34a49baccfe068b256aaa5251f80e54c5a5ea97"
+    },
+    {
+      "path": "runs/reconnect-becker-point/results.json",
+      "sha256": "8268eb454186360d606829c966693ad45acf5629f7702ef1196779529f39f337"
+    },
+    {
+      "path": "runs/reconnect-becker-point/implementation-protocol.json",
+      "sha256": "2352c33793d57266ff464b854af045a6746c36d4082c9c01c479f5ed0bebd73d"
+    },
+    {
+      "path": "runs/reconnect-becker-point/k4/native-results.json",
+      "sha256": "7b925c9a6d30b6532877cdd2ef1a26055d6983d5e1c66e2ebeb53208c4a419a2"
+    },
+    {
+      "path": "runs/reconnect-becker-point/k4/trajectory-states.npz",
+      "sha256": "8c1ec848668e0d2e06463c880e7368af1ed45fa60196f7e85c47287a9708729c"
+    },
+    {
+      "path": "runs/reconnect-becker-point/k8/native-results.json",
+      "sha256": "b70d4c821c894637099b7ea8385c9495dfdc6080bb6e608bcfb5acad9379e858"
+    },
+    {
+      "path": "runs/reconnect-becker-point/k8/trajectory-states.npz",
+      "sha256": "25e3c326ec630170806deeab6396ed2d956160632b2b849f966c0992f5a465bc"
+    },
+    {
+      "path": "runs/reconnect-becker-point/k16/native-results.json",
+      "sha256": "9db8d19c263b2dab814f1317cf6b4af14c4744a4aadca753702a01bf685d6309"
+    },
+    {
+      "path": "runs/reconnect-becker-point/k16/trajectory-states.npz",
+      "sha256": "359ce7e3b709bae08cbba61b55c431c4b3615aca06c23d63483a99a62c9a9b88"
+    }
+  ],
+  "physical_case": {
+    "delta": 0.08,
+    "D_original_float": 0.02,
+    "T_original_float": 0.1,
+    "material_columns": 32,
+    "transverse_rows": 8,
+    "candidate_K_values_unchanged": [
+      4,
+      8,
+      16
+    ]
+  },
+  "reference_levels": [
+    {
+      "cells": 16384,
+      "steps": 8192
+    },
+    {
+      "cells": 32768,
+      "steps": 8192
+    },
+    {
+      "cells": 32768,
+      "steps": 16384
+    }
+  ],
+  "reference_method": "unchanged independent fine uniform-mass conservative centered-face midpoint-time Crank-Nicolson; reference.py and Becker source frozen; no candidate FV import or coefficient fitting",
+  "reference_initial_and_boundary": "original analytic finite mass-cell average initial; original mass domain and zero scalar flux at external material endpoints; shock is not a wall",
+  "reference_guards": "same preexisting max_relative_mass_drift <=1e-9; min/max stay within original fine initial extrema +/-1e-10; nonfinite or guard failure stops without clipping/normalization",
+  "projections": "independently exact Fraction overlap onto original32 mass cells; retain direct-sum versus old primitive-interpolation projection discrepancy as extra positive term, do not replace original mass/c0 or old reference",
+  "new_reference_indicator": "mass-norm projected space difference (16384,8192)-(32768,8192) plus time difference (32768,8192)-(32768,16384), both positive; empirical differences,not certified error",
+  "source_case_policy": "retain original unresolved result and all original files. New saved-state/reference comparison is a separate predeclared result,never a retrospective pass",
+  "new_comparison": "only stored candidate K4/8/16 endpoint states, same original mass/c0/sigma/H. Retain original numeric and observation bridges; replace reference input by new independent indicator,add projection and initial-mean rounding bridges positively; use unchanged original H helper/formula and strict greater-than rule",
+  "planning_diagnostic_not_a_new_threshold": {
+    "same_formula_total_budget_at_equality": "1.7171014295658641851633307598185575452176622591840138809384026575068247735038070E-8",
+    "same_formula_reference_space_time_ceiling": "8.507811569592974208441867474287118857112539239191467949003536725034123867519035E-9",
+    "space_ceiling_if_saved_time_unchanged": "8.454268419331934477211767591761471754505148013587662297813777351369267910487785E-9",
+    "saved_reference_space_time_over_ceiling": "8.4980399085514503162910698319008702299744514642021696909227618378346189271139706",
+    "saved_reference_space_over_ceiling_if_time_unchanged": "8.5455270070884239833375049504675581867903403549197754653613190919851476582250896",
+    "planning_diagnostic_only_not_new_acceptance_threshold": true
+  },
+  "formal_order_estimates_not_guarantees": [
+    {
+      "spatial_difference_reduction_for_formal_second_order_planning_only": 4,
+      "reference_space_time_estimate_absolute": 1.811508792590499e-08,
+      "original_formula_H_indicator_estimate": 1.2211427783558851e-06,
+      "estimate_below_saved_H_decline": false,
+      "not_measured_or_certified": true
+    },
+    {
+      "spatial_difference_reduction_for_formal_second_order_planning_only": 16,
+      "reference_space_time_estimate_absolute": 4.568929344172028e-09,
+      "original_formula_H_indicator_estimate": 3.1189248342289605e-07,
+      "estimate_below_saved_H_decline": true,
+      "not_measured_or_certified": true
+    }
+  ],
+  "old_reference_consistency": "report old8192 versus new32768 reference means and H separately; do not count signed cancellation as acceptance",
+  "new_candidate_graphs": 0,
+  "new_edge_weights": 0,
+  "new_operator_actions": 0,
+  "new_candidate_transient_runs": 0,
+  "old_candidate_reruns": 0,
+  "new_complete_independent_uniformization_sequences": 0,
+  "new_reference_PDE_solves": 3,
+  "new_software_checks": 0,
+  "recorded_checks_total": 500,
+  "main_wall_seconds_cap": 300,
+  "main_peak_RSS_MiB_cap": 1024,
+  "resource_basis": {
+    "saved8192_by8192_wall_seconds": 5.708554746997834,
+    "linear_cells_times_steps_planning_seconds": 79.91976645796967,
+    "not_measured_new_runtime": true
+  },
+  "stop": "on failure/unresolved retain it; no automatic higher N/K/rows/centres/parameter or additional reference solve, H-formula or threshold retune,clipping/normalization/F_Cfit,Richardson state,or full-matrix scan",
+  "moving_shock_T4_closed": false,
+  "all_three_density_sources_closed": false,
+  "stage3_physical_acceptance": "incomplete",
+  "fluid_orc_enabled": false,
+  "kappa_computed": false,
+  "execution_date": "2026-11-06",
+  "timezone": "Asia/Shanghai",
+  "source_gate_sha256": "a9669d2f52ba67707933f237be5244a601553579d3a9b7afcea02785dc853315",
+  "additional_positive_budget_fixed_before_new_inputs": {
+    "projection": "2*sum over all three references of norm_m(exact overlap c - primitive-interpolation c)",
+    "initial_mean": "2*sum over all three references of norm_m(exact overlap fine c0 - original32 c0); includes finite-cell representation and rounding, not assumed pure roundoff",
+    "reason_for_factor2": "conservative two-difference comparison multiplicity; retain each source, no cancellation or retrospective reweighting"
+  },
+  "audit_scope": "saved endpoints, exact overlap, positive budget, original H and guards; no fourth PDE solve, no independent claim to certify all time steps",
+  "new_result_scope": "separately registered saved-candidate temporal comparison with refined empirical reference indicator; does not close spatial convergence, moving T4 or full Stage3"
+}

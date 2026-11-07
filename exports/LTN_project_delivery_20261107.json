@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-07",
+  "report_pages": 13,
+  "code_package_files": 1665,
+  "original_files": 782,
+  "source_base_commit": "e83586c6e806d919b2660e0483916bff3c7fc627",
+  "status": "verified_report_and_code_only_update_prepared",
+  "github_updated": false,
+  "repository": "hongjianli97/diffuse-mixing",
+  "branch": "main",
+  "artifacts": {
+    "LTN_project_complete_20261107.pdf": {
+      "bytes": 593161,
+      "sha256": "2311e5db80182c3e002ccb6b5e31d6a5906b73470c8c8f205537cbb975f7c694",
+      "github_download_url": "https://github.com/hongjianli97/diffuse-mixing/raw/refs/heads/main/exports/LTN_project_complete_20261107.pdf"
+    },
+    "LTN_project_code_20261107.zip": {
+      "bytes": 6641393,
+      "sha256": "d777480efe8aa0814e4aad4238bfb956dd80867e0dbe1a0c9556b6cb60dccf7c",
+      "github_download_url": "https://github.com/hongjianli97/diffuse-mixing/raw/refs/heads/main/exports/LTN_project_code_20261107.zip"
+    }
+  },
+  "source_zip_restored_and_verified": true,
+  "restored_existing_checks_passed": 15,
+  "new_physical_experiments": 0,
+  "historical_checks_record": 508,
+  "stage3": "incomplete",
+  "fluid_orc_enabled": false,
+  "full_workspace_backup": false,
+  "cloud_environment_published": false,
+  "omitted": [
+    "all historical raw runs",
+    "15 original attachments",
+    "unrecovered v080",
+    "complete chat",
+    "new runs data: excluded from this public update"
+  ],
+  "bulk_data_push_rejected_by_automatic_review": true,
+  "actual_publication_scope": "report, research source, documentation and small source ZIP; no new runs files"
+}

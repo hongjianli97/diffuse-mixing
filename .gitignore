@@ -6,10 +6,22 @@ __pycache__/
 .env.*
 .DS_Store
 
+# Current consolidated report and small source delivery.
+/reports/project-20261107/*.aux
+/reports/project-20261107/*.out
+/reports/project-20261107/*.toc
+/reports/project-20261107/*.log
+/reports/project-20261107/complete-report.pdf
+/reports/project-20261107/extracted-text.txt
+
 # Keep the selected reproducible case; do not accidentally add 18 GB of history.
 /runs/*
 !/runs/reconnect-contact-oracle/
 !/runs/reconnect-contact-spatial/
+!/runs/reconnect-becker-point/
+!/runs/reconnect-becker-budget-review/
+!/runs/reconnect-becker-reference/
+!/runs/reconnect-initial-projection/
 !/runs/reconnect-affine-shear-spatial/
 /runs/reconnect-affine-shear-spatial/*
 !/runs/reconnect-affine-shear-spatial/sha256.json
@@ -26,3 +38,161 @@ __pycache__/
 !/exports/LTN_contact_spatial_code_results_20261104.zip
 !/exports/LTN_contact_spatial_delivery_20261104.json
 !/exports/LTN_contact_spatial_downloads_20261104.md
+!/exports/LTN_becker_point_report_20261104.pdf
+!/exports/LTN_becker_point_code_results_20261104.zip
+!/exports/LTN_becker_point_delivery_20261104.json
+!/exports/LTN_becker_point_downloads_20261104.md
+!/exports/LTN_becker_budget_report_20261104.pdf
+!/exports/LTN_becker_budget_code_results_20261104.zip
+!/exports/LTN_becker_budget_delivery_20261104.json
+!/exports/LTN_becker_budget_downloads_20261104.md
+!/exports/LTN_becker_reference_report_20261106.pdf
+!/exports/LTN_becker_reference_code_results_20261106.zip
+!/exports/LTN_becker_reference_delivery_20261106.json
+!/exports/LTN_becker_reference_downloads_20261106.md
+!/exports/LTN_initial_projection_report_20261106.pdf
+!/exports/LTN_initial_projection_code_results_20261106.zip
+!/exports/LTN_initial_projection_delivery_20261106.json
+!/exports/LTN_initial_projection_downloads_20261106.md
+
+# Material-aligned reference prototype, local-only recovery.
+!/runs/reconnect-aligned-reference/
+!/exports/LTN_aligned_reference_report_20261106.pdf
+!/exports/LTN_aligned_reference_code_results_20261106.zip
+!/exports/LTN_aligned_reference_delivery_20261106.json
+!/exports/LTN_aligned_reference_downloads_20261106.md
+
+# Aligned Becker reference comparison, local-only recovery.
+!/runs/reconnect-aligned-becker/
+!/exports/LTN_aligned_becker_report_20261106.pdf
+!/exports/LTN_aligned_becker_code_results_20261106.zip
+!/exports/LTN_aligned_becker_delivery_20261106.json
+!/exports/LTN_aligned_becker_downloads_20261106.md
+
+# Moving Becker spatial comparison, local-only recovery.
+!/runs/reconnect-becker-spatial/
+!/exports/LTN_becker_spatial_report_20261106.pdf
+!/exports/LTN_becker_spatial_code_results_20261106.zip
+!/exports/LTN_becker_spatial_delivery_20261106.json
+!/exports/LTN_becker_spatial_downloads_20261106.md
+
+# Saved spatial budget review, local-only recovery.
+!/runs/reconnect-becker-spatial-budget/
+!/exports/LTN_becker_spatial_budget_report_20261107.pdf
+!/exports/LTN_becker_spatial_budget_code_results_20261107.zip
+!/exports/LTN_becker_spatial_budget_delivery_20261107.json
+!/exports/LTN_becker_spatial_budget_downloads_20261107.md
+
+# One-path K32 diagnostic, local-only recovery.
+!/runs/reconnect-becker-fine-time/
+!/exports/LTN_becker_fine_time_report_20261107.pdf
+!/exports/LTN_becker_fine_time_code_results_20261107.zip
+!/exports/LTN_becker_fine_time_delivery_20261107.json
+!/exports/LTN_becker_fine_time_downloads_20261107.md
+
+# Stage3 evidence review, local-only recovery.
+!/runs/reconnect-stage3-evidence/
+!/exports/LTN_stage3_evidence_report_20261107.pdf
+!/exports/LTN_stage3_evidence_code_results_20261107.zip
+!/exports/LTN_stage3_evidence_delivery_20261107.json
+!/exports/LTN_stage3_evidence_downloads_20261107.md
+
+# Common K32 spatial diagnostic, local-only recovery.
+!/runs/reconnect-becker-common-k32/
+!/exports/LTN_becker_common_k32_report_20261107.pdf
+!/exports/LTN_becker_common_k32_code_results_20261107.zip
+!/exports/LTN_becker_common_k32_delivery_20261107.json
+!/exports/LTN_becker_common_k32_downloads_20261107.md
+
+# Fixed-material delta definition, local-only recovery.
+!/runs/reconnect-becker-delta-definition/
+!/exports/LTN_becker_delta_definition_report_20261107.pdf
+!/exports/LTN_becker_delta_definition_code_results_20261107.zip
+!/exports/LTN_becker_delta_definition_delivery_20261107.json
+!/exports/LTN_becker_delta_definition_downloads_20261107.md
+
+# Single fixed-material delta=.04 diagnostic, local-only recovery.
+!/runs/reconnect-becker-delta004/
+!/exports/LTN_becker_delta004_report_20261107.pdf
+!/exports/LTN_becker_delta004_code_results_20261107.zip
+!/exports/LTN_becker_delta004_delivery_20261107.json
+!/exports/LTN_becker_delta004_downloads_20261107.md
+
+# Saved delta004 H-budget review, local-only recovery.
+!/runs/reconnect-becker-delta004-budget/
+!/exports/LTN_becker_delta004_budget_report_20261107.pdf
+!/exports/LTN_becker_delta004_budget_code_results_20261107.zip
+!/exports/LTN_becker_delta004_budget_delivery_20261107.json
+!/exports/LTN_becker_delta004_budget_downloads_20261107.md
+
+# Static T1 density-source contract, local-only recovery.
+!/runs/reconnect-t1-density-definition/
+!/exports/LTN_t1_density_definition_report_20261107.pdf
+!/exports/LTN_t1_density_definition_code_results_20261107.zip
+!/exports/LTN_t1_density_definition_delivery_20261107.json
+!/exports/LTN_t1_density_definition_downloads_20261107.md
+
+# Executed static T1 density calibration, local-only recovery.
+!/runs/reconnect-t1-density-calibration/
+!/exports/LTN_t1_density_calibration_report_20261107.pdf
+!/exports/LTN_t1_density_calibration_code_results_20261107.zip
+!/exports/LTN_t1_density_calibration_delivery_20261107.json
+!/exports/LTN_t1_density_calibration_downloads_20261107.md
+
+# Smooth compression density-source contract, local-only recovery.
+!/runs/reconnect-compression-density-definition/
+!/exports/LTN_compression_density_definition_report_20261107.md
+!/exports/LTN_compression_density_definition_code_results_20261107.zip
+!/exports/LTN_compression_density_definition_delivery_20261107.json
+!/exports/LTN_compression_density_definition_downloads_20261107.md
+
+# Moving smooth-compression density calibration, local-only recovery.
+!/runs/reconnect-compression-density-calibration/
+!/exports/LTN_compression_density_calibration_report_20261107.pdf
+!/exports/LTN_compression_density_calibration_report_20261107.md
+!/exports/LTN_compression_density_calibration_code_results_20261107.zip
+!/exports/LTN_compression_density_calibration_delivery_20261107.json
+!/exports/LTN_compression_density_calibration_downloads_20261107.md
+
+# Saved moving-density signed-error/budget diagnostics, local recovery only.
+!/runs/reconnect-compression-density-diagnostics/
+!/exports/LTN_compression_density_diagnostics_report_20261107.md
+!/exports/LTN_compression_density_diagnostics_code_results_20261107.zip
+!/exports/LTN_compression_density_diagnostics_delivery_20261107.json
+!/exports/LTN_compression_density_diagnostics_downloads_20261107.md
+
+# Frozen joint time/reference control definition, local recovery only.
+!/runs/reconnect-compression-joint-definition/
+!/exports/LTN_compression_joint_definition_report_20261107.md
+!/exports/LTN_compression_joint_definition_code_results_20261107.zip
+!/exports/LTN_compression_joint_definition_delivery_20261107.json
+!/exports/LTN_compression_joint_definition_downloads_20261107.md
+
+# N64 joint time/reference single control, local recovery
+!runs/reconnect-compression-joint-control/
+!runs/reconnect-compression-joint-control/**
+!exports/LTN_compression_joint_control_*_20261107.*
+
+# Read-only joint control evidence and local recovery
+!runs/reconnect-joint-evidence/
+!runs/reconnect-joint-evidence/**
+!exports/LTN_joint_evidence_*_20261107.*
+
+# Saved density snapshot definition and local recovery
+!runs/reconnect-density-snapshot-definition/
+!runs/reconnect-density-snapshot-definition/**
+!exports/LTN_density_snapshot_definition_*_20261107.*
+
+# Four-field density snapshot comparison and local recovery
+!runs/reconnect-density-snapshot/
+!runs/reconnect-density-snapshot/**
+!exports/LTN_density_snapshot_*_20261107.*
+
+# Read-only density error structure and local recovery
+!runs/reconnect-density-error-structure/
+!runs/reconnect-density-error-structure/**
+!exports/LTN_density_error_structure_*_20261107.*
+
+!/exports/LTN_project_complete_20261107.pdf
+!/exports/LTN_project_code_20261107.zip
+!/exports/LTN_project_delivery_20261107.json

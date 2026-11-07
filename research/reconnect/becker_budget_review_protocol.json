@@ -1,0 +1,120 @@
+{
+  "type": "execute_registered_saved_Becker_H_reference_budget_review",
+  "date": "2026-11-04",
+  "timezone": "Asia/Shanghai",
+  "source_gate": "runs/reconnect-becker-point/next-gate-spec.json",
+  "source_manifest_entries": 6756,
+  "source_decision_retained": "moving_Becker_control_failed_or_unresolved",
+  "sources": [
+    {
+      "path": "research/rebuild/becker.py",
+      "sha256": "6c42c00550bf2614d6d8baf978606936fff059f006308656bdb934e1f740c11e"
+    },
+    {
+      "path": "research/rebuild/reference.py",
+      "sha256": "015fb90420c836fb42185193bfad64649c7a23dd4f86c021834d3f65455cadd6"
+    },
+    {
+      "path": "research/reconnect/BECKER_BOUNDARY_DURATION_CONTRACT.md",
+      "sha256": "2caef7f96f4e551d013ab3ec48c67c9c686abbce71a5131e33ffc9f5158d058f"
+    },
+    {
+      "path": "research/reconnect/becker_point_core.py",
+      "sha256": "4c62bff643cc11e7e7d63fb05a5324f2b0b03d0c039c34a5c917164a664a18f3"
+    },
+    {
+      "path": "research/reconnect/becker_point_protocol.json",
+      "sha256": "2352c33793d57266ff464b854af045a6746c36d4082c9c01c479f5ed0bebd73d"
+    },
+    {
+      "path": "research/reconnect/t1_uniform_core.py",
+      "sha256": "bbd7e9ab8ad55860c4d66d3fbda2673ab4f30ae48f6b2f1d1e4e51e7df205d5e"
+    },
+    {
+      "path": "research/reconnect/voronoi_time_action.py",
+      "sha256": "0db8f151cfcec1b93889acfc6ba3ec6f4621d9bf7417dbf488df5eac3df1330a"
+    },
+    {
+      "path": "runs/rebuild-stage3-space/results.json",
+      "sha256": "f7e80f9dd08c9cc82687ffab97f239783905924c98ea7b984421d8fc7d0efc5b"
+    },
+    {
+      "path": "runs/reconnect-becker-point/density-volume-diagnostics.json",
+      "sha256": "f372191c5635f0485479d6736c7c151295b42611a032d218a3f2be6582dcc5d7"
+    },
+    {
+      "path": "runs/reconnect-becker-point/k16/native-results.json",
+      "sha256": "9db8d19c263b2dab814f1317cf6b4af14c4744a4aadca753702a01bf685d6309"
+    },
+    {
+      "path": "runs/reconnect-becker-point/k16/trajectory-states.npz",
+      "sha256": "359ce7e3b709bae08cbba61b55c431c4b3615aca06c23d63483a99a62c9a9b88"
+    },
+    {
+      "path": "runs/reconnect-becker-point/k4/native-results.json",
+      "sha256": "7b925c9a6d30b6532877cdd2ef1a26055d6983d5e1c66e2ebeb53208c4a419a2"
+    },
+    {
+      "path": "runs/reconnect-becker-point/k4/trajectory-states.npz",
+      "sha256": "8c1ec848668e0d2e06463c880e7368af1ed45fa60196f7e85c47287a9708729c"
+    },
+    {
+      "path": "runs/reconnect-becker-point/k8/native-results.json",
+      "sha256": "b70d4c821c894637099b7ea8385c9495dfdc6080bb6e608bcfb5acad9379e858"
+    },
+    {
+      "path": "runs/reconnect-becker-point/k8/trajectory-states.npz",
+      "sha256": "25e3c326ec630170806deeab6396ed2d956160632b2b849f966c0992f5a465bc"
+    },
+    {
+      "path": "runs/reconnect-becker-point/material-inputs.npz",
+      "sha256": "aedd3b596210c1f5d6900e0b1eafae01a0d42e5e600cc6c25b79ae6a316aeba2"
+    },
+    {
+      "path": "runs/reconnect-becker-point/reference-indicators.json",
+      "sha256": "299c0fdcaf34ccbb1bc1da24f9d9203ab483102a2e4c2c90a345f7a4c06f94f1"
+    },
+    {
+      "path": "runs/reconnect-becker-point/results.json",
+      "sha256": "8268eb454186360d606829c966693ad45acf5629f7702ef1196779529f39f337"
+    },
+    {
+      "path": "runs/reconnect-becker-point/saved-reference-material-audit.json",
+      "sha256": "eea8a83de25eb3020ee9a9f20f2abe99b913f0af1095480f2e3ceeee222d7c78"
+    },
+    {
+      "path": "runs/reconnect-becker-point/source-column-inputs.npz",
+      "sha256": "1a77246ec8f4e514d431252c778e0dfc21fc86e8829346a2befc58cb288ea17e"
+    },
+    {
+      "path": "runs/reconnect-becker-point/source-gate-spec.json",
+      "sha256": "cc139c863420dd4bfe9211fdaf26ca070a78765e81be8bda7a0cebf354dc7da5"
+    },
+    {
+      "path": "runs/reconnect-becker-point/source-reference-n8192-k8192.npz",
+      "sha256": "0da610049bde539f6028de7ac34a49baccfe068b256aaa5251f80e54c5a5ea97"
+    }
+  ],
+  "accounting": "reproduce original binary64 total and H exactly; separate positive space/time/machine/tail/full-sequence/bridge components, retain exact rational accumulation residual separately",
+  "H_formula": "(2 sqrt(M) max(1,max|c0|) b + b^2)/E0, unchanged original helper and source case decision",
+  "allowed_saved_observables": "norms and H of stored original states/means only; exact overlap projection of stored fine reference, diagnostic discrepancy separate from original budget",
+  "feasibility": "invert the same positive H polynomial at the saved H decline as a planning diagnostic; report non-reference floor, required reduction and empirical uncertainty limitations; do not replace acceptance threshold",
+  "next_work_selection": "only if saved-reference space dominates and numerical floor leaves room, register one fixed reference-only L-shape (N16384,K8192),(N32768,K8192),(N32768,K16384); no candidate rerun or solve during this review. Formal second order is cost planning only, not certified error or extrapolated state",
+  "preservation": "verify all 6756 parent entries and 102 prior formal manifests,782 originals,15 attachments; retain historical diagnostic differences",
+  "forbidden": "changed H/formula/threshold, signed cancellation in acceptance,Richardson-state replacement,clipping/normalization/F/C fit,new candidate N/K/rows/centres/parameters,automatic refinement or PDE solve in this review",
+  "main_wall_seconds_cap": 120,
+  "main_peak_RSS_MiB_cap": 1024,
+  "recorded_checks_total": 500,
+  "stage3_physical_acceptance": "incomplete",
+  "fluid_orc_enabled": false,
+  "new_points": 0,
+  "new_candidate_graphs": 0,
+  "new_edge_weights": 0,
+  "new_operator_actions": 0,
+  "new_candidate_transient_runs": 0,
+  "new_complete_independent_uniformization_sequences": 0,
+  "new_reference_PDE_solves": 0,
+  "new_reference_states": 0,
+  "old_candidate_reruns": 0,
+  "new_software_checks": 0
+}

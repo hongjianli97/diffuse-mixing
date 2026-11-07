@@ -1,0 +1,22 @@
+{
+  "pdf_pages": 13,
+  "paper": "A4",
+  "missing_characters": false,
+  "overfull_boxes": false,
+  "source_tables_checked": [
+    "runs/reconnect-becker-common-k32/results.json",
+    "runs/reconnect-compression-joint-control/results.json"
+  ],
+  "original_figures_byte_identical": true,
+  "text_sections_checked": [
+    "从连续方程到物质平均交换",
+    "图层恒等式与时间离散",
+    "代码导航与复现说明",
+    "下一步工作计划",
+    "Stage3",
+    "ledger",
+    "fluid ORC"
+  ],
+  "new_physical_experiments": 0,
+  "visual_review": "mathematics and code table pages inspected; figures inspected separately"
+}

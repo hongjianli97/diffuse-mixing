@@ -1,0 +1,13 @@
+{
+  "remote_parent_commit": "dffeee5519c9df5fef30704c7c3fbfb4dd3c87ff",
+  "local_source_base_commit": "773c108",
+  "publication_scope": "report and code only",
+  "new_runs_files": 0,
+  "old_remote_files_removed": 0,
+  "force_push": false,
+  "all_current_research_source_copied": true,
+  "bulk_data_push_rejected": true,
+  "bulk_rejection_reason": "No explicit authorization to disclose the additional run data publicly.",
+  "additional_local_data_remains_local": true,
+  "code_package_has_runs_directory": false
+}

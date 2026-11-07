@@ -1,0 +1,21 @@
+{
+  "physical_solves": 0,
+  "source_documents": [
+    "docs/PROJECT_OVERVIEW.md",
+    "docs/THEORY_EVIDENCE_APPENDIX.md",
+    "docs/CODE_GUIDE.md",
+    "docs/NEXT_STEPS.md"
+  ],
+  "input_sha256": {
+    "docs/PROJECT_OVERVIEW.md": "37b8be339074f9924eab84542ed2b0edce1472f9ea6fb526fb09b195c6ea14c7",
+    "docs/THEORY_EVIDENCE_APPENDIX.md": "0dfa7d13d16cbc129379fcf1c2bed5f3b117d6c1711f84bdae636a34a0ab4763",
+    "docs/CODE_GUIDE.md": "f84f3c96dee9acb7390a0072fd103f42b9d147ce23af94ae2fa6abe89b7668df",
+    "docs/NEXT_STEPS.md": "d006e29863071f1395d57918db44bbcf44b24d13c0c17df18bfc663a6db1af83",
+    "reports/project-20261107/header.tex": "3eac86d2bdc31f4e780db2aaa20b3295b2d0dd76c0b006c028468ae4a7368184",
+    "reports/project-20261107/report-filter.lua": "af76606a72f5c5e5f9609c94ec378be1634a15b25d11f1795d8881d4f9b771b3",
+    "reports/project-20261107/figures/material-fv-space.png": "e6ad3ad39d303f1ea1dc46335698021d8bb3f6d280ed4833ee407b299e96dceb",
+    "reports/project-20261107/figures/density-errors.png": "c257bf3f832206f328ac88430a5780f1f30b9ca1563b02b45a33eb49c61b73e8"
+  },
+  "pdf": "exports/LTN_project_complete_20261107.pdf",
+  "pdf_sha256": "2311e5db80182c3e002ccb6b5e31d6a5906b73470c8c8f205537cbb975f7c694"
+}
