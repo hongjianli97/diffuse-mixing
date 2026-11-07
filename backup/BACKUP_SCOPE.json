@@ -24,12 +24,16 @@
   "current_entry": "docs/PROJECT_OVERVIEW.md",
   "research_paused_by_user": true,
   "historical_next_gate_is_active": false,
-  "last_verified_remote_commit": "dffeee5519c9df5fef30704c7c3fbfb4dd3c87ff",
+  "last_verified_remote_commit": "e197b4b2de480b0fb85f520ad03c7f9967e97dc5",
   "public_push_pending_explicit_authorization": false,
   "github_update_explicitly_authorized": true,
   "software_checks_rerun_this_delivery": 15,
   "new_physical_experiments": 0,
-  "published_or_pushed": false,
+  "published_or_pushed": true,
   "latest_local_scientific_case": "runs/reconnect-density-error-structure",
-  "previous_remote_commit": "dffeee5519c9df5fef30704c7c3fbfb4dd3c87ff"
+  "previous_remote_commit": "dffeee5519c9df5fef30704c7c3fbfb4dd3c87ff",
+  "github_payload_commit": "e197b4b2de480b0fb85f520ad03c7f9967e97dc5",
+  "cloud_environment_published": false,
+  "local_main_pushed": false,
+  "local_main_contains_nonpublished_data_and_must_not_be_pushed": true
 }
